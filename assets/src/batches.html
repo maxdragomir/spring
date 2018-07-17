@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Batches</title>
+    //= template/head.html
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="main">
+            <div class="header">
+                <nav>
+                    <div class="nav-wrapper">
+                        <div class="right-side">
+                            <a href="index.html" class="logo waves-effect"><img src="img/logo-ua.png" alt="LOGO"></a>
+                            <button type="button" class="btn waves-effect show-mode ml-3">
+                                <i class="far fa-circle test-mode"></i>
+                                <i class="fas fa-circle live-mode active"></i>
+                            </button>
+                            <span class="text-status live active">Live mode</span>
+                            <span class="text-status test1">Test mode</span>
+                        </div>
+                        <ul class="header_menu desctop-menu">
+                            <li>
+                                <a href="index.html" class="waves-effect">
+                                    <i class="fa fa-chart-pie left"></i> <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-trigger waves-effect active" href="#!" data-target="parcels">
+                                    <i class="fa fa-box left"></i> <span>Parcels</span><i class="fa fa-angle-down ml-2"></i>
+                                </a>
+                                <ul id="parcels" class="dropdown-content">
+                                    <li><a href="parcels.html" class="waves-effect waves-light">Parcels</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Temporaries</a></li>
+                                    <li><a href="batches.html" class="waves-effect waves-light active">Batches</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Verification</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="dropdown-trigger waves-effect" href="#!" data-target="reports">
+                                    <i class="fa fa-chart-area left"></i> <span>Reports</span><i class="fa fa-angle-down ml-2"></i>
+                                </a>
+                                <ul id="reports" class="dropdown-content">
+                                    <li><a href="general.html" class="waves-effect waves-light">General</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Delivery Time</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class='dropdown-trigger waves-effect' href='#!' data-target='settings'>
+                                    <i class="fa fa-cogs left"></i> <span>Settings</span><i class="fa fa-angle-down ml-2"></i>
+                                </a>
+                                <ul id='settings' class='dropdown-content'>
+                                    <li><a href="#!" class="waves-effect waves-light">Users</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Hubs</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Tracking URLs</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Tracking Codes</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Errors</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Profile</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#!" class="dropdown-trigger waves-effect" data-target='lang'>
+                                    <i class="fa fa-globe-americas"></i><i class="fa fa-angle-down ml-2"></i>
+                                </a>
+                                <ul id='lang' class='dropdown-content'>
+                                    <li><a href="#!" class="waves-effect waves-light">EN</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">RU</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">CH</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">ES</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#!" class="waves-effect">
+                                    <i class="fa fa-sign-out-alt"></i>
+                                </a>
+                            </li>
+                            <li class="mobile-menu">
+                                <a href="#" data-target="slide-out" class="sidenav-trigger waves-effect"><i class="fa fa-bars"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="content">
+                <ul id="slide-out" class="sidenav">
+                    <li class="sidebar_bg"></li>
+                    <li>
+                        <a href="index.html" class="waves-effect sidebar-logo">
+                            <img src="img/logo-ua.png" alt="">
+                        </a>
+                    </li>
+                    <li><div class="divider"></div></li>
+                    <li>
+                        <a href="index.html" class="collapsible-header no-drop waves-effect"><i class="fa fa-chart-pie left"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <ul class="collapsible collapsible-accordion">
+                            <li>
+                                <a class="collapsible-header active waves-effect"><i class="fa fa-box left"></i> Parcels <i class="fa fa-angle-down"></i></a>
+                                <div class="collapsible-body sidenav-li-body-color">
+                                    <ul class="purchasing-group">
+                                        <li><a class="waves-effect" href="parcels.html">Parcels</a></li>
+                                        <li><a class="waves-effect" href="#">Temporaries</a></li>
+                                        <li><a class="waves-effect active" href="#">Batches</a></li>
+                                        <li><a class="waves-effect" href="#">Reports</a></li>
+                                        <li><a class="waves-effect" href="#">Verification</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="collapsible-header waves-effect"><i class="fa fa-chart-area left"></i> Reports <i class="fa fa-angle-down"></i></a>
+                                <div class="collapsible-body sidenav-li-body-color">
+                                    <ul class="purchasing-group">
+                                        <li><a class="waves-effect" href="general.html">General</a></li>
+                                        <li><a class="waves-effect" href="#">Delivery Time</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="collapsible-header waves-effect"><i class="fa fa-cogs left"></i> Settings <i class="fa fa-angle-down"></i></a>
+                                <div class="collapsible-body sidenav-li-body-color">
+                                    <ul class="purchasing-group">
+                                        <li><a class="waves-effect" href="#">Users</a></li>
+                                        <li><a class="waves-effect" href="#">Hubs</a></li>
+                                        <li><a class="waves-effect" href="#">Settings</a></li>
+                                        <li><a class="waves-effect" href="#">Profile</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="collapsible-header waves-effect"> <i class="fa fa-globe-americas"></i>Languages<i class="fa fa-angle-down"></i></a>
+                                <div class="collapsible-body sidenav-li-body-color">
+                                    <ul class="purchasing-group">
+                                        <li><a class="waves-effect" href="#">EN</a></li>
+                                        <li><a class="waves-effect" href="#">RU</a></li>
+                                        <li><a class="waves-effect" href="#">CH</a></li>
+                                        <li><a class="waves-effect" href="#">ES</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!" class="collapsible-header no-drop waves-effect"><i class="fa fa-sign-out-alt"></i>Logout</a>
+                    </li>
+                </ul>
+
+                <div class="row">
+                    <div class="col s12 mb-4">
+                        <div class="page-title">
+                            <i class="fa fa-boxes left"></i>Batches
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4 mb-0">
+                    <div class="col s12 m6 l3 xl3">
+                        <div class="card card-filters">
+                            <div class="input-field col s12 m-0 color-red">
+                                <input id="search" class="m-0" type="text">
+                                <label for="search">Search</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l2">
+                        <div class="card card-filters">
+                            <div class="input-field col s12 m-0">
+                                <select>
+                                    <option value="c" selected="">Created</option><option value="a">Accepted</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m12 l7 xl7">
+                        <div class="card card-filters">
+                            <div class="input-field col s12 m6 l3 xl3 m-0">
+                                <input id="date-start" class="m-0 datepicker-start" type="text">
+                                <label for="date-start">Date start</label>
+                            </div>
+                            <div class="input-field col s12 m6 l3 xl3 m-0">
+                                <input id="time-start" class="timepicker-start m-0" type="text">
+                                <label for="time-start">Time start</label>
+                            </div>
+                            <div class="input-field col s12 m6 l3 xl3 m-0">
+                                <input id="date-end" class="m-0 datepicker-end" type="text">
+                                <label for="date-end">Date end</label>
+                            </div>
+                            <div class="input-field col s12 m6 l3 xl3 m-0">
+                                <input id="time-end" class="timepicker-end m-0" type="text">
+                                <label for="time-end">Time end</label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-0 mb-0">
+                    <div class="col s12 m6 l3">
+                        <div class="card card-filters">
+                            <div class="input-field col s12 m-0">
+                                <select>
+                                    <option value="0" selected>User</option><option value="101796">100002482 - AGAPEA</option><option value="101770">F100004036 - ALIZE</option><option value="101779">100003693 - ASIAGLOBAL</option><option value="101812">100003431 - BEAUTY INNOVATIONS</option><option value="101773">T100012346 - BVoet</option><option value="101819">100005001 - LA CAMARA DEL ALQUIMISTA</option><option value="101750">100004627 - CARETHY</option><option value="101793">100003256 - CLICKINRED</option><option value="101802">100003529 - CONOSUR</option><option value="101817">100001839 - CARMEN SEOANE</option><option value="101790">100004727 - DIRECT OPTIC</option><option value="101815">100001843 - DENIS MARTIN VILLANEGO</option><option value="101783">100004661 - FAIR PLAY</option><option value="101814">100003269 - FAMAIDEAL</option><option value="101807">100004249 - FERNANDO LOPEZ SANZ</option><option value="101810">100001202 - FRANCIS GAGLIO</option><option value="101792">100003469 - FTLExpress</option><option value="101759">T166777888 - GBavera</option><option value="101774">100003176 - GREENSTUFF</option><option value="101818">000728960 - GRUPO POSTA</option><option value="101768">T100001234 - HBlanco</option><option value="101771">F100004757 - INDERWEAR</option><option value="101806">100001857 - JAVIER LOPEZ SANZ</option><option value="101813">100001919 - JUAN RODRIGUEZ DE LA FLOR</option><option value="101800">100001858 - JUSTCLICK</option><option value="101764">T166777889 - KKChow</option><option value="101809">100002577 - LUIS ALBA GALLO</option><option value="101785">100004290 - METROPOLIS</option><option value="101749">100003041 - MISCOTA</option><option value="101808">100004279 - MARIA JOSE ARDURA GARCIA</option><option value="101794">100002088 - PACOLIMON</option><option value="101816">100003349 - PERLA AZABACHE</option><option value="101784">100003732 - PROYECTARTE</option><option value="101811">100002579 - SAMUEL DE ROA</option><option value="101797">100001814 - SERVOVENDI</option><option value="101735">TEST - Test Shipper</option><option value="101758">T111111111 - Test123</option><option value="101769">T100012345 - TESTFR</option><option value="101795">100003800 - TODOTIENDA</option><option value="101742">100002562 - TRADEINN</option><option value="101801">100002980 - TUDETIC</option><option value="101805">100004891 - WEAREWADO</option><option value="101748">100004626 - WELLINDAL</option><option value="101765">100004505 - ZELERIS</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l2">
+                        <div class="card card-filters">
+                            <div class="input-field col s12 m-0">
+                                <select><option value="" selected="">Type</option><option value="0">Manifest</option><option value="2">OMS</option></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m12 l3">
+                        <div class="card card-filters">
+                            <div class="input-field col s12 m-0">
+                                <select>
+                                    <option value="0" selected>Status</option><option value="-1">Cancelled</option><option value="0">Queued</option><option value="1">Error</option><option value="10">Created</option><option value="20">Accepted</option><option value="21">In&nbsp;Transit</option><option value="31">Delivery Exception</option><option value="40">In&nbsp;Customs</option><option value="41">Customs Exception</option><option value="91">Delivery Attempted</option><option value="92">Delivery Awaiting Collection</option><option value="93">Delivery Scheduled</option><option value="100">Delivered</option><option value="111">Lost or Destroyed</option><option value="124">Return in&nbsp;Transit</option><option value="125">Return Received</option><option value="126">Return Completed</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m12 l3 offset-l1 offset-m0">
+                        <div class="card card-inv card-button no-other-btn">
+                            <button type="button" class="btn clear-btn waves-effect tooltipped" data-position="top" data-tooltip="Clear"><i class="fa fa-times"></i></button>
+                            <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Search"><i class="fa fa-search"></i> </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col s12">
+                        <div class="card-title table-title card-orange">
+                            <div class="card-title_result ">
+                                <div class="result tooltipped" data-position="top" data-tooltip="Results">
+                                    <i class="fa fa-table left"></i>
+                                    <span id="c_result">32</span>
+                                </div>
+                            </div>
+                            <div class="card-title_pagination">
+                                <ul class="pagination">
+                                    <li class="disabled waves-effect waves-light no-none"><a href="#!"><i class="fa fa-angle-left"></i></a></li>
+                                    <li class="active no-none"><a href="#!">1</a></li>
+                                    <li class="waves-effect waves-light"><a href="#!">2</a></li>
+                                    <li class="waves-effect waves-light"><a href="#!">3</a></li>
+                                    <li class="waves-effect waves-light no-none"><a href="#!"><i class="fa fa-angle-right"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="card-title_btn card-title_btn-solo">
+                                <a href="#add" class="btn waves-effect tooltipped modal-trigger" data-position="top" data-tooltip="Add Batch"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                        <div class="card card-table card-table-batches mt-4">
+                            <div class="thead-desctop">
+                                <table class="highlight mt-4">
+                                    <thead>
+                                    <tr>
+                                        <th>
+                                            <a href="#">ID</a>
+                                        </th>
+                                        <th>
+                                            <a href="#">Title</a>
+                                        </th>
+                                        <th>
+                                            <a href="#">Type</a><br>
+                                            Label
+                                        </th>
+                                        <th>
+                                            <a href="#">Status</a>
+                                        </th>
+                                        <th>
+                                            <a href="#">User</a>
+                                        </th>
+                                        <th>
+                                            <a href="#">Created</a>
+                                        </th>
+                                        <th>
+                                            Actions
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="thead-mobile">
+                                <table class="highlight">
+                                    <thead>
+                                    <tr>
+                                        <th>
+                                            <a href="#">ID</a>
+                                        </th>
+                                        <th>
+                                            <a href="#">Title</a>
+                                        </th>
+                                        <th>
+                                            <a href="#">Type</a><br>
+                                            Label
+                                        </th>
+                                        <th>
+                                            <a href="#">Status</a>
+                                        </th>
+                                        <th>
+                                            <a href="#">User</a>
+                                        </th>
+                                        <th>
+                                            <a href="#">Created</a>
+                                        </th>
+                                        <th>
+                                            Actions
+                                        </th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                        <tr>
+                                            <td  data-title="ID">
+                                                <div>1957</div>
+                                            </td>
+                                            <td  data-title="Title">
+                                                <div>
+                                                    <div class="bold"><a href="#">Manifest.csv</a></div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Type
+                                                            Label">
+                                                <div class="print-links">
+                                                    <div>OMS</div>
+                                                    <div class="color-orange">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td data-title="Status">
+                                                <div class="">
+                                                <!--<div class="alot-text">-->
+                                                    <!--<button type="button" class="btn-show-all tooltipped" data-position="top" data-tooltip="Show all"><i class="fa fa-eye"></i></button>-->
+                                                    <div class="color-red"> Processed with Errors</div>
+                                                    <div>– 1 parcel(s) found / 1 declared</div>
+                                                    <div>– <a href="#">1</a> parcel(s) created / <a href="#">1</a> <span class="color-red">with errors</span></div>
+                                                    <div class="color-red">– 1 invalid file line(s)</div>
+                                                    <div class="bold">Current State</div>
+                                                    <div>– 0 ok / 0 errors / 0 queued</div>
+
+                                                </div>
+                                            </td>
+                                            <td data-title="User">
+                                                <div>
+                                                    <div class="bold">MIGUELINK</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Created">
+                                                <div>
+                                                    <div>13.07.2018, 10:31</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="actions-btn">
+                                                    <a href="#view" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="View"><i class="fa fa-eye"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Download"><i class="fa fa-file-download"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  data-title="ID">
+                                                <div>1957</div>
+                                            </td>
+                                            <td  data-title="Title">
+                                                <div>
+                                                    <div class="bold"><a href="#">Manifest.csv</a></div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Type
+                                                            Label">
+                                                <div class="print-links">
+                                                    <div>OMS</div>
+                                                    <div class="color-orange">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td data-title="Status">
+                                                <div class="">
+                                                    <!--<div class="alot-text">-->
+                                                    <!--<button type="button" class="btn-show-all tooltipped" data-position="top" data-tooltip="Show all"><i class="fa fa-eye"></i></button>-->
+                                                    <div class="color-red"> Processed with Errors</div>
+                                                    <div>– 1 parcel(s) found / 1 declared</div>
+                                                    <div>– <a href="#">1</a> parcel(s) created / <a href="#">1</a> <span class="color-red">with errors</span></div>
+                                                    <div class="color-red">– 1 invalid file line(s)</div>
+                                                    <div class="bold">Current State</div>
+                                                    <div>– 0 ok / 0 errors / 0 queued</div>
+
+                                                </div>
+                                            </td>
+                                            <td data-title="User">
+                                                <div>
+                                                    <div class="bold">MIGUELINK</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Created">
+                                                <div>
+                                                    <div>13.07.2018, 10:31</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="actions-btn">
+                                                    <a href="#view" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="View"><i class="fa fa-eye"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Download"><i class="fa fa-file-download"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  data-title="ID">
+                                                <div>1957</div>
+                                            </td>
+                                            <td  data-title="Title">
+                                                <div>
+                                                    <div class="bold"><a href="#">Manifest.csv</a></div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Type
+                                                            Label">
+                                                <div class="print-links">
+                                                    <div>OMS</div>
+                                                    <div class="color-orange">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td data-title="Status">
+                                                <div class="">
+                                                    <!--<div class="alot-text">-->
+                                                    <!--<button type="button" class="btn-show-all tooltipped" data-position="top" data-tooltip="Show all"><i class="fa fa-eye"></i></button>-->
+                                                    <div class="color-red"> Processed with Errors</div>
+                                                    <div>– 1 parcel(s) found / 1 declared</div>
+                                                    <div>– <a href="#">1</a> parcel(s) created / <a href="#">1</a> <span class="color-red">with errors</span></div>
+                                                    <div class="color-red">– 1 invalid file line(s)</div>
+                                                    <div class="bold">Current State</div>
+                                                    <div>– 0 ok / 0 errors / 0 queued</div>
+
+                                                </div>
+                                            </td>
+                                            <td data-title="User">
+                                                <div>
+                                                    <div class="bold">MIGUELINK</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Created">
+                                                <div>
+                                                    <div>13.07.2018, 10:31</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="actions-btn">
+                                                    <a href="#view" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="View"><i class="fa fa-eye"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Download"><i class="fa fa-file-download"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  data-title="ID">
+                                                <div>1957</div>
+                                            </td>
+                                            <td  data-title="Title">
+                                                <div>
+                                                    <div class="bold"><a href="#">Manifest.csv</a></div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Type
+                                                            Label">
+                                                <div class="print-links">
+                                                    <div>OMS</div>
+                                                    <div class="color-orange">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td data-title="Status">
+                                                <div class="">
+                                                    <!--<div class="alot-text">-->
+                                                    <!--<button type="button" class="btn-show-all tooltipped" data-position="top" data-tooltip="Show all"><i class="fa fa-eye"></i></button>-->
+                                                    <div class="color-red"> Processed with Errors</div>
+                                                    <div>– 1 parcel(s) found / 1 declared</div>
+                                                    <div>– <a href="#">1</a> parcel(s) created / <a href="#">1</a> <span class="color-red">with errors</span></div>
+                                                    <div class="color-red">– 1 invalid file line(s)</div>
+                                                    <div class="bold">Current State</div>
+                                                    <div>– 0 ok / 0 errors / 0 queued</div>
+
+                                                </div>
+                                            </td>
+                                            <td data-title="User">
+                                                <div>
+                                                    <div class="bold">MIGUELINK</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Created">
+                                                <div>
+                                                    <div>13.07.2018, 10:31</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="actions-btn">
+                                                    <a href="#view" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="View"><i class="fa fa-eye"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Download"><i class="fa fa-file-download"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  data-title="ID">
+                                                <div>1957</div>
+                                            </td>
+                                            <td  data-title="Title">
+                                                <div>
+                                                    <div class="bold"><a href="#">Manifest.csv</a></div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Type
+                                                            Label">
+                                                <div class="print-links">
+                                                    <div>OMS</div>
+                                                    <div class="color-orange">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td data-title="Status">
+                                                <div class="">
+                                                    <!--<div class="alot-text">-->
+                                                    <!--<button type="button" class="btn-show-all tooltipped" data-position="top" data-tooltip="Show all"><i class="fa fa-eye"></i></button>-->
+                                                    <div class="color-red"> Processed with Errors</div>
+                                                    <div>– 1 parcel(s) found / 1 declared</div>
+                                                    <div>– <a href="#">1</a> parcel(s) created / <a href="#">1</a> <span class="color-red">with errors</span></div>
+                                                    <div class="color-red">– 1 invalid file line(s)</div>
+                                                    <div class="bold">Current State</div>
+                                                    <div>– 0 ok / 0 errors / 0 queued</div>
+
+                                                </div>
+                                            </td>
+                                            <td data-title="User">
+                                                <div>
+                                                    <div class="bold">MIGUELINK</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Created">
+                                                <div>
+                                                    <div>13.07.2018, 10:31</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="actions-btn">
+                                                    <a href="#view" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="View"><i class="fa fa-eye"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Download"><i class="fa fa-file-download"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  data-title="ID">
+                                                <div>1957</div>
+                                            </td>
+                                            <td  data-title="Title">
+                                                <div>
+                                                    <div class="bold"><a href="#">Manifest.csv</a></div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Type
+                                                            Label">
+                                                <div class="print-links">
+                                                    <div>OMS</div>
+                                                    <div class="color-orange">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td data-title="Status">
+                                                <div class="">
+                                                    <!--<div class="alot-text">-->
+                                                    <!--<button type="button" class="btn-show-all tooltipped" data-position="top" data-tooltip="Show all"><i class="fa fa-eye"></i></button>-->
+                                                    <div class="color-red"> Processed with Errors</div>
+                                                    <div>– 1 parcel(s) found / 1 declared</div>
+                                                    <div>– <a href="#">1</a> parcel(s) created / <a href="#">1</a> <span class="color-red">with errors</span></div>
+                                                    <div class="color-red">– 1 invalid file line(s)</div>
+                                                    <div class="bold">Current State</div>
+                                                    <div>– 0 ok / 0 errors / 0 queued</div>
+
+                                                </div>
+                                            </td>
+                                            <td data-title="User">
+                                                <div>
+                                                    <div class="bold">MIGUELINK</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Created">
+                                                <div>
+                                                    <div>13.07.2018, 10:31</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="actions-btn">
+                                                    <a href="#view" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="View"><i class="fa fa-eye"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Download"><i class="fa fa-file-download"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  data-title="ID">
+                                                <div>1957</div>
+                                            </td>
+                                            <td  data-title="Title">
+                                                <div>
+                                                    <div class="bold"><a href="#">Manifest.csv</a></div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Type
+                                                            Label">
+                                                <div class="print-links">
+                                                    <div>OMS</div>
+                                                    <div class="color-orange">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td data-title="Status">
+                                                <div class="">
+                                                    <!--<div class="alot-text">-->
+                                                    <!--<button type="button" class="btn-show-all tooltipped" data-position="top" data-tooltip="Show all"><i class="fa fa-eye"></i></button>-->
+                                                    <div class="color-red"> Processed with Errors</div>
+                                                    <div>– 1 parcel(s) found / 1 declared</div>
+                                                    <div>– <a href="#">1</a> parcel(s) created / <a href="#">1</a> <span class="color-red">with errors</span></div>
+                                                    <div class="color-red">– 1 invalid file line(s)</div>
+                                                    <div class="bold">Current State</div>
+                                                    <div>– 0 ok / 0 errors / 0 queued</div>
+
+                                                </div>
+                                            </td>
+                                            <td data-title="User">
+                                                <div>
+                                                    <div class="bold">MIGUELINK</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Created">
+                                                <div>
+                                                    <div>13.07.2018, 10:31</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="actions-btn">
+                                                    <a href="#view" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="View"><i class="fa fa-eye"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Download"><i class="fa fa-file-download"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  data-title="ID">
+                                                <div>1957</div>
+                                            </td>
+                                            <td  data-title="Title">
+                                                <div>
+                                                    <div class="bold"><a href="#">Manifest.csv</a></div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Type
+                                                            Label">
+                                                <div class="print-links">
+                                                    <div>OMS</div>
+                                                    <div class="color-orange">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td data-title="Status">
+                                                <div class="">
+                                                    <!--<div class="alot-text">-->
+                                                    <!--<button type="button" class="btn-show-all tooltipped" data-position="top" data-tooltip="Show all"><i class="fa fa-eye"></i></button>-->
+                                                    <div class="color-red"> Processed with Errors</div>
+                                                    <div>– 1 parcel(s) found / 1 declared</div>
+                                                    <div>– <a href="#">1</a> parcel(s) created / <a href="#">1</a> <span class="color-red">with errors</span></div>
+                                                    <div class="color-red">– 1 invalid file line(s)</div>
+                                                    <div class="bold">Current State</div>
+                                                    <div>– 0 ok / 0 errors / 0 queued</div>
+
+                                                </div>
+                                            </td>
+                                            <td data-title="User">
+                                                <div>
+                                                    <div class="bold">MIGUELINK</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Created">
+                                                <div>
+                                                    <div>13.07.2018, 10:31</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="actions-btn">
+                                                    <a href="#view" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="View"><i class="fa fa-eye"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Download"><i class="fa fa-file-download"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  data-title="ID">
+                                                <div>1957</div>
+                                            </td>
+                                            <td  data-title="Title">
+                                                <div>
+                                                    <div class="bold"><a href="#">Manifest.csv</a></div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Type
+                                                            Label">
+                                                <div class="print-links">
+                                                    <div>OMS</div>
+                                                    <div class="color-orange">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td data-title="Status">
+                                                <div class="">
+                                                    <!--<div class="alot-text">-->
+                                                    <!--<button type="button" class="btn-show-all tooltipped" data-position="top" data-tooltip="Show all"><i class="fa fa-eye"></i></button>-->
+                                                    <div class="color-red"> Processed with Errors</div>
+                                                    <div>– 1 parcel(s) found / 1 declared</div>
+                                                    <div>– <a href="#">1</a> parcel(s) created / <a href="#">1</a> <span class="color-red">with errors</span></div>
+                                                    <div class="color-red">– 1 invalid file line(s)</div>
+                                                    <div class="bold">Current State</div>
+                                                    <div>– 0 ok / 0 errors / 0 queued</div>
+
+                                                </div>
+                                            </td>
+                                            <td data-title="User">
+                                                <div>
+                                                    <div class="bold">MIGUELINK</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Created">
+                                                <div>
+                                                    <div>13.07.2018, 10:31</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="actions-btn">
+                                                    <a href="#view" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="View"><i class="fa fa-eye"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Download"><i class="fa fa-file-download"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="add" class="modal modal-style modal-fixed-footer modal-fixed-header modal-h-60">
+        <div class="modal-header color-orange">
+            <div class="modal-title"><i class="fa fa-plus left"></i>Add Batch</div>
+            <button class="btn waves-effect modal-close"><i class="fa fa-times"></i></button>
+        </div>
+        <div class="modal-content">
+
+            <div class="row m-0 mt-2">
+
+                <!-- mode row -->
+                <div class="col s12 mb-4">
+                    <div class="card card-modal mb-0">
+                        <div class="row">
+                            <div class="input-field col s12 m3">
+                                <div class="status color-red"><span>Test mode</span></div>
+                                <!--<div class="status color-green"><span>Live mode</span></div>-->
+                            </div>
+                            <div class="input-field col s12 m6 color-grey">
+                                <select>
+                                    <option value="0" selected>User</option><option value="101796">100002482 - AGAPEA</option><option value="101770">F100004036 - ALIZE</option><option value="101779">100003693 - ASIAGLOBAL</option><option value="101812">100003431 - BEAUTY INNOVATIONS</option><option value="101773">T100012346 - BVoet</option><option value="101819">100005001 - LA CAMARA DEL ALQUIMISTA</option><option value="101750">100004627 - CARETHY</option><option value="101793">100003256 - CLICKINRED</option><option value="101802">100003529 - CONOSUR</option><option value="101817">100001839 - CARMEN SEOANE</option><option value="101790">100004727 - DIRECT OPTIC</option><option value="101815">100001843 - DENIS MARTIN VILLANEGO</option><option value="101783">100004661 - FAIR PLAY</option><option value="101814">100003269 - FAMAIDEAL</option><option value="101807">100004249 - FERNANDO LOPEZ SANZ</option><option value="101810">100001202 - FRANCIS GAGLIO</option><option value="101792">100003469 - FTLExpress</option><option value="101759">T166777888 - GBavera</option><option value="101774">100003176 - GREENSTUFF</option><option value="101818">000728960 - GRUPO POSTA</option><option value="101768">T100001234 - HBlanco</option><option value="101771">F100004757 - INDERWEAR</option><option value="101806">100001857 - JAVIER LOPEZ SANZ</option><option value="101813">100001919 - JUAN RODRIGUEZ DE LA FLOR</option><option value="101800">100001858 - JUSTCLICK</option><option value="101764">T166777889 - KKChow</option><option value="101809">100002577 - LUIS ALBA GALLO</option><option value="101785">100004290 - METROPOLIS</option><option value="101749">100003041 - MISCOTA</option><option value="101808">100004279 - MARIA JOSE ARDURA GARCIA</option><option value="101794">100002088 - PACOLIMON</option><option value="101816">100003349 - PERLA AZABACHE</option><option value="101784">100003732 - PROYECTARTE</option><option value="101811">100002579 - SAMUEL DE ROA</option><option value="101797">100001814 - SERVOVENDI</option><option value="101735">TEST - Test Shipper</option><option value="101758">T111111111 - Test123</option><option value="101769">T100012345 - TESTFR</option><option value="101795">100003800 - TODOTIENDA</option><option value="101742">100002562 - TRADEINN</option><option value="101801">100002980 - TUDETIC</option><option value="101805">100004891 - WEAREWADO</option><option value="101748">100004626 - WELLINDAL</option><option value="101765">100004505 - ZELERIS</option>
+                                </select>
+                            </div>
+                            <div class="input-field col s12 m3 color-grey">
+                                <select><option value="0" selected>Type</option><option value="0">Manifest</option><option value="2">OMS</option></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- batch row -->
+                <div class="col s12 m12 l8">
+                    <div class="card card-modal mb-0">
+                        <div class="input-title several-btns">CSV-file
+                            <div>
+                                <button type="button" class="btn waves-effect waves-light file-btn csv-btn active tooltipped " data-position="top" data-tooltip="File"><i class="fa fa-file"></i></button>
+                                <button type="button" class="btn waves-effect waves-light url-btn csv-btn tooltipped" data-position="top" data-tooltip="URL"><i class="fa fa-link"></i></button>
+                                <button type="button" class="btn waves-effect waves-light content-btn csv-btn tooltipped" data-position="top" data-tooltip="Content"><i class="fa fa-pen"></i></button>
+                            </div>
+                        </div>
+
+                        <div id="file-block" class="row csv-file active">
+                            <div class="file-field input-field col s12 color-green">
+                                <div class="btn">
+                                    <span>Choose File</span>
+                                    <input type="file">
+                                </div>
+                                <div class="file-path-wrapper color-grey">
+                                    <input class="file-path validate" type="text">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="url-block" class="row csv-file">
+                            <div class="input-field col s12 color-green">
+                                <input id="url" class="m-0" type="text">
+                                <label for="url">URL</label>
+                            </div>
+                        </div>
+
+                        <div id="content-block" class="row csv-file">
+                            <div class="input-field col s12 color-green">
+                                <textarea id="content" class="textarea open-textarea"></textarea>
+                                <label for="content">Content</label>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="col s12 m12 l4">
+                    <div class="card card-modal mb-0">
+                        <div class="input-title">Charset</div>
+
+                        <div class="row">
+                            <div class="input-field col s12 color-grey">
+                                <select><option value="0" selected>UTF-8</option></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="modal-footer align-right">
+            <a href="#" class="btn btn-large waves-effect btn-submit">Submit</a>
+        </div>
+    </div>
+    <div id="view" class="modal modal-style modal-fixed-header modal-h-70">
+        <div class="modal-header color-orange">
+            <div class="modal-title"><i class="fa fa-eye left"></i>View Batch</div>
+            <button class="btn waves-effect modal-close"><i class="fa fa-times"></i></button>
+        </div>
+        <div class="modal-content modal-view">
+
+            <div class="row m-0 mt-2">
+
+                <!-- id row -->
+                <div class="col s12">
+                    <div class="card card-modal mb-0">
+                        <div class="parcel-top-info one-btns pl-2 pr-2">
+                            <div class="bold parcel-top-info_id mobile">ID 171321</div>
+                            <div class="parcel-top-info_desctop">
+                                <div class="parcel-top-info_left">
+                                    <div class="bold parcel-top-info_id">ID 171321</div>
+                                    <a href="#!" class="btn parcel-top-info_btn btn-log waves-effect"> <i class="fa fa-file-code pr-2"></i> Log File <i class="fa fa-angle-down ml-2"></i></a>
+                                </div>
+
+
+                                <div class="parcel-top-info_right">
+                                    <div class="color-green tooltipped" data-position="left" data-tooltip="Created"><span><i class="fa fa-file-contract"></i></span> <span>09.07.2018, 18:31</span></div>
+                                    <div class="color-orange tooltipped" data-position="left" data-tooltip="Modified"><span><i class="fa fa-file-signature"></i></span> <span>09.07.2018, 18:31</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- audit row -->
+                <div class="col s12 log-file m-0">
+                    <div class="card card-modal m-0">
+                        <div class="parcel-log" id="log">
+                            <button type="button" class="btn copy-btn" onclick="copy('audit')"><i class="fa fa-copy"></i></button>
+                            <pre>FILE PARSING STARTED
+Line 1 ERROR: Invalid 1st field (version)
+Line 2 recognized as parcel line
+FILE PARSING FINISHED
+1 PARCELS FOUND
+PARCELS CREATING STARTED
+Creating parcel 1 / #028-9747466-5643538 (file line 2)...
+ERROR: parcel created with warnings (Consignee Name required)
+PARCELS CREATING FINISHED
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- info row -->
+                <div class="col s12">
+                    <div class="card card-modal">
+                        <div class="more-info">
+                            <div class="info-row color-green">
+                                <div class="more-info_name">User</div>
+                                <div class="more-info_text bold">100004273 - NOSOLOPOSTERS</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="more-info_name">Type</div>
+                                <div class="more-info_text">OMS</div>
+                            </div>
+                            <div class="info-row big-text color-red">
+                                <div class="more-info_name">Status</div>
+                                <div class="more-info_text">
+
+
+                                    <div class="color-black">
+                                        <div class="color-red">Processed with Errors</div>
+                                        <div class="color-grey">Some errors occured - see log-file </div>
+                                        <div>– 1 parcel(s) found / 1 declared </div>
+                                        <div>– <a href="#">1</a> parcel(s) created / <a href="#">1</a> <span class="color-red">with errors</span></div>
+                                        <span class="color-red">– 1 invalid file line(s) </span>
+
+                                    </div>
+                                    <div class="color-black">
+                                        <div class="bold">Current State</div>
+                                        – 0 ok / 0 errors / 0 queued
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-row">
+                                <div class="more-info_name">Charset</div>
+                                <div class="more-info_text">UTF-8</div>
+                            </div><div class="info-row color-secondary">
+                                <div class="more-info_name">CSV-file</div>
+                                <div class="more-info_text "><a href="#">Manifest.csv</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+//= template/footer.html
+
+    <script>
+        var newPos, titlePos, bodyWidth = $(document).width();
+
+        if (bodyWidth <= 600) {
+            titlePos = 950
+        } else {
+            titlePos = Math.floor($('.thead-desctop').offset().top)
+        }
+
+        //fix panel-title
+        function fixedTitle() {
+
+            // if($('.other-filters').css('display') === 'none') {
+                if ($(window).scrollTop() >= titlePos) {
+                    $('body').addClass('fixed-title').css({
+                        'padding-top': $('.thead-desctop').outerHeight(true)
+                    });
+                } else if ($(window).scrollTop() < titlePos) {
+                    $('body').removeClass('fixed-title').css({
+                        'padding-top': 0
+                    });
+                }
+            // } else {
+                if ($(window).scrollTop() >= newPos) {
+                    $('body').addClass('fixed-title').css({
+                        'padding-top': $('.thead-desctop').outerHeight(true)
+                    });
+                } else if ($(window).scrollTop() < newPos) {
+                    $('body').removeClass('fixed-title').css({
+                        'padding-top': 0
+                    });
+                }
+            // }
+
+        }
+
+        $(window).scroll(function(){
+            fixedTitle();
+        });
+
+        $(document).ready(function () {
+
+            $('.open-textarea').on('focus', function () {
+                // $(this).parents('.modal-style').addClass('modal-h-60');
+                $(this).addClass('active');
+            });
+            $('.open-textarea').on('blur', function () {
+                // $(this).parents('.modal-style').removeClass('modal-h-60');
+                $(this).removeClass('active');
+            });
+
+            //open original
+            $('.original-btn').on('click', function () {
+                $(this).parents('.card-modal').children('.original-data').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+
+            //dump and audit logs
+            $('.btn-log').on('click', function () {
+                $('.log-file').toggleClass('show');
+                $(this).children('.fa-angle-down').toggleClass('show');
+            });
+
+            $('.btn-source').on('click', function () {
+                $('.block-source').toggleClass('show');
+                $(this).children('.fa-angle-down').toggleClass('show');
+            });
+
+            $('.btn-audit').on('click', function () {
+                $('.block-audit').toggleClass('show');
+                $(this).children('.fa-angle-down').toggleClass('show');
+            });
+
+            //clear filters and animate icon
+            $('.card-button').on('click', '.clear-btn', function () {
+
+                var el = $('.clear-btn i').clone().removeClass('active');
+                $('.clear-btn i').remove();
+                $('.clear-btn').append(el);
+                el.addClass('active');
+
+            });
+
+
+            //show eye if width < 200
+            $('.alot-text div').each(function () {
+
+                var elemW = $(this).width();
+                if(elemW < 200) {
+                    $(this).siblings('.btn-show-all').hide();
+                } else {
+                    $(this).siblings('.btn-show-all').show();
+                }
+
+            });
+
+
+            //advanced filters and change padding-top for fix panel title
+            $('.other-btn ').on('click',function () {
+
+               $('.other-filters').slideToggle();
+               $(this).toggleClass('active');
+
+
+                if (bodyWidth <= 600) {
+                    newPos = titlePos + 435;
+                } else if (bodyWidth <= 992) {
+                    newPos = titlePos + 213;
+                } else {
+                    newPos = titlePos + 72.5;
+                }
+
+            });
+
+
+            //show more text in Consignee
+            $('.btn-show-all').on('click', function () {
+
+                if (!$(this).parent().hasClass('show-all')) {
+                    $('.alot-text').removeClass('show-all');
+                    $(this).parent().addClass('show-all');
+                } else {
+                    $(this).parent().removeClass('show-all');
+                }
+
+            });
+
+
+            // $('.no-scroll').on('click', function () {
+            //
+            //     var trC = $('.thead-mobile tbody tr').length;
+            //     if(trC > 5) {
+            //         $('.thead-mobile').toggleClass('show-all');
+            //     }
+            //
+            // });
+
+
+            //Count in panel title
+            var options = {
+                useEasing: true,
+                useGrouping: true,
+                separator: ',',
+                decimal: '.',
+            };
+
+            var resultCount = new CountUp('c_result', 0, 32, 0, 4, options);
+
+            setTimeout(function () {
+                resultCount.start();
+            }, 0);
+
+
+
+            // $('#horizontal').hScroll(40);
+
+        });
+
+        // jQuery(function ($) {
+        //     $.fn.hScroll = function (amount) {
+        //         amount = amount || 120;
+        //         $(this).bind("DOMMouseScroll mousewheel", function (event) {
+        //             var oEvent = event.originalEvent,
+        //                 direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta,
+        //                 position = $(this).scrollLeft();
+        //             position += direction > 0 ? -amount : amount;
+        //             $(this).scrollLeft(position);
+        //             event.preventDefault();
+        //         })
+        //     };
+        // });
+    </script>
+</body>
+</html>

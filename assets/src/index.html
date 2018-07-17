@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dashboard</title>
+    //= template/head.html
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="main">
+            <div class="header">
+                <nav>
+                    <div class="nav-wrapper">
+                        <div class="right-side">
+                            <a href="index.html" class="logo waves-effect"><img src="img/logo-ua.png" alt="LOGO"></a>
+                            <button type="button" class="btn waves-effect show-mode ml-3">
+                                <i class="far fa-circle test-mode"></i>
+                                <i class="fas fa-circle live-mode active"></i>
+                            </button>
+                            <span class="text-status live active">Live mode</span>
+                            <span class="text-status test1">Test mode</span>
+                        </div>
+                        <ul class="header_menu desctop-menu">
+                            <li>
+                                <a href="index.html" class="active waves-effect">
+                                    <i class="fa fa-chart-pie left"></i> <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-trigger waves-effect" href="#!" data-target="parcels">
+                                    <i class="fa fa-box left"></i> <span>Parcels</span><i class="fa fa-angle-down ml-2"></i>
+                                </a>
+                                <ul id="parcels" class="dropdown-content">
+                                    <li><a href="parcels.html" class="waves-effect waves-light">Parcels</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Temporaries</a></li>
+                                    <li><a href="batches.html" class="waves-effect waves-light">Batches</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Verification</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="dropdown-trigger waves-effect" href="#!" data-target="reports">
+                                    <i class="fa fa-chart-area left"></i> <span>Reports</span><i class="fa fa-angle-down ml-2"></i>
+                                </a>
+                                <ul id="reports" class="dropdown-content">
+                                    <li><a href="general.html" class="waves-effect waves-light">General</a></li>
+                                    <li><a href="delivery.html" class="waves-effect waves-light">Delivery Time</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class='dropdown-trigger waves-effect' href='#!' data-target='settings'>
+                                    <i class="fa fa-cogs left"></i> <span>Settings</span><i class="fa fa-angle-down ml-2"></i>
+                                </a>
+                                <ul id='settings' class='dropdown-content'>
+                                    <li><a href="#!" class="waves-effect waves-light">Users</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Hubs</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Tracking URLs</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Tracking Codes</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Errors</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Profile</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#!" class="dropdown-trigger waves-effect" data-target='lang'>
+                                    <i class="fa fa-globe-americas"></i><i class="fa fa-angle-down ml-2"></i>
+                                </a>
+                                <ul id='lang' class='dropdown-content'>
+                                    <li><a href="#!" class="waves-effect waves-light">EN</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">RU</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">CH</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">ES</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#!" class="waves-effect">
+                                    <i class="fa fa-sign-out-alt"></i>
+                                </a>
+                            </li>
+                            <li class="mobile-menu">
+                                <a href="#" data-target="slide-out" class="sidenav-trigger waves-effect"><i class="fa fa-bars"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="content">
+                <ul id="slide-out" class="sidenav">
+                    <li class="sidebar_bg"></li>
+                    <li>
+                        <a href="index.html" class="waves-effect sidebar-logo">
+                            <img src="img/logo-ua.png" alt="">
+                        </a>
+                    </li>
+                    <li><div class="divider"></div></li>
+                    <li>
+                        <a href="index.html" class="collapsible-header no-drop active waves-effect"><i class="fa fa-chart-pie left"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <ul class="collapsible collapsible-accordion">
+                            <li>
+                                <a class="collapsible-header waves-effect"><i class="fa fa-box left"></i> Parcels <i class="fa fa-angle-down"></i></a>
+                                <div class="collapsible-body sidenav-li-body-color">
+                                    <ul class="purchasing-group">
+                                        <li><a class="waves-effect" href="parcels.html">Parcels</a></li>
+                                        <li><a class="waves-effect" href="#">Temporaries</a></li>
+                                        <li><a class="waves-effect" href="batches.html">Batches</a></li>
+                                        <li><a class="waves-effect" href="#">Reports</a></li>
+                                        <li><a class="waves-effect" href="#">Verification</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="collapsible-header waves-effect"><i class="fa fa-chart-area left"></i> Reports <i class="fa fa-angle-down"></i></a>
+                                <div class="collapsible-body sidenav-li-body-color">
+                                    <ul class="purchasing-group">
+                                        <li><a class="waves-effect" href="general.html">General</a></li>
+                                        <li><a class="waves-effect" href="delivery.html">Delivery Time</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="collapsible-header waves-effect"><i class="fa fa-cogs left"></i> Settings <i class="fa fa-angle-down"></i></a>
+                                <div class="collapsible-body sidenav-li-body-color">
+                                    <ul class="purchasing-group">
+                                        <li><a class="waves-effect" href="#">Users</a></li>
+                                        <li><a class="waves-effect" href="#">Hubs</a></li>
+                                        <li><a class="waves-effect" href="#">Settings</a></li>
+                                        <li><a class="waves-effect" href="#">Profile</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="collapsible-header waves-effect"> <i class="fa fa-globe-americas"></i>Languages<i class="fa fa-angle-down"></i></a>
+                                <div class="collapsible-body sidenav-li-body-color">
+                                    <ul class="purchasing-group">
+                                        <li><a class="waves-effect" href="#">EN</a></li>
+                                        <li><a class="waves-effect" href="#">RU</a></li>
+                                        <li><a class="waves-effect" href="#">CH</a></li>
+                                        <li><a class="waves-effect" href="#">ES</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!" class="collapsible-header no-drop waves-effect"><i class="fa fa-sign-out-alt"></i>Logout</a>
+                    </li>
+                </ul>
+                <div class="row m-0">
+                    <div class="col s12">
+                        <div class="page-title">
+                            <i class="fa fa-chart-pie left"></i>Dashboard
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4 mb-0">
+                    <div class="col s12 m6 xl3">
+                        <a href="#!" class="card card-widget card-blue">
+                            <div class="card_icon">
+                                <i class="fa fa-users"></i>
+                                <div class="card_show">
+                                    <span>View</span>
+                                </div>
+                            </div>
+                            <div class="card_title">
+                                <span>Users</span>
+                            </div>
+                            <div class="card_text">
+                                <span id="c_users">0</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col s12 m6 xl3">
+                        <a href="#!" class="card card-widget card-red">
+                            <div class="card_icon">
+                                <i class="fa fa-box"></i>
+                                <div class="card_show">
+                                    <span>View</span>
+                                </div>
+                            </div>
+                            <div class="card_title">
+                                <span>Today Parcels</span>
+                            </div>
+                            <div class="card_text">
+                                <span id="c_parcels">0</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col s12 m6 xl3">
+                        <a href="#!" class="card card-widget card-green">
+                            <div class="card_icon">
+                                <i class="fa fa-truck-moving"></i>
+                                <div class="card_show">
+                                    <span>View</span>
+                                </div>
+                            </div>
+                            <div class="card_title">
+                                <span>Delivered Today</span>
+                            </div>
+                            <div class="card_text">
+                                <span id="c_delivered">0</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col s12 m6 xl3">
+                        <a href="#!" class="card card-widget card-orange">
+                            <div class="card_icon">
+                               <i class="fa fa-boxes"></i>
+                                <div class="card_show">
+                                    <span>View</span>
+                                </div>
+                            </div>
+                            <div class="card_title">
+                                <span>Today Batches</span>
+                            </div>
+                            <div class="card_text">
+                                <span id="c_batches">0</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 m12 l6 xl6">
+                        <div class="card-title charts-title card-red"><i class="fa fa-box left"></i>Parcels</div>
+                        <div class="card card-charts">
+                            <div class="charts_line">
+                                <canvas id="parcelChart" class="chartjs-render-monitor" width="100%" height="500"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m12 l6 xl6">
+                        <div class="card-title charts-title card-orange"><i class="fa fa-boxes left"></i>Batches</div>
+                        <div class="card card-charts">
+                            <div class="charts_line">
+                                <canvas id="batchesChart" class="chartjs-render-monitor" width="100%" height="500"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+//= template/footer.html
+
+    <script>
+        $(document).ready(function () {
+
+
+            //Count
+
+
+            var options = {
+                useEasing: true,
+                useGrouping: true,
+                separator: ',',
+                decimal: '.',
+            };
+
+            var usersCount = new CountUp('c_users', 0, 56, 0, 4, options);
+            var parcelsCount = new CountUp('c_parcels', 0, 500, 0, 4, options);
+            var deliveredCount = new CountUp('c_delivered', 0, 10, 0, 4, options);
+            var batchesCount = new CountUp('c_batches', 0, 20, 0, 4, options);
+
+            usersCount.start();
+            parcelsCount.start();
+            deliveredCount.start();
+            batchesCount.start();
+
+
+            //Charts
+
+
+            var parcels = document.getElementById('parcelChart').getContext("2d");
+
+            var chartColorRed = "#e45123";
+
+            var gradientStroke = parcels.createLinearGradient(500, 0, 100, 0);
+            gradientStroke.addColorStop(0, '#333');
+            gradientStroke.addColorStop(1, chartColorRed);
+
+            var gradientFillRed = parcels.createLinearGradient(0, 170, 0, 50);
+            gradientFillRed.addColorStop(0, "rgba(128, 182, 244, 0)");
+            gradientFillRed.addColorStop(1, "rgba(228, 81, 35, 0.1)");
+
+            var parcelChart = new Chart(parcels, {
+                type: 'line',
+                data: {
+                    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                    datasets: [{
+                        label: "Parcels",
+                        borderColor: chartColorRed,
+                        pointBorderColor: '#fff',
+                        pointBackgroundColor: chartColorRed,
+                        pointHoverBackgroundColor: chartColorRed,
+                        pointHoverBorderColor: '#fff',
+                        pointBorderWidth: 3,
+                        pointHoverRadius: 10,
+                        pointHoverBorderWidth: 5,
+                        pointRadius: 10,
+                        fill: true,
+                        backgroundColor: gradientFillRed,
+                        borderWidth: 2,
+                        data: [50, 150, 30, 190, 130, 90, 150]
+                    }]
+                },
+                options: {
+                    layout: {
+                        padding: {
+                            left: 20,
+                            right: 20,
+                            top: 0,
+                            bottom: 0
+                        }
+                    },
+                    maintainAspectRatio: false,
+                    tooltips: {
+                        backgroundColor: '#fff',
+                        titleFontColor: '#333',
+                        bodyFontColor: '#666',
+                        bodySpacing: 4,
+                        xPadding: 12,
+                        mode: "index",
+                        intersect: 0,
+                        position: "nearest"
+                    },
+                    legend: {
+                        position: "top",
+                        display: false
+                    },
+                    animation: {
+                        easing: 'easeOutCirc'
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                fontColor: "rgba(0,0,0,0.7)",
+                                fontStyle: "bold",
+                                beginAtZero: true,
+                                maxTicksLimit: 5,
+                                padding: 10
+                            },
+                            gridLines: {
+                                drawTicks: true,
+                                drawBorder: false,
+                                display: true,
+                                color: "rgba(0,0,0,0.1)",
+                                zeroLineColor: "transparent"
+                            }
+
+                        }],
+                        xAxes: [{
+                            gridLines: {
+                                zeroLineColor: "transparent",
+                                display: false,
+
+                            },
+                            ticks: {
+                                padding: 10,
+                                fontColor: "rgba(0,0,0,0.7)",
+                                fontStyle: "bold"
+                            }
+                        }]
+                    }
+                }
+            });
+
+
+            var batches = document.getElementById('batchesChart').getContext("2d");
+
+            var chartColorOrange = "#fb8c00";
+
+            var gradientStroke = batches.createLinearGradient(500, 0, 100, 0);
+            gradientStroke.addColorStop(0, '#333');
+            gradientStroke.addColorStop(1, chartColorRed);
+
+            var gradientFillOrange = batches.createLinearGradient(0, 170, 0, 50);
+            gradientFillOrange.addColorStop(0, "rgba(128, 182, 244, 0)");
+            gradientFillOrange.addColorStop(1, "rgba(228, 81, 35, 0.1)");
+
+            var batchesChart = new Chart(batches, {
+                type: 'line',
+                data: {
+                    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                    datasets: [{
+                        label: "Batches",
+                        borderColor: chartColorOrange,
+                        pointBorderColor: '#fff',
+                        pointBackgroundColor: chartColorOrange,
+                        pointHoverBackgroundColor: chartColorOrange,
+                        pointHoverBorderColor: '#fff',
+                        pointBorderWidth: 3,
+                        pointHoverRadius: 10,
+                        pointHoverBorderWidth: 5,
+                        pointRadius: 10,
+                        fill: true,
+                        backgroundColor: gradientFillOrange,
+                        borderWidth: 2,
+                        data: [40, 50, 30, 55, 50, 40, 50]
+                    }]
+                },
+                options: {
+                    layout: {
+                        padding: {
+                            left: 20,
+                            right: 20,
+                            top: 0,
+                            bottom: 0
+                        }
+                    },
+                    maintainAspectRatio: false,
+                    tooltips: {
+                        backgroundColor: '#fff',
+                        titleFontColor: '#333',
+                        bodyFontColor: '#666',
+                        bodySpacing: 4,
+                        xPadding: 12,
+                        mode: "index",
+                        intersect: 0,
+                        position: "nearest"
+                    },
+                    legend: {
+                        position: "top",
+                        display: false
+                    },
+                    animation: {
+                        easing: 'easeOutCirc'
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                fontColor: "rgba(0,0,0,0.7)",
+                                fontStyle: "bold",
+                                beginAtZero: true,
+                                maxTicksLimit: 5,
+                                padding: 10
+                            },
+                            gridLines: {
+                                drawTicks: true,
+                                drawBorder: false,
+                                display: true,
+                                color: "rgba(0,0,0,0.1)",
+                                zeroLineColor: "transparent"
+                            }
+
+                        }],
+                        xAxes: [{
+                            gridLines: {
+                                zeroLineColor: "transparent",
+                                display: false,
+
+                            },
+                            ticks: {
+                                padding: 10,
+                                fontColor: "rgba(0,0,0,0.7)",
+                                fontStyle: "bold"
+                            }
+                        }]
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

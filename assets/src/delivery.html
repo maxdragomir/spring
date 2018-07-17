@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reports</title>
+    //= template/head.html
+</head>
+<body>
+
+    <!--<div class="loader">-->
+        <!--<div class="spinner"></div>-->
+    <!--</div>-->
+
+    <div class="wrapper">
+        <div class="main">
+            <div class="header">
+                <nav>
+                    <div class="nav-wrapper">
+                        <div class="right-side">
+                            <a href="index.html" class="logo waves-effect"><img src="img/logo-ua.png" alt="LOGO"></a>
+                            <button type="button" class="btn waves-effect show-mode ml-3">
+                                <i class="far fa-circle test-mode"></i>
+                                <i class="fas fa-circle live-mode active"></i>
+                            </button>
+                            <span class="text-status live active">Live mode</span>
+                            <span class="text-status test1">Test mode</span>
+                        </div>
+                        <ul class="header_menu desctop-menu">
+                            <li>
+                                <a href="index.html" class="waves-effect">
+                                    <i class="fa fa-chart-pie left"></i> <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-trigger waves-effect" href="#!" data-target="parcels">
+                                    <i class="fa fa-box left"></i> <span>Parcels</span><i class="fa fa-angle-down ml-2"></i>
+                                </a>
+                                <ul id="parcels" class="dropdown-content">
+                                    <li><a href="parcels.html" class="waves-effect waves-light">Parcels</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Temporaries</a></li>
+                                    <li><a href="batches.html" class="waves-effect waves-light">Batches</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Verification</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="dropdown-trigger waves-effect active" href="#!" data-target="reports">
+                                    <i class="fa fa-chart-area left"></i> <span>Reports</span><i class="fa fa-angle-down ml-2"></i>
+                                </a>
+                                <ul id="reports" class="dropdown-content">
+                                    <li><a href="general.html" class="waves-effect waves-light">General</a></li>
+                                    <li><a href="delivery.html" class="waves-effect waves-light active">Delivery Time</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class='dropdown-trigger waves-effect' href='#!' data-target='settings'>
+                                    <i class="fa fa-cogs left"></i> <span>Settings</span><i class="fa fa-angle-down ml-2"></i>
+                                </a>
+                                <ul id='settings' class='dropdown-content'>
+                                    <li><a href="#!" class="waves-effect waves-light">Users</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Hubs</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Tracking URLs</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Tracking Codes</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Errors</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">Profile</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#!" class="dropdown-trigger waves-effect" data-target='lang'>
+                                    <i class="fa fa-globe-americas"></i><i class="fa fa-angle-down ml-2"></i>
+                                </a>
+                                <ul id='lang' class='dropdown-content'>
+                                    <li><a href="#!" class="waves-effect waves-light">EN</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">RU</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">CH</a></li>
+                                    <li><a href="#!" class="waves-effect waves-light">ES</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#!" class="waves-effect">
+                                    <i class="fa fa-sign-out-alt"></i>
+                                </a>
+                            </li>
+                            <li class="mobile-menu">
+                                <a href="#" data-target="slide-out" class="sidenav-trigger waves-effect"><i class="fa fa-bars"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="content">
+                <ul id="slide-out" class="sidenav">
+                    <li class="sidebar_bg"></li>
+                    <li>
+                        <a href="index.html" class="waves-effect sidebar-logo">
+                            <img src="img/logo-ua.png" alt="">
+                        </a>
+                    </li>
+                    <li><div class="divider"></div></li>
+                    <li>
+                        <a href="index.html" class="collapsible-header no-drop waves-effect"><i class="fa fa-chart-pie left"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <ul class="collapsible collapsible-accordion">
+                            <li>
+                                <a class="collapsible-header waves-effect"><i class="fa fa-box left"></i> Parcels <i class="fa fa-angle-down"></i></a>
+                                <div class="collapsible-body sidenav-li-body-color">
+                                    <ul class="purchasing-group">
+                                        <li><a class="waves-effect" href="parcels.html">Parcels</a></li>
+                                        <li><a class="waves-effect" href="#">Temporaries</a></li>
+                                        <li><a class="waves-effect" href="batches.html">Batches</a></li>
+                                        <li><a class="waves-effect" href="#">Verification</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="collapsible-header waves-effect active"><i class="fa fa-chart-area left"></i> Reports <i class="fa fa-angle-down"></i></a>
+                                <div class="collapsible-body sidenav-li-body-color">
+                                    <ul class="purchasing-group">
+                                        <li><a class="waves-effect" href="general.html">General</a></li>
+                                        <li><a class="waves-effect active" href="delivery.html">Delivery Time</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="collapsible-header waves-effect"><i class="fa fa-cogs left"></i> Settings <i class="fa fa-angle-down"></i></a>
+                                <div class="collapsible-body sidenav-li-body-color">
+                                    <ul class="purchasing-group">
+                                        <li><a class="waves-effect" href="#">Users</a></li>
+                                        <li><a class="waves-effect" href="#">Hubs</a></li>
+                                        <li><a class="waves-effect" href="#">Settings</a></li>
+                                        <li><a class="waves-effect" href="#">Profile</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="collapsible-header waves-effect"> <i class="fa fa-globe-americas"></i>Languages<i class="fa fa-angle-down"></i></a>
+                                <div class="collapsible-body sidenav-li-body-color">
+                                    <ul class="purchasing-group">
+                                        <li><a class="waves-effect" href="#">EN</a></li>
+                                        <li><a class="waves-effect" href="#">RU</a></li>
+                                        <li><a class="waves-effect" href="#">CH</a></li>
+                                        <li><a class="waves-effect" href="#">ES</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!" class="collapsible-header no-drop waves-effect"><i class="fa fa-sign-out-alt"></i>Logout</a>
+                    </li>
+                </ul>
+
+                <div class="row">
+                    <div class="col s12 mb-4">
+                        <div class="page-title">
+                            <i class="fa fa-chart-area left"></i> Delivery Time
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4 mb-0">
+                    <div class="col s12 m6 l2">
+                        <div class="card card-filters">
+                            <div class="input-field col s12 m-0">
+                                <select>
+                                    <option value="0" selected>User</option><option value="101796">100002482 - AGAPEA</option><option value="101770">F100004036 - ALIZE</option><option value="101779">100003693 - ASIAGLOBAL</option><option value="101812">100003431 - BEAUTY INNOVATIONS</option><option value="101773">T100012346 - BVoet</option><option value="101819">100005001 - LA CAMARA DEL ALQUIMISTA</option><option value="101750">100004627 - CARETHY</option><option value="101793">100003256 - CLICKINRED</option><option value="101802">100003529 - CONOSUR</option><option value="101817">100001839 - CARMEN SEOANE</option><option value="101790">100004727 - DIRECT OPTIC</option><option value="101815">100001843 - DENIS MARTIN VILLANEGO</option><option value="101783">100004661 - FAIR PLAY</option><option value="101814">100003269 - FAMAIDEAL</option><option value="101807">100004249 - FERNANDO LOPEZ SANZ</option><option value="101810">100001202 - FRANCIS GAGLIO</option><option value="101792">100003469 - FTLExpress</option><option value="101759">T166777888 - GBavera</option><option value="101774">100003176 - GREENSTUFF</option><option value="101818">000728960 - GRUPO POSTA</option><option value="101768">T100001234 - HBlanco</option><option value="101771">F100004757 - INDERWEAR</option><option value="101806">100001857 - JAVIER LOPEZ SANZ</option><option value="101813">100001919 - JUAN RODRIGUEZ DE LA FLOR</option><option value="101800">100001858 - JUSTCLICK</option><option value="101764">T166777889 - KKChow</option><option value="101809">100002577 - LUIS ALBA GALLO</option><option value="101785">100004290 - METROPOLIS</option><option value="101749">100003041 - MISCOTA</option><option value="101808">100004279 - MARIA JOSE ARDURA GARCIA</option><option value="101794">100002088 - PACOLIMON</option><option value="101816">100003349 - PERLA AZABACHE</option><option value="101784">100003732 - PROYECTARTE</option><option value="101811">100002579 - SAMUEL DE ROA</option><option value="101797">100001814 - SERVOVENDI</option><option value="101735">TEST - Test Shipper</option><option value="101758">T111111111 - Test123</option><option value="101769">T100012345 - TESTFR</option><option value="101795">100003800 - TODOTIENDA</option><option value="101742">100002562 - TRADEINN</option><option value="101801">100002980 - TUDETIC</option><option value="101805">100004891 - WEAREWADO</option><option value="101748">100004626 - WELLINDAL</option><option value="101765">100004505 - ZELERIS</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l2">
+                        <div class="card card-filters">
+                            <div class="input-field col s12 m-0">
+                                <select>
+                                    <option value="0" selected>Services</option><option value="PPLEU">PPLEU - PostNL Parcel EU</option><option value="PPLGE">PPLGE - PostNL Parcel GlobalPack EMS</option><option value="PPLGU">PPLGU - PostNL Parcel GlobalPack UPU</option><option value="PPTT">PPTT - PostNL Packet Tracked</option><option value="PPTR">PPTR - PostNL Packet Registered</option><option value="RM24">RM24 - Royal Mail Tracked 24 - Non Signature</option><option value="RM24S">RM24S - Royal Mail Tracked 24 - With Signature</option><option value="RM48">RM48 - Royal Mail Tracked 48 - Non Signature</option><option value="RM48S">RM48S - Royal Mail Tracked 48 - With Signature</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l2">
+                        <div class="card card-filters">
+                            <div class="input-field col s12 m-0">
+                                <select>
+                                    <option value="" selected="">Hub</option><option value="2">France - Main Hub</option><option value="4">HK - Main Hub</option><option value="3">Italy - Main hub</option><option value="1">Spain - Main Hub</option><option value="5">UK - Main hub</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l2">
+                        <div class="card card-filters">
+                            <div class="input-field col s12 m-0">
+                                <select>
+                                    <option value="c" selected="">Created</option><option value="a">Accepted</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m12 l4 xl4">
+                        <div class="card card-filters no-timepicker">
+                            <div class="input-field col s12 m6 l6 xl6 m-0">
+                                <input id="date-start" class="m-0 datepicker-start" type="text">
+                                <label for="date-start">Date start</label>
+                            </div>
+                            <div class="input-field col s12 m6 l6 xl6 m-0">
+                                <input id="date-end" class="m-0 datepicker-end" type="text">
+                                <label for="date-end">Date end</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-0 mb-0">
+                    <div class="col s12 m12 l5 offset-l7">
+                        <div class="card card-inv card-button delivery-btn">
+                            <button type="button" class="btn other-btn waves-effect tooltipped" data-position="top" data-tooltip="Download">CSV</button>
+                            <select>
+                                <option value="0" selected="">Select</option>
+                                <option value="1">Total Delivery Days (inc. customs days)</option>
+                                <option value="2">Total Transit Days (exc. customs days)</option>
+                                <option value="3">Carrier Delivery Days (inc. customs days)</option>
+                                <option value="4">Carrier Transit Days (exc. customs days)</option>
+                            </select>
+                            <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Download">PDF</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+//= template/footer.html
+
+    <script>
+
+        $(document).ready(function () {
+
+            //clear filters and animate icon
+            $('.card-button').on('click', '.clear-btn', function () {
+
+                var el = $('.clear-btn i').clone().removeClass('active');
+                $('.clear-btn i').remove();
+                $('.clear-btn').append(el);
+                el.addClass('active');
+
+            });
+
+
+        });
+    </script>
+</body>
+</html>
