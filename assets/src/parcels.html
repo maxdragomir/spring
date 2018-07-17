@@ -57,9 +57,9 @@
                                 <ul id='settings' class='dropdown-content'>
                                     <li><a href="#!" class="waves-effect waves-light">Users</a></li>
                                     <li><a href="#!" class="waves-effect waves-light">Hubs</a></li>
-                                    <li><a href="#!" class="waves-effect waves-light">Tracking URLs</a></li>
-                                    <li><a href="#!" class="waves-effect waves-light">Tracking Codes</a></li>
-                                    <li><a href="#!" class="waves-effect waves-light">Errors</a></li>
+                                    <li><a href="trackingurls.html" class="waves-effect waves-light">Tracking URLs</a></li>
+                                    <li><a href="trackingcodes.html" class="waves-effect waves-light">Tracking Codes</a></li>
+                                    <li><a href="errors.html" class="waves-effect waves-light">Errors</a></li>
                                     <li><a href="#!" class="waves-effect waves-light">Profile</a></li>
                                 </ul>
                             </li>
@@ -127,7 +127,9 @@
                                     <ul class="purchasing-group">
                                         <li><a class="waves-effect" href="#">Users</a></li>
                                         <li><a class="waves-effect" href="#">Hubs</a></li>
-                                        <li><a class="waves-effect" href="#">Settings</a></li>
+                                        <li><a class="waves-effect" href="trackingurls.html">Tracking URLs</a></li>
+                                        <li><a class="waves-effect" href="trackingcodes.html">Tracking Codes</a></li>
+                                        <li><a class="waves-effect" href="errors.html">Errors</a></li>
                                         <li><a class="waves-effect" href="#">Profile</a></li>
                                     </ul>
                                 </div>
@@ -203,7 +205,17 @@
                         <div class="card card-filters">
                             <div class="input-field col s12 m-0">
                                 <select>
-                                    <option value="0" selected>User</option><option value="101796">100002482 - AGAPEA</option><option value="101770">F100004036 - ALIZE</option><option value="101779">100003693 - ASIAGLOBAL</option><option value="101812">100003431 - BEAUTY INNOVATIONS</option><option value="101773">T100012346 - BVoet</option><option value="101819">100005001 - LA CAMARA DEL ALQUIMISTA</option><option value="101750">100004627 - CARETHY</option><option value="101793">100003256 - CLICKINRED</option><option value="101802">100003529 - CONOSUR</option><option value="101817">100001839 - CARMEN SEOANE</option><option value="101790">100004727 - DIRECT OPTIC</option><option value="101815">100001843 - DENIS MARTIN VILLANEGO</option><option value="101783">100004661 - FAIR PLAY</option><option value="101814">100003269 - FAMAIDEAL</option><option value="101807">100004249 - FERNANDO LOPEZ SANZ</option><option value="101810">100001202 - FRANCIS GAGLIO</option><option value="101792">100003469 - FTLExpress</option><option value="101759">T166777888 - GBavera</option><option value="101774">100003176 - GREENSTUFF</option><option value="101818">000728960 - GRUPO POSTA</option><option value="101768">T100001234 - HBlanco</option><option value="101771">F100004757 - INDERWEAR</option><option value="101806">100001857 - JAVIER LOPEZ SANZ</option><option value="101813">100001919 - JUAN RODRIGUEZ DE LA FLOR</option><option value="101800">100001858 - JUSTCLICK</option><option value="101764">T166777889 - KKChow</option><option value="101809">100002577 - LUIS ALBA GALLO</option><option value="101785">100004290 - METROPOLIS</option><option value="101749">100003041 - MISCOTA</option><option value="101808">100004279 - MARIA JOSE ARDURA GARCIA</option><option value="101794">100002088 - PACOLIMON</option><option value="101816">100003349 - PERLA AZABACHE</option><option value="101784">100003732 - PROYECTARTE</option><option value="101811">100002579 - SAMUEL DE ROA</option><option value="101797">100001814 - SERVOVENDI</option><option value="101735">TEST - Test Shipper</option><option value="101758">T111111111 - Test123</option><option value="101769">T100012345 - TESTFR</option><option value="101795">100003800 - TODOTIENDA</option><option value="101742">100002562 - TRADEINN</option><option value="101801">100002980 - TUDETIC</option><option value="101805">100004891 - WEAREWADO</option><option value="101748">100004626 - WELLINDAL</option><option value="101765">100004505 - ZELERIS</option>
+                                    <option value="0" selected>User</option>
+                                    <option value="0">User 1</option>
+                                    <option value="0">User 2</option>
+                                    <option value="0">User 3</option>
+                                    <option value="0">User 4</option>
+                                    <option value="0">User 5</option>
+                                    <option value="0">User 6</option>
+                                    <option value="0">User 7</option>
+                                    <option value="0">User 8</option>
+                                    <option value="0">User 9</option>
+                                    <option value="0">User 10</option>
                                 </select>
                             </div>
                         </div>
@@ -304,7 +316,8 @@
                             <div class="card-title_result ">
                                 <div class="result tooltipped" data-position="top" data-tooltip="Results">
                                     <i class="fa fa-table left"></i>
-                                    <span id="c_result">16923</span>
+                                    <span class="pr-2">Found:</span>
+                                    <div id="c_result">16923</div>
                                 </div>
                             </div>
                             <div class="card-title_pagination">
@@ -704,6 +717,876 @@
                                             </div>
                                         </td>
                                     </tr>
+
+                                        <tr>
+                                            <td  data-title="Tracking Number
+                                                         Local Tracking Number
+                                                         Shipper  Reference / Display ID">
+                                                <div>
+                                                    <div class="bold"><a href="#view" class="modal-trigger">11LX498413835NL</a></div>
+                                                    <div class="light">LX498413835NL</div>
+                                                    <div><span class="color-red">z11400956-001</span> / <span class="color-orange">ID000000699462</span></div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Service
+                                                        Label
+                                                        Invoice">
+                                                <div class="print-links">
+                                                    <div>PPTT - PostNL Packet Tracked</div>
+                                                    <div class="color-orange">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="color-blue">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Invoice"><i class="fa fa-file-invoice-dollar"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Status
+                                                        Delivery
+                                                        Days">
+                                                <div>
+                                                    <div class="color-green">Delivered</div>
+                                                    <div class="color-green">5 / 1</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Value
+                                                        Weight">
+                                                <div>
+                                                    <div class="bold">10.00 EUR</div>
+                                                    <div class="color-grey light text-cross">1.44 kg</div>
+                                                    <div>1.454 kg</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Consignee">
+                                                <div class="alot-text">
+                                                    <button type="button" class="btn-show-all tooltipped" data-position="top" data-tooltip="Show all"><i class="fa fa-eye"></i></button>
+                                                    <div>TRENTON MOLLER
+                                                        <br>
+                                                        SHORT STOP TYRES
+                                                        <br>
+                                                        ADAMSTOWN, NSW 2289</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Shipper">
+                                                <div>
+                                                    <div class="bold">TRADEINN</div>
+                                                    <div>TRADEINN RETAIL <br> SERVICES S.L</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Created
+                                                        Accepted
+                                                        STC Time">
+                                                <div>
+                                                    <div>23.06.2018, 13:47</div>
+                                                    <div class="bold">25.06.2018, 11:47</div>
+                                                    <div class="color-red">29.06.2018, 11:38</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Source">
+                                                <div>
+                                                    <div>OMS</div>
+                                                    <a class="bold" href="#">1887</a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="actions-btn">
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Tracking"><i class="fa fa-map-marker-alt"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Carrier Tracking"><i class="fa fa-map-marker"></i></a>
+                                                    <a href="#view" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="View"><i class="fa fa-eye"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Cancel"><i class="fa fa-ban"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  data-title="Tracking Number
+                                                         Local Tracking Number
+                                                         Shipper  Reference / Display ID">
+                                                <div>
+                                                    <div class="bold"><a href="#creat" class="modal-trigger">11LX498413835NL</a></div>
+                                                    <div class="light">LX498413835NL</div>
+                                                    <div><span class="color-red">z11400956-001</span> / <span class="color-orange">ID000000699462</span></div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Service
+                                                        Label
+                                                        Invoice">
+                                                <div class="print-links">
+                                                    <div>PPTT - PostNL Packet Tracked</div>
+                                                    <div class="color-orange">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="color-blue">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Invoice"><i class="fa fa-file-invoice-dollar"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Status
+                                                        Delivery
+                                                        Days">
+                                                <div>
+                                                    <div class="color-secondary">Created</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Value
+                                                        Weight">
+                                                <div>
+                                                    <div class="bold">10.00 EUR</div>
+                                                    <div class="color-grey light text-cross">1.44 kg</div>
+                                                    <div>1.454 kg</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Consignee">
+                                                <div class="alot-text">
+                                                    <button type="button" class="btn-show-all tooltipped" data-position="top" data-tooltip="Show all"><i class="fa fa-eye"></i></button>
+                                                    <div>TRENTON MOLLER
+                                                        <br>
+                                                        SHORT STOP TYRES
+                                                        <br>
+                                                        ADAMSTOWN, NSW 2289 ADAMSTOWN, NSW 2289 ADAMSTOWN, NSW 2289 ADAMSTOWN, NSW 2289</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Shipper">
+                                                <div>
+                                                    <div class="bold">TRADEINN</div>
+                                                    <div>TRADEINN RETAIL <br> SERVICES S.L</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Created
+                                                        Accepted
+                                                        STC Time">
+                                                <div>
+                                                    <div>23.06.2018, 13:47</div>
+                                                    <div class="bold">25.06.2018, 11:47</div>
+                                                    <div class="color-red">29.06.2018, 11:38</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Source">
+                                                <div>
+                                                    <div>OMS</div>
+                                                    <a class="bold" href="#">1887</a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="actions-btn">
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Tracking"><i class="fa fa-map-marker-alt"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Carrier Tracking"><i class="fa fa-map-marker"></i></a>
+                                                    <a href="#creat" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="View"><i class="fa fa-eye"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  data-title="Tracking Number
+                                                         Local Tracking Number
+                                                         Shipper  Reference / Display ID">
+                                                <div>
+                                                    <div class="bold"><a href="#edit" class="modal-trigger">11LX498413835NL</a></div>
+                                                    <div class="light">LX498413835NL</div>
+                                                    <div><span class="color-red">z11400956-001</span> / <span class="color-orange">ID000000699462</span></div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Service
+                                                        Label
+                                                        Invoice">
+                                                <div class="print-links">
+                                                    <div>PPTT - PostNL Packet Tracked</div>
+                                                    <div class="color-orange">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="color-blue">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Invoice"><i class="fa fa-file-invoice-dollar"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Status
+                                                        Delivery
+                                                        Days">
+                                                <div>
+                                                    <div class="color-grey">Cancelled</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Value
+                                                        Weight">
+                                                <div>
+                                                    <div class="bold">10.00 EUR</div>
+                                                    <div class="color-grey light text-cross">1.44 kg</div>
+                                                    <div>1.454 kg</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Consignee">
+                                                <div class="alot-text">
+                                                    <button type="button" class="btn-show-all tooltipped" data-position="top" data-tooltip="Show all"><i class="fa fa-eye"></i></button>
+                                                    <div>TRENTON MOLLER
+                                                        <br>
+                                                        SHORT STOP TYRES
+                                                        <br>
+                                                        ADAMSTOWN, NSW 2289 ADAMSTOWN, NSW 2289 ADAMSTOWN, NSW 2289 ADAMSTOWN, NSW 2289</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Shipper">
+                                                <div>
+                                                    <div class="bold">TRADEINN</div>
+                                                    <div>TRADEINN RETAIL <br> SERVICES S.L</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Created
+                                                        Accepted
+                                                        STC Time">
+                                                <div>
+                                                    <div>23.06.2018, 13:47</div>
+                                                    <div class="bold">25.06.2018, 11:47</div>
+                                                    <div class="color-red">29.06.2018, 11:38</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Source">
+                                                <div>
+                                                    <div>OMS</div>
+                                                    <a class="bold" href="#">1887</a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="actions-btn">
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Tracking"><i class="fa fa-map-marker-alt"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Carrier Tracking"><i class="fa fa-map-marker"></i></a>
+                                                    <a href="#edit" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="Edit"><i class="fa fa-pen"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td  data-title="Tracking Number
+                                                         Local Tracking Number
+                                                         Shipper  Reference / Display ID">
+                                                <div>
+                                                    <div class="bold"><a href="#view" class="modal-trigger">11LX498413835NL</a></div>
+                                                    <div class="light">LX498413835NL</div>
+                                                    <div><span class="color-red">z11400956-001</span> / <span class="color-orange">ID000000699462</span></div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Service
+                                                        Label
+                                                        Invoice">
+                                                <div class="print-links">
+                                                    <div>PPTT - PostNL Packet Tracked</div>
+                                                    <div class="color-orange">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="color-blue">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Invoice"><i class="fa fa-file-invoice-dollar"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Status
+                                                        Delivery
+                                                        Days">
+                                                <div>
+                                                    <div class="color-green">Delivered</div>
+                                                    <div class="color-green">5 / 1</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Value
+                                                        Weight">
+                                                <div>
+                                                    <div class="bold">10.00 EUR</div>
+                                                    <div class="color-grey light text-cross">1.44 kg</div>
+                                                    <div>1.454 kg</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Consignee">
+                                                <div class="alot-text">
+                                                    <button type="button" class="btn-show-all tooltipped" data-position="top" data-tooltip="Show all"><i class="fa fa-eye"></i></button>
+                                                    <div>TRENTON MOLLER
+                                                        <br>
+                                                        SHORT STOP TYRES
+                                                        <br>
+                                                        ADAMSTOWN, NSW 2289</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Shipper">
+                                                <div>
+                                                    <div class="bold">TRADEINN</div>
+                                                    <div>TRADEINN RETAIL <br> SERVICES S.L</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Created
+                                                        Accepted
+                                                        STC Time">
+                                                <div>
+                                                    <div>23.06.2018, 13:47</div>
+                                                    <div class="bold">25.06.2018, 11:47</div>
+                                                    <div class="color-red">29.06.2018, 11:38</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Source">
+                                                <div>
+                                                    <div>OMS</div>
+                                                    <a class="bold" href="#">1887</a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="actions-btn">
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Tracking"><i class="fa fa-map-marker-alt"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Carrier Tracking"><i class="fa fa-map-marker"></i></a>
+                                                    <a href="#view" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="View"><i class="fa fa-eye"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Cancel"><i class="fa fa-ban"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  data-title="Tracking Number
+                                                         Local Tracking Number
+                                                         Shipper  Reference / Display ID">
+                                                <div>
+                                                    <div class="bold"><a href="#creat" class="modal-trigger">11LX498413835NL</a></div>
+                                                    <div class="light">LX498413835NL</div>
+                                                    <div><span class="color-red">z11400956-001</span> / <span class="color-orange">ID000000699462</span></div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Service
+                                                        Label
+                                                        Invoice">
+                                                <div class="print-links">
+                                                    <div>PPTT - PostNL Packet Tracked</div>
+                                                    <div class="color-orange">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="color-blue">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Invoice"><i class="fa fa-file-invoice-dollar"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Status
+                                                        Delivery
+                                                        Days">
+                                                <div>
+                                                    <div class="color-secondary">Created</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Value
+                                                        Weight">
+                                                <div>
+                                                    <div class="bold">10.00 EUR</div>
+                                                    <div class="color-grey light text-cross">1.44 kg</div>
+                                                    <div>1.454 kg</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Consignee">
+                                                <div class="alot-text">
+                                                    <button type="button" class="btn-show-all tooltipped" data-position="top" data-tooltip="Show all"><i class="fa fa-eye"></i></button>
+                                                    <div>TRENTON MOLLER
+                                                        <br>
+                                                        SHORT STOP TYRES
+                                                        <br>
+                                                        ADAMSTOWN, NSW 2289 ADAMSTOWN, NSW 2289 ADAMSTOWN, NSW 2289 ADAMSTOWN, NSW 2289</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Shipper">
+                                                <div>
+                                                    <div class="bold">TRADEINN</div>
+                                                    <div>TRADEINN RETAIL <br> SERVICES S.L</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Created
+                                                        Accepted
+                                                        STC Time">
+                                                <div>
+                                                    <div>23.06.2018, 13:47</div>
+                                                    <div class="bold">25.06.2018, 11:47</div>
+                                                    <div class="color-red">29.06.2018, 11:38</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Source">
+                                                <div>
+                                                    <div>OMS</div>
+                                                    <a class="bold" href="#">1887</a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="actions-btn">
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Tracking"><i class="fa fa-map-marker-alt"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Carrier Tracking"><i class="fa fa-map-marker"></i></a>
+                                                    <a href="#creat" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="View"><i class="fa fa-eye"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  data-title="Tracking Number
+                                                         Local Tracking Number
+                                                         Shipper  Reference / Display ID">
+                                                <div>
+                                                    <div class="bold"><a href="#edit" class="modal-trigger">11LX498413835NL</a></div>
+                                                    <div class="light">LX498413835NL</div>
+                                                    <div><span class="color-red">z11400956-001</span> / <span class="color-orange">ID000000699462</span></div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Service
+                                                        Label
+                                                        Invoice">
+                                                <div class="print-links">
+                                                    <div>PPTT - PostNL Packet Tracked</div>
+                                                    <div class="color-orange">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="color-blue">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Invoice"><i class="fa fa-file-invoice-dollar"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Status
+                                                        Delivery
+                                                        Days">
+                                                <div>
+                                                    <div class="color-grey">Cancelled</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Value
+                                                        Weight">
+                                                <div>
+                                                    <div class="bold">10.00 EUR</div>
+                                                    <div class="color-grey light text-cross">1.44 kg</div>
+                                                    <div>1.454 kg</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Consignee">
+                                                <div class="alot-text">
+                                                    <button type="button" class="btn-show-all tooltipped" data-position="top" data-tooltip="Show all"><i class="fa fa-eye"></i></button>
+                                                    <div>TRENTON MOLLER
+                                                        <br>
+                                                        SHORT STOP TYRES
+                                                        <br>
+                                                        ADAMSTOWN, NSW 2289 ADAMSTOWN, NSW 2289 ADAMSTOWN, NSW 2289 ADAMSTOWN, NSW 2289</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Shipper">
+                                                <div>
+                                                    <div class="bold">TRADEINN</div>
+                                                    <div>TRADEINN RETAIL <br> SERVICES S.L</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Created
+                                                        Accepted
+                                                        STC Time">
+                                                <div>
+                                                    <div>23.06.2018, 13:47</div>
+                                                    <div class="bold">25.06.2018, 11:47</div>
+                                                    <div class="color-red">29.06.2018, 11:38</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Source">
+                                                <div>
+                                                    <div>OMS</div>
+                                                    <a class="bold" href="#">1887</a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="actions-btn">
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Tracking"><i class="fa fa-map-marker-alt"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Carrier Tracking"><i class="fa fa-map-marker"></i></a>
+                                                    <a href="#edit" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="Edit"><i class="fa fa-pen"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td  data-title="Tracking Number
+                                                         Local Tracking Number
+                                                         Shipper  Reference / Display ID">
+                                                <div>
+                                                    <div class="bold"><a href="#view" class="modal-trigger">11LX498413835NL</a></div>
+                                                    <div class="light">LX498413835NL</div>
+                                                    <div><span class="color-red">z11400956-001</span> / <span class="color-orange">ID000000699462</span></div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Service
+                                                        Label
+                                                        Invoice">
+                                                <div class="print-links">
+                                                    <div>PPTT - PostNL Packet Tracked</div>
+                                                    <div class="color-orange">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="color-blue">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Invoice"><i class="fa fa-file-invoice-dollar"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Status
+                                                        Delivery
+                                                        Days">
+                                                <div>
+                                                    <div class="color-green">Delivered</div>
+                                                    <div class="color-green">5 / 1</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Value
+                                                        Weight">
+                                                <div>
+                                                    <div class="bold">10.00 EUR</div>
+                                                    <div class="color-grey light text-cross">1.44 kg</div>
+                                                    <div>1.454 kg</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Consignee">
+                                                <div class="alot-text">
+                                                    <button type="button" class="btn-show-all tooltipped" data-position="top" data-tooltip="Show all"><i class="fa fa-eye"></i></button>
+                                                    <div>TRENTON MOLLER
+                                                        <br>
+                                                        SHORT STOP TYRES
+                                                        <br>
+                                                        ADAMSTOWN, NSW 2289</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Shipper">
+                                                <div>
+                                                    <div class="bold">TRADEINN</div>
+                                                    <div>TRADEINN RETAIL <br> SERVICES S.L</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Created
+                                                        Accepted
+                                                        STC Time">
+                                                <div>
+                                                    <div>23.06.2018, 13:47</div>
+                                                    <div class="bold">25.06.2018, 11:47</div>
+                                                    <div class="color-red">29.06.2018, 11:38</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Source">
+                                                <div>
+                                                    <div>OMS</div>
+                                                    <a class="bold" href="#">1887</a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="actions-btn">
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Tracking"><i class="fa fa-map-marker-alt"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Carrier Tracking"><i class="fa fa-map-marker"></i></a>
+                                                    <a href="#view" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="View"><i class="fa fa-eye"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Cancel"><i class="fa fa-ban"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  data-title="Tracking Number
+                                                         Local Tracking Number
+                                                         Shipper  Reference / Display ID">
+                                                <div>
+                                                    <div class="bold"><a href="#creat" class="modal-trigger">11LX498413835NL</a></div>
+                                                    <div class="light">LX498413835NL</div>
+                                                    <div><span class="color-red">z11400956-001</span> / <span class="color-orange">ID000000699462</span></div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Service
+                                                        Label
+                                                        Invoice">
+                                                <div class="print-links">
+                                                    <div>PPTT - PostNL Packet Tracked</div>
+                                                    <div class="color-orange">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="color-blue">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Invoice"><i class="fa fa-file-invoice-dollar"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Status
+                                                        Delivery
+                                                        Days">
+                                                <div>
+                                                    <div class="color-secondary">Created</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Value
+                                                        Weight">
+                                                <div>
+                                                    <div class="bold">10.00 EUR</div>
+                                                    <div class="color-grey light text-cross">1.44 kg</div>
+                                                    <div>1.454 kg</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Consignee">
+                                                <div class="alot-text">
+                                                    <button type="button" class="btn-show-all tooltipped" data-position="top" data-tooltip="Show all"><i class="fa fa-eye"></i></button>
+                                                    <div>TRENTON MOLLER
+                                                        <br>
+                                                        SHORT STOP TYRES
+                                                        <br>
+                                                        ADAMSTOWN, NSW 2289 ADAMSTOWN, NSW 2289 ADAMSTOWN, NSW 2289 ADAMSTOWN, NSW 2289</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Shipper">
+                                                <div>
+                                                    <div class="bold">TRADEINN</div>
+                                                    <div>TRADEINN RETAIL <br> SERVICES S.L</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Created
+                                                        Accepted
+                                                        STC Time">
+                                                <div>
+                                                    <div>23.06.2018, 13:47</div>
+                                                    <div class="bold">25.06.2018, 11:47</div>
+                                                    <div class="color-red">29.06.2018, 11:38</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Source">
+                                                <div>
+                                                    <div>OMS</div>
+                                                    <a class="bold" href="#">1887</a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="actions-btn">
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Tracking"><i class="fa fa-map-marker-alt"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Carrier Tracking"><i class="fa fa-map-marker"></i></a>
+                                                    <a href="#creat" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="View"><i class="fa fa-eye"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  data-title="Tracking Number
+                                                         Local Tracking Number
+                                                         Shipper  Reference / Display ID">
+                                                <div>
+                                                    <div class="bold"><a href="#edit" class="modal-trigger">11LX498413835NL</a></div>
+                                                    <div class="light">LX498413835NL</div>
+                                                    <div><span class="color-red">z11400956-001</span> / <span class="color-orange">ID000000699462</span></div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Service
+                                                        Label
+                                                        Invoice">
+                                                <div class="print-links">
+                                                    <div>PPTT - PostNL Packet Tracked</div>
+                                                    <div class="color-orange">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="color-blue">
+                                                        <span class="tooltipped" data-position="top" data-tooltip="Invoice"><i class="fa fa-file-invoice-dollar"></i></span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL200</a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
+                                                            <a href="#">ZPL300</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Status
+                                                        Delivery
+                                                        Days">
+                                                <div>
+                                                    <div class="color-grey">Cancelled</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Value
+                                                        Weight">
+                                                <div>
+                                                    <div class="bold">10.00 EUR</div>
+                                                    <div class="color-grey light text-cross">1.44 kg</div>
+                                                    <div>1.454 kg</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Consignee">
+                                                <div class="alot-text">
+                                                    <button type="button" class="btn-show-all tooltipped" data-position="top" data-tooltip="Show all"><i class="fa fa-eye"></i></button>
+                                                    <div>TRENTON MOLLER
+                                                        <br>
+                                                        SHORT STOP TYRES
+                                                        <br>
+                                                        ADAMSTOWN, NSW 2289 ADAMSTOWN, NSW 2289 ADAMSTOWN, NSW 2289 ADAMSTOWN, NSW 2289</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Shipper">
+                                                <div>
+                                                    <div class="bold">TRADEINN</div>
+                                                    <div>TRADEINN RETAIL <br> SERVICES S.L</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Created
+                                                        Accepted
+                                                        STC Time">
+                                                <div>
+                                                    <div>23.06.2018, 13:47</div>
+                                                    <div class="bold">25.06.2018, 11:47</div>
+                                                    <div class="color-red">29.06.2018, 11:38</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Source">
+                                                <div>
+                                                    <div>OMS</div>
+                                                    <a class="bold" href="#">1887</a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="actions-btn">
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Tracking"><i class="fa fa-map-marker-alt"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Carrier Tracking"><i class="fa fa-map-marker"></i></a>
+                                                    <a href="#edit" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="Edit"><i class="fa fa-pen"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
 
                                     </tbody>
                                 </table>
@@ -1168,6 +2051,11 @@
                         <!--</div>-->
                     </div>
                 </div>
+
+            <div class="footer">
+                <div class="copyright">
+                    Developed and supported by <a target="_blank" href="http://www.xmllogistic.com/"> XMLlogistic</a>, a subsidiary of <a target="_blank" href="http://www.xmlshop.com/">XMLshop </a>
+                </div>
             </div>
         </div>
     </div>
@@ -1192,7 +2080,17 @@
                             </div>
                             <div class="input-field col s12 m9 color-grey">
                                 <select>
-                                    <option value="0" selected>User</option><option value="101796">100002482 - AGAPEA</option><option value="101770">F100004036 - ALIZE</option><option value="101779">100003693 - ASIAGLOBAL</option><option value="101812">100003431 - BEAUTY INNOVATIONS</option><option value="101773">T100012346 - BVoet</option><option value="101819">100005001 - LA CAMARA DEL ALQUIMISTA</option><option value="101750">100004627 - CARETHY</option><option value="101793">100003256 - CLICKINRED</option><option value="101802">100003529 - CONOSUR</option><option value="101817">100001839 - CARMEN SEOANE</option><option value="101790">100004727 - DIRECT OPTIC</option><option value="101815">100001843 - DENIS MARTIN VILLANEGO</option><option value="101783">100004661 - FAIR PLAY</option><option value="101814">100003269 - FAMAIDEAL</option><option value="101807">100004249 - FERNANDO LOPEZ SANZ</option><option value="101810">100001202 - FRANCIS GAGLIO</option><option value="101792">100003469 - FTLExpress</option><option value="101759">T166777888 - GBavera</option><option value="101774">100003176 - GREENSTUFF</option><option value="101818">000728960 - GRUPO POSTA</option><option value="101768">T100001234 - HBlanco</option><option value="101771">F100004757 - INDERWEAR</option><option value="101806">100001857 - JAVIER LOPEZ SANZ</option><option value="101813">100001919 - JUAN RODRIGUEZ DE LA FLOR</option><option value="101800">100001858 - JUSTCLICK</option><option value="101764">T166777889 - KKChow</option><option value="101809">100002577 - LUIS ALBA GALLO</option><option value="101785">100004290 - METROPOLIS</option><option value="101749">100003041 - MISCOTA</option><option value="101808">100004279 - MARIA JOSE ARDURA GARCIA</option><option value="101794">100002088 - PACOLIMON</option><option value="101816">100003349 - PERLA AZABACHE</option><option value="101784">100003732 - PROYECTARTE</option><option value="101811">100002579 - SAMUEL DE ROA</option><option value="101797">100001814 - SERVOVENDI</option><option value="101735">TEST - Test Shipper</option><option value="101758">T111111111 - Test123</option><option value="101769">T100012345 - TESTFR</option><option value="101795">100003800 - TODOTIENDA</option><option value="101742">100002562 - TRADEINN</option><option value="101801">100002980 - TUDETIC</option><option value="101805">100004891 - WEAREWADO</option><option value="101748">100004626 - WELLINDAL</option><option value="101765">100004505 - ZELERIS</option>
+                                    <option value="0" selected>User</option>
+                                    <option value="0">User 1</option>
+                                    <option value="0">User 2</option>
+                                    <option value="0">User 3</option>
+                                    <option value="0">User 4</option>
+                                    <option value="0">User 5</option>
+                                    <option value="0">User 6</option>
+                                    <option value="0">User 7</option>
+                                    <option value="0">User 8</option>
+                                    <option value="0">User 9</option>
+                                    <option value="0">User 10</option>
                                 </select>
                             </div>
                         </div>
@@ -1471,7 +2369,7 @@
         </div>
         <div class="modal-footer">
 
-            <div class="switch card-green">
+            <div class="switch color-green">
                 <label>
                     <input type="checkbox">
                     <span class="lever"></span>
@@ -1552,7 +2450,7 @@
                         <div class="more-info">
                             <div class="info-row color-green">
                                 <div class="more-info_name">User</div>
-                                <div class="more-info_text bold">100004627 - CARETHY</div>
+                                <div class="more-info_text bold">134534 - USER</div>
                             </div>
                             <div class="info-row">
                                 <div class="more-info_name">Hub</div>
@@ -1904,7 +2802,7 @@
         </div>
         <div class="modal-footer">
 
-            <div class="switch card-green">
+            <div class="switch color-green">
                 <label>
                     <input type="checkbox">
                     <span class="lever"></span>
@@ -1984,7 +2882,7 @@
                         <div class="more-info">
                             <div class="info-row color-green">
                                 <div class="more-info_name">User</div>
-                                <div class="more-info_text bold">100004627 - CARETHY</div>
+                                <div class="more-info_text bold">45546 - USER</div>
                             </div>
                             <div class="info-row">
                                 <div class="more-info_name">Hub</div>
@@ -2451,7 +3349,7 @@
                         <div class="more-info">
                             <div class="info-row color-green">
                                 <div class="more-info_name">User</div>
-                                <div class="more-info_text bold">100004627 - CARETHY</div>
+                                <div class="more-info_text bold">546754 - USER</div>
                             </div>
                             <div class="info-row">
                                 <div class="more-info_name">Hub</div>
@@ -2921,19 +3819,6 @@
             });
 
 
-            //show eye if width < 200
-            $('.alot-text div').each(function () {
-
-                var elemW = $(this).width();
-                if(elemW < 200) {
-                    $(this).siblings('.btn-show-all').hide();
-                } else {
-                    $(this).siblings('.btn-show-all').show();
-                }
-
-            });
-
-
             //advanced filters and change padding-top for fix panel title
             $('.other-btn ').on('click',function () {
 
@@ -2951,6 +3836,17 @@
 
             });
 
+            //show eye if width < 200
+            $('.alot-text div').each(function () {
+
+                var elemW = $(this).width();
+                if(elemW < 200) {
+                    $(this).siblings('.btn-show-all').hide();
+                } else {
+                    $(this).siblings('.btn-show-all').show();
+                }
+
+            });
 
             //show more text in Consignee
             $('.btn-show-all').on('click', function () {
