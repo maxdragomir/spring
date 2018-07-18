@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Reports</title>
+    <title>Profile</title>
     //= template/head.html
 </head>
 <body>
-
-    <!--<div class="loader">-->
-        <!--<div class="spinner"></div>-->
-    <!--</div>-->
 
     <div class="wrapper">
         <div class="main">
@@ -42,16 +38,16 @@
                                 </ul>
                             </li>
                             <li>
-                                <a class="dropdown-trigger waves-effect active" href="#!" data-target="reports">
+                                <a class="dropdown-trigger waves-effect" href="#!" data-target="reports">
                                     <i class="fa fa-chart-area left"></i> <span>Reports</span><i class="fa fa-angle-down ml-2"></i>
                                 </a>
                                 <ul id="reports" class="dropdown-content">
                                     <li><a href="general.html" class="waves-effect waves-light">General</a></li>
-                                    <li><a href="delivery.html" class="waves-effect waves-light active">Delivery Time</a></li>
+                                    <li><a href="delivery.html" class="waves-effect waves-light">Delivery Time</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a class='dropdown-trigger waves-effect' href='#!' data-target='settings'>
+                                <a class='dropdown-trigger waves-effect active' href='#!' data-target='settings'>
                                     <i class="fa fa-cogs left"></i> <span>Settings</span><i class="fa fa-angle-down ml-2"></i>
                                 </a>
                                 <ul id='settings' class='dropdown-content'>
@@ -60,7 +56,7 @@
                                     <li><a href="trackingurls.html" class="waves-effect waves-light">Tracking URLs</a></li>
                                     <li><a href="trackingcodes.html" class="waves-effect waves-light">Tracking Codes</a></li>
                                     <li><a href="errors.html" class="waves-effect waves-light">Errors</a></li>
-                                    <li><a href="profile.html" class="waves-effect waves-light">Profile</a></li>
+                                    <li><a href="profile.html" class="waves-effect waves-light active">Profile</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -86,7 +82,6 @@
                     </div>
                 </nav>
             </div>
-
             <div class="content">
                 <ul id="slide-out" class="sidenav">
                     <li class="sidebar_bg"></li>
@@ -113,16 +108,16 @@
                                 </div>
                             </li>
                             <li>
-                                <a class="collapsible-header waves-effect active"><i class="fa fa-chart-area left"></i> Reports <i class="fa fa-angle-down"></i></a>
+                                <a class="collapsible-header waves-effect"><i class="fa fa-chart-area left"></i> Reports <i class="fa fa-angle-down"></i></a>
                                 <div class="collapsible-body sidenav-li-body-color">
                                     <ul class="purchasing-group">
                                         <li><a class="waves-effect" href="general.html">General</a></li>
-                                        <li><a class="waves-effect active" href="delivery.html">Delivery Time</a></li>
+                                        <li><a class="waves-effect" href="delivery.html">Delivery Time</a></li>
                                     </ul>
                                 </div>
                             </li>
                             <li>
-                                <a class="collapsible-header waves-effect"><i class="fa fa-cogs left"></i> Settings <i class="fa fa-angle-down"></i></a>
+                                <a class="collapsible-header waves-effect active"><i class="fa fa-cogs left"></i> Settings <i class="fa fa-angle-down"></i></a>
                                 <div class="collapsible-body sidenav-li-body-color">
                                     <ul class="purchasing-group">
                                         <li><a class="waves-effect" href="users.html">Users</a></li>
@@ -130,7 +125,7 @@
                                         <li><a class="waves-effect" href="trackingurls.html">Tracking URLs</a></li>
                                         <li><a class="waves-effect" href="trackingcodes.html">Tracking Codes</a></li>
                                         <li><a class="waves-effect" href="errors.html">Errors</a></li>
-                                        <li><a class="waves-effect" href="profile.html">Profile</a></li>
+                                        <li><a class="waves-effect active" href="profile.html">Profile</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -151,92 +146,21 @@
                         <a href="#!" class="collapsible-header no-drop waves-effect"><i class="fa fa-sign-out-alt"></i>Logout</a>
                     </li>
                 </ul>
-
-                <div class="row">
-                    <div class="col s12 mt-4 mb-4">
+                <div class="row m-0">
+                    <div class="col s12 mt-4">
                         <div class="page-title">
-                            <i class="fa fa-chart-area left"></i> Delivery Time
+                            <i class="fa fa-user left"></i>Profile
                         </div>
                     </div>
                 </div>
-
-                <div class="row mt-4 mb-0">
-                    <div class="col s12 m6 l2">
-                        <div class="card card-filters">
-                            <div class="input-field col s12 m-0">
-                                <select>
-                                    <option value="0" selected>User</option>
-                                    <option value="0">User 1</option>
-                                    <option value="0">User 2</option>
-                                    <option value="0">User 3</option>
-                                    <option value="0">User 4</option>
-                                    <option value="0">User 5</option>
-                                    <option value="0">User 6</option>
-                                    <option value="0">User 7</option>
-                                    <option value="0">User 8</option>
-                                    <option value="0">User 9</option>
-                                    <option value="0">User 10</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l2">
-                        <div class="card card-filters">
-                            <div class="input-field col s12 m-0">
-                                <select>
-                                    <option value="0" selected>Services</option><option value="PPLEU">PPLEU - PostNL Parcel EU</option><option value="PPLGE">PPLGE - PostNL Parcel GlobalPack EMS</option><option value="PPLGU">PPLGU - PostNL Parcel GlobalPack UPU</option><option value="PPTT">PPTT - PostNL Packet Tracked</option><option value="PPTR">PPTR - PostNL Packet Registered</option><option value="RM24">RM24 - Royal Mail Tracked 24 - Non Signature</option><option value="RM24S">RM24S - Royal Mail Tracked 24 - With Signature</option><option value="RM48">RM48 - Royal Mail Tracked 48 - Non Signature</option><option value="RM48S">RM48S - Royal Mail Tracked 48 - With Signature</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l2">
-                        <div class="card card-filters">
-                            <div class="input-field col s12 m-0">
-                                <select>
-                                    <option value="" selected="">Hub</option><option value="2">France - Main Hub</option><option value="4">HK - Main Hub</option><option value="3">Italy - Main hub</option><option value="1">Spain - Main Hub</option><option value="5">UK - Main hub</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l2">
-                        <div class="card card-filters">
-                            <div class="input-field col s12 m-0">
-                                <select>
-                                    <option value="c" selected="">Created</option><option value="a">Accepted</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m12 l4 xl4">
-                        <div class="card card-filters no-timepicker">
-                            <div class="input-field col s12 m6 l6 xl6 m-0">
-                                <input id="date-start" class="m-0 datepicker-start" type="text">
-                                <label for="date-start">Date start</label>
-                            </div>
-                            <div class="input-field col s12 m6 l6 xl6 m-0">
-                                <input id="date-end" class="m-0 datepicker-end" type="text">
-                                <label for="date-end">Date end</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-0 mb-0">
-                    <div class="col s12 m12 l5 offset-l7">
-                        <div class="card card-inv card-button delivery-btn">
-                            <button type="button" class="btn other-btn waves-effect tooltipped" data-position="top" data-tooltip="Download">CSV</button>
-                            <select>
-                                <option value="0" selected="">Select</option>
-                                <option value="1">Total Delivery Days (inc. customs days)</option>
-                                <option value="2">Total Transit Days (exc. customs days)</option>
-                                <option value="3">Carrier Delivery Days (inc. customs days)</option>
-                                <option value="4">Carrier Transit Days (exc. customs days)</option>
-                            </select>
-                            <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Download">PDF</button>
+                <div class="row m-0">
+                    <div class="col s12">
+                        <div class="under-construction-page">
+                            <h1 class="m-0">under construction</h1>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div class="footer">
                 <div class="copyright">
                     Developed and supported by <a target="_blank" href="http://www.xmllogistic.com/"> XMLlogistic</a>, a subsidiary of <a target="_blank" href="http://www.xmlshop.com/">XMLshop </a>
@@ -248,20 +172,8 @@
 //= template/footer.html
 
     <script>
-
         $(document).ready(function () {
-
-            //clear filters and animate icon
-            $('.card-button').on('click', '.clear-btn', function () {
-
-                var el = $('.clear-btn i').clone().removeClass('active');
-                $('.clear-btn i').remove();
-                $('.clear-btn').append(el);
-                el.addClass('active');
-
-            });
-
-
+            $('.under-construction-page').addClass('active');
         });
     </script>
 </body>

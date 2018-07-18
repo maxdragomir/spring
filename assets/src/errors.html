@@ -54,8 +54,8 @@
                                 <li><a href="users.html" class="waves-effect waves-light">Users</a></li>
                                 <li><a href="hubs.html" class="waves-effect waves-light">Hubs</a></li>
                                 <li><a href="trackingurls.html" class="waves-effect waves-light">Tracking URLs</a></li>
-                                <li><a href="trackingcodes.html" class="waves-effect waves-light active">Tracking Codes</a></li>
-                                <li><a href="errors.html" class="waves-effect waves-light">Errors</a></li>
+                                <li><a href="trackingcodes.html" class="waves-effect waves-light">Tracking Codes</a></li>
+                                <li><a href="errors.html" class="waves-effect waves-light active">Errors</a></li>
                                 <li><a href="profile.html" class="waves-effect waves-light">Profile</a></li>
                             </ul>
                         </li>
@@ -124,8 +124,8 @@
                                     <li><a class="waves-effect" href="users.html">Users</a></li>
                                     <li><a class="waves-effect" href="hubs.html">Hubs</a></li>
                                     <li><a class="waves-effect" href="trackingurls.html">Tracking URLs</a></li>
-                                    <li><a class="waves-effect active" href="trackingcodes.html">Tracking Codes</a></li>
-                                    <li><a class="waves-effect" href="errors.html">Errors</a></li>
+                                    <li><a class="waves-effect" href="trackingcodes.html">Tracking Codes</a></li>
+                                    <li><a class="waves-effect active" href="errors.html">Errors</a></li>
                                     <li><a class="waves-effect" href="profile.html">Profile</a></li>
                                 </ul>
                             </div>
@@ -151,7 +151,7 @@
             <div class="row">
                 <div class="col s12 mt-4 mb-4">
                     <div class="page-title">
-                        <i class="fa fa-cogs left"></i>Tracking Codes
+                        <i class="fa fa-cogs left"></i> Errors
                     </div>
                 </div>
             </div>
@@ -194,27 +194,19 @@
             <div class="row mt-4">
                 <div class="col s12">
                     <div class="card-title table-title card-blue">
-                        <div class="card-title_result">
+                        <div class="card-title_result card-title_total">
                             <div class="result tooltipped" data-position="top" data-tooltip="Results">
                                 <i class="fa fa-table left"></i>
                                 <span class="pr-2">Found: </span>
                                 <div id="c_result">0</div>
                             </div>
                         </div>
-                        <div class="card-title_pagination">
-                            <ul class="pagination">
-                                <li class="disabled waves-effect waves-light no-none"><a href="#!"><i class="fa fa-angle-left"></i></a></li>
-                                <li class="active no-none"><a href="#!">1</a></li>
-                                <li class="waves-effect waves-light"><a href="#!">2</a></li>
-                                <li class="waves-effect waves-light"><a href="#!">3</a></li>
-                                <li class="waves-effect waves-light no-none"><a href="#!"><i class="fa fa-angle-right"></i></a></li>
-                            </ul>
-                        </div>
+
                         <div class="card-title_btn card-title_btn-solo">
-                            <a href="#add" class="btn waves-effect tooltipped modal-trigger" data-position="top" data-tooltip="Add Code"><i class="fa fa-plus"></i></a>
+                            <a href="#add" class="btn waves-effect tooltipped modal-trigger" data-position="top" data-tooltip="Add Error"><i class="fa fa-plus"></i></a>
                         </div>
                     </div>
-                    <div class="card card-table card-table-settings card-table-codes mt-4">
+                    <div class="card card-table card-table-settings card-table-errors mt-4">
                         <div class="thead-desctop">
                             <table class="highlight mt-4">
                                 <thead>
@@ -223,13 +215,10 @@
                                             <a href="#">Carrier</a>
                                         </th>
                                         <th>
-                                            <a href="#">Code</a>
+                                            <a href="#">Source Error</a>
                                         </th>
                                         <th>
-                                            Comment
-                                        </th>
-                                        <th>
-                                            <a href="#">System code</a>
+                                            Result Error
                                         </th>
                                         <th>
                                             Actions
@@ -241,46 +230,61 @@
                         <div class="thead-mobile">
                             <table class="highlight">
                                 <thead>
-                                <tr>
-                                    <th>
-                                        <a href="#">Carrier</a>
-                                    </th>
-                                    <th>
-                                        <a href="#">Code</a>
-                                    </th>
-                                    <th>
-                                        Comment
-                                    </th>
-                                    <th>
-                                        <a href="#">System code</a>
-                                    </th>
-                                    <th>
-                                        Actions
-                                    </th>
-                                </tr>
+                                    <tr>
+                                        <th>
+                                            <a href="#">Carrier</a>
+                                        </th>
+                                        <th>
+                                            <a href="#">Source Error</a>
+                                        </th>
+                                        <th>
+                                            Result Error
+                                        </th>
+                                        <th>
+                                            Actions
+                                        </th>
+                                    </tr>
                                 </thead>
 
                                 <tbody>
 
                                 <tr>
                                     <td  data-title="Carrier">
+                                        <div class="color-secondary">
+                                            PostNL Parcel
+                                        </div>
+                                    </td>
+                                    <td data-title="Source Error">
+                                        <div class="big-text color-secondary">
+                                            3SDMHK2875290: {[15204] Country code IC should be used with Las Palmas}
+                                        </div>
+                                    </td>
+                                    <td data-title="Result Error">
+                                        <div>
+                                            Destination no valid for Parcel UPU
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="actions-btn">
+                                            <a href="#edit" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="Edit"><i class="fa fa-pen"></i></a>
+                                            <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td  data-title="Carrier">
                                         <div>
                                             PostNL Parcel
                                         </div>
                                     </td>
-                                    <td data-title="Code">
-                                        <div>
-                                            I05
+                                    <td data-title="Source Error">
+                                        <div class="big-text color-blue">
+                                            3SDMHK2875290: {[15204] Country code IC should be used with Las Palmas}
                                         </div>
                                     </td>
-                                    <td data-title="Comment">
-                                        <div class="big-text">
-                                            No response at 1st pick-up attempt, 2nd attempt next business day
-                                        </div>
-                                    </td>
-                                    <td data-title="System code">
+                                    <td data-title="Result Error">
                                         <div>
-                                            100
+                                            Destination no valid for Parcel UPU
                                         </div>
                                     </td>
                                     <td>
@@ -310,40 +314,47 @@
 <!-- Modal Structure -->
 <div id="add" class="modal modal-style modal-fixed-footer modal-fixed-header modal-h-55">
     <div class="modal-header color-blue">
-        <div class="modal-title"><i class="fa fa-plus left"></i>Add Code</div>
+        <div class="modal-title"><i class="fa fa-plus left"></i>Add Error</div>
         <button class="btn waves-effect modal-close"><i class="fa fa-times"></i></button>
     </div>
     <div class="modal-content">
 
         <div class="row m-0 mt-2">
-
-            <!-- info row -->
             <div class="col s12">
-                <div class="card card-modal m-0">
+                <div class="card card-modal mb-0">
                     <div class="row">
                         <div class="input-field col s12 m6 color-green">
                             <select>
                                 <option value="0" selected>Carrier</option><option value="postnl">PostNL Parcel</option><option value="postnlpacket">PostNL Packet</option><option value="royalmail">RoyalMail Tracked 24/48</option>
                             </select>
                         </div>
-                        <div class="input-field col s12 m6 color-green">
-                            <select>
-                                <option value="0">&lt;NEW&gt;</option><option value="1" selected="">&lt;do not map&gt;</option><option value="21">21 - IN TRANSIT</option><option value="31">31 - DELIVERY EXCEPTION</option><option value="40">40 - IN CUSTOMS</option><option value="41">41 - CUSTOMS EXCEPTION</option><option value="91">91 - DELIVERY ATTEMPTED</option><option value="92">92 - DELIVERY AWAITING COLLECTION</option><option value="93">93 - DELIVERY SCHEDULED</option><option value="100">100 - DELIVERED</option><option value="111">111 - LOST OR DESTROYED</option><option value="11101">11101 - LOST</option><option value="11102">11102 - DESTROYED</option><option value="124">124 - RETURN IN TRANSIT</option><option value="12401">12401 - RETURN IN TRANSIT - REFUSED</option><option value="12402">12402 - RETURN IN TRANSIT - UNDELIVERABLE</option><option value="12403">12403 - RETURN IN TRANSIT - DAMAGED</option><option value="12404">12404 - RETURN IN TRANSIT - NOT COLLECTED</option><option value="12405">12405 - RETURN IN TRANSIT - ACCORDING TO AGREEMENT</option>
-                            </select>
-                        </div>
-                        <div class="input-field col s12 m6  color-green tooltipped" data-position="bottom" data-tooltip=" * char '%' = any sequence of chars">
-                            <input id="code" class="m-0" type="text">
-                            <label for="code">Code<i class="fa fa-info-circle"></i></label>
-                        </div>
-
-                        <div class="input-field col s12 m6  color-green">
-                            <input id="comment" class="m-0" type="text">
-                            <label for="comment">Comment</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row m-0">
+            <div class="col s12 m12 l6">
+                <div class="card card-modal mb-0">
+                    <div class="row">
+                        <div class="input-field col s12 color-green tooltipped" data-position="bottom" data-tooltip=" * char '%' = any sequence of chars">
+                            <textarea id="source" class="textarea open-textarea"></textarea>
+                            <label for="source">Source Error <i class="fa fa-info-circle"></i></label>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="col s12 m12 l6">
+                <div class="card card-modal">
+                    <div class="row">
 
+                        <div class="input-field col s12 color-green tooltipped" data-position="bottom" data-tooltip=" * enter '-' (dash) to not map">
+                            <textarea id="result" class="textarea open-textarea"></textarea>
+                            <label for="result">Result Error <i class="fa fa-info-circle"></i></label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -370,7 +381,6 @@
 
         <div class="row m-0 mt-2">
 
-            <!-- id row -->
             <div class="col s12 mb-4">
                 <div class="card card-modal">
                     <div class="parcel-top-info one-btns pl-2 pr-2">
@@ -389,36 +399,42 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-
-            <!-- info row -->
+        <div class="row m-0">
             <div class="col s12">
-                <div class="card card-modal">
+                <div class="card card-modal mb-0">
                     <div class="row">
                         <div class="input-field col s12 m6 color-green">
                             <select disabled>
                                 <option value="0">Carrier</option><option value="postnl" selected>PostNL Parcel</option><option value="postnlpacket">PostNL Packet</option><option value="royalmail">RoyalMail Tracked 24/48</option>
                             </select>
                         </div>
-                        <div class="input-field col s12 m6 color-green">
-                            <select>
-                                <option value="0">&lt;NEW&gt;</option><option value="1" selected="">&lt;do not map&gt;</option><option value="21">21 - IN TRANSIT</option><option value="31">31 - DELIVERY EXCEPTION</option><option value="40">40 - IN CUSTOMS</option><option value="41">41 - CUSTOMS EXCEPTION</option><option value="91">91 - DELIVERY ATTEMPTED</option><option value="92">92 - DELIVERY AWAITING COLLECTION</option><option value="93">93 - DELIVERY SCHEDULED</option><option value="100">100 - DELIVERED</option><option value="111">111 - LOST OR DESTROYED</option><option value="11101">11101 - LOST</option><option value="11102">11102 - DESTROYED</option><option value="124">124 - RETURN IN TRANSIT</option><option value="12401">12401 - RETURN IN TRANSIT - REFUSED</option><option value="12402">12402 - RETURN IN TRANSIT - UNDELIVERABLE</option><option value="12403">12403 - RETURN IN TRANSIT - DAMAGED</option><option value="12404">12404 - RETURN IN TRANSIT - NOT COLLECTED</option><option value="12405">12405 - RETURN IN TRANSIT - ACCORDING TO AGREEMENT</option>
-                            </select>
-                        </div>
-                        <div class="input-field col s12 m6  color-green tooltipped" data-position="bottom" data-tooltip=" * char '%' = any sequence of chars">
-                            <input id="code" class="m-0" type="text">
-                            <label for="code">Code<i class="fa fa-info-circle"></i></label>
-                        </div>
-
-                        <div class="input-field col s12 m6  color-green">
-                            <input id="comment" class="m-0" type="text">
-                            <label for="comment">Comment</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m12 l6">
+                <div class="card card-modal mb-0">
+                    <div class="row">
+                        <div class="input-field col s12 color-green tooltipped" data-position="bottom" data-tooltip=" * char '%' = any sequence of chars">
+                            <textarea id="source" class="textarea open-textarea">3SDMHK2875290: {[15204] Country code IC should be used with Las Palmas}</textarea>
+                            <label for="source">Source Error <i class="fa fa-info-circle"></i></label>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="col s12 m12 l6">
+                <div class="card card-modal">
+                    <div class="row">
 
+                        <div class="input-field col s12 color-green tooltipped" data-position="bottom" data-tooltip=" * enter '-' (dash) to not map">
+                            <textarea id="result" class="textarea open-textarea"></textarea>
+                            <label for="result">Result Error <i class="fa fa-info-circle"></i></label>
+                        </div>
 
+                    </div>
+                </div>
+            </div>
         </div>
 
 
@@ -467,6 +483,13 @@
     });
 
     $(document).ready(function () {
+
+        $('.open-textarea').on('focus', function () {
+            $(this).addClass('active');
+        });
+        $('.open-textarea').on('blur', function () {
+            $(this).removeClass('active');
+        });
 
         $.each($('.switch-active'), function() {
             var switchBtn = $(this),
@@ -521,7 +544,7 @@
             decimal: '.',
         };
 
-        var resultCount = new CountUp('c_result', 0, 279, 0, 4, options);
+        var resultCount = new CountUp('c_result', 0, 23, 0, 4, options);
 
         setTimeout(function () {
 
