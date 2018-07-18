@@ -684,7 +684,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
+        width: 200px;
         border-radius: 5px;
         background: $card-green-block;
         box-shadow: $card-green-shadow;
@@ -2797,6 +2797,7 @@ body {
       }
     }
   }
+
 }
 
 
@@ -2941,9 +2942,6 @@ body {
     width: 80% !important;
   }
   .main {
-    .page-title {
-      margin-top: 2rem;
-    }
     .content .card {
       &.card-table {
         td, th {
@@ -3016,6 +3014,14 @@ body {
   }
 }
 @media only screen and (max-width: 1200px) {
+  .modal-style {
+    .one-row-checkbox {
+      margin: 0;
+      label {
+        margin: 0 auto;
+      }
+    }
+  }
   .main {
     .header nav li {
       .dropdown-content {
@@ -3063,6 +3069,12 @@ body {
         tbody {
           display: block;
           width: 100%;
+
+          .big-text {
+            width: calc(100% - 100px);
+            display: block;
+            word-wrap: break-word;
+          }
 
           tr {
             display: block;
@@ -3213,6 +3225,9 @@ body {
           width: 180px;
         }
       }
+      .parcel-top-info_no-button {
+        align-items: center;
+      }
     }
   }
 }
@@ -3235,6 +3250,9 @@ body {
       }
       .one-btns {
         flex-flow: column;
+      }
+      .parcel-top-info_no-button {
+        justify-content: center;
       }
     }
     .modal-footer.modal-footer-view {
@@ -3317,6 +3335,9 @@ body {
         .parcel-top-info_right {
           align-items: center;
         }
+      }
+      .parcel-top-info_no-button {
+        flex-flow: row;
       }
       .more-info .info-row {
         width: 100%;
