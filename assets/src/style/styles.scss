@@ -2850,12 +2850,13 @@ body {
           }
           .btn-group {
             display: flex;
+            padding-top: 5px;
 
             a {
               position: relative;
-              height: 40px;
-              width: 60px;
-              border-radius: 10px;
+              height: 30px;
+              width: 50px;
+              border-radius: 5px;
               display: flex;
               justify-content: center;
               align-items: center;
@@ -2866,7 +2867,7 @@ body {
 
               &:hover {
                 background: #fff;
-                color: $card-orange-text;
+                color: #333;
                 transition: all 500ms cubic-bezier(0.34, 1.31, 0.7, 1);
               }
 
@@ -2931,80 +2932,29 @@ body {
     color: rgba(0,0,0, .05);
     transition: all 1000ms cubic-bezier(0.34, 1.31, 0.7, 1);
 
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 10px;
-      height: 10px;
-      transform: rotate(0);
-      background: rgba(0,0,0, .5);
-    }
-
-    &:before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 10px;
-      height: 10px;
-      transform: rotate(0);
-      background: rgba(0,0,0, .5);
-
-    }
   }
 
   &.active {
     h1 {
       animation: under-text 5s infinite linear;
 
-      &:after {
-        animation: under-dot-top 5s infinite linear;
-      }
-      &:before {
-        animation: under-dot-bottom 5s infinite linear;
+      i {
+        animation: spinner 5s infinite linear;
+
       }
     }
   }
 }
-@keyframes under-dot-top {
-  0% {
-    right: 0;
-    background: rgba(0,0,0, .05);
-  }
-  50% {
-    right: 100%;
-    background: rgba(0,0,0, .5);
-  }
-  100% {
-    right: 0;
-    background: rgba(0,0,0, .05);
-  }
-}
+
 @keyframes under-text {
   0% {
-    color: rgba(0,0,0, .05);
+    color: rgba(0, 0, 0, .05);
   }
   50% {
-    color: rgba(0,0,0, .5);
+    color: rgba(0, 0, 0, .5);
   }
   100% {
-    color: rgba(0,0,0, .05);
-  }
-}
-@keyframes under-dot-bottom {
-  0% {
-    left: 0;
-    background: rgba(0,0,0, .05);
-  }
-  50% {
-    left: 100%;
-    background: rgba(0,0,0, .5);
-  }
-  100% {
-    left: 0;
-    background: rgba(0,0,0, .05);
+    color: rgba(0, 0, 0, .05);
   }
 }
 
