@@ -410,7 +410,7 @@
 
     <!-- Modal Structure -->
     <div id="add" class="modal modal-style modal-fixed-footer modal-fixed-header">
-        <div class="modal-header color-red">
+        <div class="modal-header color-blue">
             <div class="modal-title"><i class="fa fa-plus left"></i>Add User</div>
             <button class="btn waves-effect modal-close"><i class="fa fa-times"></i></button>
         </div>
@@ -418,90 +418,691 @@
 
             <div class="row m-0 mt-2">
 
-
-                <!-- info row -->
                 <div class="col s12 mb-4">
                     <div class="card card-modal">
                         <div class="row">
-                            <div class="col s12 l6">
-                                <div class="input-title">Info</div>
-                                <div class="row">
-                                    <div class="input-field col s12 color-green tooltipped" data-position="bottom" data-tooltip="If entered, must be unique">
-                                        <input id="shipper_item_id" class="m-0" type="text">
-                                        <label for="shipper_item_id">Shipper Reference <i class="fa fa-info-circle"></i></label>
-                                    </div>
+                            <div class="input-field col s12 m6 color-blue content-centered">
+                                <select id="user-type">
+                                    <option value="0" selected>Choose user type</option><option value="11">Shipper</option><option value="21">Carrier</option><option value="4">Hub Supervisor</option><option value="5">Hub Worker</option><option value="7">Client Services</option><option value="22">Sales</option><option value="1">Admin</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                    <div class="input-field col s12 color-green tooltipped" data-position="bottom" data-tooltip="If entered, barcode will be printed on the label">
-                                        <input id="display_item_id" class="m-0" type="text">
-                                        <label for="display_item_id">Display ID <i class="fa fa-info-circle"></i></label>
-                                    </div>
+                <div class="col s12 pr">
+                    <div class="row">
+                        <div class="type-shipper type-hide">
 
-                                    <div class="input-field col s12 color-green">
-                                        <select>
-                                            <option value="0" selected>Services</option><option value="PPLEU">PPLEU - PostNL Parcel EU</option><option value="PPLGE">PPLGE - PostNL Parcel GlobalPack EMS</option><option value="PPLGU">PPLGU - PostNL Parcel GlobalPack UPU</option><option value="PPTT">PPTT - PostNL Packet Tracked</option><option value="PPTR">PPTR - PostNL Packet Registered</option><option value="RM24">RM24 - Royal Mail Tracked 24 - Non Signature</option><option value="RM24S">RM24S - Royal Mail Tracked 24 - With Signature</option><option value="RM48">RM48 - Royal Mail Tracked 48 - Non Signature</option><option value="RM48S">RM48S - Royal Mail Tracked 48 - With Signature</option>
-                                        </select>
+                            <div class="col s12">
+                                <div class="card card-modal mb-0">
+                                    <div class="row">
+                                        <div class="input-title">Add Shipper</div>
+                                        <div class="col s12 m6 l2">
+                                            <div class="one-row-checkbox color-green">
+                                                <label>
+                                                    <input checked type="checkbox"/>
+                                                    <span class="fs-1">Active</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m6 l2">
+                                            <div class="one-row-checkbox color-green">
+                                                <label>
+                                                    <input type="checkbox"/>
+                                                    <span class="fs-1">Test Mode</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="input-field col s12 m6 l4 color-green tooltipped" data-position="bottom" data-tooltip="Must be unique">
+                                            <input id="client-number" class="m-0" type="text">
+                                            <label for="client-number">Client Number<i class="fa fa-info-circle"></i></label>
+                                        </div>
+                                        <div class="input-field col s12 m6 l4 color-green">
+                                            <select>
+                                               <option value="0" selected="">Assigned Hub</option><option value="2">France - Main Hub</option><option value="6">Germany - Main Hub</option><option value="4">HK - Main Hub</option><option value="3">Italy - Main hub</option><option value="1">Spain - Main Hub</option><option value="5">UK - Main hub</option>
+                                            </select>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col m12 l6">
-                                <div class="input-title dummy"></div>
-                                <div class="row">
-                                    <div class="input-field col s12 m8 l6 color-orange">
-                                        <input id="weight" class="m-0" type="text">
-                                        <label for="weight">Weight</label>
+                            <div class="col s12">
+                                <div class="card card-modal mb-0">
+                                    <div class="row">
+
+                                        <div class="input-field col s12 m12 l4 color-green tooltipped" data-position="bottom" data-tooltip=" * 3-25 chars; only latin letters, digits and .-+_@ chars">
+                                            <input id="username" class="m-0" type="text">
+                                            <label for="username">Choose Username<i class="fa fa-info-circle"></i></label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l4 color-green">
+                                            <input id="email" class="m-0" type="text">
+                                            <label for="email">Email</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l4 color-green">
+                                            <input id="password" class="m-0" type="text">
+                                            <label for="password">Password</label>
+                                        </div>
+
                                     </div>
-                                    <div class="input-field col s12 m4 l6 color-orange">
-                                        <select>
-                                            <option value=""></option><option value="0" selected="">KG</option><option value="1">LB</option>
-                                        </select>
+                                </div>
+                            </div>
+
+                            <div class="col s12 mb-2">
+                                <div class="card card-modal">
+                                    <div class="row">
+
+                                        <div class="input-field col s12 m6 color-green">
+                                            <input id="title" class="m-0" type="text">
+                                            <label for="title">Title</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 color-green">
+                                            <select>
+                                                <option value="0" selected>Timezone</option><option value="Australia/Sydney">[GMT+10:00] Australia Eastern Time</option><option value="Australia/Adelaide">[GMT+09:30] Australia Central Time</option><option value="Japan">[GMT+09:00] Japan</option><option value="Asia/Seoul">[GMT+09:00] Seoul</option><option value="Australia/Perth">[GMT+08:00] Australia Western Time</option><option value="Asia/Shanghai">[GMT+08:00] China (Beijing)</option><option value="Asia/Hong_Kong">[GMT+08:00] Hong Kong</option><option value="Asia/Singapore">[GMT+08:00] Singapore</option><option value="Europe/Moscow">[GMT+03:00] Moscow</option><option value="EET">[GMT+02:00] Eastern European Time</option><option value="CET">[GMT+01:00] Central European Time</option><option value="WET">[GMT+00:00] Western European Time</option><option value="Europe/London">[GMT+00:00] Great Britain</option><option value="Canada/Newfoundland">[GMT-03:30] Newfoundland</option><option value="Canada/Atlantic">[GMT-04:00] Atlantic Time</option><option value="US/Eastern">[GMT-05:00] Eastern Time</option><option value="US/Central">[GMT-06:00] Central Time</option><option value="US/Mountain">[GMT-07:00] Mountain Time</option><option value="US/Arizona">[GMT-07:00] Arizona</option><option value="US/Pacific">[GMT-08:00] Pacific Time</option><option value="US/Alaska">[GMT-09:00] Alaska Time</option><option value="US/Hawaii">[GMT-10:00] Hawaii-Aleutian Time</option>
+                                            </select>
+                                        </div>
+
                                     </div>
-                                    <div class="input-field col s6 m3 color-orange">
-                                        <input id="length" class="m-0" type="text">
-                                        <label for="length">Length</label>
+                                </div>
+                            </div>
+
+                            <div class="col s12 m12 l6">
+                                <div class="card card-modal mb-0">
+                                    <div class="row">
+                                        <div class="input-field col s6 color-green">
+                                            <input id="shipper_name" class="m-0" type="text">
+                                            <label for="shipper_name">Name</label>
+                                        </div>
+                                        <div class="input-field col s6 color-green">
+                                            <input id="shipper_company" class="m-0" type="text">
+                                            <label for="shipper_company">Company</label>
+                                        </div>
+
+                                        <div class="input-field col s12 color-green">
+                                            <input id="shipper_address1" class="m-0" type="text">
+                                            <label for="shipper_address1">Address line 1</label>
+                                        </div>
+                                        <div class="input-field col s6 color-green">
+                                            <input id="shipper_address2" class="m-0" type="text">
+                                            <label for="shipper_address2">Address line 2</label>
+                                        </div>
+                                        <div class="input-field col s6 color-green">
+                                            <input id="shipper_address3" class="m-0" type="text">
+                                            <label for="shipper_address3">Address line 3</label>
+                                        </div>
+
+                                        <div class="input-field col s6 color-green">
+                                            <input id="shipper_city" class="m-0" type="text">
+                                            <label for="shipper_city">City</label>
+                                        </div>
+                                        <div class="input-field col s6 color-green">
+                                            <input id="shipper_country-state" class="m-0" type="text">
+                                            <label for="shipper_country-state">Country / State</label>
+                                        </div>
+
+                                        <div class="input-field col s5 m3 l4 color-green">
+                                            <input id="shipper_zip-code" class="m-0" type="text">
+                                            <label for="shipper_zip-code">ZIP - code</label>
+                                        </div>
+                                        <div class="input-field col s7 m9 l8 color-green">
+                                            <select name="shipper_consignee_country" size="1" >
+                                                <option value="" selected>Country</option><option value="AF">Afghanistan</option><option value="AX">Aland Islands</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua and Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT">Austria</option><option value="AZ">Azerbaijan</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BO">Bolivia</option><option value="BQ">Bonaire</option><option value="BA">Bosnia and Herzegovina</option><option value="BW">Botswana</option><option value="BV">Bouvet Island</option><option value="BR">Brazil</option><option value="IO">British Indian Ocean Territory</option><option value="BN">Brunei</option><option value="BG">Bulgaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="BT">Bhutan</option><option value="KH">Cambodia</option><option value="CM">Cameroon</option><option value="CA">Canada</option><option value="IC">Canary Islands</option><option value="CV">Cape Verde</option><option value="KY">Cayman Islands</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="CL">Chile</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos Island</option><option value="CO">Colombia</option><option value="KM">Comoros</option><option value="CG">Congo</option><option value="CD">Congo Democratic Republic</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="HR">Croatia</option><option value="CU">Cuba</option><option value="CW">Curacao</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="EC">Ecuador</option><option value="EG">Egypt</option><option value="SV">El Salvador</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="EE">Estonia</option><option value="ET">Ethiopia</option><option value="FK">Falkland Islands</option><option value="FO">Faroe Islands</option><option value="FJ">Fiji</option><option value="FI">Finland</option><option value="FR">France</option><option value="GF">French Guyana</option><option value="PF">French Polynesia</option><option value="TF">French Southern Territory</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia</option><option value="DE">Germany</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GG">Guernsey</option><option value="GN">Guinea</option><option value="GW">Guinea Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="HM">Heard and McDonald Islands</option><option value="HN">Honduras</option><option value="HK">Hong Kong</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran</option><option value="IQ">Iraq</option><option value="IE">Ireland</option><option value="IM">Isle of Man</option><option value="IL">Israel</option><option value="IT">Italy</option><option value="CI">Ivory Coast</option><option value="JM">Jamaica</option><option value="JP">Japan</option><option value="JE">Jersey</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KE">Kenya</option><option value="XK">Kosovo</option><option value="KI">Kiribati</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Laos</option><option value="LV">Latvia</option><option value="LB">Lebanon</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MO">Macau</option><option value="MK">Macedonia</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MH">Marshall Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico</option><option value="FM">Micronesia</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="MN">Mongolia</option><option value="ME">Montenegro</option><option value="MS">Montserrat</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="MM">Myanmar</option><option value="NA">Namibia</option><option value="NR">Nauru</option><option value="NP">Nepal</option><option value="AN">Netherland Antilles</option><option value="NL">Netherlands</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="KP">North Korea</option><option value="MP">Northern Mariana Island</option><option value="NO">Norway</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PW">Palau</option><option value="PS">Palestine</option><option value="PA">Panama</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="PH">Philippines</option><option value="PN">Pitcairn</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="PR">Puerto Rico</option><option value="QA">Qatar</option><option value="RE">Reunion Island</option><option value="RO">Romania</option><option value="RU">Russia</option><option value="RW">Rwanda</option><option value="BL">Saint Barthelemy</option><option value="SH">Saint Helena</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="SX">Saint Maarten</option><option value="MF">Saint Martin</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and the Grenadines</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="ST">Sao Tome and Principe</option><option value="SA">Saudi Arabia</option><option value="SN">Senegal</option><option value="RS">Serbia</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="SB">Solomon Islands</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="GS">South Georgia</option><option value="KR">South Korea</option><option value="SS">South Sudan</option><option value="ES">Spain</option><option value="LK">Sri Lanka</option><option value="SD">Sudan</option><option value="SR">Suriname</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SZ">Swaziland</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="SY">Syria</option><option value="TJ">Tajikistan</option><option value="TW">Taiwan</option><option value="TZ">Tanzania</option><option value="TH">Thailand</option><option value="TL">Timor</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad and Tobago</option><option value="TN">Tunisia</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="TC">Turks and Caicos Islands</option><option value="TV">Tuvalu</option><option value="UG">Uganda</option><option value="UA">Ukraine</option><option value="AE">United Arab Emirates</option><option value="GB">United Kingdom</option><option value="US">United States</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option value="VU">Vanuatu</option><option value="VA">Vatican</option><option value="VE">Venezuela</option><option value="VN">Vietnam</option><option value="VG">Virgin Islands (British)</option><option value="VI">Virgin Islands (US)</option><option value="WF">Wallis and Futuna</option><option value="EH">Western Sahara</option><option value="YE">Yemen</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="input-field col s12 m5 color-green">
+                                            <input id="shipper_phone" class="m-0" type="text">
+                                            <label for="shipper_phone">Phone</label>
+                                        </div>
+                                        <div class="input-field col s12 m7 color-green">
+                                            <input id="shipper_email" class="m-0" type="text">
+                                            <label for="shipper_email">Email</label>
+                                        </div>
+
+                                        <div class="input-field col s12 color-green">
+                                            <input id="shipper_vat" class="m-0" type="text">
+                                            <label for="shipper_vat">Vat</label>
+                                        </div>
                                     </div>
-                                    <div class="input-field col s6 m3 color-orange">
-                                        <input id="width" class="m-0" type="text">
-                                        <label for="width">Width</label>
+                                </div>
+                            </div>
+
+                            <div class="col s12 m12 l6">
+                                <div class="card card-modal mb-0">
+                                    <div class="row">
+                                        <div class="input-field col s12 color-green">
+                                            <input id="ftp-username" class="m-0" type="text">
+                                            <label for="ftp-username">FTP Username</label>
+                                        </div>
+                                        <div class="input-field col s12 color-green">
+                                            <input id="ftp-password" class="m-0" type="text">
+                                            <label for="ftp-password">FTP Password</label>
+                                        </div>
+                                        <div class="col s12 m6 l5 xl4">
+                                            <div class="one-row-checkbox color-green">
+                                                <label>
+                                                    <input type="checkbox"/>
+                                                    <span class="fs-1">FTP Enabled</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m6 l7 xl5">
+                                            <div class="one-row-checkbox color-green">
+                                                <label>
+                                                    <input type="checkbox"/>
+                                                    <span class="fs-1">FTP Tracking Enabled</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="input-field col s12 m12 l12 xl3 color-green">
+                                            <select>
+                                                <option value="UTF-8" selected="">UTF-8</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="input-field col s6 m3 color-orange">
-                                        <input id="height" class="m-0" type="text">
-                                        <label for="height">Height</label>
+                                </div>
+                            </div>
+
+                            <div class="col s12 m12 l6">
+                                <div class="card card-modal">
+                                    <div class="row">
+
+                                        <div class="col s12 m12 l6">
+                                            <div class="one-row-checkbox color-green mt-0">
+                                                <label>
+                                                    <input type="checkbox"/>
+                                                    <span class="fs-1">Consignee Phone Required</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m12 l6">
+                                            <div class="one-row-checkbox color-green mt-0">
+                                                <label>
+                                                    <input type="checkbox"/>
+                                                    <span class="fs-1">Consignee Email Required</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="input-field col s12 color-green">
+                                            <textarea id="admin-comment" class="textarea textarea-big"></textarea>
+                                            <label for="admin-comment">Administration Comments</label>
+                                        </div>
+
                                     </div>
-                                    <div class="input-field col s6 m3 color-orange">
-                                        <select>
-                                            <option value=""></option><option value="0" selected="">CM</option>
-                                        </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="type-carrier type-hide">
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-0">
+                                    <div class="row">
+                                        <div class="input-title">Add Carrier</div>
+                                        <div class="col s12 m6 l3">
+                                            <div class="one-row-checkbox color-green">
+                                                <label>
+                                                    <input checked type="checkbox"/>
+                                                    <span class="fs-1">Active</span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-green tooltipped" data-position="bottom" data-tooltip=" * 3-25 chars; only latin letters, digits and .-+_@ chars">
+                                            <input id="username" class="m-0" type="text">
+                                            <label for="username">Choose Username<i class="fa fa-info-circle"></i></label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-green">
+                                            <input id="email" class="m-0" type="text">
+                                            <label for="email">Email</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-green">
+                                            <input id="password" class="m-0" type="text">
+                                            <label for="password">Password</label>
+                                        </div>
+
                                     </div>
-                                    <div class="input-field col s12 m8 l6 color-orange">
-                                        <input id="value" class="m-0" type="text">
-                                        <label for="value">Value</label>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-0">
+                                    <div class="row">
+
+                                        <div class="input-field col s12 m6 color-green">
+                                            <input id="title" class="m-0" type="text">
+                                            <label for="title">Title</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 color-green">
+                                            <select>
+                                                <option value="0" selected disabled>Timezone</option><option value="Australia/Sydney">[GMT+10:00] Australia Eastern Time</option><option value="Australia/Adelaide">[GMT+09:30] Australia Central Time</option><option value="Japan">[GMT+09:00] Japan</option><option value="Asia/Seoul">[GMT+09:00] Seoul</option><option value="Australia/Perth">[GMT+08:00] Australia Western Time</option><option value="Asia/Shanghai">[GMT+08:00] China (Beijing)</option><option value="Asia/Hong_Kong">[GMT+08:00] Hong Kong</option><option value="Asia/Singapore">[GMT+08:00] Singapore</option><option value="Europe/Moscow">[GMT+03:00] Moscow</option><option value="EET">[GMT+02:00] Eastern European Time</option><option value="CET">[GMT+01:00] Central European Time</option><option value="WET">[GMT+00:00] Western European Time</option><option value="Europe/London">[GMT+00:00] Great Britain</option><option value="Canada/Newfoundland">[GMT-03:30] Newfoundland</option><option value="Canada/Atlantic">[GMT-04:00] Atlantic Time</option><option value="US/Eastern">[GMT-05:00] Eastern Time</option><option value="US/Central">[GMT-06:00] Central Time</option><option value="US/Mountain">[GMT-07:00] Mountain Time</option><option value="US/Arizona">[GMT-07:00] Arizona</option><option value="US/Pacific">[GMT-08:00] Pacific Time</option><option value="US/Alaska">[GMT-09:00] Alaska Time</option><option value="US/Hawaii">[GMT-10:00] Hawaii-Aleutian Time</option>
+                                            </select>
+                                        </div>
+
                                     </div>
-                                    <div class="input-field col s12 m4 l6 color-orange">
-                                        <select name="currency" size="1">
-                                            <option value=""></option><option value="AFN">AFN</option><option value="EUR" selected="">EUR</option><option value="DZD">DZD</option><option value="USD">USD</option><option value="AOA">AOA</option><option value="XCD">XCD</option><option value="ARS">ARS</option><option value="AMD">AMD</option><option value="AWG">AWG</option><option value="AUD">AUD</option><option value="AZM">AZM</option><option value="BSD">BSD</option><option value="BHD">BHD</option><option value="BDT">BDT</option><option value="BBD">BBD</option><option value="BYR">BYR</option><option value="BZD">BZD</option><option value="XOF">XOF</option><option value="BMD">BMD</option><option value="BTN">BTN</option><option value="BOB">BOB</option><option value="BAM">BAM</option><option value="BWP">BWP</option><option value="BRL">BRL</option><option value="BND">BND</option><option value="BGN">BGN</option><option value="BIF">BIF</option><option value="KHR">KHR</option><option value="XAF">XAF</option><option value="CAD">CAD</option><option value="CVE">CVE</option><option value="KYD">KYD</option><option value="CLP">CLP</option><option value="CNY">CNY</option><option value="COP">COP</option><option value="KMF">KMF</option><option value="CDF">CDF</option><option value="NZD">NZD</option><option value="CRC">CRC</option><option value="HRK">HRK</option><option value="CUP">CUP</option><option value="CZK">CZK</option><option value="DKK">DKK</option><option value="DJF">DJF</option><option value="DOP">DOP</option><option value="EGP">EGP</option><option value="ERN">ERN</option><option value="EEK">EEK</option><option value="ETB">ETB</option><option value="FKP">FKP</option><option value="FJD">FJD</option><option value="XPF">XPF</option><option value="GMD">GMD</option><option value="GEL">GEL</option><option value="GHS">GHS</option><option value="GIP">GIP</option><option value="GTQ">GTQ</option><option value="GBP">GBP</option><option value="GNF">GNF</option><option value="GWP">GWP</option><option value="GYD">GYD</option><option value="HTG">HTG</option><option value="HNL">HNL</option><option value="HKD">HKD</option><option value="HUF">HUF</option><option value="ISK">ISK</option><option value="INR">INR</option><option value="IDR">IDR</option><option value="IRR">IRR</option><option value="IQD">IQD</option><option value="ILS">ILS</option><option value="JMD">JMD</option><option value="JPY">JPY</option><option value="JOD">JOD</option><option value="KZT">KZT</option><option value="KES">KES</option><option value="KPW">KPW</option><option value="KRW">KRW</option><option value="KWD">KWD</option><option value="KGS">KGS</option><option value="LAK">LAK</option><option value="LVL">LVL</option><option value="LSL">LSL</option><option value="LRD">LRD</option><option value="LTD">LTD</option><option value="CHF">CHF</option><option value="LTL">LTL</option><option value="MOP">MOP</option><option value="MKD">MKD</option><option value="MGA">MGA</option><option value="MWK">MWK</option><option value="MYR">MYR</option><option value="MVR">MVR</option><option value="MRO">MRO</option><option value="MUR">MUR</option><option value="MXN">MXN</option><option value="MDL">MDL</option><option value="MNT">MNT</option><option value="MAD">MAD</option><option value="MZN">MZN</option><option value="ZAR">ZAR</option><option value="NPR">NPR</option><option value="NIO">NIO</option><option value="NGN">NGN</option><option value="NOK">NOK</option><option value="OMR">OMR</option><option value="PKR">PKR</option><option value="PAB">PAB</option><option value="PGK">PGK</option><option value="PYG">PYG</option><option value="PEN">PEN</option><option value="PHP">PHP</option><option value="PLN">PLN</option><option value="QAR">QAR</option><option value="RON">RON</option><option value="RUB">RUB</option><option value="RWF">RWF</option><option value="WST">WST</option><option value="STD">STD</option><option value="SAR">SAR</option><option value="RSD">RSD</option><option value="SCR">SCR</option><option value="SLL">SLL</option><option value="SGD">SGD</option><option value="SBD">SBD</option><option value="SOS">SOS</option><option value="LKR">LKR</option><option value="SDG">SDG</option><option value="SRD">SRD</option><option value="SZL">SZL</option><option value="SEK">SEK</option><option value="SYP">SYP</option><option value="TWD">TWD</option><option value="TJS">TJS</option><option value="TZS">TZS</option><option value="THB">THB</option><option value="TOP">TOP</option><option value="TTD">TTD</option><option value="TND">TND</option><option value="TRY">TRY</option><option value="TMM">TMM</option><option value="UGX">UGX</option><option value="UAH">UAH</option><option value="AED">AED</option><option value="UYU">UYU</option><option value="UZS">UZS</option><option value="VUV">VUV</option><option value="VEF">VEF</option><option value="VND">VND</option><option value="YER">YER</option><option value="ZMK">ZMK</option><option value="ZWD">ZWD</option>
-                                        </select>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-0">
+                                    <div class="row">
+                                        <div class="input-field col s12 m12 color-green">
+                                            <select multiple>
+                                                <option value="0" disabled selected>Assigned Carriers</option>
+                                                <option value="1">PostNL Parcel EU</option>
+                                                <option value="2">PostNL Parcel GlobalPack EMS</option>
+                                                <option value="3">PostNL Parcel GlobalPack UPU</option>
+                                                <option value="4">PostNL Packet Tracked</option>
+                                                <option value="5">PostNL Packet Registered</option>
+                                                <option value="6">Royal Mail Tracked 24 - No Signature</option>
+                                                <option value="7">Royal Mail Tracked 24 - Signature</option>
+                                                <option value="8">Royal Mail Tracked 48 - No Signature</option>
+                                                <option value="9">Royal Mail Tracked 48 - Signature</option>
+                                                <option value="10">Sending</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal">
+                                    <div class="row">
+                                        <div class="input-field col s12 color-green">
+                                            <textarea id="admin-comment" class="textarea open-textarea"></textarea>
+                                            <label for="admin-comment">Administration Comments</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="type-hubsuper type-hide">
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-0">
+                                    <div class="row">
+                                        <div class="input-title">Add Hub Supervisor</div>
+                                        <div class="col s12 m6">
+                                            <div class="one-row-checkbox color-green">
+                                                <label>
+                                                    <input checked type="checkbox"/>
+                                                    <span class="fs-1">Active</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="input-field col s12 m6 color-green">
+                                            <select>
+                                                <option value="0" selected="">Assigned Hub</option><option value="2">France - Main Hub</option><option value="6">Germany - Main Hub</option><option value="4">HK - Main Hub</option><option value="3">Italy - Main hub</option><option value="1">Spain - Main Hub</option><option value="5">UK - Main hub</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-0">
+                                    <div class="row">
+
+                                        <div class="input-field col s12 m6 l4 color-green tooltipped" data-position="bottom" data-tooltip=" * 3-25 chars; only latin letters, digits and .-+_@ chars">
+                                            <input id="username" class="m-0" type="text">
+                                            <label for="username">Choose Username<i class="fa fa-info-circle"></i></label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l4 color-green">
+                                            <input id="email" class="m-0" type="text">
+                                            <label for="email">Email</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l4 color-green">
+                                            <input id="password" class="m-0" type="text">
+                                            <label for="password">Password</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12">
+                                <div class="card card-modal mb-0">
+                                    <div class="row">
+
+                                        <div class="input-field col s12 m6 color-green">
+                                            <input id="title" class="m-0" type="text">
+                                            <label for="title">Title</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 color-green">
+                                            <select>
+                                                <option value="0" selected disabled>Timezone</option><option value="Australia/Sydney">[GMT+10:00] Australia Eastern Time</option><option value="Australia/Adelaide">[GMT+09:30] Australia Central Time</option><option value="Japan">[GMT+09:00] Japan</option><option value="Asia/Seoul">[GMT+09:00] Seoul</option><option value="Australia/Perth">[GMT+08:00] Australia Western Time</option><option value="Asia/Shanghai">[GMT+08:00] China (Beijing)</option><option value="Asia/Hong_Kong">[GMT+08:00] Hong Kong</option><option value="Asia/Singapore">[GMT+08:00] Singapore</option><option value="Europe/Moscow">[GMT+03:00] Moscow</option><option value="EET">[GMT+02:00] Eastern European Time</option><option value="CET">[GMT+01:00] Central European Time</option><option value="WET">[GMT+00:00] Western European Time</option><option value="Europe/London">[GMT+00:00] Great Britain</option><option value="Canada/Newfoundland">[GMT-03:30] Newfoundland</option><option value="Canada/Atlantic">[GMT-04:00] Atlantic Time</option><option value="US/Eastern">[GMT-05:00] Eastern Time</option><option value="US/Central">[GMT-06:00] Central Time</option><option value="US/Mountain">[GMT-07:00] Mountain Time</option><option value="US/Arizona">[GMT-07:00] Arizona</option><option value="US/Pacific">[GMT-08:00] Pacific Time</option><option value="US/Alaska">[GMT-09:00] Alaska Time</option><option value="US/Hawaii">[GMT-10:00] Hawaii-Aleutian Time</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal">
+                                    <div class="row">
+                                        <div class="input-field col s12 color-green">
+                                            <textarea id="admin-comment" class="textarea open-textarea"></textarea>
+                                            <label for="admin-comment">Administration Comments</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="type-hubwork type-hide">
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-0">
+                                    <div class="row">
+                                        <div class="input-title">Add Hub Supervisor</div>
+                                        <div class="col s12 m6">
+                                            <div class="one-row-checkbox color-green">
+                                                <label>
+                                                    <input checked type="checkbox"/>
+                                                    <span class="fs-1">Active</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="input-field col s12 m6 color-green">
+                                            <select>
+                                                <option value="0" selected="">Assigned Hub</option><option value="2">France - Main Hub</option><option value="6">Germany - Main Hub</option><option value="4">HK - Main Hub</option><option value="3">Italy - Main hub</option><option value="1">Spain - Main Hub</option><option value="5">UK - Main hub</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-0">
+                                    <div class="row">
+
+                                        <div class="input-field col s12 m6 l4 color-green tooltipped" data-position="bottom" data-tooltip=" * 3-25 chars; only latin letters, digits and .-+_@ chars">
+                                            <input id="username" class="m-0" type="text">
+                                            <label for="username">Choose Username<i class="fa fa-info-circle"></i></label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l4 color-green">
+                                            <input id="email" class="m-0" type="text">
+                                            <label for="email">Email</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l4 color-green">
+                                            <input id="password" class="m-0" type="text">
+                                            <label for="password">Password</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12">
+                                <div class="card card-modal mb-0">
+                                    <div class="row">
+
+                                        <div class="input-field col s12 m6 color-green">
+                                            <input id="title" class="m-0" type="text">
+                                            <label for="title">Title</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 color-green">
+                                            <select>
+                                                <option value="0" selected disabled>Timezone</option><option value="Australia/Sydney">[GMT+10:00] Australia Eastern Time</option><option value="Australia/Adelaide">[GMT+09:30] Australia Central Time</option><option value="Japan">[GMT+09:00] Japan</option><option value="Asia/Seoul">[GMT+09:00] Seoul</option><option value="Australia/Perth">[GMT+08:00] Australia Western Time</option><option value="Asia/Shanghai">[GMT+08:00] China (Beijing)</option><option value="Asia/Hong_Kong">[GMT+08:00] Hong Kong</option><option value="Asia/Singapore">[GMT+08:00] Singapore</option><option value="Europe/Moscow">[GMT+03:00] Moscow</option><option value="EET">[GMT+02:00] Eastern European Time</option><option value="CET">[GMT+01:00] Central European Time</option><option value="WET">[GMT+00:00] Western European Time</option><option value="Europe/London">[GMT+00:00] Great Britain</option><option value="Canada/Newfoundland">[GMT-03:30] Newfoundland</option><option value="Canada/Atlantic">[GMT-04:00] Atlantic Time</option><option value="US/Eastern">[GMT-05:00] Eastern Time</option><option value="US/Central">[GMT-06:00] Central Time</option><option value="US/Mountain">[GMT-07:00] Mountain Time</option><option value="US/Arizona">[GMT-07:00] Arizona</option><option value="US/Pacific">[GMT-08:00] Pacific Time</option><option value="US/Alaska">[GMT-09:00] Alaska Time</option><option value="US/Hawaii">[GMT-10:00] Hawaii-Aleutian Time</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal">
+                                    <div class="row">
+                                        <div class="input-field col s12 color-green">
+                                            <textarea id="admin-comment" class="textarea open-textarea"></textarea>
+                                            <label for="admin-comment">Administration Comments</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="type-client type-hide">
+                            <div class="col s12">
+                                <div class="card card-modal mb-0">
+                                    <div class="row">
+                                        <div class="input-title">Add Carrier</div>
+                                        <div class="col s12 m6 l3">
+                                            <div class="one-row-checkbox color-green">
+                                                <label>
+                                                    <input checked type="checkbox"/>
+                                                    <span class="fs-1">Active</span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-green tooltipped" data-position="bottom" data-tooltip=" * 3-25 chars; only latin letters, digits and .-+_@ chars">
+                                            <input id="username" class="m-0" type="text">
+                                            <label for="username">Choose Username<i class="fa fa-info-circle"></i></label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-green">
+                                            <input id="email" class="m-0" type="text">
+                                            <label for="email">Email</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-green">
+                                            <input id="password" class="m-0" type="text">
+                                            <label for="password">Password</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-0">
+                                    <div class="row">
+
+                                        <div class="input-field col s12 m6 color-green">
+                                            <input id="title" class="m-0" type="text">
+                                            <label for="title">Title</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 color-green">
+                                            <select>
+                                                <option value="0" selected disabled>Timezone</option><option value="Australia/Sydney">[GMT+10:00] Australia Eastern Time</option><option value="Australia/Adelaide">[GMT+09:30] Australia Central Time</option><option value="Japan">[GMT+09:00] Japan</option><option value="Asia/Seoul">[GMT+09:00] Seoul</option><option value="Australia/Perth">[GMT+08:00] Australia Western Time</option><option value="Asia/Shanghai">[GMT+08:00] China (Beijing)</option><option value="Asia/Hong_Kong">[GMT+08:00] Hong Kong</option><option value="Asia/Singapore">[GMT+08:00] Singapore</option><option value="Europe/Moscow">[GMT+03:00] Moscow</option><option value="EET">[GMT+02:00] Eastern European Time</option><option value="CET">[GMT+01:00] Central European Time</option><option value="WET">[GMT+00:00] Western European Time</option><option value="Europe/London">[GMT+00:00] Great Britain</option><option value="Canada/Newfoundland">[GMT-03:30] Newfoundland</option><option value="Canada/Atlantic">[GMT-04:00] Atlantic Time</option><option value="US/Eastern">[GMT-05:00] Eastern Time</option><option value="US/Central">[GMT-06:00] Central Time</option><option value="US/Mountain">[GMT-07:00] Mountain Time</option><option value="US/Arizona">[GMT-07:00] Arizona</option><option value="US/Pacific">[GMT-08:00] Pacific Time</option><option value="US/Alaska">[GMT-09:00] Alaska Time</option><option value="US/Hawaii">[GMT-10:00] Hawaii-Aleutian Time</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal">
+                                    <div class="row">
+                                        <div class="input-field col s12 color-green">
+                                            <textarea id="admin-comment" class="textarea open-textarea"></textarea>
+                                            <label for="admin-comment">Administration Comments</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="type-sales type-hide">
+                            <div class="col s12">
+                                <div class="card card-modal mb-0">
+                                    <div class="row">
+                                        <div class="input-title">Add Carrier</div>
+                                        <div class="col s12 m6 l3">
+                                            <div class="one-row-checkbox color-green">
+                                                <label>
+                                                    <input checked type="checkbox"/>
+                                                    <span class="fs-1">Active</span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-green tooltipped" data-position="bottom" data-tooltip=" * 3-25 chars; only latin letters, digits and .-+_@ chars">
+                                            <input id="username" class="m-0" type="text">
+                                            <label for="username">Choose Username<i class="fa fa-info-circle"></i></label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-green">
+                                            <input id="email" class="m-0" type="text">
+                                            <label for="email">Email</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-green">
+                                            <input id="password" class="m-0" type="text">
+                                            <label for="password">Password</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-0">
+                                    <div class="row">
+
+                                        <div class="input-field col s12 m6 color-green">
+                                            <input id="title" class="m-0" type="text">
+                                            <label for="title">Title</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 color-green">
+                                            <select>
+                                                <option value="0" selected disabled>Timezone</option><option value="Australia/Sydney">[GMT+10:00] Australia Eastern Time</option><option value="Australia/Adelaide">[GMT+09:30] Australia Central Time</option><option value="Japan">[GMT+09:00] Japan</option><option value="Asia/Seoul">[GMT+09:00] Seoul</option><option value="Australia/Perth">[GMT+08:00] Australia Western Time</option><option value="Asia/Shanghai">[GMT+08:00] China (Beijing)</option><option value="Asia/Hong_Kong">[GMT+08:00] Hong Kong</option><option value="Asia/Singapore">[GMT+08:00] Singapore</option><option value="Europe/Moscow">[GMT+03:00] Moscow</option><option value="EET">[GMT+02:00] Eastern European Time</option><option value="CET">[GMT+01:00] Central European Time</option><option value="WET">[GMT+00:00] Western European Time</option><option value="Europe/London">[GMT+00:00] Great Britain</option><option value="Canada/Newfoundland">[GMT-03:30] Newfoundland</option><option value="Canada/Atlantic">[GMT-04:00] Atlantic Time</option><option value="US/Eastern">[GMT-05:00] Eastern Time</option><option value="US/Central">[GMT-06:00] Central Time</option><option value="US/Mountain">[GMT-07:00] Mountain Time</option><option value="US/Arizona">[GMT-07:00] Arizona</option><option value="US/Pacific">[GMT-08:00] Pacific Time</option><option value="US/Alaska">[GMT-09:00] Alaska Time</option><option value="US/Hawaii">[GMT-10:00] Hawaii-Aleutian Time</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-0">
+                                    <div class="row">
+                                        <div class="input-field col s12 m12 color-green">
+                                            <select multiple>
+                                                <option value="0" disabled selected>Assigned Shippers</option>
+                                                <option value="1">PostNL Parcel EU</option>
+                                                <option value="2">PostNL Parcel GlobalPack EMS</option>
+                                                <option value="3">PostNL Parcel GlobalPack UPU</option>
+                                                <option value="4">PostNL Packet Tracked</option>
+                                                <option value="5">PostNL Packet Registered</option>
+                                                <option value="6">Royal Mail Tracked 24 - No Signature</option>
+                                                <option value="7">Royal Mail Tracked 24 - Signature</option>
+                                                <option value="8">Royal Mail Tracked 48 - No Signature</option>
+                                                <option value="9">Royal Mail Tracked 48 - Signature</option>
+                                                <option value="10">Sending</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal">
+                                    <div class="row">
+                                        <div class="input-field col s12 color-green">
+                                            <textarea id="admin-comment" class="textarea open-textarea"></textarea>
+                                            <label for="admin-comment">Administration Comments</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="type-admin type-hide">
+                            <div class="col s12">
+                                <div class="card card-modal mb-0">
+                                    <div class="row">
+                                        <div class="input-title">Add Carrier</div>
+                                        <div class="col s12 m6 l3">
+                                            <div class="one-row-checkbox color-green">
+                                                <label>
+                                                    <input checked type="checkbox"/>
+                                                    <span class="fs-1">Active</span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-green tooltipped" data-position="bottom" data-tooltip=" * 3-25 chars; only latin letters, digits and .-+_@ chars">
+                                            <input id="username" class="m-0" type="text">
+                                            <label for="username">Choose Username<i class="fa fa-info-circle"></i></label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-green">
+                                            <input id="email" class="m-0" type="text">
+                                            <label for="email">Email</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-green">
+                                            <input id="password" class="m-0" type="text">
+                                            <label for="password">Password</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-0">
+                                    <div class="row">
+
+                                        <div class="input-field col s12 m6 color-green">
+                                            <input id="title" class="m-0" type="text">
+                                            <label for="title">Title</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 color-green">
+                                            <select>
+                                                <option value="0" selected disabled>Timezone</option><option value="Australia/Sydney">[GMT+10:00] Australia Eastern Time</option><option value="Australia/Adelaide">[GMT+09:30] Australia Central Time</option><option value="Japan">[GMT+09:00] Japan</option><option value="Asia/Seoul">[GMT+09:00] Seoul</option><option value="Australia/Perth">[GMT+08:00] Australia Western Time</option><option value="Asia/Shanghai">[GMT+08:00] China (Beijing)</option><option value="Asia/Hong_Kong">[GMT+08:00] Hong Kong</option><option value="Asia/Singapore">[GMT+08:00] Singapore</option><option value="Europe/Moscow">[GMT+03:00] Moscow</option><option value="EET">[GMT+02:00] Eastern European Time</option><option value="CET">[GMT+01:00] Central European Time</option><option value="WET">[GMT+00:00] Western European Time</option><option value="Europe/London">[GMT+00:00] Great Britain</option><option value="Canada/Newfoundland">[GMT-03:30] Newfoundland</option><option value="Canada/Atlantic">[GMT-04:00] Atlantic Time</option><option value="US/Eastern">[GMT-05:00] Eastern Time</option><option value="US/Central">[GMT-06:00] Central Time</option><option value="US/Mountain">[GMT-07:00] Mountain Time</option><option value="US/Arizona">[GMT-07:00] Arizona</option><option value="US/Pacific">[GMT-08:00] Pacific Time</option><option value="US/Alaska">[GMT-09:00] Alaska Time</option><option value="US/Hawaii">[GMT-10:00] Hawaii-Aleutian Time</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal">
+                                    <div class="row">
+                                        <div class="input-field col s12 color-green">
+                                            <textarea id="admin-comment" class="textarea open-textarea"></textarea>
+                                            <label for="admin-comment">Administration Comments</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- info row -->
+
 
                 <!-- checkbox -row -->
-                <div class="col s12 mt-4">
-                    <div class="card card-modal card-checkbox mb-0">
-                        <div class="input-title">Custom options</div>
-                        <div class="row">
-                            <div class="col s2 color-green mb-2 mt-4">
-                                <label class="checkbox">
-                                    <input type="checkbox"/>
-                                    <span>DDP</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
 
 
             </div>
@@ -521,425 +1122,39 @@
         </div>
     </div>
     <div id="edit" class="modal modal-style modal-fixed-footer modal-fixed-header">
-        <div class="modal-header color-red">
+        <div class="modal-header color-blue">
             <div class="modal-title"><i class="fa fa-pen left"></i>Edit Parcel</div>
-            <div class="d-flex">
-            <button class="btn waves-effect tooltipped" data-position="top" data-tooltip="Click here if you want to take it"><i class="fa fa-exclamation-circle"></i></button>
             <button class="btn waves-effect modal-close ml-2"><i class="fa fa-times"></i></button>
-            </div>
         </div>
-        <div class="modal-content modal-view">
+        <div class="modal-content modal-opt">
 
             <div class="row m-0 mt-2">
 
                 <!-- id row -->
                 <div class="col s12">
                     <div class="card card-modal mb-0">
-                        <div class="parcel-top-info pl-2 pr-2">
-                            <div class="bold parcel-top-info_id mobile">ID 171321</div>
-
-                            <div class="parcel-top-info_desctop">
+                        <div class="parcel-top-info one-btns pl-2 pr-2">
+                            <div class="bold parcel-top-info_id mobile">
+                                <div>ID 171321</div>
+                                <div>Shipper</div>
+                            </div>
+                            <div class="parcel-top-info_desctop parcel-top-info_no-button">
                                 <div class="parcel-top-info_left">
-                                    <div class="color-green tooltipped" data-position="top" data-tooltip="Created"><span><i class="fa fa-file-contract"></i></span> <span>09.07.2018, 18:31</span></div>
-                                    <a href="#!" class="btn parcel-top-info_btn btn-source waves-effect"> <i class="fa fa-file-code pr-2"></i> Source Dump <i class="fa fa-angle-down ml-2"></i></a>
+                                    <div class="bold parcel-top-info_id">ID 171321</div>
+                                    <div class="bold parcel-top-info_type">Shipper</div>
                                 </div>
 
-                                <div class="bold parcel-top-info_id">ID 171321</div>
 
                                 <div class="parcel-top-info_right">
-                                    <div class="color-orange tooltipped" data-position="top" data-tooltip="Modified"><span><i class="fa fa-file-signature"></i></span> <span>09.07.2018, 18:31</span></div>
-                                    <a href="#!" class="btn parcel-top-info_btn btn-audit waves-effect"> <i class="far fa-file-code pr-2"></i> Audit Log <i class="fa fa-angle-down ml-2"></i></a>
+                                    <div class="color-green tooltipped" data-position="left" data-tooltip="Created"><span><i class="fa fa-file-contract"></i></span> <span>09.07.2018, 18:31</span></div>
+                                    <div class="color-orange tooltipped" data-position="left" data-tooltip="Modified"><span><i class="fa fa-file-signature"></i></span> <span>09.07.2018, 18:31</span></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- source row -->
-                <div class="col s12 block-source">
-                    <div class="card card-modal m-0">
-                        <div class="parcel-source " id="source">
-                            <button type="button" class="btn copy-btn" onclick="copy('source')"><i class="fa fa-copy"></i></button>
-                            <span>
-                                {"Apikey":"aa93ac9a5ab3dcfc","Command":"OrderShipment","Shipment":{"LabelFormat":"ZPL200","ShipperReference":"11542352-001","DisplayId":"ID810011542352","Service":"RM48S","ConsignorAddress" : {"Name":"TradeINN","Company":"TRADEINN RETAIL SERVICES S.L","AddressLine1":"POSTBUS 7007","AddressLine2":"","AddressLine3":"","City":"SCHIEDAM","State":"NL","Zip":"3109","Country":"NL","Phone":"+34932200089","Email":"expediciones@tradeinn.com","Vat":"ESB17527524"},"ConsigneeAddress":{"Name":"NEIL VINCENT","Company":"NEIL VINCENT","AddressLine1":"8, Goldfield Avenue, Worsthorne","AddressLine2":"","AddressLine3":"LANCASHIRE","City":"BURNLEY","State":"","Zip":"BB10 3JJ","Country":"GB","Phone":"07842189789","Email":"neilvincent_7@hotmail.com","Vat":"","NationalId":"","TaxId":"","PassportNumber" : "","PassportIssueDate" : "","PassportExpiryDate" : ""},"PaymentReferenceNumber" :"","PaymentDateTime" : "","Weight" : "4.32",	"WeightUnit" : "kg",	"Length" : "102",	"Width" : "78", "Height" : "78",	"DimUnit" : "cm",	"Value" : "22.87",	"Currency" : "EUR",	"CustomsDuty" : "DDU",	"Description" : "goods","Products" : [{	"Description" : "Intexpurespaseat47","Sku" : "5172824","HsCode" : "5172824","OriginCountry" : "ES","PurchaseUrl" : "","Quantity" : "1","Value" : "5"} ]} }
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- audit row -->
-                <div class="col s12 block-audit m-0">
-                    <div class="card card-modal m-0">
-                        <div class="parcel-audit" id="audit">
-                            <button type="button" class="btn copy-btn" onclick="copy('audit')"><i class="fa fa-copy"></i></button>
-                            <span>
-                               [11.07.2018, 17:52]&nbsp; <b>TradeInn</b><br>Parcel created<br>
-                                Applied auto-corrections:<br>
-                                value: "22.87" =&gt; "5.00"<br>
-                                shipper_state: "NL" =&gt; ""<br>
-                                consignee_company: "NEIL VINCENT" =&gt; ""<br>
-                                consignee_address2: "" =&gt; "LANCASHIRE"<br>
-                                consignee_address3: "LANCASHIRE" =&gt; ""<br><br>[11.07.2018, 17:52]&nbsp; <b>TradeInn</b><br>Carrier label created - FN344729811GB / <br><br>[11.07.2018, 17:53]&nbsp; <b>TradeInn</b><br>Parcel cancelled<br><br>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- more info row -->
-                <div class="col s12">
-                    <div class="card card-modal">
-                        <div class="more-info">
-                            <div class="info-row color-green">
-                                <div class="more-info_name">User</div>
-                                <div class="more-info_text bold">134534 - USER</div>
-                            </div>
-                            <div class="info-row">
-                                <div class="more-info_name">Hub</div>
-                                <div class="more-info_text">Spain - Main Hub</div>
-                            </div>
-                            <div class="info-row">
-                                <div class="more-info_name">Carrier</div>
-                                <div class="more-info_text">PostNL Parcel EU</div>
-                            </div>
-                            <div class="info-row color-orange">
-                                <div class="more-info_name">Tracking Number</div>
-                                <div class="more-info_text bold">3SDMHK0015747</div>
-                            </div>
-                            <div class="info-row color-grey">
-                                <div class="more-info_name">Status</div>
-                                <div class="more-info_text">Cancelled</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- info row -->
-                <div class="col s12 mb-4">
-                    <div class="card card-modal">
-                        <div class="row">
-                            <div class="col s12 l6">
-                                <div class="input-title">Info</div>
-                                <div class="row">
-                                    <div class="input-field col s12 color-green tooltipped" data-position="bottom" data-tooltip="If entered, must be unique">
-                                        <input id="shipper_item_id" class="m-0" type="text">
-                                        <label for="shipper_item_id">Shipper Reference <i class="fa fa-info-circle"></i></label>
-                                    </div>
-
-                                    <div class="input-field col s12 color-green tooltipped" data-position="bottom" data-tooltip="If entered, barcode will be printed on the label">
-                                        <input id="display_item_id" class="m-0" type="text">
-                                        <label for="display_item_id">Display ID <i class="fa fa-info-circle"></i></label>
-                                    </div>
-
-                                    <div class="input-field col s12 color-green">
-                                        <select>
-                                            <option value="0" selected>Services</option><option value="PPLEU">PPLEU - PostNL Parcel EU</option><option value="PPLGE">PPLGE - PostNL Parcel GlobalPack EMS</option><option value="PPLGU">PPLGU - PostNL Parcel GlobalPack UPU</option><option value="PPTT">PPTT - PostNL Packet Tracked</option><option value="PPTR">PPTR - PostNL Packet Registered</option><option value="RM24">RM24 - Royal Mail Tracked 24 - Non Signature</option><option value="RM24S">RM24S - Royal Mail Tracked 24 - With Signature</option><option value="RM48">RM48 - Royal Mail Tracked 48 - Non Signature</option><option value="RM48S">RM48S - Royal Mail Tracked 48 - With Signature</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col m12 l6">
-                                <div class="input-title dummy"></div>
-                                <div class="row">
-                                    <div class="input-field col s12 m8 l6 color-orange">
-                                        <input id="weight" class="m-0" type="text">
-                                        <label for="weight">Weight</label>
-                                    </div>
-                                    <div class="input-field col s12 m4 l6 color-orange">
-                                        <select>
-                                            <option value=""></option><option value="0" selected="">KG</option><option value="1">LB</option>
-                                        </select>
-                                    </div>
-                                    <div class="input-field col s6 m3 color-orange">
-                                        <input id="length" class="m-0" type="text">
-                                        <label for="length">Length</label>
-                                    </div>
-                                    <div class="input-field col s6 m3 color-orange">
-                                        <input id="width" class="m-0" type="text">
-                                        <label for="width">Width</label>
-                                    </div>
-                                    <div class="input-field col s6 m3 color-orange">
-                                        <input id="height" class="m-0" type="text">
-                                        <label for="height">Height</label>
-                                    </div>
-                                    <div class="input-field col s6 m3 color-orange">
-                                        <select>
-                                            <option value=""></option><option value="0" selected="">CM</option>
-                                        </select>
-                                    </div>
-                                    <div class="input-field col s12 m8 l6 color-orange">
-                                        <input id="value" class="m-0" type="text">
-                                        <label for="value">Value</label>
-                                    </div>
-                                    <div class="input-field col s12 m4 l6 color-red">
-                                        <select name="currency" size="1">
-                                            <option value=""></option><option value="AFN">AFN</option><option value="EUR" selected="">EUR</option><option value="DZD">DZD</option><option value="USD">USD</option><option value="AOA">AOA</option><option value="XCD">XCD</option><option value="ARS">ARS</option><option value="AMD">AMD</option><option value="AWG">AWG</option><option value="AUD">AUD</option><option value="AZM">AZM</option><option value="BSD">BSD</option><option value="BHD">BHD</option><option value="BDT">BDT</option><option value="BBD">BBD</option><option value="BYR">BYR</option><option value="BZD">BZD</option><option value="XOF">XOF</option><option value="BMD">BMD</option><option value="BTN">BTN</option><option value="BOB">BOB</option><option value="BAM">BAM</option><option value="BWP">BWP</option><option value="BRL">BRL</option><option value="BND">BND</option><option value="BGN">BGN</option><option value="BIF">BIF</option><option value="KHR">KHR</option><option value="XAF">XAF</option><option value="CAD">CAD</option><option value="CVE">CVE</option><option value="KYD">KYD</option><option value="CLP">CLP</option><option value="CNY">CNY</option><option value="COP">COP</option><option value="KMF">KMF</option><option value="CDF">CDF</option><option value="NZD">NZD</option><option value="CRC">CRC</option><option value="HRK">HRK</option><option value="CUP">CUP</option><option value="CZK">CZK</option><option value="DKK">DKK</option><option value="DJF">DJF</option><option value="DOP">DOP</option><option value="EGP">EGP</option><option value="ERN">ERN</option><option value="EEK">EEK</option><option value="ETB">ETB</option><option value="FKP">FKP</option><option value="FJD">FJD</option><option value="XPF">XPF</option><option value="GMD">GMD</option><option value="GEL">GEL</option><option value="GHS">GHS</option><option value="GIP">GIP</option><option value="GTQ">GTQ</option><option value="GBP">GBP</option><option value="GNF">GNF</option><option value="GWP">GWP</option><option value="GYD">GYD</option><option value="HTG">HTG</option><option value="HNL">HNL</option><option value="HKD">HKD</option><option value="HUF">HUF</option><option value="ISK">ISK</option><option value="INR">INR</option><option value="IDR">IDR</option><option value="IRR">IRR</option><option value="IQD">IQD</option><option value="ILS">ILS</option><option value="JMD">JMD</option><option value="JPY">JPY</option><option value="JOD">JOD</option><option value="KZT">KZT</option><option value="KES">KES</option><option value="KPW">KPW</option><option value="KRW">KRW</option><option value="KWD">KWD</option><option value="KGS">KGS</option><option value="LAK">LAK</option><option value="LVL">LVL</option><option value="LSL">LSL</option><option value="LRD">LRD</option><option value="LTD">LTD</option><option value="CHF">CHF</option><option value="LTL">LTL</option><option value="MOP">MOP</option><option value="MKD">MKD</option><option value="MGA">MGA</option><option value="MWK">MWK</option><option value="MYR">MYR</option><option value="MVR">MVR</option><option value="MRO">MRO</option><option value="MUR">MUR</option><option value="MXN">MXN</option><option value="MDL">MDL</option><option value="MNT">MNT</option><option value="MAD">MAD</option><option value="MZN">MZN</option><option value="ZAR">ZAR</option><option value="NPR">NPR</option><option value="NIO">NIO</option><option value="NGN">NGN</option><option value="NOK">NOK</option><option value="OMR">OMR</option><option value="PKR">PKR</option><option value="PAB">PAB</option><option value="PGK">PGK</option><option value="PYG">PYG</option><option value="PEN">PEN</option><option value="PHP">PHP</option><option value="PLN">PLN</option><option value="QAR">QAR</option><option value="RON">RON</option><option value="RUB">RUB</option><option value="RWF">RWF</option><option value="WST">WST</option><option value="STD">STD</option><option value="SAR">SAR</option><option value="RSD">RSD</option><option value="SCR">SCR</option><option value="SLL">SLL</option><option value="SGD">SGD</option><option value="SBD">SBD</option><option value="SOS">SOS</option><option value="LKR">LKR</option><option value="SDG">SDG</option><option value="SRD">SRD</option><option value="SZL">SZL</option><option value="SEK">SEK</option><option value="SYP">SYP</option><option value="TWD">TWD</option><option value="TJS">TJS</option><option value="TZS">TZS</option><option value="THB">THB</option><option value="TOP">TOP</option><option value="TTD">TTD</option><option value="TND">TND</option><option value="TRY">TRY</option><option value="TMM">TMM</option><option value="UGX">UGX</option><option value="UAH">UAH</option><option value="AED">AED</option><option value="UYU">UYU</option><option value="UZS">UZS</option><option value="VUV">VUV</option><option value="VEF">VEF</option><option value="VND">VND</option><option value="YER">YER</option><option value="ZMK">ZMK</option><option value="ZWD">ZWD</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-               <!-- consignee row -->
-                <div class="col m12 l6">
-                    <div class="card card-modal">
-                        <div class="input-title">Consignee <button type="button" class="btn waves-effect waves-light original-btn tooltipped" data-position="left" data-tooltip="Original data"><i class="fa fa-eye"></i></button></div>
-
-                        <div class="row">
-                            <div class="input-field col s6 color-green">
-                                <input id="consignee_name" class="m-0" type="text">
-                                <label for="consignee_name">Name</label>
-                            </div>
-                            <div class="input-field col s6 color-green">
-                                <input id="consignee_company" class="m-0" type="text">
-                                <label for="consignee_company">Company</label>
-                            </div>
-
-                            <div class="input-field col s12 color-green">
-                                <input id="consignee_address1" class="m-0" type="text">
-                                <label for="consignee_address1">Address line 1</label>
-                            </div>
-                            <div class="input-field col s6 color-green">
-                                <input id="consignee_address2" class="m-0" type="text">
-                                <label for="consignee_address2">Address line 2</label>
-                            </div>
-                            <div class="input-field col s6 color-green">
-                                <input id="consignee_address3" class="m-0" type="text">
-                                <label for="consignee_address3">Address line 3</label>
-                            </div>
-
-                            <div class="input-field col s6 color-green">
-                                <input id="consignee_city" class="m-0" type="text">
-                                <label for="consignee_city">City</label>
-                            </div>
-                            <div class="input-field col s6 color-green">
-                                <input id="consignee_country-state" class="m-0" type="text">
-                                <label for="consignee_country-state">Country / State</label>
-                            </div>
-
-                            <div class="input-field col s5 m3 l4 color-green">
-                                <input id="consignee_zip-code" class="m-0" type="text">
-                                <label for="consignee_zip-code">ZIP - code</label>
-                            </div>
-                            <div class="input-field col s7 m9 l8 color-green">
-                                <select name="consignee_country" size="1" >
-                                    <option value="" selected>Country</option><option value="AF">Afghanistan</option><option value="AX">Aland Islands</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua and Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT">Austria</option><option value="AZ">Azerbaijan</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BO">Bolivia</option><option value="BQ">Bonaire</option><option value="BA">Bosnia and Herzegovina</option><option value="BW">Botswana</option><option value="BV">Bouvet Island</option><option value="BR">Brazil</option><option value="IO">British Indian Ocean Territory</option><option value="BN">Brunei</option><option value="BG">Bulgaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="BT">Bhutan</option><option value="KH">Cambodia</option><option value="CM">Cameroon</option><option value="CA">Canada</option><option value="IC">Canary Islands</option><option value="CV">Cape Verde</option><option value="KY">Cayman Islands</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="CL">Chile</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos Island</option><option value="CO">Colombia</option><option value="KM">Comoros</option><option value="CG">Congo</option><option value="CD">Congo Democratic Republic</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="HR">Croatia</option><option value="CU">Cuba</option><option value="CW">Curacao</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="EC">Ecuador</option><option value="EG">Egypt</option><option value="SV">El Salvador</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="EE">Estonia</option><option value="ET">Ethiopia</option><option value="FK">Falkland Islands</option><option value="FO">Faroe Islands</option><option value="FJ">Fiji</option><option value="FI">Finland</option><option value="FR">France</option><option value="GF">French Guyana</option><option value="PF">French Polynesia</option><option value="TF">French Southern Territory</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia</option><option value="DE">Germany</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GG">Guernsey</option><option value="GN">Guinea</option><option value="GW">Guinea Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="HM">Heard and McDonald Islands</option><option value="HN">Honduras</option><option value="HK">Hong Kong</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran</option><option value="IQ">Iraq</option><option value="IE">Ireland</option><option value="IM">Isle of Man</option><option value="IL">Israel</option><option value="IT">Italy</option><option value="CI">Ivory Coast</option><option value="JM">Jamaica</option><option value="JP">Japan</option><option value="JE">Jersey</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KE">Kenya</option><option value="XK">Kosovo</option><option value="KI">Kiribati</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Laos</option><option value="LV">Latvia</option><option value="LB">Lebanon</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MO">Macau</option><option value="MK">Macedonia</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MH">Marshall Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico</option><option value="FM">Micronesia</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="MN">Mongolia</option><option value="ME">Montenegro</option><option value="MS">Montserrat</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="MM">Myanmar</option><option value="NA">Namibia</option><option value="NR">Nauru</option><option value="NP">Nepal</option><option value="AN">Netherland Antilles</option><option value="NL">Netherlands</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="KP">North Korea</option><option value="MP">Northern Mariana Island</option><option value="NO">Norway</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PW">Palau</option><option value="PS">Palestine</option><option value="PA">Panama</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="PH">Philippines</option><option value="PN">Pitcairn</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="PR">Puerto Rico</option><option value="QA">Qatar</option><option value="RE">Reunion Island</option><option value="RO">Romania</option><option value="RU">Russia</option><option value="RW">Rwanda</option><option value="BL">Saint Barthelemy</option><option value="SH">Saint Helena</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="SX">Saint Maarten</option><option value="MF">Saint Martin</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and the Grenadines</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="ST">Sao Tome and Principe</option><option value="SA">Saudi Arabia</option><option value="SN">Senegal</option><option value="RS">Serbia</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="SB">Solomon Islands</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="GS">South Georgia</option><option value="KR">South Korea</option><option value="SS">South Sudan</option><option value="ES">Spain</option><option value="LK">Sri Lanka</option><option value="SD">Sudan</option><option value="SR">Suriname</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SZ">Swaziland</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="SY">Syria</option><option value="TJ">Tajikistan</option><option value="TW">Taiwan</option><option value="TZ">Tanzania</option><option value="TH">Thailand</option><option value="TL">Timor</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad and Tobago</option><option value="TN">Tunisia</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="TC">Turks and Caicos Islands</option><option value="TV">Tuvalu</option><option value="UG">Uganda</option><option value="UA">Ukraine</option><option value="AE">United Arab Emirates</option><option value="GB">United Kingdom</option><option value="US">United States</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option value="VU">Vanuatu</option><option value="VA">Vatican</option><option value="VE">Venezuela</option><option value="VN">Vietnam</option><option value="VG">Virgin Islands (British)</option><option value="VI">Virgin Islands (US)</option><option value="WF">Wallis and Futuna</option><option value="EH">Western Sahara</option><option value="YE">Yemen</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option>
-                                </select>
-                            </div>
-
-                            <div class="input-field col s12 m5 color-green">
-                                <input id="consignee_phone" class="m-0" type="text">
-                                <label for="consignee_phone">Phone</label>
-                            </div>
-                            <div class="input-field col s12 m7 color-green">
-                                <input id="consignee_email" class="m-0" type="text">
-                                <label for="consignee_email">Email</label>
-                            </div>
-
-                            <div class="input-field col s12 color-green">
-                                <input id="consignee_vat" class="m-0" type="text">
-                                <label for="consignee_vat">Vat</label>
-                            </div>
-                        </div>
-                        <div class="original-data">
-                            <div class="input-title">Consignee original data</div>
-
-                            <div class="row">
-                                <div class="input-field col s6 color-blue">
-                                    <input id="consignee_name" class="m-0" type="text" value="WIWAT KOOPINPAITOON" disabled>
-                                    <label for="consignee_name">Name</label>
-                                </div>
-                                <div class="input-field col s6 color-blue">
-                                    <input id="consignee_company" class="m-0" type="text" disabled>
-                                    <label for="consignee_company">Company</label>
-                                </div>
-
-                                <div class="input-field col s12 color-blue">
-                                    <input id="consignee_address1" class="m-0" type="text" value="32/19 Soi Sukumvit 62 Yaek 7" disabled>
-                                    <label for="consignee_address1">Address line 1</label>
-                                </div>
-                                <div class="input-field col s6 color-blue">
-                                    <input id="consignee_address2" class="m-0" type="text" value="BANGJAK PHRAKANONG" disabled>
-                                    <label for="consignee_address2">Address line 2</label>
-                                </div>
-                                <div class="input-field col s6 color-blue">
-                                    <input id="consignee_address3" class="m-0" type="text" disabled>
-                                    <label for="consignee_address3">Address line 3</label>
-                                </div>
-
-                                <div class="input-field col s6 color-blue">
-                                    <input id="consignee_city" class="m-0" type="text" value="BANGKOK" disabled>
-                                    <label for="consignee_city">City</label>
-                                </div>
-                                <div class="input-field col s6 color-blue">
-                                    <input id="consignee_country-state" class="m-0" type="text" disabled>
-                                    <label for="consignee_country-state">Country / State</label>
-                                </div>
-                                <div class="input-field col s5 m3 l4 color-blue">
-                                    <input id="consignee_zip-code" class="m-0" type="text" value="10260" disabled>
-                                    <label for="consignee_zip-code">ZIP - code</label>
-                                </div>
-                                <div class="input-field col s7 m9 l8 color-blue">
-                                    <select name="consignee_country" size="1" disabled>
-                                        <option value="">Country</option><option value="AF" selected>Afghanistan</option><option value="AX">Aland Islands</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua and Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT">Austria</option><option value="AZ">Azerbaijan</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BO">Bolivia</option><option value="BQ">Bonaire</option><option value="BA">Bosnia and Herzegovina</option><option value="BW">Botswana</option><option value="BV">Bouvet Island</option><option value="BR">Brazil</option><option value="IO">British Indian Ocean Territory</option><option value="BN">Brunei</option><option value="BG">Bulgaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="BT">Bhutan</option><option value="KH">Cambodia</option><option value="CM">Cameroon</option><option value="CA">Canada</option><option value="IC">Canary Islands</option><option value="CV">Cape Verde</option><option value="KY">Cayman Islands</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="CL">Chile</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos Island</option><option value="CO">Colombia</option><option value="KM">Comoros</option><option value="CG">Congo</option><option value="CD">Congo Democratic Republic</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="HR">Croatia</option><option value="CU">Cuba</option><option value="CW">Curacao</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="EC">Ecuador</option><option value="EG">Egypt</option><option value="SV">El Salvador</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="EE">Estonia</option><option value="ET">Ethiopia</option><option value="FK">Falkland Islands</option><option value="FO">Faroe Islands</option><option value="FJ">Fiji</option><option value="FI">Finland</option><option value="FR">France</option><option value="GF">French Guyana</option><option value="PF">French Polynesia</option><option value="TF">French Southern Territory</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia</option><option value="DE">Germany</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GG">Guernsey</option><option value="GN">Guinea</option><option value="GW">Guinea Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="HM">Heard and McDonald Islands</option><option value="HN">Honduras</option><option value="HK">Hong Kong</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran</option><option value="IQ">Iraq</option><option value="IE">Ireland</option><option value="IM">Isle of Man</option><option value="IL">Israel</option><option value="IT">Italy</option><option value="CI">Ivory Coast</option><option value="JM">Jamaica</option><option value="JP">Japan</option><option value="JE">Jersey</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KE">Kenya</option><option value="XK">Kosovo</option><option value="KI">Kiribati</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Laos</option><option value="LV">Latvia</option><option value="LB">Lebanon</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MO">Macau</option><option value="MK">Macedonia</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MH">Marshall Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico</option><option value="FM">Micronesia</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="MN">Mongolia</option><option value="ME">Montenegro</option><option value="MS">Montserrat</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="MM">Myanmar</option><option value="NA">Namibia</option><option value="NR">Nauru</option><option value="NP">Nepal</option><option value="AN">Netherland Antilles</option><option value="NL">Netherlands</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="KP">North Korea</option><option value="MP">Northern Mariana Island</option><option value="NO">Norway</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PW">Palau</option><option value="PS">Palestine</option><option value="PA">Panama</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="PH">Philippines</option><option value="PN">Pitcairn</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="PR">Puerto Rico</option><option value="QA">Qatar</option><option value="RE">Reunion Island</option><option value="RO">Romania</option><option value="RU">Russia</option><option value="RW">Rwanda</option><option value="BL">Saint Barthelemy</option><option value="SH">Saint Helena</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="SX">Saint Maarten</option><option value="MF">Saint Martin</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and the Grenadines</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="ST">Sao Tome and Principe</option><option value="SA">Saudi Arabia</option><option value="SN">Senegal</option><option value="RS">Serbia</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="SB">Solomon Islands</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="GS">South Georgia</option><option value="KR">South Korea</option><option value="SS">South Sudan</option><option value="ES">Spain</option><option value="LK">Sri Lanka</option><option value="SD">Sudan</option><option value="SR">Suriname</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SZ">Swaziland</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="SY">Syria</option><option value="TJ">Tajikistan</option><option value="TW">Taiwan</option><option value="TZ">Tanzania</option><option value="TH">Thailand</option><option value="TL">Timor</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad and Tobago</option><option value="TN">Tunisia</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="TC">Turks and Caicos Islands</option><option value="TV">Tuvalu</option><option value="UG">Uganda</option><option value="UA">Ukraine</option><option value="AE">United Arab Emirates</option><option value="GB">United Kingdom</option><option value="US">United States</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option value="VU">Vanuatu</option><option value="VA">Vatican</option><option value="VE">Venezuela</option><option value="VN">Vietnam</option><option value="VG">Virgin Islands (British)</option><option value="VI">Virgin Islands (US)</option><option value="WF">Wallis and Futuna</option><option value="EH">Western Sahara</option><option value="YE">Yemen</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option>
-                                    </select>
-                                </div>
-                                <div class="input-field col s12 m5 color-blue">
-                                    <input id="consignee_phone" class="m-0" type="text" value="0813312210" disabled>
-                                    <label for="consignee_phone">Phone</label>
-                                </div>
-                                <div class="input-field col s12 m7 color-blue">
-                                    <input id="consignee_email" class="m-0" type="text" value="lghostracker@gmail.com" disabled>
-                                    <label for="consignee_email">Email</label>
-                                </div>
-
-                                <div class="input-field col s12 color-blue">
-                                    <input id="consignee_vat" class="m-0" type="text" disabled>
-                                    <label for="consignee_vat">Vat</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col m12 l6">
-                    <div class="card card-modal">
-                        <div class="input-title">Shipper</div>
-
-                        <div class="row">
-                            <div class="input-field col s6 color-orange">
-                                <input id="shipper_name" class="m-0" type="text">
-                                <label for="shipper_name">Name</label>
-                            </div>
-                            <div class="input-field col s6 color-orange">
-                                <input id="shipper_company" class="m-0" type="text">
-                                <label for="shipper_company">Company</label>
-                            </div>
-
-                            <div class="input-field col s12 color-orange">
-                                <input id="shipper_address1" class="m-0" type="text">
-                                <label for="shipper_address1">Address line 1</label>
-                            </div>
-                            <div class="input-field col s6 color-orange">
-                                <input id="shipper_address2" class="m-0" type="text">
-                                <label for="shipper_address2">Address line 2</label>
-                            </div>
-                            <div class="input-field col s6 color-orange">
-                                <input id="shipper_address3" class="m-0" type="text">
-                                <label for="shipper_address3">Address line 3</label>
-                            </div>
-
-                            <div class="input-field col s6 color-orange">
-                                <input id="shipper_city" class="m-0" type="text">
-                                <label for="shipper_city">City</label>
-                            </div>
-                            <div class="input-field col s6 color-orange">
-                                <input id="shipper_country-state" class="m-0" type="text">
-                                <label for="shipper_country-state">Country / State</label>
-                            </div>
-
-                            <div class="input-field col s5 m3 l4 color-orange">
-                                <input id="shipper_zip-code" class="m-0" type="text">
-                                <label for="shipper_zip-code">ZIP - code</label>
-                            </div>
-                            <div class="input-field col s7 m9 l8 color-orange">
-                                <select name="shipper_consignee_country" size="1" >
-                                    <option value="" selected>Country</option><option value="AF">Afghanistan</option><option value="AX">Aland Islands</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua and Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT">Austria</option><option value="AZ">Azerbaijan</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BO">Bolivia</option><option value="BQ">Bonaire</option><option value="BA">Bosnia and Herzegovina</option><option value="BW">Botswana</option><option value="BV">Bouvet Island</option><option value="BR">Brazil</option><option value="IO">British Indian Ocean Territory</option><option value="BN">Brunei</option><option value="BG">Bulgaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="BT">Bhutan</option><option value="KH">Cambodia</option><option value="CM">Cameroon</option><option value="CA">Canada</option><option value="IC">Canary Islands</option><option value="CV">Cape Verde</option><option value="KY">Cayman Islands</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="CL">Chile</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos Island</option><option value="CO">Colombia</option><option value="KM">Comoros</option><option value="CG">Congo</option><option value="CD">Congo Democratic Republic</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="HR">Croatia</option><option value="CU">Cuba</option><option value="CW">Curacao</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="EC">Ecuador</option><option value="EG">Egypt</option><option value="SV">El Salvador</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="EE">Estonia</option><option value="ET">Ethiopia</option><option value="FK">Falkland Islands</option><option value="FO">Faroe Islands</option><option value="FJ">Fiji</option><option value="FI">Finland</option><option value="FR">France</option><option value="GF">French Guyana</option><option value="PF">French Polynesia</option><option value="TF">French Southern Territory</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia</option><option value="DE">Germany</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GG">Guernsey</option><option value="GN">Guinea</option><option value="GW">Guinea Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="HM">Heard and McDonald Islands</option><option value="HN">Honduras</option><option value="HK">Hong Kong</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran</option><option value="IQ">Iraq</option><option value="IE">Ireland</option><option value="IM">Isle of Man</option><option value="IL">Israel</option><option value="IT">Italy</option><option value="CI">Ivory Coast</option><option value="JM">Jamaica</option><option value="JP">Japan</option><option value="JE">Jersey</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KE">Kenya</option><option value="XK">Kosovo</option><option value="KI">Kiribati</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Laos</option><option value="LV">Latvia</option><option value="LB">Lebanon</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MO">Macau</option><option value="MK">Macedonia</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MH">Marshall Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico</option><option value="FM">Micronesia</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="MN">Mongolia</option><option value="ME">Montenegro</option><option value="MS">Montserrat</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="MM">Myanmar</option><option value="NA">Namibia</option><option value="NR">Nauru</option><option value="NP">Nepal</option><option value="AN">Netherland Antilles</option><option value="NL">Netherlands</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="KP">North Korea</option><option value="MP">Northern Mariana Island</option><option value="NO">Norway</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PW">Palau</option><option value="PS">Palestine</option><option value="PA">Panama</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="PH">Philippines</option><option value="PN">Pitcairn</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="PR">Puerto Rico</option><option value="QA">Qatar</option><option value="RE">Reunion Island</option><option value="RO">Romania</option><option value="RU">Russia</option><option value="RW">Rwanda</option><option value="BL">Saint Barthelemy</option><option value="SH">Saint Helena</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="SX">Saint Maarten</option><option value="MF">Saint Martin</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and the Grenadines</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="ST">Sao Tome and Principe</option><option value="SA">Saudi Arabia</option><option value="SN">Senegal</option><option value="RS">Serbia</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="SB">Solomon Islands</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="GS">South Georgia</option><option value="KR">South Korea</option><option value="SS">South Sudan</option><option value="ES">Spain</option><option value="LK">Sri Lanka</option><option value="SD">Sudan</option><option value="SR">Suriname</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SZ">Swaziland</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="SY">Syria</option><option value="TJ">Tajikistan</option><option value="TW">Taiwan</option><option value="TZ">Tanzania</option><option value="TH">Thailand</option><option value="TL">Timor</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad and Tobago</option><option value="TN">Tunisia</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="TC">Turks and Caicos Islands</option><option value="TV">Tuvalu</option><option value="UG">Uganda</option><option value="UA">Ukraine</option><option value="AE">United Arab Emirates</option><option value="GB">United Kingdom</option><option value="US">United States</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option value="VU">Vanuatu</option><option value="VA">Vatican</option><option value="VE">Venezuela</option><option value="VN">Vietnam</option><option value="VG">Virgin Islands (British)</option><option value="VI">Virgin Islands (US)</option><option value="WF">Wallis and Futuna</option><option value="EH">Western Sahara</option><option value="YE">Yemen</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option>
-                                </select>
-                            </div>
-
-                            <div class="input-field col s12 m5 color-orange">
-                                <input id="shipper_phone" class="m-0" type="text">
-                                <label for="shipper_phone">Phone</label>
-                            </div>
-                            <div class="input-field col s12 m7 color-orange">
-                                <input id="shipper_email" class="m-0" type="text">
-                                <label for="shipper_email">Email</label>
-                            </div>
-
-                            <div class="input-field col s12 color-orange">
-                                <input id="shipper_vat" class="m-0" type="text">
-                                <label for="shipper_vat">Vat</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- shipper row -->
-                <div class="col s12 mt-4">
-                    <div class="card card-modal mb-0">
-                        <div class="input-title">Products</div>
-                        <div class="row">
-                            <div class="input-field col s12 color-green">
-                                <input id="description" class="m-0" type="text">
-                                <label for="description">Description of Goods</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- product row -->
-                <div class="col s12">
-                    <div class="card card-modal" id="list-products">
-                        <div class="row products_var">
-                            <div class="input-field col s12 l3 color-green tooltipped" data-position="bottom" data-tooltip="Required">
-                                <input id="product-description" class="m-0" type="text">
-                                <label for="product-description">Description <i class="fa fa-asterisk"></i></label>
-                            </div>
-
-                            <div class="input-field col s6 l2 color-green">
-                                <input id="product-sku" class="m-0" type="text">
-                                <label for="product-sku">Sku</label>
-                            </div>
-
-                            <div class="input-field col s6 l3 color-green tooltipped" data-position="bottom" data-tooltip="10 digits">
-                                <input id="product-hs-code" class="m-0" type="text">
-                                <label for="product-hs-code">HS-code <i class="fa fa-info-circle"></i></label>
-                            </div>
-
-                            <div class="input-field col s6 l2 color-green tooltipped" data-position="bottom" data-tooltip="Required">
-                                <input id="product-quantity" class="m-0" type="text">
-                                <label for="product-quantity">Quantity <i class="fa fa-asterisk"></i></label>
-                            </div>
-
-                            <div class="input-field col s6 l2 color-green tooltipped" data-position="bottom" data-tooltip="Required">
-                                <input id="product-value" class="m-0" type="text">
-                                <label for="product-value">Value <i class="fa fa-asterisk"></i></label>
-                            </div>
-
-                            <div class="input-field col s12 m4 l4 color-green">
-                                <select name="consignee_country" size="1" >
-                                    <option value="" selected>Country</option><option value="AF">Afghanistan</option><option value="AX">Aland Islands</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua and Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT">Austria</option><option value="AZ">Azerbaijan</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BO">Bolivia</option><option value="BQ">Bonaire</option><option value="BA">Bosnia and Herzegovina</option><option value="BW">Botswana</option><option value="BV">Bouvet Island</option><option value="BR">Brazil</option><option value="IO">British Indian Ocean Territory</option><option value="BN">Brunei</option><option value="BG">Bulgaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="BT">Bhutan</option><option value="KH">Cambodia</option><option value="CM">Cameroon</option><option value="CA">Canada</option><option value="IC">Canary Islands</option><option value="CV">Cape Verde</option><option value="KY">Cayman Islands</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="CL">Chile</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos Island</option><option value="CO">Colombia</option><option value="KM">Comoros</option><option value="CG">Congo</option><option value="CD">Congo Democratic Republic</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="HR">Croatia</option><option value="CU">Cuba</option><option value="CW">Curacao</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="EC">Ecuador</option><option value="EG">Egypt</option><option value="SV">El Salvador</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="EE">Estonia</option><option value="ET">Ethiopia</option><option value="FK">Falkland Islands</option><option value="FO">Faroe Islands</option><option value="FJ">Fiji</option><option value="FI">Finland</option><option value="FR">France</option><option value="GF">French Guyana</option><option value="PF">French Polynesia</option><option value="TF">French Southern Territory</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia</option><option value="DE">Germany</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GG">Guernsey</option><option value="GN">Guinea</option><option value="GW">Guinea Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="HM">Heard and McDonald Islands</option><option value="HN">Honduras</option><option value="HK">Hong Kong</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran</option><option value="IQ">Iraq</option><option value="IE">Ireland</option><option value="IM">Isle of Man</option><option value="IL">Israel</option><option value="IT">Italy</option><option value="CI">Ivory Coast</option><option value="JM">Jamaica</option><option value="JP">Japan</option><option value="JE">Jersey</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KE">Kenya</option><option value="XK">Kosovo</option><option value="KI">Kiribati</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Laos</option><option value="LV">Latvia</option><option value="LB">Lebanon</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MO">Macau</option><option value="MK">Macedonia</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MH">Marshall Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico</option><option value="FM">Micronesia</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="MN">Mongolia</option><option value="ME">Montenegro</option><option value="MS">Montserrat</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="MM">Myanmar</option><option value="NA">Namibia</option><option value="NR">Nauru</option><option value="NP">Nepal</option><option value="AN">Netherland Antilles</option><option value="NL">Netherlands</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="KP">North Korea</option><option value="MP">Northern Mariana Island</option><option value="NO">Norway</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PW">Palau</option><option value="PS">Palestine</option><option value="PA">Panama</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="PH">Philippines</option><option value="PN">Pitcairn</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="PR">Puerto Rico</option><option value="QA">Qatar</option><option value="RE">Reunion Island</option><option value="RO">Romania</option><option value="RU">Russia</option><option value="RW">Rwanda</option><option value="BL">Saint Barthelemy</option><option value="SH">Saint Helena</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="SX">Saint Maarten</option><option value="MF">Saint Martin</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and the Grenadines</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="ST">Sao Tome and Principe</option><option value="SA">Saudi Arabia</option><option value="SN">Senegal</option><option value="RS">Serbia</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="SB">Solomon Islands</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="GS">South Georgia</option><option value="KR">South Korea</option><option value="SS">South Sudan</option><option value="ES">Spain</option><option value="LK">Sri Lanka</option><option value="SD">Sudan</option><option value="SR">Suriname</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SZ">Swaziland</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="SY">Syria</option><option value="TJ">Tajikistan</option><option value="TW">Taiwan</option><option value="TZ">Tanzania</option><option value="TH">Thailand</option><option value="TL">Timor</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad and Tobago</option><option value="TN">Tunisia</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="TC">Turks and Caicos Islands</option><option value="TV">Tuvalu</option><option value="UG">Uganda</option><option value="UA">Ukraine</option><option value="AE">United Arab Emirates</option><option value="GB">United Kingdom</option><option value="US">United States</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option value="VU">Vanuatu</option><option value="VA">Vatican</option><option value="VE">Venezuela</option><option value="VN">Vietnam</option><option value="VG">Virgin Islands (British)</option><option value="VI">Virgin Islands (US)</option><option value="WF">Wallis and Futuna</option><option value="EH">Western Sahara</option><option value="YE">Yemen</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option>
-                                </select>
-                            </div>
-
-                            <div class="input-field col s12 m8 l8 color-green">
-                                <input id="product-web" class="m-0" type="text">
-                                <label for="product-web">Purchase web address</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- checkbox -row -->
-                <div class="col s12 mt-4">
-                    <div class="card card-modal card-checkbox mb-0">
-                        <div class="input-title">Custom options</div>
-                        <div class="row">
-                            <div class="col s2 color-green mb-2 mt-4">
-                                <label class="checkbox">
-                                    <input type="checkbox"/>
-                                    <span>DDP</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-
-
         </div>
         <div class="modal-footer">
 
@@ -985,6 +1200,44 @@
         });
 
         $(document).ready(function () {
+
+            $('.open-textarea').on('focus', function () {
+                $(this).addClass('active');
+            });
+            $('.open-textarea').on('blur', function () {
+                $(this).removeClass('active');
+            });
+
+            $('#user-type').on('change', function () {
+                var selectUser = $('select#user-type').val();
+
+                if(selectUser === '11') {
+                    $('.type-hide').removeClass('show');
+                    $('.type-shipper').addClass('show');
+                } else if(selectUser === '21') {
+                    $('.type-hide').removeClass('show');
+                    $('.type-carrier').addClass('show');
+                } else if(selectUser === '4') {
+                    $('.type-hide').removeClass('show');
+                    $('.type-hubsuper').addClass('show');
+                } else if(selectUser === '5') {
+                    $('.type-hide').removeClass('show');
+                    $('.type-hubwork').addClass('show');
+                } else if(selectUser === '7') {
+                    $('.type-hide').removeClass('show');
+                    $('.type-client').addClass('show');
+                } else if(selectUser === '22') {
+                    $('.type-hide').removeClass('show');
+                    $('.type-sales').addClass('show');
+                } else if(selectUser === '1') {
+                    $('.type-hide').removeClass('show');
+                    $('.type-admin').addClass('show');
+                } else {
+                    $('.type-hide').removeClass('show');
+                }
+            });
+
+
 
             $.each($('.switch-active'), function() {
 
