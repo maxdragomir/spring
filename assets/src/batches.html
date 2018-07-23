@@ -13,14 +13,10 @@
                     <div class="nav-wrapper">
                         <div class="right-side">
                             <a href="index.html" class="logo waves-effect"><img src="img/logo-ua.png" alt="LOGO"></a>
-                            <button type="button" class="btn waves-effect show-mode ml-3">
-                                <i class="far fa-circle test-mode"></i>
-                                <i class="fas fa-circle live-mode active"></i>
-                            </button>
-                            <span class="text-status live active">Live mode</span>
-                            <span class="text-status test1">Test mode</span>
                         </div>
-                        <ul class="header_menu desctop-menu">
+                        <div>
+                            <a href="#" class="btn waves-effect show-mode"><span class="mode active color-red tooltipped" data-position="left" data-tooltip="Test Mode">T</span><span class="mode color-green tooltipped" data-position="left" data-tooltip="Live Mode">L</span></a>
+                            <ul class="header_menu desctop-menu">
                             <li>
                                 <a href="index.html" class="waves-effect">
                                     <i class="fa fa-chart-pie left"></i> <span>Dashboard</span>
@@ -79,6 +75,7 @@
                                 <a href="#" data-target="slide-out" class="sidenav-trigger waves-effect"><i class="fa fa-bars"></i></a>
                             </li>
                         </ul>
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -235,15 +232,18 @@
 
                     <div class="col s12 m12 l3 offset-l1 offset-m0">
                         <div class="card card-inv card-button no-other-btn">
-                            <button type="button" class="btn clear-btn waves-effect tooltipped" data-position="top" data-tooltip="Clear"><i class="fa fa-times"></i></button>
-                            <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Search"><i class="fa fa-search"></i> </button>
+                            <div class="d-flex">
+                                <button type="button" class="btn clear-btn waves-effect tooltipped" data-position="top" data-tooltip="Clear"><i class="fa fa-times"></i></button>
+                                <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Search"><i class="fa fa-search"></i> </button>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="row mt-4">
                     <div class="col s12">
-                        <div class="card-title table-title card-orange">
-                            <div class="card-title_result ">
+                        <div class="card-title table-title card-glight">
+                            <div class="card-title_result">
                                 <div class="result tooltipped" data-position="top" data-tooltip="Results">
                                     <i class="fa fa-table left"></i>
                                     <span class="pr-2">Found:</span>
@@ -339,17 +339,18 @@
                                                 <div class="print-links">
                                                     <div>OMS</div>
                                                     <div class="color-orange">
-                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <span class="color-black">Label: </span>
                                                         <a href="#">PDF</a>
                                                         <div class="zpl200">
-                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
                                                             <a href="#">ZPL200</a>
+                                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
                                                         </div>
                                                         <div class="zpl300">
-                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
                                                             <a href="#">ZPL300</a>
+                                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
                                                         </div>
                                                     </div>
+
                                                 </div>
                                             </td>
 
@@ -397,17 +398,18 @@
                                                 <div class="print-links">
                                                     <div>OMS</div>
                                                     <div class="color-orange">
-                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <span class="color-black">Label: </span>
                                                         <a href="#">PDF</a>
                                                         <div class="zpl200">
-                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
                                                             <a href="#">ZPL200</a>
+                                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
                                                         </div>
                                                         <div class="zpl300">
-                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
                                                             <a href="#">ZPL300</a>
+                                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
                                                         </div>
                                                     </div>
+
                                                 </div>
                                             </td>
 
@@ -455,17 +457,18 @@
                                                 <div class="print-links">
                                                     <div>OMS</div>
                                                     <div class="color-orange">
-                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <span class="color-black">Label: </span>
                                                         <a href="#">PDF</a>
                                                         <div class="zpl200">
-                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
                                                             <a href="#">ZPL200</a>
+                                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
                                                         </div>
                                                         <div class="zpl300">
-                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
                                                             <a href="#">ZPL300</a>
+                                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
                                                         </div>
                                                     </div>
+
                                                 </div>
                                             </td>
 
@@ -513,17 +516,18 @@
                                                 <div class="print-links">
                                                     <div>OMS</div>
                                                     <div class="color-orange">
-                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <span class="color-black">Label: </span>
                                                         <a href="#">PDF</a>
                                                         <div class="zpl200">
-                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
                                                             <a href="#">ZPL200</a>
+                                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
                                                         </div>
                                                         <div class="zpl300">
-                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
                                                             <a href="#">ZPL300</a>
+                                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
                                                         </div>
                                                     </div>
+
                                                 </div>
                                             </td>
 
@@ -571,17 +575,18 @@
                                                 <div class="print-links">
                                                     <div>OMS</div>
                                                     <div class="color-orange">
-                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <span class="color-black">Label: </span>
                                                         <a href="#">PDF</a>
                                                         <div class="zpl200">
-                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
                                                             <a href="#">ZPL200</a>
+                                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
                                                         </div>
                                                         <div class="zpl300">
-                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
                                                             <a href="#">ZPL300</a>
+                                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
                                                         </div>
                                                     </div>
+
                                                 </div>
                                             </td>
 
@@ -629,17 +634,18 @@
                                                 <div class="print-links">
                                                     <div>OMS</div>
                                                     <div class="color-orange">
-                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <span class="color-black">Label: </span>
                                                         <a href="#">PDF</a>
                                                         <div class="zpl200">
-                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
                                                             <a href="#">ZPL200</a>
+                                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
                                                         </div>
                                                         <div class="zpl300">
-                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
                                                             <a href="#">ZPL300</a>
+                                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
                                                         </div>
                                                     </div>
+
                                                 </div>
                                             </td>
 
@@ -687,17 +693,18 @@
                                                 <div class="print-links">
                                                     <div>OMS</div>
                                                     <div class="color-orange">
-                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <span class="color-black">Label: </span>
                                                         <a href="#">PDF</a>
                                                         <div class="zpl200">
-                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
                                                             <a href="#">ZPL200</a>
+                                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
                                                         </div>
                                                         <div class="zpl300">
-                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
                                                             <a href="#">ZPL300</a>
+                                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
                                                         </div>
                                                     </div>
+
                                                 </div>
                                             </td>
 
@@ -745,17 +752,18 @@
                                                 <div class="print-links">
                                                     <div>OMS</div>
                                                     <div class="color-orange">
-                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <span class="color-black">Label: </span>
                                                         <a href="#">PDF</a>
                                                         <div class="zpl200">
-                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
                                                             <a href="#">ZPL200</a>
+                                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
                                                         </div>
                                                         <div class="zpl300">
-                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
                                                             <a href="#">ZPL300</a>
+                                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
                                                         </div>
                                                     </div>
+
                                                 </div>
                                             </td>
 
@@ -803,17 +811,18 @@
                                                 <div class="print-links">
                                                     <div>OMS</div>
                                                     <div class="color-orange">
-                                                        <span class="tooltipped" data-position="top" data-tooltip="Label"><i class="fa fa-file-invoice"></i></span>
+                                                        <span class="color-black">Label: </span>
                                                         <a href="#">PDF</a>
                                                         <div class="zpl200">
-                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
                                                             <a href="#">ZPL200</a>
+                                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
                                                         </div>
                                                         <div class="zpl300">
-                                                            <a href="#"><i class="fa fa-print mr-2"></i></a>
                                                             <a href="#">ZPL300</a>
+                                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
                                                         </div>
                                                     </div>
+
                                                 </div>
                                             </td>
 
@@ -847,6 +856,66 @@
                                                 </div>
                                             </td>
                                         </tr>
+                                        <tr>
+                                            <td  data-title="ID">
+                                                <div>1957</div>
+                                            </td>
+                                            <td  data-title="Title">
+                                                <div>
+                                                    <div class="bold"><a href="#">Manifest.csv</a></div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Type
+                                                            Label">
+                                                <div class="print-links">
+                                                    <div>OMS</div>
+                                                    <div class="color-orange">
+                                                        <span class="color-black">Label: </span>
+                                                        <a href="#">PDF</a>
+                                                        <div class="zpl200">
+                                                            <a href="#">ZPL200</a>
+                                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
+                                                        </div>
+                                                        <div class="zpl300">
+                                                            <a href="#">ZPL300</a>
+                                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </td>
+
+                                            <td data-title="Status">
+                                                <div class="">
+                                                    <!--<div class="alot-text">-->
+                                                    <!--<button type="button" class="btn-show-all tooltipped" data-position="top" data-tooltip="Show all"><i class="fa fa-eye"></i></button>-->
+                                                    <div class="color-red"> Processed with Errors</div>
+                                                    <div>– 1 parcel(s) found / 1 declared</div>
+                                                    <div>– <a href="#">1</a> parcel(s) created / <a href="#">1</a> <span class="color-red">with errors</span></div>
+                                                    <div class="color-red">– 1 invalid file line(s)</div>
+                                                    <div class="bold">Current State</div>
+                                                    <div>– 0 ok / 0 errors / 0 queued</div>
+
+                                                </div>
+                                            </td>
+                                            <td data-title="User">
+                                                <div>
+                                                    <div class="bold">USER</div>
+                                                </div>
+                                            </td>
+                                            <td data-title="Created">
+                                                <div>
+                                                    <div>13.07.2018, 10:31</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="actions-btn">
+                                                    <a href="#view" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="View"><i class="fa fa-eye"></i></a>
+                                                    <a href="#!" class="tooltipped waves-effect btn bg-orange" data-position="top" data-tooltip="Download"><i class="fa fa-file-download"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
 
 
                                     </tbody>
@@ -867,7 +936,7 @@
 
     <!-- Modal Structure -->
     <div id="add" class="modal modal-style modal-fixed-footer modal-fixed-header modal-h-60">
-        <div class="modal-header color-orange">
+        <div class="modal-header color-glight">
             <div class="modal-title"><i class="fa fa-plus left"></i>Add Batch</div>
             <button class="btn waves-effect modal-close"><i class="fa fa-times"></i></button>
         </div>
@@ -917,7 +986,7 @@
                         </div>
 
                         <div id="file-block" class="row csv-file active">
-                            <div class="file-field input-field col s12 color-green">
+                            <div class="file-field input-field col s12 color-grey">
                                 <div class="btn">
                                     <span>Choose File</span>
                                     <input type="file">
@@ -929,14 +998,14 @@
                         </div>
 
                         <div id="url-block" class="row csv-file">
-                            <div class="input-field col s12 color-green">
+                            <div class="input-field col s12 color-grey">
                                 <input id="url" class="m-0" type="text">
                                 <label for="url">URL</label>
                             </div>
                         </div>
 
                         <div id="content-block" class="row csv-file">
-                            <div class="input-field col s12 color-green">
+                            <div class="input-field col s12 color-grey">
                                 <textarea id="content" class="textarea open-textarea"></textarea>
                                 <label for="content">Content</label>
                             </div>
@@ -964,11 +1033,11 @@
 
         </div>
         <div class="modal-footer align-right">
-            <a href="#" class="btn btn-large waves-effect btn-submit">Submit</a>
+            <button class="btn btn-large waves-effect btn-submit">Submit</button>
         </div>
     </div>
     <div id="view" class="modal modal-style modal-fixed-header modal-h-70">
-        <div class="modal-header color-orange">
+        <div class="modal-header color-glight">
             <div class="modal-title"><i class="fa fa-eye left"></i>View Batch</div>
             <button class="btn waves-effect modal-close"><i class="fa fa-times"></i></button>
         </div>
@@ -979,22 +1048,44 @@
                 <!-- id row -->
                 <div class="col s12">
                     <div class="card card-modal mb-0">
-                        <div class="parcel-top-info one-btns pl-2 pr-2">
+                        <div class="parcel-top-info pl-2 pr-2">
                             <div class="bold parcel-top-info_id mobile">ID 171321</div>
+
                             <div class="parcel-top-info_desctop">
                                 <div class="parcel-top-info_left">
                                     <div class="bold parcel-top-info_id">ID 171321</div>
-                                    <a href="#!" class="btn parcel-top-info_btn btn-log waves-effect"> <i class="fa fa-file-code pr-2"></i> Log File <i class="fa fa-angle-down ml-2"></i></a>
+                                    <!--<a href="#!" class="btn parcel-top-info_btn btn-source waves-effect"> <i class="fa fa-file-code pr-2"></i> Source Dump <i class="fa fa-angle-down ml-2"></i></a>-->
+
                                 </div>
 
-
                                 <div class="parcel-top-info_right">
-                                    <div class="color-green tooltipped" data-position="left" data-tooltip="Created"><span><i class="fa fa-file-contract"></i></span> <span>09.07.2018, 18:31</span></div>
-                                    <div class="color-orange tooltipped" data-position="left" data-tooltip="Modified"><span><i class="fa fa-file-signature"></i></span> <span>09.07.2018, 18:31</span></div>
+                                    <div class="dates">
+                                        <span class="tooltipped" data-position="top" data-tooltip="Created">09.07.2018, 18:31</span>
+                                        <span> | </span>
+                                        <span class="tooltipped" data-position="top" data-tooltip="Modified">09.07.2018, 18:31</span>
+                                    </div>
+                                    <a href="#!" class="color-glight btn parcel-top-info_btn btn-log waves-effect"> Log File <i class="fa fa-angle-down ml-2"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!--<div class="card card-modal mb-0">-->
+                        <!--<div class="parcel-top-info one-btns pl-2 pr-2">-->
+                            <!--<div class="bold parcel-top-info_id mobile">ID 171321</div>-->
+                            <!--<div class="parcel-top-info_desctop">-->
+                                <!--<div class="parcel-top-info_left">-->
+                                    <!--<div class="bold parcel-top-info_id">ID 171321</div>-->
+                                    <!--<a href="#!" class="btn parcel-top-info_btn btn-log waves-effect"> <i class="fa fa-file-code pr-2"></i> Log File <i class="fa fa-angle-down ml-2"></i></a>-->
+                                <!--</div>-->
+
+
+                                <!--<div class="parcel-top-info_right">-->
+                                    <!--<div class="color-green tooltipped" data-position="left" data-tooltip="Created"><span><i class="fa fa-file-contract"></i></span> <span>09.07.2018, 18:31</span></div>-->
+                                    <!--<div class="color-orange tooltipped" data-position="left" data-tooltip="Modified"><span><i class="fa fa-file-signature"></i></span> <span>09.07.2018, 18:31</span></div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
                 </div>
 
                 <!-- log row -->
@@ -1020,17 +1111,17 @@ PARCELS CREATING FINISHED
                 <div class="col s12">
                     <div class="card card-modal">
                         <div class="more-info">
-                            <div class="info-row color-green">
+                            <div class="info-row">
                                 <div class="more-info_name">User</div>
-                                <div class="more-info_text bold">5465464 - USER</div>
+                                <div class="more-info_text bold color-green">5465464 - USER</div>
                             </div>
                             <div class="info-row">
                                 <div class="more-info_name">Type</div>
                                 <div class="more-info_text">OMS</div>
                             </div>
-                            <div class="info-row big-text color-red">
+                            <div class="info-row big-text">
                                 <div class="more-info_name">Status</div>
-                                <div class="more-info_text">
+                                <div class="more-info_text color-red">
 
 
                                     <div class="color-black">
@@ -1050,9 +1141,9 @@ PARCELS CREATING FINISHED
                             <div class="info-row">
                                 <div class="more-info_name">Charset</div>
                                 <div class="more-info_text">UTF-8</div>
-                            </div><div class="info-row color-secondary">
+                            </div><div class="info-row">
                                 <div class="more-info_name">CSV-file</div>
-                                <div class="more-info_text "><a href="#">Manifest.csv</a></div>
+                                <div class="more-info_text color-secondary"><a href="#">Manifest.csv</a></div>
                             </div>
                         </div>
                     </div>

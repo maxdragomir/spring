@@ -12,15 +12,19 @@ function copy(element_id){
 
 
 $(document).ready(function(){
+    $('.under-construction-page').addClass('active');
 
 
-    var loader = $('.loader');
-    setTimeout(function () {
-        if (!loader.hasClass('ok')) {
-            loader.addClass('ok');
-        }
-    }, 500);
+    // var loader = $('.loader');
+    // setTimeout(function () {
+    //     if (!loader.hasClass('ok')) {
+    //         loader.addClass('ok');
+    //     }
+    // }, 500);
 
+    $('.show-mode').on('click', function () {
+        $('.mode').toggleClass('active').tooltip('close');
+    });
 
     $('#list-products').addInputArea({
         area_var: '.products_var',
