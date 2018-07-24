@@ -11,11 +11,16 @@
             <div class="header">
                 <nav>
                     <div class="nav-wrapper">
-                        <div class="right-side">
+                        <div class="left-side">
                             <a href="index.html" class="logo waves-effect"><img src="img/logo-ua.png" alt="LOGO"></a>
                         </div>
-                        <div>
-                            <a href="#" class="btn waves-effect show-mode"><span class="mode active color-red tooltipped" data-position="left" data-tooltip="Test Mode">T</span><span class="mode color-green tooltipped" data-position="left" data-tooltip="Live Mode">L</span></a>
+                        <div class="right-side">
+                            <a href="#" class="btn waves-effect dropdown-trigger show-mode" data-target="mode">
+                                <span class="mode active color-green ">Live Mode</span>
+                            </a>
+                            <ul id="mode" class="dropdown-content">
+                                <li><a href="#!" class="waves-effect color-red">Test Mode</a></li>
+                            </ul>
                             <ul class="header_menu desctop-menu">
                             <li>
                                 <a href="index.html" class="waves-effect">

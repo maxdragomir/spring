@@ -11,11 +11,16 @@
         <div class="header">
             <nav>
                 <div class="nav-wrapper">
-                    <div class="right-side">
+                    <div class="left-side">
                         <a href="index.html" class="logo waves-effect"><img src="img/logo-ua.png" alt="LOGO"></a>
                     </div>
-                    <div>
-                        <a href="#" class="btn waves-effect show-mode"><span class="mode active color-red tooltipped" data-position="left" data-tooltip="Test Mode">T</span><span class="mode color-green tooltipped" data-position="left" data-tooltip="Live Mode">L</span></a>
+                    <div class="right-side">
+                        <a href="#" class="btn waves-effect dropdown-trigger show-mode" data-target="mode">
+                            <span class="mode active color-green ">Live Mode</span>
+                        </a>
+                        <ul id="mode" class="dropdown-content">
+                            <li><a href="#!" class="waves-effect color-red">Test Mode</a></li>
+                        </ul>
                         <ul class="header_menu desctop-menu">
                         <li>
                             <a href="index.html" class="waves-effect">
@@ -152,14 +157,14 @@
                     </div>
                 </div>
             </div>
-            <div class="row m-0">
+            <div class="dn row m-0">
                 <div class="col s12">
                     <div class="under-construction-page">
                         <h1 class="m-0"> <i class="fa fa-cog"></i> under construction</h1>
                     </div>
                 </div>
             </div>
-            <div class="dn row mt-4 mb-0">
+            <div class=" row mt-4 mb-0">
                 <div class="col s12 m12 l3 xl3">
                     <div class="card card-filters">
                         <div class="input-field col s12 m-0 color-red">
@@ -194,9 +199,9 @@
                 </div>
             </div>
 
-            <div class="dn row mt-4">
+            <div class=" row mt-4">
                 <div class="col s12">
-                    <div class="card-title table-title card-blue">
+                    <div class="card-title table-title card-cyan">
                         <div class="card-title_result">
                             <div class="result tooltipped" data-position="top" data-tooltip="Results">
                                 <i class="fa fa-table left"></i>
@@ -312,7 +317,7 @@
 
 <!-- Modal Structure -->
 <div id="add" class="modal modal-style modal-fixed-footer modal-fixed-header modal-h-55">
-    <div class="modal-header color-blue">
+    <div class="modal-header color-cyan">
         <div class="modal-title"><i class="fa fa-plus left"></i>Add Code</div>
         <button class="btn waves-effect modal-close"><i class="fa fa-times"></i></button>
     </div>
@@ -359,11 +364,11 @@
                 <span class="label-text">Not close window to continue edit</span>
             </label>
         </div>
-        <a href="#" class="btn btn-large waves-effect btn-submit">Submit</a>
+        <button class="btn btn-large waves-effect btn-submit">Submit</button>
     </div>
 </div>
 <div id="edit" class="modal modal-style modal-fixed-footer modal-fixed-header modal-h-70">
-    <div class="modal-header color-blue">
+    <div class="modal-header color-cyan">
         <div class="modal-title"><i class="fa fa-pen left"></i>Edit Url</div>
         <div class="d-flex">
             <button class="btn waves-effect modal-close ml-2"><i class="fa fa-times"></i></button>
@@ -435,7 +440,7 @@
                 <span class="label-text">Not close window to continue edit</span>
             </label>
         </div>
-        <a href="#" class="btn btn-large waves-effect btn-submit">Submit</a>
+        <button class="btn btn-large waves-effect btn-submit">Submit</button>
     </div>
 </div>
 

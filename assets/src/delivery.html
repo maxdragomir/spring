@@ -15,11 +15,16 @@
             <div class="header">
                 <nav>
                     <div class="nav-wrapper">
-                        <div class="right-side">
+                        <div class="left-side">
                             <a href="index.html" class="logo waves-effect"><img src="img/logo-ua.png" alt="LOGO"></a>
                         </div>
-                        <div>
-                            <a href="#" class="btn waves-effect show-mode"><span class="mode active color-red tooltipped" data-position="left" data-tooltip="Test Mode">T</span><span class="mode color-green tooltipped" data-position="left" data-tooltip="Live Mode">L</span></a>
+                        <div class="right-side">
+                            <a href="#" class="btn waves-effect dropdown-trigger show-mode" data-target="mode">
+                                <span class="mode active color-green ">Live Mode</span>
+                            </a>
+                            <ul id="mode" class="dropdown-content">
+                                <li><a href="#!" class="waves-effect color-red">Test Mode</a></li>
+                            </ul>
                             <ul class="header_menu desctop-menu">
                             <li>
                                 <a href="index.html" class="waves-effect">
@@ -156,14 +161,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="row m-0">
+                <div class="dn row m-0">
                     <div class="col s12">
                         <div class="under-construction-page">
                             <h1 class="m-0"> <i class="fa fa-cog"></i> under construction</h1>
                         </div>
                     </div>
                 </div>
-                <div class="row mt-4 mb-0 dn">
+
+                <div class="row mt-4 mb-0">
                     <div class="col s12 m6 l2">
                         <div class="card card-filters">
                             <div class="input-field col s12 m-0">
@@ -223,10 +229,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-0 mb-0 dn">
-                    <div class="col s12 m12 l5 offset-l7">
+                <div class="row mt-0 mb-0">
+                    <div class="col s12">
                         <div class="card card-inv card-button delivery-btn">
-                            <button type="button" class="btn other-btn waves-effect tooltipped" data-position="top" data-tooltip="Download">CSV</button>
+                            <button type="button" class="btn other-btn waves-effect tooltipped" data-position="top" data-tooltip="Download"><i class="fa fa-download pr-2"></i>CSV</button>
+
                             <select>
                                 <option value="0" selected="">Select</option>
                                 <option value="1">Total Delivery Days (inc. customs days)</option>
@@ -234,7 +241,7 @@
                                 <option value="3">Carrier Delivery Days (inc. customs days)</option>
                                 <option value="4">Carrier Transit Days (exc. customs days)</option>
                             </select>
-                            <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Download">PDF</button>
+                            <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Download"><i class="fa fa-download pr-2"></i>PDF</button>
                         </div>
                     </div>
                 </div>

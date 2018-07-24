@@ -11,12 +11,17 @@
             <div class="header">
                 <nav>
                     <div class="nav-wrapper">
-                        <div class="right-side">
+                        <div class="left-side">
                             <a href="index.html" class="logo waves-effect"><img src="img/logo-ua.png" alt="LOGO"></a>
                         </div>
 
-                        <div>
-                            <a href="#" class="btn waves-effect show-mode"><span class="mode active color-red tooltipped" data-position="left" data-tooltip="Test Mode">T</span><span class="mode color-green tooltipped" data-position="left" data-tooltip="Live Mode">L</span></a>
+                        <div class="right-side">
+                            <a href="#" class="btn waves-effect dropdown-trigger show-mode" data-target="mode">
+                                <span class="mode active color-red">Test Mode</span>
+                            </a>
+                            <ul id="mode" class="dropdown-content">
+                                <li><a href="#!" class="waves-effect waves-light color-green">Live Mode</a></li>
+                            </ul>
                             <ul class="header_menu desctop-menu">
                                 <li>
                                     <a href="index.html" class="active waves-effect">
@@ -67,7 +72,10 @@
                                         <li><a href="#!" class="waves-effect waves-light">ES</a></li>
                                     </ul>
                                 </li>
-                                <li>
+                                <li class="double-btn">
+                                    <a href="#!" class="waves-effect">
+                                        <i class="fa fa-user"></i>
+                                    </a>
                                     <a href="#!" class="waves-effect">
                                         <i class="fa fa-sign-out-alt"></i>
                                     </a>
@@ -124,7 +132,6 @@
                                         <li><a class="waves-effect" href="trackingurls.html">Tracking URLs</a></li>
                                         <li><a class="waves-effect" href="trackingcodes.html">Tracking Codes</a></li>
                                         <li><a class="waves-effect" href="errors.html">Errors</a></li>
-                                        <li><a class="waves-effect" href="profile.html">Profile</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -141,8 +148,9 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="#!" class="collapsible-header no-drop waves-effect"><i class="fa fa-sign-out-alt"></i>Logout</a>
+                    <li class="double-btn">
+                        <a href="profile.html" class="collapsible-header no-drop waves-effect"><i class="fa fa-user"></i>Profile</a>
+                        <a href="#!" class="collapsible-header no-drop waves-effect">Logout<i class="fa fa-sign-out-alt"></i></a>
                     </li>
                 </ul>
                 <div class="row m-0">
@@ -154,7 +162,7 @@
                 </div>
                 <div class="row mt-4 mb-0">
                     <div class="col s12 m6 xl3">
-                        <a href="#!" class="card card-widget card-repink">
+                        <a href="users.html" class="card card-widget card-cyan">
                             <div class="card_icon">
                                 <i class="fa fa-users"></i>
                                 <div class="card_show">
@@ -170,7 +178,7 @@
                         </a>
                     </div>
                     <div class="col s12 m6 xl3">
-                        <a href="#!" class="card card-widget card-indigo">
+                        <a href="parcels.html" class="card card-widget card-cyan">
                             <div class="card_icon">
                                 <i class="fa fa-box"></i>
                                 <div class="card_show">
@@ -186,7 +194,7 @@
                         </a>
                     </div>
                     <div class="col s12 m6 xl3">
-                        <a href="#!" class="card card-widget card-cyan">
+                        <a href="general.html" class="card card-widget card-cyan">
                             <div class="card_icon">
                                 <i class="fa fa-truck-moving"></i>
                                 <div class="card_show">
@@ -202,7 +210,7 @@
                         </a>
                     </div>
                     <div class="col s12 m6 xl3">
-                        <a href="#!" class="card card-widget card-glight">
+                        <a href="batches.html" class="card card-widget card-cyan">
                             <div class="card_icon">
                                <i class="fa fa-boxes"></i>
                                 <div class="card_show">
@@ -221,7 +229,7 @@
 
                 <div class="row mb-0">
                     <div class="col s12 m12 l6 xl6">
-                        <div class="card-title charts-title card-indigo"><i class="fa fa-box left"></i>Parcels</div>
+                        <div class="card-title charts-title card-cyan"><i class="fa fa-box left"></i>Parcels</div>
                         <div class="card card-charts">
                             <div class="charts_line">
                                 <canvas id="parcelChart" class="chartjs-render-monitor" width="100%" height="450"></canvas>
@@ -230,7 +238,7 @@
                     </div>
 
                     <div class="col s12 m12 l6 xl6">
-                        <div class="card-title charts-title card-glight"><i class="fa fa-boxes left"></i>Batches</div>
+                        <div class="card-title charts-title card-cyan"><i class="fa fa-boxes left"></i>Batches</div>
                         <div class="card card-charts">
                             <div class="charts_line">
                                 <canvas id="batchesChart" class="chartjs-render-monitor" width="100%" height="450"></canvas>
@@ -278,16 +286,14 @@
 
 
             var parcels = document.getElementById('parcelChart').getContext("2d");
-
-            var chartColorRed = "#C873F4";
-
+            var chartColorRed = "#3395FF";
             var gradientStroke = parcels.createLinearGradient(500, 0, 100, 0);
             gradientStroke.addColorStop(0, '#333');
             gradientStroke.addColorStop(1, chartColorRed);
 
             var gradientFillRed = parcels.createLinearGradient(0, 170, 0, 50);
             gradientFillRed.addColorStop(0, "rgba(128, 182, 244, 0)");
-            gradientFillRed.addColorStop(1, "rgba(200,115,244, 0.3)");
+            gradientFillRed.addColorStop(1, "rgba(51,149,255, 0.28)");
 
             var parcelChart = new Chart(parcels, {
                 type: 'line',
@@ -373,16 +379,14 @@
 
 
             var batches = document.getElementById('batchesChart').getContext("2d");
-
-            var chartColorOrange = "#20D2BB";
-
+            var chartColorOrange = "#3395FF";
             var gradientStroke = batches.createLinearGradient(500, 0, 100, 0);
             gradientStroke.addColorStop(0, '#333');
             gradientStroke.addColorStop(1, chartColorRed);
 
             var gradientFillOrange = batches.createLinearGradient(0, 170, 0, 50);
             gradientFillOrange.addColorStop(0, "rgba(128, 182, 244, 0)");
-            gradientFillOrange.addColorStop(1, "rgba(32,210,187, 0.3)");
+            gradientFillOrange.addColorStop(1, "rgba(51,149,255, 0.28)");
 
             var batchesChart = new Chart(batches, {
                 type: 'line',

@@ -22,9 +22,9 @@ $(document).ready(function(){
     //     }
     // }, 500);
 
-    $('.show-mode').on('click', function () {
-        $('.mode').toggleClass('active').tooltip('close');
-    });
+    // $('.show-mode').on('click', function () {
+    //     $('.mode').toggleClass('active').tooltip('close');
+    // });
 
     $('#list-products').addInputArea({
         area_var: '.products_var',
@@ -90,7 +90,6 @@ $(document).ready(function(){
 
         }
     });
-
 
     $('select').formSelect();
 
