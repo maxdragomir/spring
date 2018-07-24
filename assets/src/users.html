@@ -61,7 +61,6 @@
                                     <li><a href="trackingurls.html" class="waves-effect waves-light">Tracking URLs</a></li>
                                     <li><a href="trackingcodes.html" class="waves-effect waves-light">Tracking Codes</a></li>
                                     <li><a href="errors.html" class="waves-effect waves-light">Errors</a></li>
-                                    <li><a href="profile.html" class="waves-effect waves-light">Profile</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -75,11 +74,14 @@
                                     <li><a href="#!" class="waves-effect waves-light">ES</a></li>
                                 </ul>
                             </li>
-                            <li>
-                                <a href="#!" class="waves-effect">
-                                    <i class="fa fa-sign-out-alt"></i>
-                                </a>
-                            </li>
+                                <li class="double-btn">
+                                    <a href="#!" class="waves-effect">
+                                        <i class="fa fa-user"></i>
+                                    </a>
+                                    <a href="#!" class="waves-effect">
+                                        <i class="fa fa-sign-out-alt"></i>
+                                    </a>
+                                </li>
                             <li class="mobile-menu">
                                 <a href="#" data-target="slide-out" class="sidenav-trigger waves-effect"><i class="fa fa-bars"></i></a>
                             </li>
@@ -132,7 +134,6 @@
                                         <li><a class="waves-effect" href="trackingurls.html">Tracking URLs</a></li>
                                         <li><a class="waves-effect" href="trackingcodes.html">Tracking Codes</a></li>
                                         <li><a class="waves-effect" href="errors.html">Errors</a></li>
-                                        <li><a class="waves-effect" href="profile.html">Profile</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -149,8 +150,9 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="#!" class="collapsible-header no-drop waves-effect"><i class="fa fa-sign-out-alt"></i>Logout</a>
+                    <li class="double-btn">
+                        <a href="profile.html" class="collapsible-header no-drop waves-effect"><i class="fa fa-user"></i>Profile</a>
+                        <a href="#!" class="collapsible-header no-drop waves-effect">Logout<i class="fa fa-sign-out-alt"></i></a>
                     </li>
                 </ul>
 
@@ -986,19 +988,7 @@
                                 <div class="card card-modal mb-0">
                                     <div class="row">
                                         <div class="input-field col s12 m12 color-grey">
-                                            <select multiple>
-                                                <option value="0" disabled selected>Assigned Shippers</option>
-                                                <option value="1">PostNL Parcel EU</option>
-                                                <option value="2">PostNL Parcel GlobalPack EMS</option>
-                                                <option value="3">PostNL Parcel GlobalPack UPU</option>
-                                                <option value="4">PostNL Packet Tracked</option>
-                                                <option value="5">PostNL Packet Registered</option>
-                                                <option value="6">Royal Mail Tracked 24 - No Signature</option>
-                                                <option value="7">Royal Mail Tracked 24 - Signature</option>
-                                                <option value="8">Royal Mail Tracked 48 - No Signature</option>
-                                                <option value="9">Royal Mail Tracked 48 - Signature</option>
-                                                <option value="10">Sending</option>
-                                            </select>
+                                            TAGS
                                         </div>
                                     </div>
                                 </div>
@@ -1041,25 +1031,17 @@
                                             <label for="email">Email</label>
                                         </div>
 
-                                        <div class="input-field col s12 m6 l3 color-grey">
+                                        <div class="input-field col s12 m6 l2 color-grey">
                                             <input id="password" class="m-0" type="text">
                                             <label for="password">Password</label>
                                         </div>
 
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col s12">
-                                <div class="card card-modal mb-0">
-                                    <div class="row">
-
-                                        <div class="input-field col s12 m6 color-grey">
+                                        <div class="input-field col s12 m6 l2 color-grey">
                                             <input id="title" class="m-0" type="text">
                                             <label for="title">Title</label>
                                         </div>
 
-                                        <div class="input-field col s12 m6 color-grey">
+                                        <div class="input-field col s12 m6 l2 color-grey">
                                             <select>
                                                 <option value="0" selected disabled>Timezone</option><option value="Australia/Sydney">[GMT+10:00] Australia Eastern Time</option><option value="Australia/Adelaide">[GMT+09:30] Australia Central Time</option><option value="Japan">[GMT+09:00] Japan</option><option value="Asia/Seoul">[GMT+09:00] Seoul</option><option value="Australia/Perth">[GMT+08:00] Australia Western Time</option><option value="Asia/Shanghai">[GMT+08:00] China (Beijing)</option><option value="Asia/Hong_Kong">[GMT+08:00] Hong Kong</option><option value="Asia/Singapore">[GMT+08:00] Singapore</option><option value="Europe/Moscow">[GMT+03:00] Moscow</option><option value="EET">[GMT+02:00] Eastern European Time</option><option value="CET">[GMT+01:00] Central European Time</option><option value="WET">[GMT+00:00] Western European Time</option><option value="Europe/London">[GMT+00:00] Great Britain</option><option value="Canada/Newfoundland">[GMT-03:30] Newfoundland</option><option value="Canada/Atlantic">[GMT-04:00] Atlantic Time</option><option value="US/Eastern">[GMT-05:00] Eastern Time</option><option value="US/Central">[GMT-06:00] Central Time</option><option value="US/Mountain">[GMT-07:00] Mountain Time</option><option value="US/Arizona">[GMT-07:00] Arizona</option><option value="US/Pacific">[GMT-08:00] Pacific Time</option><option value="US/Alaska">[GMT-09:00] Alaska Time</option><option value="US/Hawaii">[GMT-10:00] Hawaii-Aleutian Time</option>
                                             </select>
@@ -1074,7 +1056,7 @@
                                     <div class="row">
 
                                         <div class="input-field col s12 color-grey">
-                                            <textarea id="admin-comment" class="textarea open-textarea"></textarea>
+                                            <textarea id="admin-comment" class="textarea textarea-big"></textarea>
                                             <label for="admin-comment">Administration Comments</label>
                                         </div>
 

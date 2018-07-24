@@ -57,7 +57,6 @@
                                 <li><a href="trackingurls.html" class="waves-effect waves-light">Tracking URLs</a></li>
                                 <li><a href="trackingcodes.html" class="waves-effect waves-light">Tracking Codes</a></li>
                                 <li><a href="errors.html" class="waves-effect waves-light active">Errors</a></li>
-                                <li><a href="profile.html" class="waves-effect waves-light">Profile</a></li>
                             </ul>
                         </li>
                         <li>
@@ -71,7 +70,10 @@
                                 <li><a href="#!" class="waves-effect waves-light">ES</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="double-btn">
+                            <a href="#!" class="waves-effect">
+                                <i class="fa fa-user"></i>
+                            </a>
                             <a href="#!" class="waves-effect">
                                 <i class="fa fa-sign-out-alt"></i>
                             </a>
@@ -128,7 +130,6 @@
                                     <li><a class="waves-effect" href="trackingurls.html">Tracking URLs</a></li>
                                     <li><a class="waves-effect" href="trackingcodes.html">Tracking Codes</a></li>
                                     <li><a class="waves-effect active" href="errors.html">Errors</a></li>
-                                    <li><a class="waves-effect" href="profile.html">Profile</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -145,8 +146,9 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#!" class="collapsible-header no-drop waves-effect"><i class="fa fa-sign-out-alt"></i>Logout</a>
+                <li class="double-btn">
+                    <a href="profile.html" class="collapsible-header no-drop waves-effect"><i class="fa fa-user"></i>Profile</a>
+                    <a href="#!" class="collapsible-header no-drop waves-effect">Logout<i class="fa fa-sign-out-alt"></i></a>
                 </li>
             </ul>
 
@@ -320,7 +322,7 @@
 </div>
 
 <!-- Modal Structure -->
-<div id="add" class="modal modal-style modal-fixed-footer modal-fixed-header modal-h-55">
+<div id="add" class="modal modal-style modal-fixed-footer modal-fixed-header">
     <div class="modal-header color-cyan">
         <div class="modal-title"><i class="fa fa-plus left"></i>Add Error</div>
         <button class="btn waves-effect modal-close"><i class="fa fa-times"></i></button>
@@ -331,7 +333,7 @@
             <div class="col s12 m12">
                 <div class="card card-modal mb-0">
                     <div class="row">
-                        <div class="input-field col s12 m6 color-green content-centered">
+                        <div class="input-field col s12 m6 color-grey">
                             <select>
                                 <option value="0" selected>Carrier</option><option value="postnl">PostNL Parcel</option><option value="postnlpacket">PostNL Packet</option><option value="royalmail">RoyalMail Tracked 24/48</option>
                             </select>
@@ -344,8 +346,8 @@
             <div class="col s12 m12 l6">
                 <div class="card card-modal mb-0">
                     <div class="row">
-                        <div class="input-field col s12 color-green tooltipped" data-position="bottom" data-tooltip=" * char '%' = any sequence of chars">
-                            <textarea id="source" class="textarea open-textarea"></textarea>
+                        <div class="input-field col s12 color-grey tooltipped" data-position="bottom" data-tooltip=" * char '%' = any sequence of chars">
+                            <textarea id="source" class="textarea textarea-big"></textarea>
                             <label for="source">Source Error <i class="fa fa-info-circle"></i></label>
                         </div>
                     </div>
@@ -355,8 +357,8 @@
                 <div class="card card-modal">
                     <div class="row">
 
-                        <div class="input-field col s12 color-green tooltipped" data-position="bottom" data-tooltip=" * enter '-' (dash) to not map">
-                            <textarea id="result" class="textarea open-textarea"></textarea>
+                        <div class="input-field col s12 color-grey tooltipped" data-position="bottom" data-tooltip=" * enter '-' (dash) to not map">
+                            <textarea id="result" class="textarea textarea-big"></textarea>
                             <label for="result">Result Error <i class="fa fa-info-circle"></i></label>
                         </div>
 
@@ -378,7 +380,7 @@
         <button class="btn btn-large waves-effect btn-submit">Submit</button>
     </div>
 </div>
-<div id="edit" class="modal modal-style modal-fixed-footer modal-fixed-header modal-h-70">
+<div id="edit" class="modal modal-style modal-fixed-footer modal-fixed-header">
     <div class="modal-header color-cyan">
         <div class="modal-title"><i class="fa fa-pen left"></i>Edit Url</div>
         <div class="d-flex">
@@ -400,8 +402,11 @@
 
 
                             <div class="parcel-top-info_right">
-                                <div class="color-green tooltipped" data-position="left" data-tooltip="Created"><span><i class="fa fa-file-contract"></i></span> <span>09.07.2018, 18:31</span></div>
-                                <div class="color-orange tooltipped" data-position="left" data-tooltip="Modified"><span><i class="fa fa-file-signature"></i></span> <span>09.07.2018, 18:31</span></div>
+                                <div class="dates">
+                                    <span class="tooltipped pr-2" data-position="top" data-tooltip="Created">09.07.2018, 18:31</span>
+                                    <span> | </span>
+                                    <span class="tooltipped pl-2" data-position="top" data-tooltip="Modified">09.07.2018, 18:31</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -413,7 +418,7 @@
             <div class="col s12">
                 <div class="card card-modal mb-0">
                     <div class="row">
-                        <div class="input-field col s12 m6 color-green">
+                        <div class="input-field col s12 m6 color-grey">
                             <select disabled>
                                 <option value="0">Carrier</option><option value="postnl" selected>PostNL Parcel</option><option value="postnlpacket">PostNL Packet</option><option value="royalmail">RoyalMail Tracked 24/48</option>
                             </select>
@@ -424,8 +429,8 @@
             <div class="col s12 m12 l6">
                 <div class="card card-modal mb-0">
                     <div class="row">
-                        <div class="input-field col s12 color-green tooltipped" data-position="bottom" data-tooltip=" * char '%' = any sequence of chars">
-                            <textarea id="source" class="textarea open-textarea">3SDMHK2875290: {[15204] Country code IC should be used with Las Palmas}</textarea>
+                        <div class="input-field col s12 color-grey tooltipped" data-position="bottom" data-tooltip=" * char '%' = any sequence of chars">
+                            <textarea id="source" class="textarea textarea-big">3SDMHK2875290: {[15204] Country code IC should be used with Las Palmas}</textarea>
                             <label for="source">Source Error <i class="fa fa-info-circle"></i></label>
                         </div>
                     </div>
@@ -435,8 +440,8 @@
                 <div class="card card-modal">
                     <div class="row">
 
-                        <div class="input-field col s12 color-green tooltipped" data-position="bottom" data-tooltip=" * enter '-' (dash) to not map">
-                            <textarea id="result" class="textarea open-textarea"></textarea>
+                        <div class="input-field col s12 color-grey tooltipped" data-position="bottom" data-tooltip=" * enter '-' (dash) to not map">
+                            <textarea id="result" class="textarea textarea-big"></textarea>
                             <label for="result">Result Error <i class="fa fa-info-circle"></i></label>
                         </div>
 

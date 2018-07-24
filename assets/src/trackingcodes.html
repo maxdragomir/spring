@@ -57,7 +57,6 @@
                                 <li><a href="trackingurls.html" class="waves-effect waves-light">Tracking URLs</a></li>
                                 <li><a href="trackingcodes.html" class="waves-effect waves-light active">Tracking Codes</a></li>
                                 <li><a href="errors.html" class="waves-effect waves-light">Errors</a></li>
-                                <li><a href="profile.html" class="waves-effect waves-light">Profile</a></li>
                             </ul>
                         </li>
                         <li>
@@ -71,7 +70,10 @@
                                 <li><a href="#!" class="waves-effect waves-light">ES</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="double-btn">
+                            <a href="#!" class="waves-effect">
+                                <i class="fa fa-user"></i>
+                            </a>
                             <a href="#!" class="waves-effect">
                                 <i class="fa fa-sign-out-alt"></i>
                             </a>
@@ -128,7 +130,6 @@
                                     <li><a class="waves-effect" href="trackingurls.html">Tracking URLs</a></li>
                                     <li><a class="waves-effect active" href="trackingcodes.html">Tracking Codes</a></li>
                                     <li><a class="waves-effect" href="errors.html">Errors</a></li>
-                                    <li><a class="waves-effect" href="profile.html">Profile</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -145,8 +146,9 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#!" class="collapsible-header no-drop waves-effect"><i class="fa fa-sign-out-alt"></i>Logout</a>
+                <li class="double-btn">
+                    <a href="profile.html" class="collapsible-header no-drop waves-effect"><i class="fa fa-user"></i>Profile</a>
+                    <a href="#!" class="collapsible-header no-drop waves-effect">Logout<i class="fa fa-sign-out-alt"></i></a>
                 </li>
             </ul>
 
@@ -316,7 +318,7 @@
 </div>
 
 <!-- Modal Structure -->
-<div id="add" class="modal modal-style modal-fixed-footer modal-fixed-header modal-h-55">
+<div id="add" class="modal modal-style modal-fixed-footer modal-fixed-header modal-h-70">
     <div class="modal-header color-cyan">
         <div class="modal-title"><i class="fa fa-plus left"></i>Add Code</div>
         <button class="btn waves-effect modal-close"><i class="fa fa-times"></i></button>
@@ -326,28 +328,38 @@
         <div class="row m-0 mt-2">
 
             <!-- info row -->
-            <div class="col s12">
+            <div class="col s12 m6">
                 <div class="card card-modal m-0">
                     <div class="row">
-                        <div class="input-field col s12 m6 color-green">
+                        <div class="input-field col s12 color-grey">
                             <select>
                                 <option value="0" selected>Carrier</option><option value="postnl">PostNL Parcel</option><option value="postnlpacket">PostNL Packet</option><option value="royalmail">RoyalMail Tracked 24/48</option>
                             </select>
                         </div>
-                        <div class="input-field col s12 m6 color-green">
-                            <select>
-                                <option value="0">&lt;NEW&gt;</option><option value="1" selected="">&lt;do not map&gt;</option><option value="21">21 - IN TRANSIT</option><option value="31">31 - DELIVERY EXCEPTION</option><option value="40">40 - IN CUSTOMS</option><option value="41">41 - CUSTOMS EXCEPTION</option><option value="91">91 - DELIVERY ATTEMPTED</option><option value="92">92 - DELIVERY AWAITING COLLECTION</option><option value="93">93 - DELIVERY SCHEDULED</option><option value="100">100 - DELIVERED</option><option value="111">111 - LOST OR DESTROYED</option><option value="11101">11101 - LOST</option><option value="11102">11102 - DESTROYED</option><option value="124">124 - RETURN IN TRANSIT</option><option value="12401">12401 - RETURN IN TRANSIT - REFUSED</option><option value="12402">12402 - RETURN IN TRANSIT - UNDELIVERABLE</option><option value="12403">12403 - RETURN IN TRANSIT - DAMAGED</option><option value="12404">12404 - RETURN IN TRANSIT - NOT COLLECTED</option><option value="12405">12405 - RETURN IN TRANSIT - ACCORDING TO AGREEMENT</option>
-                            </select>
-                        </div>
-                        <div class="input-field col s12 m6  color-green tooltipped" data-position="bottom" data-tooltip=" * char '%' = any sequence of chars">
+
+                        <div class="input-field col s12 color-grey tooltipped" data-position="bottom" data-tooltip=" * char '%' = any sequence of chars">
                             <input id="code" class="m-0" type="text">
                             <label for="code">Code<i class="fa fa-info-circle"></i></label>
                         </div>
 
-                        <div class="input-field col s12 m6  color-green">
-                            <input id="comment" class="m-0" type="text">
+                        <div class="input-field col s12 color-grey">
+                            <select>
+                                <option value="0">&lt;NEW&gt;</option><option value="1" selected="">&lt;do not map&gt;</option><option value="21">21 - IN TRANSIT</option><option value="31">31 - DELIVERY EXCEPTION</option><option value="40">40 - IN CUSTOMS</option><option value="41">41 - CUSTOMS EXCEPTION</option><option value="91">91 - DELIVERY ATTEMPTED</option><option value="92">92 - DELIVERY AWAITING COLLECTION</option><option value="93">93 - DELIVERY SCHEDULED</option><option value="100">100 - DELIVERED</option><option value="111">111 - LOST OR DESTROYED</option><option value="11101">11101 - LOST</option><option value="11102">11102 - DESTROYED</option><option value="124">124 - RETURN IN TRANSIT</option><option value="12401">12401 - RETURN IN TRANSIT - REFUSED</option><option value="12402">12402 - RETURN IN TRANSIT - UNDELIVERABLE</option><option value="12403">12403 - RETURN IN TRANSIT - DAMAGED</option><option value="12404">12404 - RETURN IN TRANSIT - NOT COLLECTED</option><option value="12405">12405 - RETURN IN TRANSIT - ACCORDING TO AGREEMENT</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6">
+                <div class="card card-modal m-0">
+                    <div class="row">
+                        <div class="input-field col s12 color-grey">
+                            <textarea id="comment" class="textarea textarea-big"></textarea>
+                            <!--<input id="comment" class="m-0" type="text">-->
                             <label for="comment">Comment</label>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -367,7 +379,7 @@
         <button class="btn btn-large waves-effect btn-submit">Submit</button>
     </div>
 </div>
-<div id="edit" class="modal modal-style modal-fixed-footer modal-fixed-header modal-h-70">
+<div id="edit" class="modal modal-style modal-fixed-footer modal-fixed-header ">
     <div class="modal-header color-cyan">
         <div class="modal-title"><i class="fa fa-pen left"></i>Edit Url</div>
         <div class="d-flex">
@@ -390,8 +402,11 @@
 
 
                             <div class="parcel-top-info_right">
-                                <div class="color-green tooltipped" data-position="left" data-tooltip="Created"><span><i class="fa fa-file-contract"></i></span> <span>09.07.2018, 18:31</span></div>
-                                <div class="color-orange tooltipped" data-position="left" data-tooltip="Modified"><span><i class="fa fa-file-signature"></i></span> <span>09.07.2018, 18:31</span></div>
+                                <div class="dates">
+                                    <span class="tooltipped pr-2" data-position="top" data-tooltip="Created">09.07.2018, 18:31</span>
+                                    <span> | </span>
+                                    <span class="tooltipped pl-2" data-position="top" data-tooltip="Modified">09.07.2018, 18:31</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -400,28 +415,38 @@
 
 
             <!-- info row -->
-            <div class="col s12">
-                <div class="card card-modal">
+            <div class="col s12 m6">
+                <div class="card card-modal m-0">
                     <div class="row">
-                        <div class="input-field col s12 m6 color-green">
-                            <select disabled>
-                                <option value="0">Carrier</option><option value="postnl" selected>PostNL Parcel</option><option value="postnlpacket">PostNL Packet</option><option value="royalmail">RoyalMail Tracked 24/48</option>
-                            </select>
-                        </div>
-                        <div class="input-field col s12 m6 color-green">
+                        <div class="input-field col s12 color-grey">
                             <select>
-                                <option value="0">&lt;NEW&gt;</option><option value="1" selected="">&lt;do not map&gt;</option><option value="21">21 - IN TRANSIT</option><option value="31">31 - DELIVERY EXCEPTION</option><option value="40">40 - IN CUSTOMS</option><option value="41">41 - CUSTOMS EXCEPTION</option><option value="91">91 - DELIVERY ATTEMPTED</option><option value="92">92 - DELIVERY AWAITING COLLECTION</option><option value="93">93 - DELIVERY SCHEDULED</option><option value="100">100 - DELIVERED</option><option value="111">111 - LOST OR DESTROYED</option><option value="11101">11101 - LOST</option><option value="11102">11102 - DESTROYED</option><option value="124">124 - RETURN IN TRANSIT</option><option value="12401">12401 - RETURN IN TRANSIT - REFUSED</option><option value="12402">12402 - RETURN IN TRANSIT - UNDELIVERABLE</option><option value="12403">12403 - RETURN IN TRANSIT - DAMAGED</option><option value="12404">12404 - RETURN IN TRANSIT - NOT COLLECTED</option><option value="12405">12405 - RETURN IN TRANSIT - ACCORDING TO AGREEMENT</option>
+                                <option value="0" selected>Carrier</option><option value="postnl">PostNL Parcel</option><option value="postnlpacket">PostNL Packet</option><option value="royalmail">RoyalMail Tracked 24/48</option>
                             </select>
                         </div>
-                        <div class="input-field col s12 m6  color-green tooltipped" data-position="bottom" data-tooltip=" * char '%' = any sequence of chars">
+
+                        <div class="input-field col s12 color-grey tooltipped" data-position="bottom" data-tooltip=" * char '%' = any sequence of chars">
                             <input id="code" class="m-0" type="text">
                             <label for="code">Code<i class="fa fa-info-circle"></i></label>
                         </div>
 
-                        <div class="input-field col s12 m6  color-green">
-                            <input id="comment" class="m-0" type="text">
+                        <div class="input-field col s12 color-grey">
+                            <select>
+                                <option value="0">&lt;NEW&gt;</option><option value="1" selected="">&lt;do not map&gt;</option><option value="21">21 - IN TRANSIT</option><option value="31">31 - DELIVERY EXCEPTION</option><option value="40">40 - IN CUSTOMS</option><option value="41">41 - CUSTOMS EXCEPTION</option><option value="91">91 - DELIVERY ATTEMPTED</option><option value="92">92 - DELIVERY AWAITING COLLECTION</option><option value="93">93 - DELIVERY SCHEDULED</option><option value="100">100 - DELIVERED</option><option value="111">111 - LOST OR DESTROYED</option><option value="11101">11101 - LOST</option><option value="11102">11102 - DESTROYED</option><option value="124">124 - RETURN IN TRANSIT</option><option value="12401">12401 - RETURN IN TRANSIT - REFUSED</option><option value="12402">12402 - RETURN IN TRANSIT - UNDELIVERABLE</option><option value="12403">12403 - RETURN IN TRANSIT - DAMAGED</option><option value="12404">12404 - RETURN IN TRANSIT - NOT COLLECTED</option><option value="12405">12405 - RETURN IN TRANSIT - ACCORDING TO AGREEMENT</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6">
+                <div class="card card-modal m-0">
+                    <div class="row">
+                        <div class="input-field col s12 color-grey">
+                            <textarea id="comment" class="textarea textarea-big"></textarea>
+                            <!--<input id="comment" class="m-0" type="text">-->
                             <label for="comment">Comment</label>
                         </div>
+
                     </div>
                 </div>
             </div>
