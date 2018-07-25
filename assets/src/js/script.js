@@ -94,7 +94,15 @@ $(document).ready(function(){
     $('select').formSelect();
 
 
-    $('.dropdown-trigger').dropdown();
+    $('.dropdown-trigger').dropdown({
+        autoTrigger: false,
+        coverTrigger: false
+        // onCloseEnd: function (dropdownEl) {
+        //
+        //     console.log(dropdownEl);
+        //
+        // }
+    });
 
     $('.tooltipped').tooltip({
         margin: -5,

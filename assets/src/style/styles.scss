@@ -833,13 +833,14 @@ div.btn {
       }
       .btn-wrapper {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: flex-end;
         height: 50px;
+        width: 100%;
       }
       .btn-var {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         width: 100%;
         padding: .5rem;
@@ -875,7 +876,10 @@ div.btn {
               width: 100px;
               transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
 
-              &:hover {
+              a {
+                transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+              }
+              &:hover a{
                 color: $secondary-color;
                 transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
               }
@@ -2583,6 +2587,7 @@ div.btn {
       &.card-filters {
         position: relative;
         padding: 0;
+        margin-bottom: 2rem;
 
         &.no-timepicker {
           .datepicker-end {
@@ -2609,23 +2614,29 @@ div.btn {
             }
           }
           label {
-            pointer-events: none;
-            transform: translateY(15px) scale(1);
+            //pointer-events: none;
+            font-size: .9rem;
+            transform: translateY(-25px) scale(1);
             transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
           }
+
           label.active {
-            display: flex;
-            padding: 0 1rem;
-            width: calc(100% - 25px);
-            color: #fff;
-            background: $main-color;
-            box-shadow: $main-shadow;
-            border-radius: 5px;
-            transform: translateY(-12px) scale(1);
-            transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
-
-
+            color: $card-cyan-text;
+            font-size: 1.1rem;
+            transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1) 100ms;
           }
+          //label.active {
+          //  display: flex;
+          //  padding: 0 1rem;
+          //  width: calc(100% - 25px);
+          //  color: #fff;
+          //  background: $main-color;
+          //  box-shadow: $main-shadow;
+          //  border-radius: 5px;
+          //  transform: translateY(-12px) scale(1);
+          //  transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+          //}
+
           &.color-red {
             label.active {
               background: $card-red-block;
@@ -2638,23 +2649,29 @@ div.btn {
               box-shadow: $card-orange-shadow;
             }
           }
+          &.color-cyan {
+            label.active {
+              background: $card-cyan-block;
+              box-shadow: $card-cyan-shadow;
+            }
+          }
+
+
           .datepicker-start {
             border-radius: 0 0 0 10px;
             border-right: 1px solid #c9c9c9;
 
             & + label.active {
-              background: $card-green-block;
-              box-shadow: $card-green-shadow;
+              color: $card-cyan-text;
             }
           }
 
           .timepicker-start {
             border-radius: 0;
-            border-right: 1px solid #c9c9c9;
+            //border-right: 1px solid #c9c9c9;
 
             & + label.active {
-              background: $card-blue-block;
-              box-shadow: $card-blue-shadow;
+              color: $card-cyan-text;
             }
           }
 
@@ -2663,8 +2680,7 @@ div.btn {
             border-right: 1px solid #c9c9c9;
 
             & + label.active {
-              background: $card-green-block;
-              box-shadow: $card-green-shadow;
+              color: $card-cyan-text;
             }
           }
 
@@ -2672,8 +2688,7 @@ div.btn {
             border-radius: 0 0 10px 0;
 
             & + label.active {
-              background: $card-blue-block;
-              box-shadow: $card-blue-shadow;
+              color: $card-cyan-text;
             }
           }
         }
@@ -2685,9 +2700,10 @@ div.btn {
           height: 50px;
           transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
 
-
           .caret {
             right: 10px;
+            background: #fff;
+            z-index: 1;
           }
 
           .dropdown-trigger {
@@ -2698,7 +2714,6 @@ div.btn {
             padding: 0 1rem 0;
             border-radius: 10px;
           }
-
           .dropdown-content {
             top: 55px !important;
             border-radius: 10px;
@@ -2708,18 +2723,22 @@ div.btn {
               color: #333;
             }
           }
+          & + label {
+            transform: inherit;
 
-          & + label.active {
-            top: auto;
-            font-size: 1rem;
-            background: $secondary-color;
-            box-shadow: $secondary-shadow;
+            .active {
+              color: $card-cyan-text;
+              font-size: 1.1rem;
+              transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1) 100ms;
+            }
           }
+
         }
+
         .datepicker-modal {
           position: absolute;
           margin-top: 3.3rem;
-          margin-right: 0;
+          margin-right: auto;
           width: 100%;
           max-width: 300px;
           border-radius: 10px;
@@ -3397,6 +3416,7 @@ div.btn {
         }
 
       }
+
     }
 
     .card-filters:hover {
@@ -3926,6 +3946,7 @@ div.btn {
         }
         .datepicker-modal {
           margin-top: 3.5rem;
+          margin-right: auto;
         }
       }
     }
