@@ -13,7 +13,9 @@ function copy(element_id){
 
 $(document).ready(function(){
     $('.under-construction-page').addClass('active');
-
+    setTimeout(function () {
+        $('.card-filters label').addClass('show-label');
+    }, 400);
 
     // var loader = $('.loader');
     // setTimeout(function () {
@@ -94,14 +96,9 @@ $(document).ready(function(){
     $('select').formSelect();
 
 
-    $('.dropdown-trigger').dropdown({
-        autoTrigger: false,
-        coverTrigger: false
-        // onCloseEnd: function (dropdownEl) {
-        //
-        //     console.log(dropdownEl);
-        //
-        // }
+    $('.dropdown-trigger').dropdown();
+    $('.dropdown-trigger-right').dropdown({
+        alignment: 'right'
     });
 
     $('.tooltipped').tooltip({

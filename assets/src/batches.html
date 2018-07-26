@@ -88,6 +88,7 @@
             </div>
 
             <div class="content">
+
                 <ul id="slide-out" class="sidenav">
                     <li class="sidebar_bg"></li>
                     <li>
@@ -159,94 +160,101 @@
                         </div>
                     </div>
                 </div>
+                <div id="main-filter" class="row mt-4 mb-0">
+                    <div class="col s12 m3 pr-4">
 
-                <div class="row mt-4 mb-0">
-                    <div class="col s12 m6 l3 xl3">
-                        <div class="card card-filters">
-                            <div class="input-field col s12 m-0 color-red">
-                                <input id="search" class="m-0" type="text">
-                                <label for="search">Search</label>
+                        <div class="row mb-0">
+
+                            <div class="col s12">
+                                <div class="card card-filters">
+                                    <div class="input-field col s12 m12 m-0">
+                                        <input id="date-start" class="m-0 datepicker-start" type="text">
+                                        <label for="date-start">Date start</label>
+                                    </div>
+                                    <div class="input-field col s12 m12 m-0">
+                                        <input id="time-start" class="timepicker-start m-0" type="text">
+                                        <label for="time-start">Time start</label>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l2">
-                        <div class="card card-filters">
-                            <div class="input-field col s12 m-0">
-                                <select>
-                                    <option value="c" selected="">Created</option><option value="a">Accepted</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m12 l7 xl7">
-                        <div class="card card-filters">
-                            <div class="input-field col s12 m6 l3 xl3 m-0">
-                                <input id="date-start" class="m-0 datepicker-start" type="text">
-                                <label for="date-start">Date start</label>
-                            </div>
-                            <div class="input-field col s12 m6 l3 xl3 m-0">
-                                <input id="time-start" class="timepicker-start m-0" type="text">
-                                <label for="time-start">Time start</label>
-                            </div>
-                            <div class="input-field col s12 m6 l3 xl3 m-0">
-                                <input id="date-end" class="m-0 datepicker-end" type="text">
-                                <label for="date-end">Date end</label>
-                            </div>
-                            <div class="input-field col s12 m6 l3 xl3 m-0">
-                                <input id="time-end" class="timepicker-end m-0" type="text">
-                                <label for="time-end">Time end</label>
+                            <div class="col s12">
+                                <div class="card card-filters">
+                                    <div class="input-field col s12 m12 m-0">
+                                        <input id="date-end" class="m-0 datepicker-end" type="text">
+                                        <label for="date-end">Date end</label>
+                                    </div>
+                                    <div class="input-field col s12 m12 m-0">
+                                        <input id="time-end" class="timepicker-end m-0" type="text">
+                                        <label for="time-end">Time end</label>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
+                    </div>
+
+                    <div class="col s12 m9 pl-4">
+
+                        <div class="row mb-0">
+
+                            <div class="col s12 m6 l4">
+                                <div class="card card-filters">
+                                    <div class="input-field col s12 m-0">
+                                        <select>
+                                            <option value="0" selected> All </option>
+                                            <option value="0">User 1</option>
+                                            <option value="0">User 2</option>
+                                            <option value="0">User 3</option>
+                                            <option value="0">User 4</option>
+                                            <option value="0">User 5</option>
+                                            <option value="0">User 6</option>
+                                            <option value="0">User 7</option>
+                                            <option value="0">User 8</option>
+                                            <option value="0">User 9</option>
+                                            <option value="0">User 10</option>
+                                        </select>
+                                        <label>User</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l4">
+                                <div class="card card-filters">
+                                    <div class="input-field col s12 m-0">
+                                        <select>
+                                            <option value="0" selected> All </option>
+                                            <option value="-1">Cancelled</option><option value="0">Queued</option><option value="1">Error</option><option value="10">Created</option><option value="20">Accepted</option><option value="21">In&nbsp;Transit</option><option value="31">Delivery Exception</option><option value="40">In&nbsp;Customs</option><option value="41">Customs Exception</option><option value="91">Delivery Attempted</option><option value="92">Delivery Awaiting Collection</option><option value="93">Delivery Scheduled</option><option value="100">Delivered</option><option value="111">Lost or Destroyed</option><option value="124">Return in&nbsp;Transit</option><option value="125">Return Received</option><option value="126">Return Completed</option>
+                                        </select>
+                                        <label>Status</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l4">
+                                <div class="card card-filters">
+                                    <div class="input-field col s12 m-0">
+                                        <select>
+                                            <option value="0" selected> All </option>
+                                            <option value="0">Manifest</option><option value="2">OMS</option></select>
+                                        </select>
+                                        <label>Type</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row mb-0">
+                            <div class="col s12 m12 l3 offset-l9">
+                                <div class="card card-inv card-button no-other-btn">
+                                    <div class="d-flex">
+                                        <button type="button" class="btn clear-btn waves-effect tooltipped" data-position="top" data-tooltip="Clear"><i class="fa fa-times"></i></button>
+                                        <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Search"><i class="fa fa-search"></i> </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <div class="row mt-0 mb-0">
-                    <div class="col s12 m6 l3">
-                        <div class="card card-filters">
-                            <div class="input-field col s12 m-0">
-                                <select>
-                                    <option value="0" selected>User</option>
-                                    <option value="0">User 1</option>
-                                    <option value="0">User 2</option>
-                                    <option value="0">User 3</option>
-                                    <option value="0">User 4</option>
-                                    <option value="0">User 5</option>
-                                    <option value="0">User 6</option>
-                                    <option value="0">User 7</option>
-                                    <option value="0">User 8</option>
-                                    <option value="0">User 9</option>
-                                    <option value="0">User 10</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l2">
-                        <div class="card card-filters">
-                            <div class="input-field col s12 m-0">
-                                <select><option value="" selected="">Type</option><option value="0">Manifest</option><option value="2">OMS</option></select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m12 l3">
-                        <div class="card card-filters">
-                            <div class="input-field col s12 m-0">
-                                <select>
-                                    <option value="0" selected>Status</option><option value="-1">Cancelled</option><option value="0">Queued</option><option value="1">Error</option><option value="10">Created</option><option value="20">Accepted</option><option value="21">In&nbsp;Transit</option><option value="31">Delivery Exception</option><option value="40">In&nbsp;Customs</option><option value="41">Customs Exception</option><option value="91">Delivery Attempted</option><option value="92">Delivery Awaiting Collection</option><option value="93">Delivery Scheduled</option><option value="100">Delivered</option><option value="111">Lost or Destroyed</option><option value="124">Return in&nbsp;Transit</option><option value="125">Return Received</option><option value="126">Return Completed</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m12 l3 offset-l1 offset-m0">
-                        <div class="card card-inv card-button no-other-btn">
-                            <div class="d-flex">
-                                <button type="button" class="btn clear-btn waves-effect tooltipped" data-position="top" data-tooltip="Clear"><i class="fa fa-times"></i></button>
-                                <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Search"><i class="fa fa-search"></i> </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="row mt-4">
                     <div class="col s12">
                         <div class="card-title table-title card-cyan">
@@ -931,7 +939,8 @@
                         </div>
                     </div>
                 </div>
-                </div>
+
+            </div>
 
             <div class="footer">
                 <div class="copyright">

@@ -6,10 +6,6 @@
 </head>
 <body>
 
-    <!--<div class="loader">-->
-        <!--<div class="spinner"></div>-->
-    <!--</div>-->
-
     <div class="wrapper">
         <div class="main">
             <div class="header">
@@ -92,6 +88,7 @@
             </div>
 
             <div class="content">
+
                 <ul id="slide-out" class="sidenav">
                     <li class="sidebar_bg"></li>
                     <li>
@@ -163,11 +160,10 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="row mt-4 mb-0">
                     <div class="col s12 m12 l3 xl3">
                         <div class="card card-filters">
-                            <div class="input-field col s12 m-0 color-red">
+                            <div class="input-field col s12 m-0">
                                 <input id="search" class="m-0" type="text">
                                 <label for="search">Search</label>
                             </div>
@@ -177,8 +173,9 @@
                         <div class="card card-filters">
                             <div class="input-field col s12 m-0">
                                 <select>
-                                    <option value="11" selected="">Shipper</option><option value="21">Carrier</option><option value="4">Hub Supervisor</option><option value="5">Hub Worker</option><option value="7">Client Services</option><option value="22">Sales</option><option value="1">Admin</option>
+                                    <option value="11">Shipper</option><option value="21">Carrier</option><option value="4">Hub Supervisor</option><option value="5">Hub Worker</option><option value="7">Client Services</option><option value="22">Sales</option><option value="1">Admin</option>
                                 </select>
+                                <label>User type</label>
                             </div>
                         </div>
                     </div>
@@ -186,19 +183,19 @@
                         <div class="card card-filters">
                             <div class="input-field col s12 m-0">
                                 <select>
-                                    <option value="" selected="">all</option><option value="a">Active</option><option value="na">Inactive</option><option value="l">Live Mode</option><option value="t">Test Mode</option>
+                                    <option value="">All</option><option value="a">Active</option><option value="na">Inactive</option><option value="l">Live Mode</option><option value="t">Test Mode</option>
                                 </select>
+                                <label>Mode</label>
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m12 l4">
+                    <div class="col s12 m12 l1">
                         <div class="card card-inv card-button no-other-btn">
                             <button type="button" class="btn clear-btn waves-effect tooltipped" data-position="top" data-tooltip="Clear"><i class="fa fa-times"></i></button>
                             <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Search"><i class="fa fa-search"></i> </button>
                         </div>
                     </div>
                 </div>
-
                 <div class="row mt-4">
                     <div class="col s12">
                         <div class="card-title table-title card-cyan">
@@ -433,6 +430,8 @@
                     </div>
                 </div>
 
+
+
                 <div class="dn row m-0">
                     <div class="col s12">
                         <div class="under-construction-page">
@@ -440,6 +439,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
 
             <div class="footer">
@@ -1244,16 +1244,6 @@
 
             });
 
-            //clear filters and animate icon
-            $('.card-button').on('click', '.clear-btn', function () {
-
-                var el = $('.clear-btn i').clone().removeClass('active');
-                $('.clear-btn i').remove();
-                $('.clear-btn').append(el);
-                el.addClass('active');
-
-            });
-
             //show eye if width < 200
             $('.alot-text div').each(function () {
 
@@ -1263,6 +1253,15 @@
                 } else {
                     $(this).siblings('.btn-show-all').show();
                 }
+
+            });
+            //clear filters and animate icon
+            $('.card-button').on('click', '.clear-btn', function () {
+
+                var el = $('.clear-btn i').clone().removeClass('active');
+                $('.clear-btn i').remove();
+                $('.clear-btn').append(el);
+                el.addClass('active');
 
             });
 
@@ -1296,5 +1295,6 @@
         });
 
     </script>
+
 </body>
 </html>

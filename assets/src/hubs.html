@@ -157,7 +157,147 @@
                         </div>
                     </div>
                 </div>
-                <div class="row m-0">
+
+                <div class=" row mt-4 mb-0">
+                    <div class="col s12 m12 l3 xl3">
+                        <div class="card card-filters">
+                            <div class="input-field col s12 m-0">
+                                <input id="search" class="m-0" type="text">
+                                <label for="search">Search</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l2">
+                        <div class="card card-filters">
+                            <div class="input-field col s12 m-0">
+                                <select>
+                                    <option value="">All</option><option value="a">Active</option><option value="na">Inactive</option>
+                                </select>
+                                <label>Sort</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m12 l1">
+                        <div class="card card-inv card-button no-other-btn">
+                            <button type="button" class="btn clear-btn waves-effect tooltipped" data-position="top" data-tooltip="Clear"><i class="fa fa-times"></i></button>
+                            <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Search"><i class="fa fa-search"></i> </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" row mt-4">
+                    <div class="col s12">
+                        <div class="card-title table-title card-cyan">
+                            <div class="card-title_result card-title_total">
+                                <div class="result tooltipped" data-position="top" data-tooltip="Results">
+                                    <i class="fa fa-table left"></i>
+                                    <span class="pr-2">Found: </span>
+                                    <div id="c_result">0</div>
+                                </div>
+                            </div>
+
+                            <div class="card-title_btn card-title_btn-solo">
+                                <a href="#add" class="btn waves-effect tooltipped modal-trigger" data-position="top" data-tooltip="Add Error"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                        <div class="card card-table card-table-settings card-table-errors mt-4">
+                            <div class="thead-desctop">
+                                <table class="highlight mt-4">
+                                    <thead>
+                                    <tr>
+                                        <th>
+                                            <a href="#">Carrier</a>
+                                        </th>
+                                        <th>
+                                            <a href="#">Source Error</a>
+                                        </th>
+                                        <th>
+                                            Result Error
+                                        </th>
+                                        <th>
+                                            Actions
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="thead-mobile">
+                                <table class="highlight">
+                                    <thead>
+                                    <tr>
+                                        <th>
+                                            <a href="#">Carrier</a>
+                                        </th>
+                                        <th>
+                                            <a href="#">Source Error</a>
+                                        </th>
+                                        <th>
+                                            Result Error
+                                        </th>
+                                        <th>
+                                            Actions
+                                        </th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                    <tr>
+                                        <td  data-title="Carrier">
+                                            <div class="color-secondary">
+                                                PostNL Parcel
+                                            </div>
+                                        </td>
+                                        <td data-title="Source Error">
+                                            <div class="big-text color-secondary">
+                                                3SDMHK2875290: {[15204] Country code IC should be used with Las Palmas}
+                                            </div>
+                                        </td>
+                                        <td data-title="Result Error">
+                                            <div>
+                                                Destination no valid for Parcel UPU
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="actions-btn">
+                                                <a href="#edit" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="Edit"><i class="fa fa-pen"></i></a>
+                                                <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td  data-title="Carrier">
+                                            <div>
+                                                PostNL Parcel
+                                            </div>
+                                        </td>
+                                        <td data-title="Source Error">
+                                            <div class="big-text color-blue">
+                                                3SDMHK2875290: {[15204] Country code IC should be used with Las Palmas}
+                                            </div>
+                                        </td>
+                                        <td data-title="Result Error">
+                                            <div>
+                                                Destination no valid for Parcel UPU
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="actions-btn">
+                                                <a href="#edit" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="Edit"><i class="fa fa-pen"></i></a>
+                                                <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dn row m-0">
                     <div class="col s12">
                         <div class="under-construction-page">
                             <h1 class="m-0"> <i class="fa fa-cog"></i> under construction</h1>
@@ -174,12 +314,175 @@
         </div>
     </div>
 
+    <!-- Modal Structure -->
+    <div id="add" class="modal modal-style modal-fixed-footer modal-fixed-header">
+        <div class="modal-header color-cyan">
+            <div class="modal-title"><i class="fa fa-plus left"></i>Add Error</div>
+            <button class="btn waves-effect modal-close"><i class="fa fa-times"></i></button>
+        </div>
+        <div class="modal-content">
+
+            <div class="row m-0 mt-2">
+                <div class="col s12 m12">
+                    <div class="card card-modal mb-0">
+                        <div class="row">
+                            <div class="input-field col s12 m6 color-grey">
+                                <select>
+                                    <option value="0" selected>Carrier</option><option value="postnl">PostNL Parcel</option><option value="postnlpacket">PostNL Packet</option><option value="royalmail">RoyalMail Tracked 24/48</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-0">
+                <div class="col s12 m12 l6">
+                    <div class="card card-modal mb-0">
+                        <div class="row">
+                            <div class="input-field col s12 color-grey tooltipped" data-position="bottom" data-tooltip=" * char '%' = any sequence of chars">
+                                <textarea id="source" class="textarea textarea-big"></textarea>
+                                <label for="source">Source Error <i class="fa fa-info-circle"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m12 l6">
+                    <div class="card card-modal">
+                        <div class="row">
+
+                            <div class="input-field col s12 color-grey tooltipped" data-position="bottom" data-tooltip=" * enter '-' (dash) to not map">
+                                <textarea id="result" class="textarea textarea-big"></textarea>
+                                <label for="result">Result Error <i class="fa fa-info-circle"></i></label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+
+            <div class="switch color-green">
+                <label>
+                    <input type="checkbox">
+                    <span class="lever"></span>
+                    <span class="label-text">Not close window to continue edit</span>
+                </label>
+            </div>
+            <button class="btn btn-large waves-effect btn-submit">Submit</button>
+        </div>
+    </div>
+    <div id="edit" class="modal modal-style modal-fixed-footer modal-fixed-header">
+        <div class="modal-header color-cyan">
+            <div class="modal-title"><i class="fa fa-pen left"></i>Edit Url</div>
+            <div class="d-flex">
+                <button class="btn waves-effect modal-close ml-2"><i class="fa fa-times"></i></button>
+            </div>
+        </div>
+        <div class="modal-content modal-opt">
+
+            <div class="row m-0 mt-2">
+
+                <div class="col s12 mb-4">
+                    <div class="card card-modal">
+                        <div class="parcel-top-info one-btns pl-2 pr-2">
+                            <div class="bold parcel-top-info_id mobile">ID 171321</div>
+                            <div class="parcel-top-info_desctop parcel-top-info_no-button">
+                                <div class="parcel-top-info_left">
+                                    <div class="bold parcel-top-info_id">ID 171321</div>
+                                </div>
+
+
+                                <div class="parcel-top-info_right">
+                                    <div class="dates">
+                                        <span class="tooltipped pr-2" data-position="top" data-tooltip="Created">09.07.2018, 18:31</span>
+                                        <span> | </span>
+                                        <span class="tooltipped pl-2" data-position="top" data-tooltip="Modified">09.07.2018, 18:31</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row m-0">
+                <div class="col s12">
+                    <div class="card card-modal mb-0">
+                        <div class="row">
+                            <div class="input-field col s12 m6 color-grey">
+                                <select disabled>
+                                    <option value="0">Carrier</option><option value="postnl" selected>PostNL Parcel</option><option value="postnlpacket">PostNL Packet</option><option value="royalmail">RoyalMail Tracked 24/48</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m12 l6">
+                    <div class="card card-modal mb-0">
+                        <div class="row">
+                            <div class="input-field col s12 color-grey tooltipped" data-position="bottom" data-tooltip=" * char '%' = any sequence of chars">
+                                <textarea id="source" class="textarea textarea-big">3SDMHK2875290: {[15204] Country code IC should be used with Las Palmas}</textarea>
+                                <label for="source">Source Error <i class="fa fa-info-circle"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m12 l6">
+                    <div class="card card-modal">
+                        <div class="row">
+
+                            <div class="input-field col s12 color-grey tooltipped" data-position="bottom" data-tooltip=" * enter '-' (dash) to not map">
+                                <textarea id="result" class="textarea textarea-big"></textarea>
+                                <label for="result">Result Error <i class="fa fa-info-circle"></i></label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="modal-footer">
+
+            <div class="switch color-green">
+                <label>
+                    <input type="checkbox">
+                    <span class="lever"></span>
+                    <span class="label-text">Not close window to continue edit</span>
+                </label>
+            </div>
+            <button class="btn btn-large waves-effect btn-submit">Submit</button>
+        </div>
+    </div>
+
 //= template/footer.html
 
     <script>
         $(document).ready(function () {
             $('.under-construction-page').addClass('active');
+
+
+            //Count in panel title
+            var options = {
+
+                useEasing: true,
+                useGrouping: true,
+                separator: ',',
+                decimal: '.',
+            };
+
+            var resultCount = new CountUp('c_result', 0, 10, 0, 4, options);
+
+            setTimeout(function () {
+
+                resultCount.start();
+
+            }, 0);
         });
     </script>
+
 </body>
 </html>

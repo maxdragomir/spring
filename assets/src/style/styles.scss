@@ -9,20 +9,6 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #eee;
   color: #3c4858;
-  //overflow: auto !important;
-
-  //&:after {
-  //  content: '';
-  //  position: absolute;
-  //  top: 0;
-  //  left: 0;
-  //  width: 100%;
-  //  height: 100%;
-  //  background: url(https://images.unsplash.com/photo-1518002196537-b51e4e4d0f65?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a90b6f81dbcf743ea1927690c5bacbba&auto=format&fit=crop&w=1273&q=80) no-repeat center;
-  //  background-size: cover;
-  //  z-index: -1;
-  //  opacity: .1;
-  //}
 
   &.fixed-title .main .content .card-title {
     position: fixed;
@@ -62,23 +48,6 @@ body {
     visibility: hidden;
     transform: scale(0);
     transition: all 1000ms cubic-bezier(0.34, 1.61, 0.7, 1);;
-  }
-}
-
-button {
-  font-family: 'Roboto', sans-serif;
-}
-.btn {
-  transition: all 100ms ease;
-
-  &:active {
-    transform: scale(.95);
-    transition: all 100ms ease;
-  }
-}
-div.btn {
-  &:active {
-    transform: inherit;
   }
 }
 .spinner {
@@ -156,6 +125,22 @@ div.btn {
   top: 0;
   height: 100vh;
   position: relative;
+}
+button {
+  font-family: 'Roboto', sans-serif;
+}
+.btn {
+  transition: all 100ms ease;
+
+  &:active {
+    transform: scale(.95);
+    transition: all 100ms ease;
+  }
+}
+div.btn {
+  &:active {
+    transform: inherit;
+  }
 }
 .bold {
   font-weight: 600;
@@ -268,11 +253,11 @@ div.btn {
     height: 60% !important;
     transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
   }
-
   &.modal-h-70 {
     height: 70% !important;
     transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
   }
+
 
   &.modal-fixed-footer {
     .modal-content {
@@ -308,6 +293,7 @@ div.btn {
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
   }
+
 
   .modal-header {
     position: relative;
@@ -985,6 +971,7 @@ div.btn {
     }
   }
 
+
   .modal-view {
     .input-field {
       input[disabled] {
@@ -1005,6 +992,7 @@ div.btn {
       }
     }
   }
+
 
   .modal-opt {
     .block-audit, .block-source, .log-file {
@@ -1262,10 +1250,10 @@ div.btn {
   display: flex;
   align-items: center;
 }
+
 .color-secondary {
   color: $secondary-color;
 }
-
 .color-purple {
   color: #9c27b0;
 }
@@ -1290,7 +1278,6 @@ div.btn {
 .color-black {
   color: #333;
 }
-
 
 .bg-secondary {
   background: $secondary-color;
@@ -1719,6 +1706,7 @@ div.btn {
           }
         }
       }
+
       .sidebar-logo {
         display: flex;
         justify-content: center;
@@ -2436,154 +2424,6 @@ div.btn {
         }
       }
 
-      &.card-v-table {
-        position: relative;
-        background: none;
-        box-shadow: none;
-        padding: 0;
-        margin: 0;
-
-        table {
-          width: 100%;
-          border-collapse: collapse;
-          border-spacing: 0;
-          display: block;
-          position: relative;
-        }
-        thead {
-          border: 0;
-          border-radius: 10px;
-          //border-right: 1px solid rgba(0, 0, 0, 0.12);
-          //box-shadow: 12px 0 20px -10px rgba(0, 0, 0, 0.18), 4px 0 20px 0 rgba(0, 0, 0, 0.07), 7px 0 8px -5px rgba(0, 0, 0, 0.02);
-          box-shadow:5px 0 20px -10px rgba(0, 0, 0, 0.18), 0px 0 20px 0 rgba(0, 0, 0, 0.07), 0px 0 8px -5px rgba(0, 0, 0, 0.02);
-          display: block;
-          float: left;
-          padding: 1rem;
-          background: #fff;
-          margin-right: 5px;
-
-          tr {
-            display: block;
-            padding: 0 10px 0 0;
-            border-bottom: none;
-          }
-          th {
-            position: relative;
-            display: block;
-            text-align: right;
-            margin: 0;
-            vertical-align: top;
-
-            &:last-child {
-              &:after {
-                display: none;
-              }
-            }
-
-            &:after {
-              content: '';
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              background: #eee;
-              height: 1px;
-              width: 100%;
-            }
-
-            a {
-              color: $secondary-color;
-            }
-          }
-        }
-        tbody {
-          display: block;
-          width: auto;
-          position: relative;
-          overflow-x: auto;
-          overflow-y: hidden;
-          min-height: 810px;
-          white-space: nowrap;
-          padding: 1rem .5rem 1.2rem;
-
-          tr {
-            background: #fff;
-            border-radius: 10px;
-            display: inline-block;
-            vertical-align: top;
-            border-bottom: none;
-            padding: 0 10px;
-            margin: 0 5px;
-            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-            transform: scale(1);
-            transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
-
-
-            &:hover {
-              //transform: scale(1.02);
-              box-shadow:0 14px 20px -12px rgba(153, 153, 153, 0.42), 0 4px 15px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2);
-              transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
-
-            }
-          }
-          td {
-            position: relative;
-            display: block;
-            min-height: 1.25em;
-            text-align: left;
-            margin: 0;
-            vertical-align: top;
-
-            &:nth-child(8), &:last-child {
-              &:after {
-                display: none;
-              }
-            }
-
-            &:after {
-              content: '';
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              background: #eee;
-              height: 1px;
-              width: 100%;
-            }
-
-            &.actions-btn {
-              display: flex;
-              justify-content: space-around;
-
-              position: absolute;
-              left: 0;
-              width: 100%;
-            }
-
-            a {
-              &.btn {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: #fff;
-                box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-                width: 40px;
-                height: 40px;
-                border-radius: 25rem;
-                transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
-
-                i {
-                  font-size: 1.3rem;
-                }
-
-                &:hover {
-                  box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.18), 0 4px 20px 0 rgba(0, 0, 0, 0.07), 0 7px 8px -5px rgba(0, 0, 0, 0.02);
-                  transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
-                }
-              }
-            }
-          }
-        }
-      }
-
       &.card-filters {
         position: relative;
         padding: 0;
@@ -2599,6 +2439,7 @@ div.btn {
           display: flex;
           position: relative;
           padding: 0;
+          //height: 50px;
 
           & > input {
             display: flex;
@@ -2613,18 +2454,24 @@ div.btn {
               box-shadow: none;
             }
           }
+
           label {
-            //pointer-events: none;
+            opacity: 0;
             font-size: .9rem;
             transform: translateY(-25px) scale(1);
             transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+
+            &.show-label {
+              opacity: 1;
+            }
+
+            &.active {
+              color: $card-cyan-text;
+              font-size: 1.1rem;
+              transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1) 200ms;
+            }
           }
 
-          label.active {
-            color: $card-cyan-text;
-            font-size: 1.1rem;
-            transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1) 100ms;
-          }
           //label.active {
           //  display: flex;
           //  padding: 0 1rem;
@@ -2729,7 +2576,7 @@ div.btn {
             .active {
               color: $card-cyan-text;
               font-size: 1.1rem;
-              transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1) 100ms;
+              transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1) 200ms;
             }
           }
 
@@ -2751,7 +2598,7 @@ div.btn {
             .datepicker-date-display {
               flex: auto;
               text-align: center;
-              background: $card-green-block;
+              background: $card-cyan-block;
               padding: 10px 12px;
 
               .year-text {
@@ -2765,7 +2612,7 @@ div.btn {
             }
             .datepicker-controls {
               button:focus {
-                background: $card-green-text;
+                background: $card-cyan-text;
 
                 svg {
                   fill: #fff;
@@ -2778,13 +2625,13 @@ div.btn {
             width: 300px;
           }
           .datepicker-table td.is-today {
-            color: $card-green-text;
+            color: $card-cyan-text;
             button {
               font-weight: bold;
             }
           }
           .datepicker-table td.is-selected {
-            background: $card-green-block;
+            background: $card-cyan-block;
             color: #fff !important;
           }
           .datepicker-footer {
@@ -2792,7 +2639,7 @@ div.btn {
           }
           .confirmation-btns {
             button {
-              color: $card-green-text;
+              color: $card-cyan-text;
             }
           }
 
@@ -2812,26 +2659,26 @@ div.btn {
             font-size: 2rem;
           }
           .timepicker-digital-display {
-            background: $card-blue-block;
-            box-shadow: $card-blue-shadow;
+            background: $card-cyan-block;
+            box-shadow: $card-cyan-shadow;
           }
           .timepicker-canvas line {
-            stroke: $card-blue-text;
+            stroke: $card-cyan-text;
           }
           .timepicker-canvas-bg, .timepicker-canvas-bearing {
-            fill: $card-blue-text;
+            fill: $card-cyan-text;
           }
           .timepicker-tick.active, .timepicker-tick:hover {
-            background: rgba(0, 172, 193, .5);
+            background: rgba(51,149,255, .5);
           }
           .timepicker-footer {
             button {
-              color: $card-red-text;
+              color: $card-cyan-text;
             }
 
             .confirmation-btns {
               button {
-                color: $card-blue-text;
+                color: $card-cyan-text;
               }
             }
           }
@@ -2900,7 +2747,7 @@ div.btn {
 
         &.delivery-btn {
           margin-bottom: 0;
-          justify-content: center;
+          justify-content: flex-end;
 
           button {
             font-size: 1.3rem;
@@ -3501,6 +3348,7 @@ div.btn {
     opacity: 0;
   }
 }
+
 
 @media only screen and (max-width: 1910px) {
   .main .content .card {
