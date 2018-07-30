@@ -71,7 +71,7 @@
                                 </ul>
                             </li>
                             <li class="double-btn">
-                                <a href="#!" class="waves-effect">
+                                <a href="profile.html" class="waves-effect">
                                     <i class="fa fa-user"></i>
                                 </a>
                                 <a href="#!" class="waves-effect">
@@ -157,7 +157,90 @@
                         </div>
                     </div>
                 </div>
-                <div class="row m-0">
+
+                <div id="main-filter" class="row mt-4 mb-0">
+                    <div class="col s12 m6 l4 xl4">
+                        <div class="card card-filters">
+                            <div class="input-field col s12 m-0">
+                                <input id="search" class="m-0" type="text">
+                                <label for="search">Tracking number</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m3 l1">
+                        <div class="card card-inv card-button one-btn">
+                            <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Search"><i class="fa fa-search"></i> </button>
+                            <!--<span class="test-btn"><i class="fa fa-arrow-alt-circle-left pr-2"></i>Click to see demo</span>-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" row mt-4">
+                    <div class="col s12 m12 l6">
+                        <div class="card card-temp no-info">
+                            <span class="no-text">No Info</span>
+                        </div>
+                        <div class="wrapp card-label-img">
+                            <div class="card card-temp info">
+                                <div class="more-info">
+                                    <div class="card-temp_title">Info</div>
+                                    <div class="info-row">
+                                        <div class="more-info_name">Tracking Number</div>
+                                        <div class="more-text color-secondary bold">FN344687232GB</div>
+                                    </div>
+                                    <div class="info-row">
+                                        <div class="more-info_name">Local Tracking Number</div>
+                                        <div class="more-info_text">FN344687232GB</div>
+                                    </div>
+                                    <div class="info-row">
+                                        <div class="more-info_name">Shipper Reference</div>
+                                        <div class="more-info_text color-orange">11434715-001</div>
+                                    </div>
+                                    <div class="info-row">
+                                        <div class="more-info_name">Status</div>
+                                        <div class="more-info_text color-green">Delivered</div>
+                                    </div>
+                                </div>
+
+                                <div class="more-info more-info-download mt-4">
+                                    <div class="card-temp_title">Get label(s)</div>
+                                    <div class="info-row">
+                                        <div class="more-info_name"><i class="fa fa-download pr-2"></i> Label: </div>
+                                        <div class="more-info_text">
+                                            <a href="#">PDF</a>
+                                            <div class="zpl200">
+                                                <a href="#">ZPL200</a>
+                                                <a href="#"><i class="fa fa-print ml-2"></i></a>
+                                            </div>
+                                            <div class="zpl300">
+                                                <a href="#">ZPL300</a>
+                                                <a href="#"><i class="fa fa-print ml-2"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="info-row">
+                                        <div class="more-info_name"><i class="fa fa-download pr-2"></i> Invoice: </div>
+                                        <div class="more-info_text">
+                                            <a href="#">PDF</a>
+                                            <div class="zpl200">
+                                                <a href="#">ZPL200</a>
+                                                <a href="#"><i class="fa fa-print ml-2"></i></a>
+                                            </div>
+                                            <div class="zpl300">
+                                                <a href="#">ZPL300</a>
+                                                <a href="#"><i class="fa fa-print ml-2"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img class="label-img" width="500" src="http://mailingtechnology.com/img/illustrate_labels_1.gif" alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dn row m-0">
                     <div class="col s12">
                         <div class="under-construction-page">
                             <h1 class="m-0">
@@ -179,7 +262,15 @@
 
     <script>
         $(document).ready(function () {
-            $('.under-construction-page').addClass('active');
+
+            $('.search-btn').on('click', function () {
+                $('.no-info').slideUp();
+                $('.info').slideDown();
+                setTimeout(function () {
+                    $('.label-img').addClass('show-img');
+                }, 600);
+            });
+
         });
     </script>
 </body>

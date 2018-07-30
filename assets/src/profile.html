@@ -158,10 +158,57 @@
                         </div>
                     </div>
                 </div>
-                <div class="row m-0">
+                <div class="dn row m-0">
                     <div class="col s12">
                         <div class="under-construction-page">
                             <h1 class="m-0"> <i class="fa fa-cog"></i> under construction</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col s12 m12 l6 xl4 offset-l3 offset-xl4">
+                        <div class="card card-profile">
+                            <div class="profile-header">
+                                <div class="profile-avatar">
+                                    <i class="fa fa-user-edit"></i>
+                                </div>
+                                <div class="profile-name tooltipped" data-position="top" data-tooltip="Username">
+                                    Guest
+                                </div>
+                                <div class="profile-title tooltipped" data-position="top" data-tooltip="Title">
+                                    Guest
+                                </div>
+                            </div>
+                            <div class="profile-content">
+                                <div class="row mb-0">
+                                    <div class="input-field col s12 color-green">
+                                        <input id="email" class="m-0" type="text" value="tsuren@xmlshop.com">
+                                        <label for="email">Email</label>
+                                    </div>
+                                    <div class="input-field col s12 color-green">
+                                        <input id="new_password" class="m-0" type="text">
+                                        <label for="new_password">New Password</label>
+                                    </div>
+                                    <div class="input-field col s12 color-green">
+                                        <input id="repeat_password" class="m-0" type="text">
+                                        <label for="repeat_password">Repeat Password</label>
+                                    </div>
+                                    <div class="input-field col s12 color-green">
+                                        <input id="current_password" class="m-0" type="text">
+                                        <label for="current_password">Current Password</label>
+                                    </div>
+                                    <div class="input-field col s12 color-green">
+                                        <select>
+                                            <option value="Australia/Sydney">[GMT+10:00] Australia Eastern Time</option><option value="Australia/Adelaide">[GMT+09:30] Australia Central Time</option><option value="Japan">[GMT+09:00] Japan</option><option value="Asia/Seoul">[GMT+09:00] Seoul</option><option value="Australia/Perth">[GMT+08:00] Australia Western Time</option><option value="Asia/Shanghai">[GMT+08:00] China (Beijing)</option><option value="Asia/Hong_Kong">[GMT+08:00] Hong Kong</option><option value="Asia/Singapore">[GMT+08:00] Singapore</option><option value="Europe/Moscow">[GMT+03:00] Moscow</option><option value="EET">[GMT+02:00] Eastern European Time</option><option value="CET">[GMT+01:00] Central European Time</option><option value="WET">[GMT+00:00] Western European Time</option><option value="Europe/London">[GMT+00:00] Great Britain</option><option value="Canada/Newfoundland">[GMT-03:30] Newfoundland</option><option value="Canada/Atlantic">[GMT-04:00] Atlantic Time</option><option value="US/Eastern">[GMT-05:00] Eastern Time</option><option value="US/Central">[GMT-06:00] Central Time</option><option value="US/Mountain">[GMT-07:00] Mountain Time</option><option value="US/Arizona">[GMT-07:00] Arizona</option><option value="US/Pacific">[GMT-08:00] Pacific Time</option><option value="US/Alaska">[GMT-09:00] Alaska Time</option><option value="US/Hawaii">[GMT-10:00] Hawaii-Aleutian Time</option>
+                                        </select>
+                                        <label>Timezone</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile-footer">
+                                <button class="btn btn-large waves-effect btn-submit">Submit</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -178,7 +225,7 @@
 
     <script>
         $(document).ready(function () {
-            $('.under-construction-page').addClass('active');
+            $('.profile-avatar').addClass('show-profile');
         });
     </script>
 </body>

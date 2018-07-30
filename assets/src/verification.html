@@ -71,7 +71,7 @@
                                 </ul>
                             </li>
                             <li class="double-btn">
-                                <a href="#!" class="waves-effect">
+                                <a href="profile.html" class="waves-effect">
                                     <i class="fa fa-user"></i>
                                 </a>
                                 <a href="#!" class="waves-effect">
@@ -105,9 +105,9 @@
                                 <div class="collapsible-body sidenav-li-body-color">
                                     <ul class="purchasing-group">
                                         <li><a class="waves-effect" href="parcels.html">Parcels</a></li>
-                                        <li><a class="waves-effect active" href="temporaries.html">Temporaries</a></li>
+                                        <li><a class="waves-effect" href="temporaries.html">Temporaries</a></li>
                                         <li><a class="waves-effect" href="batches.html">Batches</a></li>
-                                        <li><a class="waves-effect" href="verification.html">Verification</a></li>
+                                        <li><a class="waves-effect active" href="verification.html">Verification</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -157,7 +157,134 @@
                         </div>
                     </div>
                 </div>
-                <div class="row m-0">
+
+                <div class=" row mt-4 mb-0">
+                    <div class="col s12 m6 l3 xl3">
+                        <div class="card card-filters">
+                            <div class="input-field col s12 m-0">
+                                <input id="search" class="m-0" type="text">
+                                <label for="search">Tracking number</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3 xl2">
+                        <div class="card card-filters">
+                            <div class="input-field col s12 m-0">
+                                <select>
+                                    <option value="338704a3">test</option><option value="fa19bdd9">Station 1</option><option value="d5e10a2a" selected="">Station 2</option><option value="eeeae9fe">Station 3</option><option value="68dad289">Station 4</option><option value="a1f43925">Station 5</option><option value="3a15cae2">Station 6</option><option value="712563e8">Station 7</option><option value="beb4e1b7">Station 8</option><option value="3c3329f8">Station 9</option><option value="c4279c30">Station 10</option>
+                                </select>
+                                <label>Station</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m12 l1">
+                        <div class="card card-inv card-button one-btn">
+                            <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Search"><i class="fa fa-search"></i> </button>
+                            <!--<span class="test-btn"><i class="fa fa-arrow-alt-circle-left pr-2"></i>Click to see demo</span>-->
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class=" row mt-4">
+                    <div class="col s12 m12 l6">
+                        <div class="card card-temp no-info">
+                            <span class="no-text">No Info</span>
+                        </div>
+                        <div class="card card-temp info">
+                            <div class="more-info">
+                                <div class="info-row">
+                                    <div class="more-info_name">Tracking Number</div>
+                                    <div class="more-text color-secondary bold">FN344687232GB</div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="more-info_name">Local Tracking Number</div>
+                                    <div class="more-info_text">FN344687232GB</div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="more-info_name">Shipper Reference</div>
+                                    <div class="more-info_text color-orange">11434715-001</div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="more-info_name">Destination</div>
+                                    <div class="more-info_text color-orange">United Kingdom / Royal Mail Tracked 48 - Signature</div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="more-info_name">Status</div>
+                                    <div class="more-info_text color-green">Delivered</div>
+                                </div>
+                            </div>
+                            <div class=" more-info more-info-download mt-4">
+                                <div class="card-temp_title">Get label(s)</div>
+                                <div class="info-row">
+                                    <div class="more-info_name"><i class="fa fa-download pr-2"></i> Invoice: </div>
+                                    <div class="more-info_text">
+                                        <a href="#">PDF</a>
+                                        <div class="zpl200">
+                                            <a href="#">ZPL200</a>
+                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
+                                        </div>
+                                        <div class="zpl300">
+                                            <a href="#">ZPL300</a>
+                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col s12 m12 l6">
+                        <div class="card card-temp info">
+                            <div class="more-info last-row">
+                                <div class="info-row">
+                                    <div class="more-info_name">Dimensions</div>
+                                    <div class="more-info_text">45 x 30 x 30 cm</div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="more-info_name">Declared Weight</div>
+                                    <div class="more-info_text">0.180 kg</div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="more-info_name">Real Weight</div>
+                                    <div class="more-info_text">
+                                        <div class="row m-0">
+                                            <div class="input-field col s12 m5 m-0 color-green">
+                                                <input id="weight" class="m-0" type="text" placeholder="0.180">
+                                            </div>
+                                            <div class="input-field col s12 m4 m-0 color-green mr-1">
+                                                <select>
+                                                    <option value="0" selected> kg </option>
+                                                    <option value="0">lb</option>
+                                                </select>
+                                            </div>
+                                            <button class="btn waves-effect btn-check tooltipped" data-position="top" data-tooltip="Accept"><i class="fa fa-check"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dn more-info more-info-download mt-4">
+                                <div class="card-temp_title">Get label(s)</div>
+                                <div class="info-row">
+                                    <div class="more-info_name">Invoice: </div>
+                                    <div class="more-info_text">
+                                        <a href="#">PDF</a>
+                                        <div class="zpl200">
+                                            <a href="#">ZPL200</a>
+                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
+                                        </div>
+                                        <div class="zpl300">
+                                            <a href="#">ZPL300</a>
+                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dn row m-0">
                     <div class="col s12">
                         <div class="under-construction-page">
                             <h1 class="m-0"> <i class="fa fa-cog"></i> under construction</h1>
@@ -177,7 +304,11 @@
 
     <script>
         $(document).ready(function () {
-            $('.under-construction-page').addClass('active');
+            $('.search-btn').on('click', function () {
+                $('.no-info').slideUp();
+                $('.info').slideDown();
+                $('#weight').focus();
+            });
         });
     </script>
 </body>

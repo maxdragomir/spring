@@ -71,7 +71,7 @@
                                 </ul>
                             </li>
                             <li class="double-btn">
-                                <a href="#!" class="waves-effect">
+                                <a href="profile.html" class="waves-effect">
                                     <i class="fa fa-user"></i>
                                 </a>
                                 <a href="#!" class="waves-effect">
@@ -163,26 +163,37 @@
                 <div id="main-filter" class="row mt-4 mb-0">
                     <div class="col s12 m3 pr-4">
 
-                        <div class="row mb-0">
+                        <div class="row mb-0 picker-items">
 
-                            <div class="col s12">
+                            <div class="col s12 m12 l7 pr-0">
                                 <div class="card card-filters">
                                     <div class="input-field col s12 m12 m-0">
                                         <input id="date-start" class="m-0 datepicker-start" type="text">
                                         <label for="date-start">Date start</label>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12 m12 l5 pl-0">
+                                <div class="card card-filters">
                                     <div class="input-field col s12 m12 m-0">
                                         <input id="time-start" class="timepicker-start m-0" type="text">
                                         <label for="time-start">Time start</label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col s12">
+
+
+                            <div class="col s12 m12 l7 pr-0">
                                 <div class="card card-filters">
                                     <div class="input-field col s12 m12 m-0">
                                         <input id="date-end" class="m-0 datepicker-end" type="text">
                                         <label for="date-end">Date end</label>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m12 l5 pl-0">
+                                <div class="card card-filters">
                                     <div class="input-field col s12 m12 m-0">
                                         <input id="time-end" class="timepicker-end m-0" type="text">
                                         <label for="time-end">Time end</label>
@@ -197,7 +208,7 @@
 
                         <div class="row mb-0">
 
-                            <div class="col s12 m6 l4">
+                            <div class="col s12 m12 l4">
                                 <div class="card card-filters">
                                     <div class="input-field col s12 m-0">
                                         <select>
@@ -217,7 +228,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col s12 m6 l4">
+                            <div class="col s12 m12 l4">
                                 <div class="card card-filters">
                                     <div class="input-field col s12 m-0">
                                         <select>
@@ -228,7 +239,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col s12 m6 l4">
+                            <div class="col s12 m12 l4">
                                 <div class="card card-filters">
                                     <div class="input-field col s12 m-0">
                                         <select>
@@ -970,7 +981,6 @@
                             </div>
                             <div class="input-field col s12 m6 color-grey">
                                 <select>
-                                    <option value="0" selected>User</option>
                                     <option value="0">User 1</option>
                                     <option value="0">User 2</option>
                                     <option value="0">User 3</option>
@@ -982,9 +992,13 @@
                                     <option value="0">User 9</option>
                                     <option value="0">User 10</option>
                                 </select>
+                                <label>User</label>
                             </div>
                             <div class="input-field col s12 m3 color-grey">
-                                <select><option value="0" selected>Type</option><option value="0">Manifest</option><option value="2">OMS</option></select>
+                                <select>
+                                    <option value="0">Manifest</option><option value="2">OMS</option>
+                                </select>
+                                <label>Type</label>
                             </div>
                         </div>
                     </div>
@@ -1085,23 +1099,6 @@
                             </div>
                         </div>
                     </div>
-                    <!--<div class="card card-modal mb-0">-->
-                        <!--<div class="parcel-top-info one-btns pl-2 pr-2">-->
-                            <!--<div class="bold parcel-top-info_id mobile">ID 171321</div>-->
-                            <!--<div class="parcel-top-info_desctop">-->
-                                <!--<div class="parcel-top-info_left">-->
-                                    <!--<div class="bold parcel-top-info_id">ID 171321</div>-->
-                                    <!--<a href="#!" class="btn parcel-top-info_btn btn-log waves-effect"> <i class="fa fa-file-code pr-2"></i> Log File <i class="fa fa-angle-down ml-2"></i></a>-->
-                                <!--</div>-->
-
-
-                                <!--<div class="parcel-top-info_right">-->
-                                    <!--<div class="color-green tooltipped" data-position="left" data-tooltip="Created"><span><i class="fa fa-file-contract"></i></span> <span>09.07.2018, 18:31</span></div>-->
-                                    <!--<div class="color-orange tooltipped" data-position="left" data-tooltip="Modified"><span><i class="fa fa-file-signature"></i></span> <span>09.07.2018, 18:31</span></div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
                 </div>
 
                 <!-- log row -->
@@ -1159,7 +1156,7 @@ PARCELS CREATING FINISHED
                                 <div class="more-info_text">UTF-8</div>
                             </div><div class="info-row">
                                 <div class="more-info_name">CSV-file</div>
-                                <div class="more-info_text color-secondary"><a href="#">Manifest.csv</a></div>
+                                <div class="more-info_text color-secondary"><a href="#"><i class="fa fa-download"></i> Manifest.csv</a></div>
                             </div>
                         </div>
                     </div>
@@ -1231,16 +1228,6 @@ PARCELS CREATING FINISHED
             $('.btn-audit').on('click', function () {
                 $('.block-audit').toggleClass('show');
                 $(this).children('.fa-angle-down').toggleClass('show');
-            });
-
-            //clear filters and animate icon
-            $('.card-button').on('click', '.clear-btn', function () {
-
-                var el = $('.clear-btn i').clone().removeClass('active');
-                $('.clear-btn i').remove();
-                $('.clear-btn').append(el);
-                el.addClass('active');
-
             });
 
 

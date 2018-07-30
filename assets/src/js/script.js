@@ -15,7 +15,17 @@ $(document).ready(function(){
     $('.under-construction-page').addClass('active');
     setTimeout(function () {
         $('.card-filters label').addClass('show-label');
-    }, 400);
+    }, 500);
+
+    //clear filters and animate icon
+    $('.card-button').on('click', '.clear-btn', function () {
+
+        var el = $('.clear-btn i').clone().removeClass('active');
+        $('.clear-btn i').remove();
+        $('.clear-btn').append(el);
+        el.addClass('active');
+
+    });
 
     // var loader = $('.loader');
     // setTimeout(function () {
@@ -95,7 +105,7 @@ $(document).ready(function(){
 
     $('select').formSelect();
 
-
+    $('.materialboxed').materialbox();
     $('.dropdown-trigger').dropdown();
     $('.dropdown-trigger-right').dropdown({
         alignment: 'right'
