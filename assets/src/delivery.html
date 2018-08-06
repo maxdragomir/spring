@@ -6,300 +6,294 @@
 </head>
 <body>
 
-    <div class="wrapper">
-        <div class="main">
-            <div class="header">
-                <nav>
-                    <div class="nav-wrapper">
-                        <div class="left-side">
-                            <a href="index.html" class="logo waves-effect"><img src="img/logo-ua.png" alt="LOGO"></a>
-                        </div>
-                        <div class="right-side">
-                            <a href="#" class="btn waves-effect dropdown-trigger show-mode" data-target="mode">
-                                <span class="mode active color-green ">Live Mode</span>
-                            </a>
-                            <ul id="mode" class="dropdown-content">
-                                <li><a href="#!" class="waves-effect color-red">Test Mode</a></li>
-                            </ul>
-                            <ul class="header_menu desctop-menu">
-                            <li>
-                                <a href="index.html" class="waves-effect">
-                                    <i class="fa fa-chart-pie left"></i> <span>Dashboard</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-trigger waves-effect" href="#!" data-target="parcels">
-                                    <i class="fa fa-box left"></i> <span>Parcels</span><i class="fa fa-angle-down ml-2"></i>
-                                </a>
-                                <ul id="parcels" class="dropdown-content">
-                                    <li><a href="parcels.html" class="waves-effect waves-light">Parcels</a></li>
-                                    <li><a href="temporaries.html" class="waves-effect waves-light">Temporaries</a></li>
-                                    <li><a href="batches.html" class="waves-effect waves-light">Batches</a></li>
-                                    <li><a href="verification.html" class="waves-effect waves-light">Verification</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a class="dropdown-trigger waves-effect active" href="#!" data-target="reports">
-                                    <i class="fa fa-chart-area left"></i> <span>Reports</span><i class="fa fa-angle-down ml-2"></i>
-                                </a>
-                                <ul id="reports" class="dropdown-content">
-                                    <li><a href="general.html" class="waves-effect waves-light">General</a></li>
-                                    <li><a href="delivery.html" class="waves-effect waves-light active">Delivery Time</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a class='dropdown-trigger waves-effect' href='#!' data-target='settings'>
-                                    <i class="fa fa-cogs left"></i> <span>Settings</span><i class="fa fa-angle-down ml-2"></i>
-                                </a>
-                                <ul id='settings' class='dropdown-content'>
-                                    <li><a href="users.html" class="waves-effect waves-light">Users</a></li>
-                                    <li><a href="hubs.html" class="waves-effect waves-light">Hubs</a></li>
-                                    <li><a href="trackingurls.html" class="waves-effect waves-light">Tracking URLs</a></li>
-                                    <li><a href="trackingcodes.html" class="waves-effect waves-light">Tracking Codes</a></li>
-                                    <li><a href="errors.html" class="waves-effect waves-light">Errors</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#!" class="dropdown-trigger waves-effect" data-target='lang'>
-                                    <i class="fa fa-globe-americas"></i><i class="fa fa-angle-down ml-2"></i>
-                                </a>
-                                <ul id='lang' class='dropdown-content'>
-                                    <li><a href="#!" class="waves-effect waves-light">EN</a></li>
-                                    <li><a href="#!" class="waves-effect waves-light">RU</a></li>
-                                    <li><a href="#!" class="waves-effect waves-light">CH</a></li>
-                                    <li><a href="#!" class="waves-effect waves-light">ES</a></li>
-                                </ul>
-                            </li>
-                            <li class="double-btn">
-                                <a href="profile.html" class="waves-effect">
-                                    <i class="fa fa-user"></i>
-                                </a>
-                                <a href="#!" class="waves-effect">
-                                    <i class="fa fa-sign-out-alt"></i>
-                                </a>
-                            </li>
-                            <li class="mobile-menu">
-                                <a href="#" data-target="slide-out" class="sidenav-trigger waves-effect"><i class="fa fa-bars"></i></a>
-                            </li>
-                        </ul>
-                        </div>
+    <div class="main">
+
+        <!-- HEADER -->
+        <div class="header">
+            <nav>
+                <div class="nav-wrapper">
+                    <div class="left-side">
+                        <a href="index.html" class="logo waves-effect"><img src="img/logo-ua.png" alt="LOGO"></a>
                     </div>
-                </nav>
-            </div>
-
-            <div class="content">
-
-                <ul id="slide-out" class="sidenav">
-                    <li class="sidebar_bg"></li>
-                    <li>
-                        <a href="index.html" class="waves-effect sidebar-logo">
-                            <img src="img/logo-ua.png" alt="">
+                    <div class="right-side">
+                        <a href="#" class="btn waves-effect dropdown-trigger show-mode" data-target="mode">
+                            <span class="mode active color-green ">Live Mode</span>
                         </a>
-                    </li>
-                    <li><div class="divider"></div></li>
-                    <li>
-                        <a href="index.html" class="collapsible-header no-drop waves-effect"><i class="fa fa-chart-pie left"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <ul class="collapsible collapsible-accordion">
-                            <li>
-                                <a class="collapsible-header waves-effect"><i class="fa fa-box left"></i> Parcels <i class="fa fa-angle-down"></i></a>
-                                <div class="collapsible-body sidenav-li-body-color">
-                                    <ul class="purchasing-group">
-                                        <li><a class="waves-effect" href="parcels.html">Parcels</a></li>
-                                        <li><a class="waves-effect" href="temporaries.html">Temporaries</a></li>
-                                        <li><a class="waves-effect" href="batches.html">Batches</a></li>
-                                        <li><a class="waves-effect" href="verification.html">Verification</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="collapsible-header waves-effect active"><i class="fa fa-chart-area left"></i> Reports <i class="fa fa-angle-down"></i></a>
-                                <div class="collapsible-body sidenav-li-body-color">
-                                    <ul class="purchasing-group">
-                                        <li><a class="waves-effect" href="general.html">General</a></li>
-                                        <li><a class="waves-effect active" href="delivery.html">Delivery Time</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="collapsible-header waves-effect"><i class="fa fa-cogs left"></i> Settings <i class="fa fa-angle-down"></i></a>
-                                <div class="collapsible-body sidenav-li-body-color">
-                                    <ul class="purchasing-group">
-                                        <li><a class="waves-effect" href="users.html">Users</a></li>
-                                        <li><a class="waves-effect" href="hubs.html">Hubs</a></li>
-                                        <li><a class="waves-effect" href="trackingurls.html">Tracking URLs</a></li>
-                                        <li><a class="waves-effect" href="trackingcodes.html">Tracking Codes</a></li>
-                                        <li><a class="waves-effect" href="errors.html">Errors</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="collapsible-header waves-effect"> <i class="fa fa-globe-americas"></i>Languages<i class="fa fa-angle-down"></i></a>
-                                <div class="collapsible-body sidenav-li-body-color">
-                                    <ul class="purchasing-group">
-                                        <li><a class="waves-effect" href="#">EN</a></li>
-                                        <li><a class="waves-effect" href="#">RU</a></li>
-                                        <li><a class="waves-effect" href="#">CH</a></li>
-                                        <li><a class="waves-effect" href="#">ES</a></li>
-                                    </ul>
-                                </div>
-                            </li>
+                        <ul id="mode" class="dropdown-content">
+                            <li><a href="#!" class="waves-effect color-red">Test Mode</a></li>
                         </ul>
-                    </li>
-                    <li class="double-btn">
-                        <a href="profile.html" class="collapsible-header no-drop waves-effect"><i class="fa fa-user"></i>Profile</a>
-                        <a href="#!" class="collapsible-header no-drop waves-effect">Logout<i class="fa fa-sign-out-alt"></i></a>
-                    </li>
-                </ul>
-
-                <div class="row">
-                    <div class="col s12 mt-4 mb-4">
-                        <div class="page-title">
-                            <i class="fa fa-chart-area left"></i> Delivery Time
-                        </div>
+                        <ul class="header_menu desctop-menu">
+                        <li>
+                            <a href="index.html" class="waves-effect">
+                                <i class="fa fa-chart-pie left"></i> <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-trigger waves-effect" href="#!" data-target="parcels">
+                                <i class="fa fa-box left"></i> <span>Parcels</span><i class="fa fa-angle-down ml-2"></i>
+                            </a>
+                            <ul id="parcels" class="dropdown-content">
+                                <li><a href="parcels.html" class="waves-effect waves-light">Parcels</a></li>
+                                <li><a href="temporaries.html" class="waves-effect waves-light">Temporaries</a></li>
+                                <li><a href="batches.html" class="waves-effect waves-light">Batches</a></li>
+                                <li><a href="verification.html" class="waves-effect waves-light">Verification</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-trigger waves-effect active" href="#!" data-target="reports">
+                                <i class="fa fa-chart-area left"></i> <span>Reports</span><i class="fa fa-angle-down ml-2"></i>
+                            </a>
+                            <ul id="reports" class="dropdown-content">
+                                <li><a href="general.html" class="waves-effect waves-light">General</a></li>
+                                <li><a href="delivery.html" class="waves-effect waves-light active">Delivery Time</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class='dropdown-trigger waves-effect' href='#!' data-target='settings'>
+                                <i class="fa fa-cogs left"></i> <span>Settings</span><i class="fa fa-angle-down ml-2"></i>
+                            </a>
+                            <ul id='settings' class='dropdown-content'>
+                                <li><a href="users.html" class="waves-effect waves-light">Users</a></li>
+                                <li><a href="hubs.html" class="waves-effect waves-light">Hubs</a></li>
+                                <li><a href="trackingurls.html" class="waves-effect waves-light">Tracking URLs</a></li>
+                                <li><a href="trackingcodes.html" class="waves-effect waves-light">Tracking Codes</a></li>
+                                <li><a href="errors.html" class="waves-effect waves-light">Errors</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#!" class="dropdown-trigger waves-effect" data-target='lang'>
+                                <i class="fa fa-globe-americas"></i><i class="fa fa-angle-down ml-2"></i>
+                            </a>
+                            <ul id='lang' class='dropdown-content'>
+                                <li><a href="#!" class="waves-effect waves-light">EN</a></li>
+                                <li><a href="#!" class="waves-effect waves-light">RU</a></li>
+                                <li><a href="#!" class="waves-effect waves-light">CH</a></li>
+                                <li><a href="#!" class="waves-effect waves-light">ES</a></li>
+                            </ul>
+                        </li>
+                        <li class="double-btn">
+                            <a href="profile.html" class="waves-effect">
+                                <i class="fa fa-user"></i>
+                            </a>
+                                <a href="login.html" class="waves-effect">
+                                <i class="fa fa-sign-out-alt"></i>
+                            </a>
+                        </li>
+                        <li class="mobile-menu">
+                            <a href="#" data-target="slide-out" class="sidenav-trigger waves-effect"><i class="fa fa-bars"></i></a>
+                        </li>
+                    </ul>
                     </div>
                 </div>
-                <div id="main-filter" class="row mt-4 mb-0">
-                    <div class="col s12 m3 pr-4">
-                        <div class="row mb-0">
+            </nav>
+        </div>
+        <!-- /HEADER/ -->
 
-                            <div class="col s12 m12">
-                                <div class="card card-filters">
-                                    <div class="input-field col s12 m-0">
-                                        <select>
-                                            <option value="c" selected>Created on</option><option value="a">Accepted on</option>
-                                        </select>
-                                        <label>Parcels</label>
-                                    </div>
-                                </div>
+        <!-- CONTENT -->
+        <div class="content">
+
+            <ul id="slide-out" class="sidenav">
+                <li class="sidebar_bg"></li>
+                <li>
+                    <a href="index.html" class="waves-effect sidebar-logo">
+                        <img src="img/logo-ua.png" alt="">
+                    </a>
+                </li>
+                <li><div class="divider"></div></li>
+                <li>
+                    <a href="index.html" class="collapsible-header no-drop waves-effect"><i class="fa fa-chart-pie left"></i> Dashboard</a>
+                </li>
+                <li>
+                    <ul class="collapsible collapsible-accordion">
+                        <li>
+                            <a class="collapsible-header waves-effect"><i class="fa fa-box left"></i> Parcels <i class="fa fa-angle-down"></i></a>
+                            <div class="collapsible-body sidenav-li-body-color">
+                                <ul class="purchasing-group">
+                                    <li><a class="waves-effect" href="parcels.html">Parcels</a></li>
+                                    <li><a class="waves-effect" href="temporaries.html">Temporaries</a></li>
+                                    <li><a class="waves-effect" href="batches.html">Batches</a></li>
+                                    <li><a class="waves-effect" href="verification.html">Verification</a></li>
+                                </ul>
                             </div>
-
-                        </div>
-
-                        <div class="row mb-0">
-
-                            <div class="col s12">
-                                <div class="card card-filters no-timepicker">
-                                    <div class="input-field col s12 m12 m-0">
-                                        <input id="date-start" class="m-0 datepicker-start" type="text">
-                                        <label for="date-start">Date start</label>
-                                    </div>
-                                    <div class="input-field col s12 m12 m-0">
-                                        <input id="date-end" class="m-0 datepicker-end" type="text">
-                                        <label for="date-end">Date end</label>
-                                    </div>
-                                </div>
+                        </li>
+                        <li>
+                            <a class="collapsible-header waves-effect active"><i class="fa fa-chart-area left"></i> Reports <i class="fa fa-angle-down"></i></a>
+                            <div class="collapsible-body sidenav-li-body-color">
+                                <ul class="purchasing-group">
+                                    <li><a class="waves-effect" href="general.html">General</a></li>
+                                    <li><a class="waves-effect active" href="delivery.html">Delivery Time</a></li>
+                                </ul>
                             </div>
+                        </li>
+                        <li>
+                            <a class="collapsible-header waves-effect"><i class="fa fa-cogs left"></i> Settings <i class="fa fa-angle-down"></i></a>
+                            <div class="collapsible-body sidenav-li-body-color">
+                                <ul class="purchasing-group">
+                                    <li><a class="waves-effect" href="users.html">Users</a></li>
+                                    <li><a class="waves-effect" href="hubs.html">Hubs</a></li>
+                                    <li><a class="waves-effect" href="trackingurls.html">Tracking URLs</a></li>
+                                    <li><a class="waves-effect" href="trackingcodes.html">Tracking Codes</a></li>
+                                    <li><a class="waves-effect" href="errors.html">Errors</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="collapsible-header waves-effect"> <i class="fa fa-globe-americas"></i>Languages<i class="fa fa-angle-down"></i></a>
+                            <div class="collapsible-body sidenav-li-body-color">
+                                <ul class="purchasing-group">
+                                    <li><a class="waves-effect" href="#">EN</a></li>
+                                    <li><a class="waves-effect" href="#">RU</a></li>
+                                    <li><a class="waves-effect" href="#">CH</a></li>
+                                    <li><a class="waves-effect" href="#">ES</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="double-btn">
+                    <a href="profile.html" class="collapsible-header no-drop waves-effect"><i class="fa fa-user"></i>Profile</a>
+                    <a href="login.html" class="collapsible-header no-drop waves-effect">Logout<i class="fa fa-sign-out-alt"></i></a>
+                </li>
+            </ul>
 
-                        </div>
+            <div class="row">
+                <div class="col s12 mt-4 mb-4">
+                    <div class="page-title">
+                        <i class="fa fa-chart-area left"></i> Delivery Time
                     </div>
+                </div>
+            </div>
+            <div id="main-filter" class="row mt-4 mb-0">
+                <div class="col s12 m3 pr-4">
+                    <div class="row mb-0">
 
-                    <div class="col s12 m9 pl-4">
-                        <div class="row mb-0">
-
-                            <div class="col s12 m6 l4">
-                                <div class="card card-filters">
-                                    <div class="input-field col s12 m-0">
-                                        <select>
-                                            <option value="0">All</option><option value="2">France - Main Hub</option><option value="4">HK - Main Hub</option><option value="3">Italy - Main hub</option><option value="1">Spain - Main Hub</option><option value="5">UK - Main hub</option>
-                                        </select>
-                                        <label>Hub</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s12 m6 l4">
-                                <div class="card card-filters">
-                                    <div class="input-field col s12 m-0">
-                                        <select>
-                                            <option value="0">All</option><option value="PPLEU">PPLEU - PostNL Parcel EU</option><option value="PPLGE">PPLGE - PostNL Parcel GlobalPack EMS</option><option value="PPLGU">PPLGU - PostNL Parcel GlobalPack UPU</option><option value="PPTT">PPTT - PostNL Packet Tracked</option><option value="PPTR">PPTR - PostNL Packet Registered</option><option value="RM24">RM24 - Royal Mail Tracked 24 - Non Signature</option><option value="RM24S">RM24S - Royal Mail Tracked 24 - With Signature</option><option value="RM48">RM48 - Royal Mail Tracked 48 - Non Signature</option><option value="RM48S">RM48S - Royal Mail Tracked 48 - With Signature</option>
-                                        </select>
-                                        <label>Services</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s12 m6 l4">
-                                <div class="card card-filters">
-                                    <div class="input-field col s12 m-0">
-                                        <select>
-                                            <option value="0">All</option>
-                                            <option value="0">User 1</option>
-                                            <option value="0">User 2</option>
-                                            <option value="0">User 3</option>
-                                            <option value="0">User 4</option>
-                                            <option value="0">User 5</option>
-                                            <option value="0">User 6</option>
-                                            <option value="0">User 7</option>
-                                            <option value="0">User 8</option>
-                                            <option value="0">User 9</option>
-                                            <option value="0">User 10</option>
-                                        </select>
-                                        <label>User</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="row mb-0">
-
-                            <div class="col s12">
-                                <div class="card card-inv card-button delivery-btn">
-                                    <button type="button" class="btn other-btn waves-effect tooltipped" data-position="top" data-tooltip="Download"><i class="fa fa-download pr-2"></i>CSV</button>
-
+                        <div class="col s12 m12">
+                            <div class="card card-filters">
+                                <div class="input-field col s12 m-0">
                                     <select>
-                                        <option value="0" selected="">Select</option>
-                                        <option value="1">Total Delivery Days (inc. customs days)</option>
-                                        <option value="2">Total Transit Days (exc. customs days)</option>
-                                        <option value="3">Carrier Delivery Days (inc. customs days)</option>
-                                        <option value="4">Carrier Transit Days (exc. customs days)</option>
+                                        <option value="c" selected>Created on</option><option value="a">Accepted on</option>
                                     </select>
-                                    <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Download"><i class="fa fa-download pr-2"></i>PDF</button>
+                                    <label>Parcels</label>
                                 </div>
                             </div>
-
                         </div>
+
+                    </div>
+
+                    <div class="row mb-0 picker-items only-date">
+
+                        <div class="col s12 m12 l6 pr-0">
+                            <div class="card card-filters">
+                                <div class="input-field col s12 m-0">
+                                    <input id="date-start" class="m-0 datepicker-start" type="text">
+                                    <label for="date-start">Date start</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l6 pl-0">
+                            <div class="card card-filters">
+                                <div class="input-field col s12 m-0">
+                                    <input id="date-end" class="m-0 datepicker-end" type="text">
+                                    <label for="date-end">Date end</label>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
 
+                <div class="col s12 m9 pl-4">
+                    <div class="row mb-0">
 
-
-                <div class="dn row m-0">
-                    <div class="col s12">
-                        <div class="under-construction-page">
-                            <h1 class="m-0"> <i class="fa fa-cog"></i> under construction</h1>
+                        <div class="col s12 m12 l4">
+                            <div class="card card-filters">
+                                <div class="input-field col s12 m-0">
+                                    <select>
+                                        <option value="0">All</option><option value="2">France - Main Hub</option><option value="4">HK - Main Hub</option><option value="3">Italy - Main hub</option><option value="1">Spain - Main Hub</option><option value="5">UK - Main hub</option>
+                                    </select>
+                                    <label>Hub</label>
+                                </div>
+                            </div>
                         </div>
+                        <div class="col s12 m12 l4">
+                            <div class="card card-filters">
+                                <div class="input-field col s12 m-0">
+                                    <select>
+                                        <option value="0">All</option><option value="PPLEU">PPLEU - PostNL Parcel EU</option><option value="PPLGE">PPLGE - PostNL Parcel GlobalPack EMS</option><option value="PPLGU">PPLGU - PostNL Parcel GlobalPack UPU</option><option value="PPTT">PPTT - PostNL Packet Tracked</option><option value="PPTR">PPTR - PostNL Packet Registered</option><option value="RM24">RM24 - Royal Mail Tracked 24 - Non Signature</option><option value="RM24S">RM24S - Royal Mail Tracked 24 - With Signature</option><option value="RM48">RM48 - Royal Mail Tracked 48 - Non Signature</option><option value="RM48S">RM48S - Royal Mail Tracked 48 - With Signature</option>
+                                    </select>
+                                    <label>Services</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l4">
+                            <div class="card card-filters">
+                                <div class="input-field col s12 m-0">
+                                    <select>
+                                        <option value="0">All</option>
+                                        <option value="0">User 1</option>
+                                        <option value="0">User 2</option>
+                                        <option value="0">User 3</option>
+                                        <option value="0">User 4</option>
+                                        <option value="0">User 5</option>
+                                        <option value="0">User 6</option>
+                                        <option value="0">User 7</option>
+                                        <option value="0">User 8</option>
+                                        <option value="0">User 9</option>
+                                        <option value="0">User 10</option>
+                                    </select>
+                                    <label>User</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row mb-0">
+
+                        <div class="col s12">
+                            <div class="card card-inv card-button delivery-btn">
+                                <button type="button" class="btn other-btn waves-effect tooltipped" data-position="top" data-tooltip="Download"><i class="fa fa-download pr-2"></i>CSV</button>
+
+                                <select>
+                                    <option value="0" selected="">Select</option>
+                                    <option value="1">Total Delivery Days (inc. customs days)</option>
+                                    <option value="2">Total Transit Days (exc. customs days)</option>
+                                    <option value="3">Carrier Delivery Days (inc. customs days)</option>
+                                    <option value="4">Carrier Transit Days (exc. customs days)</option>
+                                </select>
+                                <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Download"><i class="fa fa-download pr-2"></i>PDF</button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-
             </div>
 
-            <div class="footer">
-                <div class="copyright">
-                    Developed and supported by <a target="_blank" href="http://www.xmllogistic.com/"> XMLlogistic</a>, a subsidiary of <a target="_blank" href="http://www.xmlshop.com/">XMLshop </a>
+
+
+            <div class="dn row m-0">
+                <div class="col s12">
+                    <div class="under-construction-page">
+                        <h1 class="m-0"> <i class="fa fa-cog"></i> under construction</h1>
+                    </div>
                 </div>
+            </div>
+
+        </div>
+        <!-- /CONTENT/ -->
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="copyright">
+                Developed and supported by <a target="_blank" href="http://www.xmllogistic.com/"> XMLlogistic</a>, a subsidiary of <a target="_blank" href="http://www.xmlshop.com/">XMLshop </a>
             </div>
         </div>
+        <!-- /FOOTER/ -->
+
     </div>
 
-//= template/footer.html
+    //= template/footer.html
 
-    <script>
-
-        $(document).ready(function () {
-
-            //clear filters and animate icon
-            $('.card-button').on('click', '.clear-btn', function () {
-
-                var el = $('.clear-btn i').clone().removeClass('active');
-                $('.clear-btn i').remove();
-                $('.clear-btn').append(el);
-                el.addClass('active');
-
-            });
-
-
-        });
-    </script>
 </body>
 </html>

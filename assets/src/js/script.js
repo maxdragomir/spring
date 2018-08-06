@@ -27,6 +27,14 @@ $(document).ready(function(){
 
     });
 
+    $('.log-out').on('click', function (e) {
+        var isYes = confirm("Are you sure?");
+
+        if(!isYes) {
+            e.preventDefault();
+        }
+    });
+
     // var loader = $('.loader');
     // setTimeout(function () {
     //     if (!loader.hasClass('ok')) {

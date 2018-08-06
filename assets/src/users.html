@@ -6,452 +6,1156 @@
 </head>
 <body>
 
-    <div class="wrapper">
-        <div class="main">
-            <div class="header">
-                <nav>
-                    <div class="nav-wrapper">
-                        <div class="left-side">
-                            <a href="index.html" class="logo waves-effect"><img src="img/logo-ua.png" alt="LOGO"></a>
-                        </div>
-                        <div class="right-side">
-                            <a href="#" class="btn waves-effect dropdown-trigger show-mode" data-target="mode">
-                                <span class="mode active color-green ">Live Mode</span>
-                            </a>
-                            <ul id="mode" class="dropdown-content">
-                                <li><a href="#!" class="waves-effect color-red">Test Mode</a></li>
-                            </ul>
-                            <ul class="header_menu desctop-menu">
-                            <li>
-                                <a href="index.html" class="waves-effect">
-                                    <i class="fa fa-chart-pie left"></i> <span>Dashboard</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-trigger waves-effect" href="#!" data-target="parcels">
-                                    <i class="fa fa-box left"></i> <span>Parcels</span><i class="fa fa-angle-down ml-2"></i>
-                                </a>
-                                <ul id="parcels" class="dropdown-content">
-                                    <li><a href="parcels.html" class="waves-effect waves-light">Parcels</a></li>
-                                    <li><a href="temporaries.html" class="waves-effect waves-light">Temporaries</a></li>
-                                    <li><a href="batches.html" class="waves-effect waves-light">Batches</a></li>
-                                    <li><a href="verification.html" class="waves-effect waves-light">Verification</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a class="dropdown-trigger waves-effect" href="#!" data-target="reports">
-                                    <i class="fa fa-chart-area left"></i> <span>Reports</span><i class="fa fa-angle-down ml-2"></i>
-                                </a>
-                                <ul id="reports" class="dropdown-content">
-                                    <li><a href="general.html" class="waves-effect waves-light">General</a></li>
-                                    <li><a href="delivery.html" class="waves-effect waves-light">Delivery Time</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a class='dropdown-trigger waves-effect active' href='#!' data-target='settings'>
-                                    <i class="fa fa-cogs left"></i> <span>Settings</span><i class="fa fa-angle-down ml-2"></i>
-                                </a>
-                                <ul id='settings' class='dropdown-content'>
-                                    <li><a href="users.html" class="waves-effect waves-light active">Users</a></li>
-                                    <li><a href="hubs.html" class="waves-effect waves-light">Hubs</a></li>
-                                    <li><a href="trackingurls.html" class="waves-effect waves-light">Tracking URLs</a></li>
-                                    <li><a href="trackingcodes.html" class="waves-effect waves-light">Tracking Codes</a></li>
-                                    <li><a href="errors.html" class="waves-effect waves-light">Errors</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#!" class="dropdown-trigger waves-effect" data-target='lang'>
-                                    <i class="fa fa-globe-americas"></i><i class="fa fa-angle-down ml-2"></i>
-                                </a>
-                                <ul id='lang' class='dropdown-content'>
-                                    <li><a href="#!" class="waves-effect waves-light">EN</a></li>
-                                    <li><a href="#!" class="waves-effect waves-light">RU</a></li>
-                                    <li><a href="#!" class="waves-effect waves-light">CH</a></li>
-                                    <li><a href="#!" class="waves-effect waves-light">ES</a></li>
-                                </ul>
-                            </li>
-                                <li class="double-btn">
-                                    <a href="profile.html" class="waves-effect">
-                                        <i class="fa fa-user"></i>
-                                    </a>
-                                    <a href="#!" class="waves-effect">
-                                        <i class="fa fa-sign-out-alt"></i>
-                                    </a>
-                                </li>
-                            <li class="mobile-menu">
-                                <a href="#" data-target="slide-out" class="sidenav-trigger waves-effect"><i class="fa fa-bars"></i></a>
-                            </li>
-                        </ul>
-                        </div>
+    <div class="main">
+
+        <!-- HEADER -->
+        <div class="header">
+            <nav>
+                <div class="nav-wrapper">
+                    <div class="left-side">
+                        <a href="index.html" class="logo waves-effect"><img src="img/logo-ua.png" alt="LOGO"></a>
                     </div>
-                </nav>
-            </div>
-
-            <div class="content">
-
-                <ul id="slide-out" class="sidenav">
-                    <li class="sidebar_bg"></li>
-                    <li>
-                        <a href="index.html" class="waves-effect sidebar-logo">
-                            <img src="img/logo-ua.png" alt="">
+                    <div class="right-side">
+                        <a href="#" class="btn waves-effect dropdown-trigger show-mode" data-target="mode">
+                            <span class="mode active color-green ">Live Mode</span>
                         </a>
-                    </li>
-                    <li><div class="divider"></div></li>
-                    <li>
-                        <a href="index.html" class="collapsible-header no-drop waves-effect"><i class="fa fa-chart-pie left"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <ul class="collapsible collapsible-accordion">
-                            <li>
-                                <a class="collapsible-header waves-effect"><i class="fa fa-box left"></i> Parcels <i class="fa fa-angle-down"></i></a>
-                                <div class="collapsible-body sidenav-li-body-color">
-                                    <ul class="purchasing-group">
-                                        <li><a class="waves-effect" href="parcels.html">Parcels</a></li>
-                                        <li><a class="waves-effect" href="temporaries.html">Temporaries</a></li>
-                                        <li><a class="waves-effect" href="batches.html">Batches</a></li>
-                                        <li><a class="waves-effect" href="verification.html">Verification</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="collapsible-header waves-effect"><i class="fa fa-chart-area left"></i> Reports <i class="fa fa-angle-down"></i></a>
-                                <div class="collapsible-body sidenav-li-body-color">
-                                    <ul class="purchasing-group">
-                                        <li><a class="waves-effect" href="general.html">General</a></li>
-                                        <li><a class="waves-effect" href="delivery.html">Delivery Time</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="collapsible-header waves-effect active"><i class="fa fa-cogs left"></i> Settings <i class="fa fa-angle-down"></i></a>
-                                <div class="collapsible-body sidenav-li-body-color">
-                                    <ul class="purchasing-group">
-                                        <li><a class="waves-effect active" href="users.html">Users</a></li>
-                                        <li><a class="waves-effect" href="hubs.html">Hubs</a></li>
-                                        <li><a class="waves-effect" href="trackingurls.html">Tracking URLs</a></li>
-                                        <li><a class="waves-effect" href="trackingcodes.html">Tracking Codes</a></li>
-                                        <li><a class="waves-effect" href="errors.html">Errors</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="collapsible-header waves-effect"> <i class="fa fa-globe-americas"></i>Languages<i class="fa fa-angle-down"></i></a>
-                                <div class="collapsible-body sidenav-li-body-color">
-                                    <ul class="purchasing-group">
-                                        <li><a class="waves-effect" href="#">EN</a></li>
-                                        <li><a class="waves-effect" href="#">RU</a></li>
-                                        <li><a class="waves-effect" href="#">CH</a></li>
-                                        <li><a class="waves-effect" href="#">ES</a></li>
-                                    </ul>
-                                </div>
-                            </li>
+                        <ul id="mode" class="dropdown-content">
+                            <li><a href="#!" class="waves-effect color-red">Test Mode</a></li>
                         </ul>
-                    </li>
-                    <li class="double-btn">
-                        <a href="profile.html" class="collapsible-header no-drop waves-effect"><i class="fa fa-user"></i>Profile</a>
-                        <a href="#!" class="collapsible-header no-drop waves-effect">Logout<i class="fa fa-sign-out-alt"></i></a>
-                    </li>
-                </ul>
+                        <ul class="header_menu desctop-menu">
+                        <li>
+                            <a href="index.html" class="waves-effect">
+                                <i class="fa fa-chart-pie left"></i> <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-trigger waves-effect" href="#!" data-target="parcels">
+                                <i class="fa fa-box left"></i> <span>Parcels</span><i class="fa fa-angle-down ml-2"></i>
+                            </a>
+                            <ul id="parcels" class="dropdown-content">
+                                <li><a href="parcels.html" class="waves-effect waves-light">Parcels</a></li>
+                                <li><a href="temporaries.html" class="waves-effect waves-light">Temporaries</a></li>
+                                <li><a href="batches.html" class="waves-effect waves-light">Batches</a></li>
+                                <li><a href="verification.html" class="waves-effect waves-light">Verification</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-trigger waves-effect" href="#!" data-target="reports">
+                                <i class="fa fa-chart-area left"></i> <span>Reports</span><i class="fa fa-angle-down ml-2"></i>
+                            </a>
+                            <ul id="reports" class="dropdown-content">
+                                <li><a href="general.html" class="waves-effect waves-light">General</a></li>
+                                <li><a href="delivery.html" class="waves-effect waves-light">Delivery Time</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class='dropdown-trigger waves-effect active' href='#!' data-target='settings'>
+                                <i class="fa fa-cogs left"></i> <span>Settings</span><i class="fa fa-angle-down ml-2"></i>
+                            </a>
+                            <ul id='settings' class='dropdown-content'>
+                                <li><a href="users.html" class="waves-effect waves-light active">Users</a></li>
+                                <li><a href="hubs.html" class="waves-effect waves-light">Hubs</a></li>
+                                <li><a href="trackingurls.html" class="waves-effect waves-light">Tracking URLs</a></li>
+                                <li><a href="trackingcodes.html" class="waves-effect waves-light">Tracking Codes</a></li>
+                                <li><a href="errors.html" class="waves-effect waves-light">Errors</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#!" class="dropdown-trigger waves-effect" data-target='lang'>
+                                <i class="fa fa-globe-americas"></i><i class="fa fa-angle-down ml-2"></i>
+                            </a>
+                            <ul id='lang' class='dropdown-content'>
+                                <li><a href="#!" class="waves-effect waves-light">EN</a></li>
+                                <li><a href="#!" class="waves-effect waves-light">RU</a></li>
+                                <li><a href="#!" class="waves-effect waves-light">CH</a></li>
+                                <li><a href="#!" class="waves-effect waves-light">ES</a></li>
+                            </ul>
+                        </li>
+                            <li class="double-btn">
+                                <a href="profile.html" class="waves-effect">
+                                    <i class="fa fa-user"></i>
+                                </a>
+                                <a href="login.html" class="waves-effect">
+                                    <i class="fa fa-sign-out-alt"></i>
+                                </a>
+                            </li>
+                        <li class="mobile-menu">
+                            <a href="#" data-target="slide-out" class="sidenav-trigger waves-effect"><i class="fa fa-bars"></i></a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- /HEADER/ -->
 
-                <div class="row">
-                    <div class="col s12 mt-4 mb-4">
-                        <div class="page-title">
-                            <i class="fa fa-users left"></i>Users
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-4 mb-0">
-                    <div class="col s12 m12 l3 xl3">
-                        <div class="card card-filters">
-                            <div class="input-field col s12 m-0">
-                                <input id="search" class="m-0" type="text">
-                                <label for="search">Search</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l3">
-                        <div class="card card-filters">
-                            <div class="input-field col s12 m-0">
-                                <select>
-                                    <option value="">All</option>
-                                    <option value="11">Shipper</option><option value="21">Carrier</option><option value="4">Hub Supervisor</option><option value="5">Hub Worker</option><option value="7">Client Services</option><option value="22">Sales</option><option value="1">Admin</option>
-                                </select>
-                                <label>User type</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l2">
-                        <div class="card card-filters">
-                            <div class="input-field col s12 m-0">
-                                <select>
-                                    <option value="">All</option><option value="a">Active</option><option value="na">Inactive</option><option value="l">Live Mode</option><option value="t">Test Mode</option>
-                                </select>
-                                <label>Mode</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m12 l1">
-                        <div class="card card-inv card-button no-other-btn">
-                            <button type="button" class="btn clear-btn waves-effect tooltipped" data-position="top" data-tooltip="Clear"><i class="fa fa-times"></i></button>
-                            <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Search"><i class="fa fa-search"></i> </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col s12">
-                        <div class="card-title table-title card-cyan">
-                            <div class="card-title_result">
-                                <div class="result tooltipped" data-position="top" data-tooltip="Results">
-                                    <i class="fa fa-table left"></i>
-                                    <span class="pr-2">Found:</span>
-                                    <div id="c_result">0</div>
-                                </div>
-                            </div>
-                            <div class="card-title_pagination">
-                                <ul class="pagination">
-                                    <li class="disabled waves-effect waves-light no-none"><a href="#!"><i class="fa fa-angle-left"></i></a></li>
-                                    <li class="active no-none"><a href="#!">1</a></li>
-                                    <li class="waves-effect waves-light"><a href="#!">2</a></li>
-                                    <li class="waves-effect waves-light"><a href="#!">3</a></li>
-                                    <li class="waves-effect waves-light"><a href="#!">4</a></li>
-                                    <li class="waves-effect waves-light"><a href="#!">5</a></li>
-                                    <li class="waves-effect waves-light"><a href="#!">...</a></li>
-                                    <li class="waves-effect waves-light"><a href="#!">400</a></li>
-                                    <li class="waves-effect waves-light no-none"><a href="#!"><i class="fa fa-angle-right"></i></a></li>
+        <!-- CONTENT -->
+        <div class="content">
+
+            <ul id="slide-out" class="sidenav">
+                <li class="sidebar_bg"></li>
+                <li>
+                    <a href="index.html" class="waves-effect sidebar-logo">
+                        <img src="img/logo-ua.png" alt="">
+                    </a>
+                </li>
+                <li><div class="divider"></div></li>
+                <li>
+                    <a href="index.html" class="collapsible-header no-drop waves-effect"><i class="fa fa-chart-pie left"></i> Dashboard</a>
+                </li>
+                <li>
+                    <ul class="collapsible collapsible-accordion">
+                        <li>
+                            <a class="collapsible-header waves-effect"><i class="fa fa-box left"></i> Parcels <i class="fa fa-angle-down"></i></a>
+                            <div class="collapsible-body sidenav-li-body-color">
+                                <ul class="purchasing-group">
+                                    <li><a class="waves-effect" href="parcels.html">Parcels</a></li>
+                                    <li><a class="waves-effect" href="temporaries.html">Temporaries</a></li>
+                                    <li><a class="waves-effect" href="batches.html">Batches</a></li>
+                                    <li><a class="waves-effect" href="verification.html">Verification</a></li>
                                 </ul>
                             </div>
-                            <div class="card-title_btn card-title_btn-solo">
-                                <a href="#add" class="btn waves-effect tooltipped modal-trigger" data-position="top" data-tooltip="Add User"><i class="fa fa-plus"></i></a>
+                        </li>
+                        <li>
+                            <a class="collapsible-header waves-effect"><i class="fa fa-chart-area left"></i> Reports <i class="fa fa-angle-down"></i></a>
+                            <div class="collapsible-body sidenav-li-body-color">
+                                <ul class="purchasing-group">
+                                    <li><a class="waves-effect" href="general.html">General</a></li>
+                                    <li><a class="waves-effect" href="delivery.html">Delivery Time</a></li>
+                                </ul>
                             </div>
-                        </div>
-                        <div class="card card-table card-table-users mt-4">
-                            <div class="thead-desctop">
-                                <table class="highlight mt-4">
-                                    <thead>
-                                        <tr>
-                                            <th>
-                                                <a href="#">ID</a> <br>
-                                                Client Number
-                                            </th>
-                                            <th>
-                                                <a href="#">Username</a> <br>
-                                                <a href="#">Title</a>
-                                            </th>
-                                            <th>
-                                                <a href="#">Email </a>
-                                            </th>
-                                            <th>
-                                                Shipper Address
-                                            </th>
-                                            <th>
-                                                <a href="#">Created</a>
-                                            </th>
-                                            <th>
-                                                <a href="#">Active</a>
-                                            </th>
-                                            <th>
-                                                Actions
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                </table>
+                        </li>
+                        <li>
+                            <a class="collapsible-header waves-effect active"><i class="fa fa-cogs left"></i> Settings <i class="fa fa-angle-down"></i></a>
+                            <div class="collapsible-body sidenav-li-body-color">
+                                <ul class="purchasing-group">
+                                    <li><a class="waves-effect active" href="users.html">Users</a></li>
+                                    <li><a class="waves-effect" href="hubs.html">Hubs</a></li>
+                                    <li><a class="waves-effect" href="trackingurls.html">Tracking URLs</a></li>
+                                    <li><a class="waves-effect" href="trackingcodes.html">Tracking Codes</a></li>
+                                    <li><a class="waves-effect" href="errors.html">Errors</a></li>
+                                </ul>
                             </div>
-                            <div class="thead-mobile">
-                                <table class="highlight">
-                                    <thead>
-                                        <tr>
-                                            <th>
-                                                <a href="#">ID</a> <br>
-                                                Client Number
-                                            </th>
-                                            <th>
-                                                <a href="#">Username</a> <br>
-                                                <a href="#">Title</a>
-                                            </th>
-                                            <th>
-                                                <a href="#">Email </a>
-                                            </th>
-                                            <th>
-                                                Shipper Address
-                                            </th>
-                                            <th>
-                                                <a href="#">Created</a>
-                                            </th>
-                                            <th>
-                                                <a href="#">Active</a>
-                                            </th>
-                                            <th>
-                                                Actions
-                                            </th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-
-                                        <tr>
-                                            <td  data-title="ID
-                                                             Client Number">
-
-                                                <div>
-                                                    <div>101794</div>
-                                                    <div class="bold">100002088</div>
-                                                </div>
-
-                                            </td>
-                                            <td data-title="Username
-                                                            Title">
-
-                                                <div class="td-links">
-                                                    <div>
-                                                        <div class="bold"><a href="#">PACOLIMON</a></div>
-                                                        <div>PACOLIMON</div>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Parcels"><i class="fa fa-box"></i></a> 
-                                                        <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Batches"><i class="fa fa-boxes"></i></a>
-                                                    </div>
-                                                </div>
-
-                                            </td>
-                                            <td data-title="Email">
-
-                                                <div>
-                                                    <a href="mailto:info@test.com"><i class="fa fa-envelope pr-1"></i> info@test.com</a>
-                                                </div>
-
-                                            </td>
-                                            <td data-title="Shipper Address">
-
-                                                <div>
-                                                    TICTACAREA.com <br>
-                                                    Pº Rosales, 14 <br>
-                                                    Molina de Segura, 30500, ES
-                                                </div>
-
-                                            </td>
-                                            <td data-title="Created">
-
-                                                <div>
-                                                    <div>23.06.2018, 13:47</div>
-                                                </div>
-
-                                            </td>
-                                            <td data-title="Active">
-
-                                                <div class="switch color-green switch-center switch-active tooltipped" data-position="top" data-tooltip="">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        <span class="lever"></span>
-                                                    </label>
-                                                </div>
-
-                                            </td>
-                                            <td>
-
-                                                <div class="actions-btn">
-                                                    <a href="#edit" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="Edit"><i class="fa fa-pen"></i></a>
-                                                    <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
-                                                </div>
-
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td  data-title="ID
-                                                             Client Number">
-
-                                                <div>
-                                                    <div>101794</div>
-                                                    <div class="bold">100002088</div>
-                                                </div>
-
-                                            </td>
-                                            <td data-title="Username
-                                                            Title">
-
-                                                <div class="td-links">
-                                                    <div>
-                                                        <div class="bold"><a href="#">PACOLIMON</a></div>
-                                                        <div>PACOLIMON</div>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Parcels"><i class="fa fa-box"></i></a> 
-                                                        <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Batches"><i class="fa fa-boxes"></i></a>
-                                                    </div>
-                                                </div>
-
-                                            </td>
-                                            <td data-title="Email">
-
-                                                <div>
-                                                    <a href="mailto:info@test.com"><i class="fa fa-envelope pr-1"></i> info@test.com</a>
-                                                </div>
-
-                                            </td>
-                                            <td data-title="Shipper Address">
-
-                                                <div>
-                                                    TICTACAREA.com <br>
-                                                    Pº Rosales, 14 <br>
-                                                    Molina de Segura, 30500, ES
-                                                </div>
-
-                                            </td>
-
-                                            <td data-title="Created">
-
-                                                <div>
-                                                    <div>23.06.2018, 13:47</div>
-                                                </div>
-
-                                            </td>
-                                            <td data-title="Active">
-
-                                                <div class="switch color-green switch-center switch-active tooltipped" data-position="top" data-tooltip="">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        <span class="lever"></span>
-                                                    </label>
-                                                </div>
-
-                                            </td>
-                                            <td>
-
-                                                <div class="actions-btn">
-                                                    <a href="#edit" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="Edit"><i class="fa fa-pen"></i></a>
-                                                    <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
-                                                </div>
-
-                                            </td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
+                        </li>
+                        <li>
+                            <a class="collapsible-header waves-effect"> <i class="fa fa-globe-americas"></i>Languages<i class="fa fa-angle-down"></i></a>
+                            <div class="collapsible-body sidenav-li-body-color">
+                                <ul class="purchasing-group">
+                                    <li><a class="waves-effect" href="#">EN</a></li>
+                                    <li><a class="waves-effect" href="#">RU</a></li>
+                                    <li><a class="waves-effect" href="#">CH</a></li>
+                                    <li><a class="waves-effect" href="#">ES</a></li>
+                                </ul>
                             </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="double-btn">
+                    <a href="profile.html" class="collapsible-header no-drop waves-effect"><i class="fa fa-user"></i>Profile</a>
+                    <a href="login.html" class="collapsible-header no-drop waves-effect">Logout<i class="fa fa-sign-out-alt"></i></a>
+                </li>
+            </ul>
+
+            <div class="row">
+                <div class="col s12 mt-4 mb-4">
+                    <div class="page-title">
+                        <i class="fa fa-users left"></i>Users
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4 mb-0">
+                <div class="col s12 m12 l3 xl3">
+                    <div class="card card-filters">
+                        <div class="input-field col s12 m-0">
+                            <input id="search" class="m-0" type="text">
+                            <label for="search">Search</label>
                         </div>
                     </div>
                 </div>
-
-
-
-                <div class="dn row m-0">
-                    <div class="col s12">
-                        <div class="under-construction-page">
-                            <h1 class="m-0"> <i class="fa fa-cog"></i> under construction</h1>
+                <div class="col s12 m6 l3">
+                    <div class="card card-filters">
+                        <div class="input-field col s12 m-0">
+                            <select>
+                                <option value="">All</option>
+                                <option value="11">Shipper</option><option value="21">Carrier</option><option value="4">Hub Supervisor</option><option value="5">Hub Worker</option><option value="7">Client Services</option><option value="22">Sales</option><option value="1">Admin</option>
+                            </select>
+                            <label>User type</label>
                         </div>
                     </div>
                 </div>
+                <div class="col s12 m6 l2">
+                    <div class="card card-filters">
+                        <div class="input-field col s12 m-0">
+                            <select>
+                                <option value="">All</option><option value="a">Active</option><option value="na">Inactive</option><option value="l">Live Mode</option><option value="t">Test Mode</option>
+                            </select>
+                            <label>Mode</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m12 l2 xl1">
+                    <div class="card card-inv card-button no-other-btn">
+                        <button type="button" class="btn clear-btn waves-effect tooltipped" data-position="top" data-tooltip="Clear"><i class="fa fa-times"></i></button>
+                        <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Search"><i class="fa fa-search"></i> </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col s12">
+                    <div class="card-title table-title card-cyan">
+                        <div class="card-title_result">
+                            <div class="result tooltipped" data-position="top" data-tooltip="Results">
+                                <i class="fa fa-table left"></i>
+                                <span class="pr-2">Found:</span>
+                                <div id="c_result" data-result="60">0</div>
+                            </div>
+                        </div>
+                        <div class="card-title_pagination">
+                            <ul class="pagination">
+                                <li class="disabled waves-effect waves-light no-none"><a href="#!"><i class="fa fa-angle-left"></i></a></li>
+                                <li class="active no-none"><a href="#!">1</a></li>
+                                <li class="waves-effect waves-light"><a href="#!">2</a></li>
+                                <li class="waves-effect waves-light"><a href="#!">3</a></li>
+                                <li class="waves-effect waves-light"><a href="#!">4</a></li>
+                                <li class="waves-effect waves-light"><a href="#!">5</a></li>
+                                <li class="waves-effect waves-light"><a href="#!">...</a></li>
+                                <li class="waves-effect waves-light"><a href="#!">400</a></li>
+                                <li class="waves-effect waves-light no-none"><a href="#!"><i class="fa fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="card-title_btn card-title_btn-solo">
+                            <a href="#add" class="btn waves-effect tooltipped modal-trigger" data-position="top" data-tooltip="Add User"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="card card-table card-table-users mt-4">
+                        <div class="thead-desctop">
+                            <table class="highlight mt-4">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <a href="#">ID</a> <br>
+                                            Client Number
+                                        </th>
+                                        <th>
+                                            <a href="#">Username</a> <br>
+                                            <a href="#">Title</a>
+                                        </th>
+                                        <th>
+                                            <a href="#">Email </a>
+                                        </th>
+                                        <th>
+                                            Shipper Address
+                                        </th>
+                                        <th>
+                                            <a href="#">Created</a>
+                                        </th>
+                                        <th>
+                                            <a href="#">Active</a>
+                                        </th>
+                                        <th>
+                                            Actions
+                                        </th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="thead-mobile">
+                            <table class="highlight">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <a href="#">ID</a> <br>
+                                            Client Number
+                                        </th>
+                                        <th>
+                                            <a href="#">Username</a> <br>
+                                            <a href="#">Title</a>
+                                        </th>
+                                        <th>
+                                            <a href="#">Email </a>
+                                        </th>
+                                        <th>
+                                            Shipper Address
+                                        </th>
+                                        <th>
+                                            <a href="#">Created</a>
+                                        </th>
+                                        <th>
+                                            <a href="#">Active</a>
+                                        </th>
+                                        <th>
+                                            Actions
+                                        </th>
+                                    </tr>
+                                </thead>
 
+                                <tbody>
+
+                                    <tr>
+                                        <td  data-title="ID
+                                                         Client Number">
+
+                                            <div>
+                                                <div>101794</div>
+                                                <div class="bold">100002088</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Username
+                                                        Title">
+
+                                            <div class="td-links">
+                                                <div class="test-badge">
+                                                    <div class="bold">
+                                                        <div class="test-mode tooltipped"  data-position="top" data-tooltip="Test Mode">T</div>
+                                                        <a href="#">PACOLIMON</a>
+                                                    </div>
+                                                    <div>PACOLIMON</div>
+                                                </div>
+                                                <div class="btn-group">
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Parcels"><i class="fa fa-box"></i></a> 
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Batches"><i class="fa fa-boxes"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Email">
+
+                                            <div>
+                                                <a href="mailto:info@test.com"><i class="fa fa-envelope pr-1"></i> info@test.com</a>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Shipper Address">
+
+                                            <div>
+                                                TICTACAREA.com <br>
+                                                Pº Rosales, 14 <br>
+                                                Molina de Segura, 30500, ES
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Created">
+
+                                            <div>
+                                                <div>23.06.2018, 13:47</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Active">
+
+                                            <div class="switch color-green switch-center switch-active tooltipped" data-position="top" data-tooltip="">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="lever"></span>
+                                                </label>
+                                            </div>
+
+                                        </td>
+                                        <td>
+
+                                            <div class="actions-btn">
+                                                <a href="#edit" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="Edit"><i class="fa fa-pen"></i></a>
+                                                <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td  data-title="ID
+                                                         Client Number">
+
+                                            <div>
+                                                <div>101794</div>
+                                                <div class="bold">100002088</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Username
+                                                        Title">
+
+                                            <div class="td-links">
+                                                <div>
+                                                    <div class="bold"><a href="#">PACOLIMON</a></div>
+                                                    <div>PACOLIMON</div>
+                                                </div>
+                                                <div class="btn-group">
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Parcels"><i class="fa fa-box"></i></a> 
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Batches"><i class="fa fa-boxes"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Email">
+
+                                            <div>
+                                                <a href="mailto:info@test.com"><i class="fa fa-envelope pr-1"></i> info@test.com</a>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Shipper Address">
+
+                                            <div>
+                                                TICTACAREA.com <br>
+                                                Pº Rosales, 14 <br>
+                                                Molina de Segura, 30500, ES
+                                            </div>
+
+                                        </td>
+
+                                        <td data-title="Created">
+
+                                            <div>
+                                                <div>23.06.2018, 13:47</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Active">
+
+                                            <div class="switch color-green switch-center switch-active tooltipped" data-position="top" data-tooltip="">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="lever"></span>
+                                                </label>
+                                            </div>
+
+                                        </td>
+                                        <td>
+
+                                            <div class="actions-btn">
+                                                <a href="#edit" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="Edit"><i class="fa fa-pen"></i></a>
+                                                <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td  data-title="ID
+                                                         Client Number">
+
+                                            <div>
+                                                <div>101794</div>
+                                                <div class="bold">100002088</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Username
+                                                        Title">
+
+                                            <div class="td-links">
+                                                <div class="test-badge">
+                                                    <div class="bold">
+                                                        <div class="test-mode tooltipped"  data-position="top" data-tooltip="Test Mode">T</div>
+                                                        <a href="#">PACOLIMON</a>
+                                                    </div>
+                                                    <div>PACOLIMON</div>
+                                                </div>
+                                                <div class="btn-group">
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Parcels"><i class="fa fa-box"></i></a> 
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Batches"><i class="fa fa-boxes"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Email">
+
+                                            <div>
+                                                <a href="mailto:info@test.com"><i class="fa fa-envelope pr-1"></i> info@test.com</a>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Shipper Address">
+
+                                            <div>
+                                                TICTACAREA.com <br>
+                                                Pº Rosales, 14 <br>
+                                                Molina de Segura, 30500, ES
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Created">
+
+                                            <div>
+                                                <div>23.06.2018, 13:47</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Active">
+
+                                            <div class="switch color-green switch-center switch-active tooltipped" data-position="top" data-tooltip="">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="lever"></span>
+                                                </label>
+                                            </div>
+
+                                        </td>
+                                        <td>
+
+                                            <div class="actions-btn">
+                                                <a href="#edit" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="Edit"><i class="fa fa-pen"></i></a>
+                                                <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td  data-title="ID
+                                                         Client Number">
+
+                                            <div>
+                                                <div>101794</div>
+                                                <div class="bold">100002088</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Username
+                                                        Title">
+
+                                            <div class="td-links">
+                                                <div>
+                                                    <div class="bold"><a href="#">PACOLIMON</a></div>
+                                                    <div>PACOLIMON</div>
+                                                </div>
+                                                <div class="btn-group">
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Parcels"><i class="fa fa-box"></i></a> 
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Batches"><i class="fa fa-boxes"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Email">
+
+                                            <div>
+                                                <a href="mailto:info@test.com"><i class="fa fa-envelope pr-1"></i> info@test.com</a>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Shipper Address">
+
+                                            <div>
+                                                TICTACAREA.com <br>
+                                                Pº Rosales, 14 <br>
+                                                Molina de Segura, 30500, ES
+                                            </div>
+
+                                        </td>
+
+                                        <td data-title="Created">
+
+                                            <div>
+                                                <div>23.06.2018, 13:47</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Active">
+
+                                            <div class="switch color-green switch-center switch-active tooltipped" data-position="top" data-tooltip="">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="lever"></span>
+                                                </label>
+                                            </div>
+
+                                        </td>
+                                        <td>
+
+                                            <div class="actions-btn">
+                                                <a href="#edit" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="Edit"><i class="fa fa-pen"></i></a>
+                                                <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td  data-title="ID
+                                                         Client Number">
+
+                                            <div>
+                                                <div>101794</div>
+                                                <div class="bold">100002088</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Username
+                                                        Title">
+
+                                            <div class="td-links">
+                                                <div class="test-badge">
+                                                    <div class="bold">
+                                                        <div class="test-mode tooltipped"  data-position="top" data-tooltip="Test Mode">T</div>
+                                                        <a href="#">PACOLIMON</a>
+                                                    </div>
+                                                    <div>PACOLIMON</div>
+                                                </div>
+                                                <div class="btn-group">
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Parcels"><i class="fa fa-box"></i></a> 
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Batches"><i class="fa fa-boxes"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Email">
+
+                                            <div>
+                                                <a href="mailto:info@test.com"><i class="fa fa-envelope pr-1"></i> info@test.com</a>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Shipper Address">
+
+                                            <div>
+                                                TICTACAREA.com <br>
+                                                Pº Rosales, 14 <br>
+                                                Molina de Segura, 30500, ES
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Created">
+
+                                            <div>
+                                                <div>23.06.2018, 13:47</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Active">
+
+                                            <div class="switch color-green switch-center switch-active tooltipped" data-position="top" data-tooltip="">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="lever"></span>
+                                                </label>
+                                            </div>
+
+                                        </td>
+                                        <td>
+
+                                            <div class="actions-btn">
+                                                <a href="#edit" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="Edit"><i class="fa fa-pen"></i></a>
+                                                <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td  data-title="ID
+                                                         Client Number">
+
+                                            <div>
+                                                <div>101794</div>
+                                                <div class="bold">100002088</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Username
+                                                        Title">
+
+                                            <div class="td-links">
+                                                <div>
+                                                    <div class="bold"><a href="#">PACOLIMON</a></div>
+                                                    <div>PACOLIMON</div>
+                                                </div>
+                                                <div class="btn-group">
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Parcels"><i class="fa fa-box"></i></a> 
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Batches"><i class="fa fa-boxes"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Email">
+
+                                            <div>
+                                                <a href="mailto:info@test.com"><i class="fa fa-envelope pr-1"></i> info@test.com</a>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Shipper Address">
+
+                                            <div>
+                                                TICTACAREA.com <br>
+                                                Pº Rosales, 14 <br>
+                                                Molina de Segura, 30500, ES
+                                            </div>
+
+                                        </td>
+
+                                        <td data-title="Created">
+
+                                            <div>
+                                                <div>23.06.2018, 13:47</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Active">
+
+                                            <div class="switch color-green switch-center switch-active tooltipped" data-position="top" data-tooltip="">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="lever"></span>
+                                                </label>
+                                            </div>
+
+                                        </td>
+                                        <td>
+
+                                            <div class="actions-btn">
+                                                <a href="#edit" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="Edit"><i class="fa fa-pen"></i></a>
+                                                <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td  data-title="ID
+                                                         Client Number">
+
+                                            <div>
+                                                <div>101794</div>
+                                                <div class="bold">100002088</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Username
+                                                        Title">
+
+                                            <div class="td-links">
+                                                <div class="test-badge">
+                                                    <div class="bold">
+                                                        <div class="test-mode tooltipped"  data-position="top" data-tooltip="Test Mode">T</div>
+                                                        <a href="#">PACOLIMON</a>
+                                                    </div>
+                                                    <div>PACOLIMON</div>
+                                                </div>
+                                                <div class="btn-group">
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Parcels"><i class="fa fa-box"></i></a> 
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Batches"><i class="fa fa-boxes"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Email">
+
+                                            <div>
+                                                <a href="mailto:info@test.com"><i class="fa fa-envelope pr-1"></i> info@test.com</a>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Shipper Address">
+
+                                            <div>
+                                                TICTACAREA.com <br>
+                                                Pº Rosales, 14 <br>
+                                                Molina de Segura, 30500, ES
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Created">
+
+                                            <div>
+                                                <div>23.06.2018, 13:47</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Active">
+
+                                            <div class="switch color-green switch-center switch-active tooltipped" data-position="top" data-tooltip="">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="lever"></span>
+                                                </label>
+                                            </div>
+
+                                        </td>
+                                        <td>
+
+                                            <div class="actions-btn">
+                                                <a href="#edit" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="Edit"><i class="fa fa-pen"></i></a>
+                                                <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td  data-title="ID
+                                                         Client Number">
+
+                                            <div>
+                                                <div>101794</div>
+                                                <div class="bold">100002088</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Username
+                                                        Title">
+
+                                            <div class="td-links">
+                                                <div>
+                                                    <div class="bold"><a href="#">PACOLIMON</a></div>
+                                                    <div>PACOLIMON</div>
+                                                </div>
+                                                <div class="btn-group">
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Parcels"><i class="fa fa-box"></i></a> 
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Batches"><i class="fa fa-boxes"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Email">
+
+                                            <div>
+                                                <a href="mailto:info@test.com"><i class="fa fa-envelope pr-1"></i> info@test.com</a>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Shipper Address">
+
+                                            <div>
+                                                TICTACAREA.com <br>
+                                                Pº Rosales, 14 <br>
+                                                Molina de Segura, 30500, ES
+                                            </div>
+
+                                        </td>
+
+                                        <td data-title="Created">
+
+                                            <div>
+                                                <div>23.06.2018, 13:47</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Active">
+
+                                            <div class="switch color-green switch-center switch-active tooltipped" data-position="top" data-tooltip="">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="lever"></span>
+                                                </label>
+                                            </div>
+
+                                        </td>
+                                        <td>
+
+                                            <div class="actions-btn">
+                                                <a href="#edit" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="Edit"><i class="fa fa-pen"></i></a>
+                                                <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td  data-title="ID
+                                                         Client Number">
+
+                                            <div>
+                                                <div>101794</div>
+                                                <div class="bold">100002088</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Username
+                                                        Title">
+
+                                            <div class="td-links">
+                                                <div class="test-badge">
+                                                    <div class="bold">
+                                                        <div class="test-mode tooltipped"  data-position="top" data-tooltip="Test Mode">T</div>
+                                                        <a href="#">PACOLIMON</a>
+                                                    </div>
+                                                    <div>PACOLIMON</div>
+                                                </div>
+                                                <div class="btn-group">
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Parcels"><i class="fa fa-box"></i></a> 
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Batches"><i class="fa fa-boxes"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Email">
+
+                                            <div>
+                                                <a href="mailto:info@test.com"><i class="fa fa-envelope pr-1"></i> info@test.com</a>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Shipper Address">
+
+                                            <div>
+                                                TICTACAREA.com <br>
+                                                Pº Rosales, 14 <br>
+                                                Molina de Segura, 30500, ES
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Created">
+
+                                            <div>
+                                                <div>23.06.2018, 13:47</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Active">
+
+                                            <div class="switch color-green switch-center switch-active tooltipped" data-position="top" data-tooltip="">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="lever"></span>
+                                                </label>
+                                            </div>
+
+                                        </td>
+                                        <td>
+
+                                            <div class="actions-btn">
+                                                <a href="#edit" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="Edit"><i class="fa fa-pen"></i></a>
+                                                <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td  data-title="ID
+                                                         Client Number">
+
+                                            <div>
+                                                <div>101794</div>
+                                                <div class="bold">100002088</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Username
+                                                        Title">
+
+                                            <div class="td-links">
+                                                <div>
+                                                    <div class="bold"><a href="#">PACOLIMON</a></div>
+                                                    <div>PACOLIMON</div>
+                                                </div>
+                                                <div class="btn-group">
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Parcels"><i class="fa fa-box"></i></a> 
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Batches"><i class="fa fa-boxes"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Email">
+
+                                            <div>
+                                                <a href="mailto:info@test.com"><i class="fa fa-envelope pr-1"></i> info@test.com</a>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Shipper Address">
+
+                                            <div>
+                                                TICTACAREA.com <br>
+                                                Pº Rosales, 14 <br>
+                                                Molina de Segura, 30500, ES
+                                            </div>
+
+                                        </td>
+
+                                        <td data-title="Created">
+
+                                            <div>
+                                                <div>23.06.2018, 13:47</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Active">
+
+                                            <div class="switch color-green switch-center switch-active tooltipped" data-position="top" data-tooltip="">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="lever"></span>
+                                                </label>
+                                            </div>
+
+                                        </td>
+                                        <td>
+
+                                            <div class="actions-btn">
+                                                <a href="#edit" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="Edit"><i class="fa fa-pen"></i></a>
+                                                <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td  data-title="ID
+                                                         Client Number">
+
+                                            <div>
+                                                <div>101794</div>
+                                                <div class="bold">100002088</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Username
+                                                        Title">
+
+                                            <div class="td-links">
+                                                <div class="test-badge">
+                                                    <div class="bold">
+                                                        <div class="test-mode tooltipped"  data-position="top" data-tooltip="Test Mode">T</div>
+                                                        <a href="#">PACOLIMON</a>
+                                                    </div>
+                                                    <div>PACOLIMON</div>
+                                                </div>
+                                                <div class="btn-group">
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Parcels"><i class="fa fa-box"></i></a> 
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Batches"><i class="fa fa-boxes"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Email">
+
+                                            <div>
+                                                <a href="mailto:info@test.com"><i class="fa fa-envelope pr-1"></i> info@test.com</a>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Shipper Address">
+
+                                            <div>
+                                                TICTACAREA.com <br>
+                                                Pº Rosales, 14 <br>
+                                                Molina de Segura, 30500, ES
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Created">
+
+                                            <div>
+                                                <div>23.06.2018, 13:47</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Active">
+
+                                            <div class="switch color-green switch-center switch-active tooltipped" data-position="top" data-tooltip="">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="lever"></span>
+                                                </label>
+                                            </div>
+
+                                        </td>
+                                        <td>
+
+                                            <div class="actions-btn">
+                                                <a href="#edit" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="Edit"><i class="fa fa-pen"></i></a>
+                                                <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td  data-title="ID
+                                                         Client Number">
+
+                                            <div>
+                                                <div>101794</div>
+                                                <div class="bold">100002088</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Username
+                                                        Title">
+
+                                            <div class="td-links">
+                                                <div>
+                                                    <div class="bold"><a href="#">PACOLIMON</a></div>
+                                                    <div>PACOLIMON</div>
+                                                </div>
+                                                <div class="btn-group">
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Parcels"><i class="fa fa-box"></i></a> 
+                                                    <a href="#!" class="btn waves-effect tooltipped card-orange" data-position="left" data-tooltip="Batches"><i class="fa fa-boxes"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Email">
+
+                                            <div>
+                                                <a href="mailto:info@test.com"><i class="fa fa-envelope pr-1"></i> info@test.com</a>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Shipper Address">
+
+                                            <div>
+                                                TICTACAREA.com <br>
+                                                Pº Rosales, 14 <br>
+                                                Molina de Segura, 30500, ES
+                                            </div>
+
+                                        </td>
+
+                                        <td data-title="Created">
+
+                                            <div>
+                                                <div>23.06.2018, 13:47</div>
+                                            </div>
+
+                                        </td>
+                                        <td data-title="Active">
+
+                                            <div class="switch color-green switch-center switch-active tooltipped" data-position="top" data-tooltip="">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="lever"></span>
+                                                </label>
+                                            </div>
+
+                                        </td>
+                                        <td>
+
+                                            <div class="actions-btn">
+                                                <a href="#edit" class="tooltipped waves-effect btn bg-blue modal-trigger" data-position="top" data-tooltip="Edit"><i class="fa fa-pen"></i></a>
+                                                <a href="#!" class="tooltipped waves-effect btn bg-red" data-position="top" data-tooltip="Delete"><i class="fa fa-times-circle"></i></a>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="footer">
-                <div class="copyright">
-                    Developed and supported by <a target="_blank" href="http://www.xmllogistic.com/"> XMLlogistic</a>, a subsidiary of <a target="_blank" href="http://www.xmlshop.com/">XMLshop </a>
+
+
+            <div class="dn row m-0">
+                <div class="col s12">
+                    <div class="under-construction-page">
+                        <h1 class="m-0"> <i class="fa fa-cog"></i> under construction</h1>
+                    </div>
                 </div>
+            </div>
+
+        </div>
+        <!-- /CONTENT/ -->
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="copyright">
+                Developed and supported by <a target="_blank" href="http://www.xmllogistic.com/"> XMLlogistic</a>, a subsidiary of <a target="_blank" href="http://www.xmlshop.com/">XMLshop </a>
             </div>
         </div>
+        <!-- /FOOTER/ -->
+
     </div>
 
-    <!-- Modal Structure -->
+    <!-- MODALS -->
     <div id="add" class="modal modal-style modal-fixed-footer modal-fixed-header">
         <div class="modal-header color-cyan">
             <div class="modal-title"><i class="fa fa-plus left"></i>Add User</div>
@@ -571,11 +1275,11 @@
                                             <label for="shipper_address3">Address line 3</label>
                                         </div>
 
-                                        <div class="input-field col s6 color-grey">
+                                        <div class="input-field col s12 m6 color-grey">
                                             <input id="shipper_city" class="m-0" type="text">
                                             <label for="shipper_city">City</label>
                                         </div>
-                                        <div class="input-field col s6 color-grey">
+                                        <div class="input-field col s12 m6 color-grey">
                                             <input id="shipper_country-state" class="m-0" type="text">
                                             <label for="shipper_country-state">Country / State</label>
                                         </div>
@@ -1156,30 +1860,21 @@
             <button class="btn btn-large waves-effect btn-submit">Submit</button>
         </div>
     </div>
+    <!-- /MODALS/ -->
 
-//= template/footer.html
+    //= template/footer.html
 
     <script>
-        var newPos, titlePos, bodyWidth = $(document).width();
-
-        if (bodyWidth <= 600) {
-            titlePos = 950
-        } else {
-            titlePos = Math.floor($('.thead-desctop').offset().top)
-        }
+        var titlePos = Math.floor($('.card-title').offset().top);
 
         //fix panel-title
         function fixedTitle() {
 
-                if ($(window).scrollTop() >= titlePos) {
-                    $('body').addClass('fixed-title').css({
-                        'padding-top': $('.thead-desctop').outerHeight(true)
-                    });
-                } else if ($(window).scrollTop() < titlePos) {
-                    $('body').removeClass('fixed-title').css({
-                        'padding-top': 0
-                    });
-                }
+            if ($(window).scrollTop() >= titlePos) {
+                $('body').addClass('fixed-title');
+            } else if ($(window).scrollTop() < titlePos) {
+                $('body').removeClass('fixed-title');
+            }
 
         }
 
@@ -1189,13 +1884,7 @@
 
         $(document).ready(function () {
 
-            $('.open-textarea').on('focus', function () {
-                $(this).addClass('active');
-            });
-            $('.open-textarea').on('blur', function () {
-                $(this).removeClass('active');
-            });
-
+            // user type
             $('#user-type').on('change', function () {
                 var selectUser = $('select#user-type').val();
 
@@ -1226,7 +1915,7 @@
             });
 
 
-
+            // toggle tooltip status
             $.each($('.switch-active'), function() {
 
                 var switchBtn = $(this),
@@ -1267,15 +1956,7 @@
                 }
 
             });
-            //clear filters and animate icon
-            $('.card-button').on('click', '.clear-btn', function () {
 
-                var el = $('.clear-btn i').clone().removeClass('active');
-                $('.clear-btn i').remove();
-                $('.clear-btn').append(el);
-                el.addClass('active');
-
-            });
 
             //show more text in Consignee
             $('.btn-show-all').on('click', function () {
@@ -1290,19 +1971,19 @@
             });
 
 
-            //Count in panel title
-            var options = {
-                useEasing: true,
-                useGrouping: true,
-                separator: ',',
-                decimal: '.',
-            };
+            //Count
+            var resultCount,
+                dataResult = $('#c_result').data('result'),
 
-            var resultCount = new CountUp('c_result', 0, 60, 0, 4, options);
+                options = {
+                    useEasing: true,
+                    useGrouping: true,
+                    separator: ',',
+                    decimal: '.',
+                };
 
-            setTimeout(function () {
-                resultCount.start();
-            }, 0);
+            resultCount = new CountUp('c_result', 0, dataResult, 0, 4, options);
+            resultCount.start();
 
         });
 
