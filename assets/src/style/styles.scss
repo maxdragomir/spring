@@ -1281,6 +1281,10 @@ div.btn {
 
       .select-wrapper {
         width: 270px;
+
+        .dropdown-content {
+          border-radius: 10px;
+        }
       }
     }
 
@@ -2192,16 +2196,16 @@ div.btn {
 
         .card-title_group {
           position: absolute;
-          right: 9rem;
-          bottom: -50px;
+          right: 1.1rem;
+          bottom: -90px;
           visibility: hidden;
-          background: $card-cyan-block;
+          background: $card-cyan-text-l;
           box-shadow: $card-cyan-shadow;
           display: flex;
-          padding: 1rem;
+          padding: 3rem 2rem 2rem;
           align-items: center;
           justify-content: center;
-          height: 50px;
+          height: 90px;
           opacity: 0;
           border-radius: 0 0 10px 10px;
           transform-origin: top;
@@ -2211,6 +2215,56 @@ div.btn {
           .group-operation {
             display: flex;
             align-items: center;
+
+            .input-field {
+              margin: 0;
+
+              &.service-group {
+                display: none;
+                
+                &.show {
+                  display: block;
+                }
+              }
+
+              .select-wrapper {
+                background: #fff;
+                border-radius: 10px;
+                margin-right: 1rem;
+                height: 50px;
+
+                input {
+                  margin-bottom: 0;
+                  border-bottom: 0;
+                  padding: 0 .75rem;
+                  height: 50px;
+                }
+
+                .dropdown-content {
+                  border-radius: 10px;
+                  max-height: 400px;
+                }
+
+                & +  label {
+                  font-size: .9rem;
+                  top: -35px;
+                  left: .5rem;
+                  color: #fff;
+                }
+              }
+            }
+
+            button {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 50px;
+              line-height: 50px;
+              border-radius: 10px;
+              background: $card-orange-block;
+              box-shadow: $card-orange-shadow;
+              font-weight: 500;
+            }
           }
 
           &.open {
@@ -3118,7 +3172,7 @@ div.btn {
             width: 7%;
           }
           &:nth-child(2) {
-            width: 8%;
+            width: 10%;
           }
           &:nth-child(3) {
             width: 10%;
@@ -3127,7 +3181,7 @@ div.btn {
             width: 20%;
           }
           &:nth-child(5) {
-            width: 10%;
+            width: 6%;
           }
           &:nth-child(6) {
             width: 5%;
@@ -3175,9 +3229,9 @@ div.btn {
         tbody {
           .alot-text {
             position: relative;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            //white-space: nowrap;
+            //overflow: hidden;
+            //text-overflow: ellipsis;
             width: 250px;
 
             &.show-all {
@@ -3199,8 +3253,8 @@ div.btn {
 
             .btn-show-all {
               position: absolute;
-              top: 0;
-              right: 0;
+              top: -10px;
+              right: -20px;
               cursor: pointer;
               justify-content: center;
               align-items: center;
@@ -3326,32 +3380,33 @@ div.btn {
         }
 
         &.card-table-parcels {
+
           .all-id {
             position: relative;
-            transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+            transition: all 300ms cubic-bezier(0.34, 1.31, 0.7, 1);
 
 
             .checklist {
               position: absolute;
               left: 0;
               opacity: 0;
-              transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
-
+              transition: all 300ms cubic-bezier(0.34, 1.31, 0.7, 1);
             }
 
             &.open {
               padding-left: 30px;
-              transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+              transition: all 300ms cubic-bezier(0.34, 1.31, 0.7, 1);
 
 
               .checklist {
                 opacity: 1;
-                transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+                transition: all 300ms cubic-bezier(0.34, 1.31, 0.7, 1);
 
               }
             }
 
           }
+
         }
         &.card-table-batches {
           tbody {
@@ -4275,7 +4330,10 @@ div.btn {
       &.card-table {
         td, th {
           &:first-child {
-            width: 150px;
+            width: 180px;
+          }
+          &:nth-child(2) {
+            width: 210px;
           }
           &:nth-child(5) {
             width: 230px;
@@ -4320,8 +4378,11 @@ div.btn {
     &.card-table {
       td, th {
 
+        //&:first-child {
+        //  width: 185px;
+        //}
         &:nth-child(2) {
-          width: 140px;
+          width: 110px;
         }
         &:nth-child(5) {
           width: 200px;
@@ -4351,7 +4412,7 @@ div.btn {
     &.card-table {
       td, th {
         &:nth-child(2) {
-          width: 120px;
+          width: 100px;
         }
 
         &:nth-child(7) {
@@ -4400,6 +4461,9 @@ div.btn {
       }
     }
     .content {
+      .card-title.table-title .card-title_btn .btn-checklist {
+        display: none;
+      }
       .card {
         &.card-table.card-table-reports {
           .thead-mobile {
@@ -4434,6 +4498,9 @@ div.btn {
               display: block;
               width: 100%;
 
+              .checklist {
+                display: none;
+              }
               .td-links {
                 .test-badge {
                   & > .bold {
