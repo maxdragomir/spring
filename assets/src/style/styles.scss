@@ -263,6 +263,29 @@ div.btn {
   }
 
 }
+.switch-batches {
+  display:flex;
+  align-items:center;
+  height: 50px;
+  margin: 0.5rem 0 2rem 0;
+
+  span {
+    font-size: 1.2rem;
+    //color: #333;
+    text-transform: uppercase;
+  }
+  .lever {
+    //margin-right: 5px !important;
+  }
+  .batch-id {
+    font-weight: 500;
+    padding-right: 5px;
+  }
+  label {
+    display: flex;
+    align-items: center;
+  }
+}
 .modal.modal-style {
   background: #eee;
 
@@ -2909,6 +2932,20 @@ div.btn {
           justify-content: flex-end;
         }
 
+        &.space-between {
+          justify-content: space-between;
+
+          button {
+            border-radius: 10px;
+
+            &.clear-btn {
+              background: $card-orange-block;
+              box-shadow: $card-orange-shadow;
+              color: #fff;
+            }
+          }
+        }
+
         button {
           position: relative;
           display: flex;
@@ -2924,7 +2961,7 @@ div.btn {
         }
 
         .clear-btn {
-          width: 50px;
+          //width: 50px;
           background: #fff;
           color: #b3b3b3;
           border-radius: 10px 0 0 10px;
@@ -2985,6 +3022,8 @@ div.btn {
 
         &.one-btn {
           position: relative;
+          //justify-content: flex-end;
+
           .search-btn {
             border-radius: 10px;
           }
@@ -3003,7 +3042,7 @@ div.btn {
         }
 
         .thead-mobile {
-          max-height: 3000px;
+          //max-height: 3000px;
           height: auto;
           transition: all 500ms ease;
 
@@ -3229,13 +3268,11 @@ div.btn {
         tbody {
           .alot-text {
             position: relative;
-            //white-space: nowrap;
-            //overflow: hidden;
-            //text-overflow: ellipsis;
-            width: 250px;
+            overflow: hidden;
+            transition: all 300ms cubic-bezier(0.34, 1, 0.7, 1);
+
 
             &.show-all {
-              white-space: normal;
 
               button {
                 opacity: 1;
@@ -3248,13 +3285,15 @@ div.btn {
             }
 
             & > div {
-              display: inline-block;
+              display: block;
+              position: relative;
+              transition: all 300ms cubic-bezier(0.34, 1, 0.7, 1);
             }
 
             .btn-show-all {
               position: absolute;
-              top: -10px;
-              right: -20px;
+              top: 0;
+              right: 0;
               cursor: pointer;
               justify-content: center;
               align-items: center;
@@ -3263,6 +3302,7 @@ div.btn {
               background: transparent;
               box-shadow: none;
               opacity: .3;
+              z-index: 1;
               transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
 
               i {
@@ -3272,7 +3312,7 @@ div.btn {
               &:after {
                 content: '';
                 position: absolute;
-                top: 8px;
+                top: 7px;
                 right: 3px;
                 width: 20px;
                 height: 2px;
@@ -4464,6 +4504,9 @@ div.btn {
       .card-title.table-title .card-title_btn .btn-checklist {
         display: none;
       }
+      .card-title_group {
+        display: none !important;
+      }
       .card {
         &.card-table.card-table-reports {
           .thead-mobile {
@@ -4683,7 +4726,7 @@ div.btn {
 
           &.one-btn {
             margin: 0.5rem 0 1rem 0;
-            justify-content: flex-start;
+            justify-content: flex-end;
           }
         }
         &.card-filters {
@@ -4811,6 +4854,11 @@ div.btn {
   }
   .main .content {
     padding: 100px 0 30px;
+
+    .switch-batches {
+      justify-content: center;
+      margin-top: 0;
+    }
 
     .card {
       &.card-filters {
