@@ -33,7 +33,7 @@ body {
     position: fixed;
     width: calc(100% - 113px) !important;
     top: 54px;
-    z-index: 1;
+    z-index: 2;
 
     tr {
       background: #fff;
@@ -133,6 +133,7 @@ body {
 .spinner.spinner-light:after {
   animation-delay: 2s
 }
+
 @keyframes spinner {
   0% {
     transform: rotate(0deg)
@@ -152,7 +153,23 @@ body {
     background-color: #f4b627
   }
 }
-
+@keyframes clear-btn {
+  20% {
+    transform: rotate(15deg)
+  }
+  40% {
+    transform: rotate(-10deg)
+  }
+  60% {
+    transform: rotate(5deg)
+  }
+  80% {
+    transform: rotate(-5deg)
+  }
+  to {
+    transform: rotate(0deg)
+  }
+}
 
 .wrapper {
   position: relative;
@@ -160,7 +177,7 @@ body {
 button {
   font-family: 'Roboto', sans-serif;
 }
-.btn {
+.btn, .press-scale {
   transition: all 100ms ease;
 
   &:active {
@@ -766,6 +783,7 @@ div.btn {
           .caret {
             background: #fff;
             z-index: 1;
+            pointer-events: none;
           }
 
         }
@@ -1324,7 +1342,97 @@ div.btn {
 .d-flex {
   display: flex;
 }
+.no-material-select {
+  .select-wrapper {
+    display: none !important;
+  }
+}
+.multi-tags.selectize-control {
+  display: flex;
+  width: 100%;
 
+  .selectize-input {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    min-height: 50px;
+    border: 0;
+    font-size: 1rem;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    color: #333 !important;
+    border-bottom: 1px solid #9e9e9e;
+
+    input {
+      font-size: 1rem;
+
+      &::placeholder {
+        color: #9e9e9e;
+      }
+    }
+
+    & > div {
+      cursor: pointer;
+      margin: 0 5px 5px 0;
+      padding: 10px;
+      background: $card-cyan-block;
+      box-shadow: $card-cyan-shadow;
+      color: #fff;
+      border: 0;
+      border-radius: 5px;
+
+      &.active {
+        background: $card-cyan-text-l;
+        color: #fff;
+      }
+    }
+  }
+  .selectize-dropdown {
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 5px;
+
+    .active {
+      background-color: rgba(0, 0, 0, 0.08);
+      color: #333;
+    }
+    .option {
+      clear: both;
+      color: rgba(0, 0, 0, 0.87);
+      cursor: pointer;
+      min-height: 50px;
+      width: 100%;
+      text-align: left;
+      font-size: 16px;
+      display: block;
+      line-height: 22px;
+      padding: 14px 16px;
+    }
+  }
+  
+  &.plugin-remove_button [data-value] .remove {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    width: 20px;
+    background: rgba(0,0,0, .2);
+    border-radius: 0 5px 5px 0;
+    border: 0;
+  }
+
+  &.color-green {
+    .selectize-input > div {
+      background: $card-green-block;
+      box-shadow: $card-green-shadow;
+
+      &.active {
+        background: $card-green-text-l;
+      }
+    }
+  }
+}
 .col-centered-hor {
   display: flex;
   justify-content: center;
@@ -1908,7 +2016,7 @@ div.btn {
       }
       &.table-title {
         justify-content: space-between;
-        z-index: 2;
+        z-index: 3;
 
         &.card-main {
           background: $secondary-color;
@@ -2666,6 +2774,13 @@ div.btn {
           padding: 0;
           height: 50px;
 
+
+          &.color-secondary {
+            label {
+              color: $secondary-color;
+            }
+          }
+
           input {
             display: flex;
             border-radius: 10px;
@@ -2695,6 +2810,10 @@ div.btn {
               color: #9e9e9e;
               //font-size: 1.1rem;
               //transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1) 200ms;
+            }
+
+            &.color-secondary {
+              color: $secondary-color;
             }
           }
 
@@ -2735,7 +2854,7 @@ div.btn {
             border-right: 1px solid #c9c9c9;
 
             & + label.active {
-              color: #9e9e9e;
+              color: $secondary-color;
             }
           }
 
@@ -2744,7 +2863,7 @@ div.btn {
             //border-right: 1px solid #c9c9c9;
 
             & + label.active {
-              color: #9e9e9e;
+              color: $secondary-color;
             }
           }
 
@@ -2753,7 +2872,7 @@ div.btn {
             border-right: 1px solid #c9c9c9;
 
             & + label.active {
-              color: #9e9e9e;
+              color: $secondary-color;
             }
           }
 
@@ -2761,7 +2880,7 @@ div.btn {
             border-radius: 0 0 10px 0;
 
             & + label.active {
-              color: #9e9e9e;
+              color: $secondary-color;
             }
           }
         }
@@ -2777,6 +2896,7 @@ div.btn {
             right: 10px;
             background: #fff;
             z-index: 1;
+            pointer-events: none;
           }
 
           .dropdown-trigger {
@@ -2968,7 +3088,7 @@ div.btn {
 
           & > i.active {
             transform-origin: center;
-            animation: spinner 1000ms  cubic-bezier(0.34, 1.61, 0.7, 1);
+            animation: clear-btn 1000ms  cubic-bezier(0.34, 1.61, 0.7, 1);
           }
         }
 
@@ -3341,7 +3461,14 @@ div.btn {
 
             & > div:not(:first-child) {
               font-size: .85rem;
-              max-width: 250px;
+              display: flex;
+              justify-content: space-between;
+
+              & > div {
+                display: flex;
+                justify-content: space-between;
+                width: calc(100% - 55px);
+              }
 
               span {
                 width: 40px;
@@ -3364,11 +3491,6 @@ div.btn {
                 color: $secondary-color;
                 transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
               }
-            }
-
-            div:not(:first-child){
-              display: flex;
-              justify-content: space-between;
             }
 
           }
@@ -3966,6 +4088,7 @@ div.btn {
             .caret {
               background: #fff;
               z-index: 1;
+              pointer-events: none;
             }
 
           }
@@ -4330,8 +4453,19 @@ div.btn {
 
         }
       }
-      tbody .alot-text {
-        width: 230px;
+      tbody {
+        .print-links {
+
+          & > div:not(:first-child) {
+            flex-flow: column;
+            width: 100%;
+
+            & > div {
+              width: 100%;
+            }
+
+          }
+        }
       }
     }
   }
@@ -4398,15 +4532,15 @@ div.btn {
             }
           }
           .print-links {
-           & > div > a {
-             display: block;
-             width: 100%;
-           }
-           div:not(:first-child) {
-             justify-content: flex-start;
-             flex-flow: row wrap;
-             width: 180px;
-           }
+           //& > div > a {
+           //  display: block;
+           //  width: 100%;
+           //}
+           //div:not(:first-child) {
+           //  justify-content: flex-start;
+           //  flex-flow: row wrap;
+           //  width: 180px;
+           //}
          }
         }
       }
@@ -4441,8 +4575,28 @@ div.btn {
         }
 
       }
-      tbody .alot-text {
-        width: 180px;
+      tbody {
+        .alot-text {
+          width: 180px;
+        }
+        .print-links {
+          & > div {
+            padding-bottom: 10px !important;
+
+            &:last-child {
+              padding-bottom: 0;
+            }
+          }
+          & > div:not(:first-child) {
+            flex-flow: column;
+
+
+            & > div {
+              flex-flow: column;
+            }
+
+          }
+        }
       }
     }
   }
@@ -4583,17 +4737,11 @@ div.btn {
                 text-align: left;
                 width: auto;
               }
-              .print-links div:not(:first-child) {
-                width: auto;
-                justify-content: space-between;
-                flex-flow: row;
-
-                span {
-                  display: none;
-                }
-
-                &.zpl200 {
-                  padding: 0 5px;
+              .print-links {
+                div:not(:first-child) {
+                  span {
+                    width: 100%;
+                  }
                 }
               }
               .actions-btn {

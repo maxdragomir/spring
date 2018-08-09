@@ -35,6 +35,21 @@ $(document).ready(function(){
         }
     });
 
+    $('.multi-tags').selectize({
+        maxItems: 1000,
+        plugins: ['remove_button'],
+        persist: false,
+        create: false,
+        render: {
+            item: function(data, escape) {
+                return '<div>' + escape(data.text) + '</div>';
+            }
+        },
+        onDelete: function(values) {
+            // return confirm(values.length > 1 ? 'Are you sure you want to remove these ' + values.length + ' items?' : 'Are you sure you want to remove "' + values[0] + '"?');
+        }
+    });
+
     // var loader = $('.loader');
     // setTimeout(function () {
     //     if (!loader.hasClass('ok')) {

@@ -7,3 +7,4 @@
 //= ../bower_components/count.js/count.min.js
 //= ../bower_components/pikaday/pikaday.js
 //= ../bower_components/addinput/add-input-area.min.js
+//= ../bower_components/selectize/selectize.min.js
