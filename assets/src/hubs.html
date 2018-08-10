@@ -964,26 +964,31 @@
     //= template/footer.html
 
     <script>
-
-        var titlePos = Math.floor($('.card-title').offset().top);
+        var titlePos = Math.floor($('.card-title').offset().top),
+            tableHeight = $('.card-table').height();
 
         //fix panel-title
         function fixedTitle() {
 
-            if ($(window).scrollTop() >= titlePos) {
-                $('body').addClass('fixed-title');
-            } else if ($(window).scrollTop() < titlePos) {
-                $('body').removeClass('fixed-title');
+            if(tableHeight > 1000) {
+                if ($(window).scrollTop() >= titlePos) {
+                    $('body').addClass('fixed-title');
+                } else if ($(window).scrollTop() < titlePos) {
+                    $('body').removeClass('fixed-title');
+                }
             }
 
         }
-
         $(window).scroll(function(){
             fixedTitle();
         });
 
+        $(window).resize(function(){
+            fixedTitle();
+        });
 
         $(document).ready(function () {
+            fixedTitle();
 
             // toggle tooltip status
             $.each($('.switch-active'), function() {

@@ -1885,15 +1885,18 @@
     //= template/footer.html
 
     <script>
-        var titlePos = Math.floor($('.card-title').offset().top);
+        var titlePos = Math.floor($('.card-title').offset().top),
+            tableHeight = $('.card-table').height();
 
         //fix panel-title
         function fixedTitle() {
 
-            if ($(window).scrollTop() >= titlePos) {
-                $('body').addClass('fixed-title');
-            } else if ($(window).scrollTop() < titlePos) {
-                $('body').removeClass('fixed-title');
+            if(tableHeight > 1000) {
+                if ($(window).scrollTop() >= titlePos) {
+                    $('body').addClass('fixed-title');
+                } else if ($(window).scrollTop() < titlePos) {
+                    $('body').removeClass('fixed-title');
+                }
             }
 
         }
@@ -1902,8 +1905,12 @@
             fixedTitle();
         });
 
-        $(document).ready(function () {
+        $(window).resize(function(){
+            fixedTitle();
+        });
 
+        $(document).ready(function () {
+            fixedTitle();
             // user type
             $('#user-type').on('change', function () {
                 var selectUser = $('select#user-type').val();

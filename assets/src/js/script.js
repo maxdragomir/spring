@@ -12,6 +12,7 @@ function copy(element_id){
 
 
 $(document).ready(function(){
+
     $('.under-construction-page').addClass('active');
     setTimeout(function () {
         $('.card-filters label').addClass('show-label');
@@ -23,6 +24,14 @@ $(document).ready(function(){
         var el = $('.clear-btn i').clone().removeClass('active');
         $('.clear-btn i').remove();
         $('.clear-btn').append(el);
+        el.addClass('active');
+
+    });
+    $('.card-button').on('click', '.search-btn', function () {
+
+        var el = $('.search-btn i').clone().removeClass('active');
+        $('.search-btn i').remove();
+        $('.search-btn').append(el);
         el.addClass('active');
 
     });

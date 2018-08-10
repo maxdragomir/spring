@@ -164,7 +164,7 @@
                 </div>
             </div>
             <div id="main-filter" class="row mt-4 mb-0">
-                <div class="col s12 m3 pr-4">
+                <div class="col s12 m4 l3 pr-4">
 
                     <div class="row mb-0">
 
@@ -183,7 +183,7 @@
 
                     <div class="row mb-0 picker-items">
 
-                        <div class="col s12 m12 l7 pr-0">
+                        <div class="col s6 m6 l7 pr-0">
                             <div class="card card-filters">
                                 <div class="input-field col s12 m-0">
                                     <input id="date-start" class="m-0 datepicker-start" type="text">
@@ -191,7 +191,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col s12 m12 l5 pl-0">
+                        <div class="col s6 m6 l5 pl-0">
                             <div class="card card-filters">
                                 <div class="input-field col s12 m-0">
                                     <input id="time-start" class="timepicker-start m-0" type="text">
@@ -199,7 +199,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col s12 m12 l7 pr-0">
+                        <div class="col s6 m6 l7 pr-0">
                             <div class="card card-filters">
                                 <div class="input-field col s12 m-0">
                                     <input id="date-end" class="m-0 datepicker-end" type="text">
@@ -207,7 +207,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col s12 m12 l5 pl-0">
+                        <div class="col s6 m6 l5 pl-0">
                             <div class="card card-filters">
                                 <div class="input-field col s12 m-0">
                                     <input id="time-end" class="timepicker-end m-0" type="text">
@@ -219,7 +219,7 @@
                     </div>
                 </div>
 
-                <div class="col s12 m9 pl-4">
+                <div class="col s12 m8 l9 pl-4">
 
                     <div class="row mb-0">
 
@@ -331,22 +331,12 @@
 
                     </div>
 
-                    <!--<div class="row mb-0">-->
-                        <!--<div class="col s12">-->
-                            <!--<div class="card card-inv card-button no-other-btn">-->
-                                <!--<div class="d-flex">-->
-                                    <!--<button type="button" class="btn clear-btn waves-effect tooltipped" data-position="top" data-tooltip="Clear"><i class="fa fa-times"></i></button>-->
-                                    <!--<button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Search"><i class="fa fa-search"></i> </button>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
                 </div>
             </div>
             <div class="row">
                 <div class="col s12">
                     <div class="card card-inv card-button space-between">
-                        <button type="button" class="btn clear-btn waves-effect tooltipped" data-position="top" data-tooltip="Clear"><i class="fa fa-trash-alt"></i></button>
+                        <button type="button" class="btn clear-btn waves-effect tooltipped" data-position="top" data-tooltip="Clear"><i class="fa fa-broom"></i></button>
                         <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Search"><i class="fa fa-search"></i> </button>
                     </div>
                 </div>
@@ -1082,15 +1072,18 @@
     //= template/footer.html
 
     <script>
-        var titlePos = Math.floor($('.card-title').offset().top);
+        var titlePos = Math.floor($('.card-title').offset().top),
+            tableHeight = $('.card-table').height();
 
         //fix panel-title
         function fixedTitle() {
 
-            if ($(window).scrollTop() >= titlePos) {
-                $('body').addClass('fixed-title');
-            } else if ($(window).scrollTop() < titlePos) {
-                $('body').removeClass('fixed-title');
+            if(tableHeight > 1000) {
+                if ($(window).scrollTop() >= titlePos) {
+                    $('body').addClass('fixed-title');
+                } else if ($(window).scrollTop() < titlePos) {
+                    $('body').removeClass('fixed-title');
+                }
             }
 
         }
@@ -1099,8 +1092,12 @@
             fixedTitle();
         });
 
-        $(document).ready(function () {
+        $(window).resize(function(){
+            fixedTitle();
+        });
 
+        $(document).ready(function () {
+            fixedTitle();
 
             // bar colors
             $.each($('.determinate'), function() {

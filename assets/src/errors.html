@@ -877,7 +877,12 @@
             fixedTitle();
         });
 
+        $(window).resize(function(){
+            fixedTitle();
+        });
+
         $(document).ready(function () {
+            fixedTitle();
 
             // toggle tooltip status;
             $.each($('.switch-active'), function() {

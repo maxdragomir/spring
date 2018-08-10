@@ -227,7 +227,7 @@
             <div class="row">
                 <div class="col s12">
                     <div class="card card-inv card-button space-between">
-                        <button type="button" class="btn clear-btn waves-effect tooltipped" data-position="top" data-tooltip="Clear"><i class="fa fa-trash-alt"></i></button>
+                        <button type="button" class="btn clear-btn waves-effect tooltipped" data-position="top" data-tooltip="Clear"><i class="fa fa-broom"></i></button>
                         <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Search"><i class="fa fa-search"></i> </button>
                     </div>
                 </div>
@@ -1236,7 +1236,12 @@
             fixedTitle();
         });
 
+        $(window).resize(function(){
+            fixedTitle();
+        });
+
         $(document).ready(function () {
+            fixedTitle();
 
             // toggle tooltip status
             $.each($('.switch-active'), function() {

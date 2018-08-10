@@ -23,11 +23,14 @@ body {
     box-shadow: 0 -10px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2);
     transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
   }
-  &.fixed-title .main .content .card-title {
-    position: fixed;
-    width: calc(100% - 82px);
-    top: 28px;
-    border-radius: 0 0 10px 10px;
+  &.fixed-title .main .content {
+
+    .card-title {
+      position: fixed;
+      width: calc(100% - 82px);
+      top: 28px;
+      border-radius: 0 0 10px 10px;
+    }
   }
   &.fixed-title .main .content .thead-desctop {
     position: fixed;
@@ -153,7 +156,7 @@ body {
     background-color: #f4b627
   }
 }
-@keyframes clear-btn {
+@keyframes filter-btn-animate {
   20% {
     transform: rotate(15deg)
   }
@@ -1567,12 +1570,14 @@ div.btn {
               transform: scale(0);
               transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
 
-              //&.color-green {
-              //  color: $card-green-text;
-              //}
-              //&.color-red{
-              //  color: $card-red-text;
-              //}
+              &.color-green {
+                color: #fff;
+                background: $card-green-text-l;
+              }
+              &.color-red{
+                color: #fff;
+                background: $card-red-text-l;
+              }
             }
             .active {
               opacity: 1;
@@ -1604,14 +1609,14 @@ div.btn {
                 &.color-red {
                   &:hover {
                     color: #fff;
-                    background: $card-red-text;
+                    background: $card-red-text-l;
                     transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
                   }
                 }
                 &.color-green {
                   &:hover {
                     color: #fff;
-                    background: $card-green-text;
+                    background: $card-green-text-l;
                     transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
                   }
                 }
@@ -2315,6 +2320,7 @@ div.btn {
               }
             }
           }
+
           .btn-checklist {
             right: 9.5rem;
             transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
@@ -2441,7 +2447,7 @@ div.btn {
 
       &:hover {
         box-shadow: 0 14px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2);
-        transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+        transition: box-shadow 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
       }
 
       &.card-green {
@@ -3078,6 +3084,11 @@ div.btn {
         .search-btn {
           background: $card-green-block;
           border-radius: 0 10px 10px 0;
+
+          & > i.active {
+            transform-origin: center;
+            animation: filter-btn-animate 1000ms  cubic-bezier(0.34, 1.61, 0.7, 1);
+          }
         }
 
         .clear-btn {
@@ -3088,7 +3099,7 @@ div.btn {
 
           & > i.active {
             transform-origin: center;
-            animation: clear-btn 1000ms  cubic-bezier(0.34, 1.61, 0.7, 1);
+            animation: filter-btn-animate 1000ms  cubic-bezier(0.34, 1.61, 0.7, 1);
           }
         }
 
@@ -3553,6 +3564,11 @@ div.btn {
               left: 0;
               opacity: 0;
               transition: all 300ms cubic-bezier(0.34, 1.31, 0.7, 1);
+
+              [type="checkbox"]:checked + span:not(.lever):before {
+                border-right-color: $card-green-text;
+                border-bottom-color: $card-green-text;
+              }
             }
 
             &.open {
@@ -3576,7 +3592,12 @@ div.btn {
               flex-flow: column;
 
               a {
-                margin: .5rem 0 0 0;
+                margin: 0;
+
+                &:not(:first-child) {
+                  margin: .5rem 0 0 0;
+                }
+
               }
             }
           }
@@ -3780,6 +3801,10 @@ div.btn {
           padding: 0 2rem 2rem;
 
           .input-field {
+
+            label {
+              transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+            }
             input {
               &:focus {
                 box-shadow: none;
@@ -3793,6 +3818,18 @@ div.btn {
               }
               label.active {
                 color: $card-green-text;
+              }
+            }
+            &.color-grey {
+              input {
+                &:focus {
+                  border-bottom: 1px solid #b3b3b3;
+                }
+              }
+              label.active {
+                color: #b3b3b3;
+                transform: translateY(-12px) scale(1);
+                transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
               }
             }
 
@@ -4445,12 +4482,7 @@ div.btn {
           width: 75px;
         }
         &:last-child {
-          width: 190px;
-
-          a {
-            margin-bottom: 5px;
-          }
-
+          width: 120px;
         }
       }
       tbody {
@@ -4464,6 +4496,18 @@ div.btn {
               width: 100%;
             }
 
+          }
+        }
+        .actions-btn {
+          a {
+            margin: 0;
+
+            &:first-child {
+              margin-bottom: .5rem;
+            }
+            &:nth-child(2) {
+              margin-bottom: .5rem;
+            }
           }
         }
       }
@@ -4564,14 +4608,14 @@ div.btn {
         &:last-child {
           width: 80px;
 
-          a {
-            width: 30px;
-            height: 30px;
-
-            i {
-              font-size: 1rem;
-            }
-          }
+          //a {
+          //  width: 30px;
+          //  height: 30px;
+          //
+          //  i {
+          //    font-size: 1rem;
+          //  }
+          //}
         }
 
       }
@@ -4848,19 +4892,7 @@ div.btn {
           }
         }
       }
-      .picker-items {
-        & > .col {
-          padding: 0 .75rem !important;
 
-          .card.card-filters {
-            border-radius: 10px;
-
-            .input-field input {
-              border-right: 0;
-            }
-          }
-        }
-      }
       .card {
         &.card-inv.card-button {
           width: 100%;
@@ -4891,9 +4923,6 @@ div.btn {
               margin-bottom: 2rem;
             }
           }
-        }
-        &.card-temp {
-
         }
       }
       .card-label-img {
@@ -5012,8 +5041,9 @@ div.btn {
       &.card-filters {
         flex-flow: column;
 
+
         .timepicker-modal {
-          margin-right: auto;
+          margin-right: 0;
         }
 
         .input-field input {
