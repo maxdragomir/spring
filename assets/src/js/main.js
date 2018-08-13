@@ -8,3 +8,4 @@
 //= ../bower_components/pikaday/pikaday.js
 //= ../bower_components/addinput/add-input-area.min.js
 //= ../bower_components/selectize/selectize.min.js
+//= ../bower_components/sweetalert2/dist/sweetalert2.all.min.js

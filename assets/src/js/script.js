@@ -13,6 +13,8 @@ function copy(element_id){
 
 $(document).ready(function(){
 
+
+
     $('.under-construction-page').addClass('active');
     setTimeout(function () {
         $('.card-filters label').addClass('show-label');
@@ -37,11 +39,28 @@ $(document).ready(function(){
     });
 
     $('.log-out').on('click', function (e) {
-        var isYes = confirm("Are you sure?");
+        // var isYes = confirm("Are you sure?");
+        //
+        // if(!isYes) {
+        //     e.preventDefault();
+        // }
+        e.preventDefault();
 
-        if(!isYes) {
-            e.preventDefault();
-        }
+        swal({
+            title: 'Are you sure?',
+            type: 'warning',
+            cancelButtonText: 'No',
+            confirmButtonText: 'Yes',
+            confirmButtonClass: 'waves-effect',
+            cancelButtonClass: 'waves-effect',
+            showCancelButton: true,
+            reverseButtons: true
+        }).then((result) => {
+            if (result.value) {
+                location.href = '/login.html';
+            }
+        })
+
     });
 
     $('.multi-tags').selectize({

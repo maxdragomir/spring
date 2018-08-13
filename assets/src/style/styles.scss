@@ -1,9 +1,11 @@
 // Переопределение дефолтных значений переменных Bootstrap 4 и определение своих
 @import "variables";
 
+
 * {
   outline: none;
 }
+
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -137,6 +139,8 @@ body {
   animation-delay: 2s
 }
 
+
+
 @keyframes spinner {
   0% {
     transform: rotate(0deg)
@@ -173,6 +177,8 @@ body {
     transform: rotate(0deg)
   }
 }
+
+
 
 .wrapper {
   position: relative;
@@ -225,7 +231,7 @@ div.btn {
     color: #333;
   }
 }
-.rotate-btn-icon{
+.rotate-btn-icon {
   &:hover {
     transition: all 800ms cubic-bezier(0.34, 1.61, 0.7, 1);
 
@@ -1342,6 +1348,7 @@ div.btn {
   }
 
 }
+
 .d-flex {
   display: flex;
 }
@@ -3081,8 +3088,9 @@ div.btn {
           align-items: center;
           height: 50px;
         }
-        .search-btn {
+        .search-btn, .delivery-download {
           background: $card-green-block;
+          box-shadow: $card-green-shadow;
           border-radius: 0 10px 10px 0;
 
           & > i.active {
@@ -3105,6 +3113,7 @@ div.btn {
 
         .other-btn {
           background: $card-orange-text;
+          box-shadow: $card-orange-shadow;
           color: #fff;
           width: 100px;
           border-radius: 10px;
@@ -4256,6 +4265,7 @@ div.btn {
           background: $card-green-block;
           box-shadow: $card-green-shadow;
           border-radius: 10px;
+          font-size: 1.3rem;
         }
       }
       &.card-fix {
@@ -4386,6 +4396,106 @@ div.btn {
   }
 }
 
+.swal2-modal {
+  border-radius: 10px !important;
+  background: #eee !important;
+  box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+
+  .swal2-actions {
+    display: flex;
+    justify-content: space-between !important;
+    width: 100%;
+    background: #fafafa;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    margin: 0 !important;
+    border-radius: 10px;
+
+    button {
+      text-transform: uppercase;
+      outline: none;
+      height: 40px;
+      border-radius: 10px !important;
+      transition: all 100ms ease;
+    }
+
+    button:active {
+      background-image: none;
+      transform: scale(.95);
+      transition: all 100ms ease;
+    }
+
+
+    .swal2-cancel  {
+      background: linear-gradient(60deg, #ffa726, #fb8c00) !important;
+      box-shadow: 0 12px 20px -10px rgba(255, 152, 0, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(255, 152, 0, 0.2) !important;
+      color: #fff;
+    }
+    .swal2-confirm  {
+      background: linear-gradient(60deg, #66bb6a, #43a047) !important;
+      box-shadow: 0 12px 20px -10px rgba(76, 175, 80, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(76, 175, 80, 0.2) !important;
+    }
+  }
+
+  .swal2-content {
+    margin-bottom: 80px !important;
+  }
+
+  .swal2-icon {
+    & > div {
+      background: transparent !important;
+    }
+  }
+
+  .swal2-title {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .swal2-icon.swal2-warning {
+    border-color: $card-orange-text-l;
+    color: $card-orange-text-l;
+
+    [class^=swal2-x-mark-line] {
+      background-color: $card-orange-text-l;
+    }
+  }
+  .swal2-icon.swal2-error {
+    border-color: $card-red-text-l;
+    color: $card-red-text-l;
+
+    [class^=swal2-x-mark-line] {
+      background-color: $card-red-text-l;
+    }
+  }
+  .swal2-icon.swal2-success {
+    border-color: $card-green-text-l;
+    color: $card-green-text-l;
+
+    [class^=swal2-success-line] {
+      background-color: $card-green-text-l;
+    }
+  }
+  .swal2-icon.swal2-info {
+    border-color: $card-blue-text-l;
+    color: $card-blue-text-l;
+
+    [class^=swal2-success-line] {
+      background-color: $card-blue-text-l;
+    }
+  }
+  .swal2-icon.swal2-question {
+    border-color: $card-purple-text-l;
+    color: $card-purple-text-l;
+
+    [class^=swal2-success-line] {
+      background-color: $card-purple-text-l;
+    }
+  }
+}
 
 @media only screen and (max-width: 1910px) {
   .main .content .card {
@@ -4816,7 +4926,6 @@ div.btn {
     }
   }
 }
-
 @media only screen and (max-width: 992px) {
   body.fixed-title .main .content .card-fix {
     width: 70%;
