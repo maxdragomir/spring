@@ -64,6 +64,10 @@ body {
       transition: all 800ms cubic-bezier(0.34, 1.31, 0.7, 1);
     }
   }
+
+  &.overflow-auto {
+    overflow: auto !important;
+  }
 }
 .mobile {
   display: none;
@@ -194,6 +198,12 @@ button {
     transition: all 100ms ease;
   }
 }
+a.modal-trigger.disabled {
+  pointer-events: none;
+  box-shadow: none;
+  color: #9F9F9F !important;
+  cursor: default;
+}
 div.btn {
   &:active {
     transform: inherit;
@@ -314,6 +324,15 @@ div.btn {
 }
 .modal.modal-style {
   background: #eee;
+  transition: top 500ms cubic-bezier(0.34, 1.31, 0.7, 1);
+
+  & + .modal-overlay{
+    transition: all 500ms cubic-bezier(0.34, 1.31, 0.7, 1);
+  }
+  & + .new-overlay {
+    opacity: .2 !important;
+    transition: all 500ms cubic-bezier(0.34, 1.31, 0.7, 1);
+  }
 
   .under-construction-page {
     height: auto;
@@ -367,6 +386,20 @@ div.btn {
     border-radius: 10px;
     overflow: visible !important;
 
+    &.modal-hide {
+      top: 170% !important;
+      transition: all 500ms cubic-bezier(0.34, 1.31, 0.7, 1);
+
+      .hide-window {
+        i {
+          display: none;
+
+          &:first-child {
+            display: block;
+          }
+        }
+      }
+    }
 
     .modal-header {
       position: absolute;
@@ -491,6 +524,17 @@ div.btn {
 
       i {
         font-size: 1rem;
+      }
+    }
+    .hide-window {
+      i {
+        transform: rotate(0);
+        transform-origin: center;
+        transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+
+        &:first-child {
+          display: none;
+        }
       }
     }
     button {
@@ -1121,24 +1165,6 @@ div.btn {
         height: 300px;
         transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
       }
-
-      .copy-btn {
-        position: fixed;
-        top: 1rem;
-        right: 1.7rem;
-        background: #fff;
-        color: #ddd;
-        box-shadow: none;
-        border-radius: 0 0 0 10px;
-        width: 50px;
-        height: 50px;
-        transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
-
-        &:hover {
-          color: #555;
-          transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
-        }
-      }
     }
     .parcel-source, .parcel-audit, .parcel-log {
       position: relative;
@@ -1303,6 +1329,8 @@ div.btn {
         display: flex;
 
         a {
+          padding: 5px;
+          border-radius: 5px;
           transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
 
           &:hover {
@@ -1479,7 +1507,6 @@ div.btn {
 .color-black {
   color: #333;
 }
-
 .bg-secondary {
   background: $secondary-color;
 }
@@ -2958,6 +2985,7 @@ div.btn {
               flex: auto;
               text-align: center;
               background: $card-cyan-block;
+              box-shadow: $card-cyan-shadow;
               padding: 10px 12px;
 
               .year-text {
@@ -2991,7 +3019,11 @@ div.btn {
           }
           .datepicker-table td.is-selected {
             background: $card-cyan-block;
+            box-shadow: $card-cyan-shadow;
             color: #fff !important;
+          }
+          .datepicker-day-button:focus {
+            background: rgba(51,149,255, .5);
           }
           .datepicker-footer {
             padding: 5px 10px;
@@ -3031,7 +3063,7 @@ div.btn {
             background: rgba(51,149,255, .5);
           }
           .timepicker-footer {
-            button {
+            .confirmation-btns button {
               color: $card-cyan-text;
             }
 
@@ -3182,7 +3214,6 @@ div.btn {
         }
 
         .thead-mobile {
-          //max-height: 3000px;
           height: auto;
           transition: all 500ms ease;
 
@@ -3197,10 +3228,30 @@ div.btn {
           border-radius: 10px;
           table-layout: fixed;
         }
-
+        thead tr {
+          background: #fff !important;
+        }
         tr {
           border: none;
           height: auto;
+
+          //&:hover {
+          //  background-color: rgba(242, 242, 242, 0.5);
+          //  transition: all 300ms cubic-bezier(0.34, 1, 0.7, 1);
+          //
+          //  .alot-text {
+          //    &:after {
+          //      box-shadow: inset 0 -15px 20px rgba(255, 255, 255, 0);
+          //      transition: all 300ms cubic-bezier(0.34, 1, 0.7, 1);
+          //    }
+          //
+          //    .btn-show-all {
+          //      opacity: 1;
+          //      transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+          //
+          //    }
+          //  }
+          //}
         }
 
         th {
@@ -3408,35 +3459,78 @@ div.btn {
         tbody {
           .alot-text {
             position: relative;
-            overflow: hidden;
+            //overflow: hidden;
             transition: all 300ms cubic-bezier(0.34, 1, 0.7, 1);
 
-
-            &.show-all {
-
-              button {
-                opacity: 1;
-                &:after {
-                  transform: scale(1, 1) rotate(40deg);
-                  opacity: 1;
-                  transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
-                }
-              }
-            }
-
-            & > div {
-              display: block;
-              position: relative;
+            .hide-text {
+              height: 0;
+              opacity: 0;
               transition: all 300ms cubic-bezier(0.34, 1, 0.7, 1);
             }
 
+            a {
+              display: flex;
+              color: #333;
+            }
+
+            //&:after {
+            //  content: '';
+            //  position: absolute;
+            //  bottom: 0;
+            //  right: 0;
+            //  left: 0;
+            //  width: 100%;
+            //  height: 20px;
+            //  box-shadow: inset 0 -10px 25px #fff;
+            //  transition: all 300ms cubic-bezier(0.34, 1, 0.7, 1);
+            //}
+
+            //&.no-shad {
+            //  &:after {
+            //    display: none;
+            //  }
+            //}
+
+
+            //&.show-all {
+            //
+            //  &:after {
+            //    box-shadow: inset 0 -15px 20px rgba(255,255,255, 0);
+            //    transition: all 300ms cubic-bezier(0.34, 1, 0.7, 1);
+            //  }
+            //
+            //  button {
+            //    opacity: .8;
+            //    transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+            //
+            //    i {
+            //      transform: rotate(180deg);
+            //      transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+            //    }
+
+                //&:after {
+                //  transform: scale(1, 1) rotate(40deg);
+                //  opacity: 1;
+                //  transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+                //}
+            //  }
+            //}
+
+            //& > div {
+            //  display: block;
+            //  position: relative;
+            //  transition: all 300ms cubic-bezier(0.34, 1, 0.7, 1);
+            //}
+
             .btn-show-all {
               position: absolute;
-              top: 0;
+              bottom: -5px;
               right: 0;
-              cursor: pointer;
-              justify-content: center;
+              display: flex;
+              justify-content: flex-end;
               align-items: center;
+              width: 100%;
+              cursor: pointer;
               color: #333;
               border: 0;
               background: transparent;
@@ -3446,22 +3540,25 @@ div.btn {
               transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
 
               i {
-                font-size: 1rem;
-              }
-
-              &:after {
-                content: '';
-                position: absolute;
-                top: 7px;
-                right: 3px;
-                width: 20px;
-                height: 2px;
-                background: #333;
-                opacity: 0;
+                transform: rotate(0);
                 transform-origin: center;
-                transform: scale(0, 0) rotate(40deg);
+                font-size: 1.2rem;
                 transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
               }
+
+              //&:after {
+              //  content: '';
+              //  position: absolute;
+              //  top: 7px;
+              //  right: 3px;
+              //  width: 20px;
+              //  height: 2px;
+              //  background: #333;
+              //  opacity: 0;
+              //  transform-origin: center;
+              //  transform: scale(0, 0) rotate(40deg);
+              //  transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+              //}
 
 
               &:hover {
@@ -3469,10 +3566,10 @@ div.btn {
                 color: $secondary-color;
                 transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
 
-                &:after {
-                  background: $secondary-color;
-                  transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
-                }
+                //&:after {
+                //  background: $secondary-color;
+                //  transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+                //}
               }
             }
           }
@@ -3572,6 +3669,7 @@ div.btn {
               position: absolute;
               left: 0;
               opacity: 0;
+              visibility: hidden;
               transition: all 300ms cubic-bezier(0.34, 1.31, 0.7, 1);
 
               [type="checkbox"]:checked + span:not(.lever):before {
@@ -3587,6 +3685,7 @@ div.btn {
 
               .checklist {
                 opacity: 1;
+                visibility: visible;
                 transition: all 300ms cubic-bezier(0.34, 1.31, 0.7, 1);
 
               }
@@ -4667,12 +4766,16 @@ div.btn {
             width: 230px;
           }
           &:last-child {
-            width: 100px;
+            width: 90px;
           }
         }
         tbody {
           .alot-text {
             width: 200px;
+
+            &:after {
+              display: none;
+            }
           }
           .td-links {
             flex-flow: column;
@@ -4706,26 +4809,14 @@ div.btn {
     &.card-table {
       td, th {
 
-        //&:first-child {
-        //  width: 185px;
-        //}
         &:nth-child(2) {
-          width: 110px;
+          width: 100px;
         }
         &:nth-child(5) {
           width: 200px;
         }
         &:last-child {
           width: 80px;
-
-          //a {
-          //  width: 30px;
-          //  height: 30px;
-          //
-          //  i {
-          //    font-size: 1rem;
-          //  }
-          //}
         }
 
       }
@@ -4759,12 +4850,8 @@ div.btn {
   .main .content .card {
     &.card-table {
       td, th {
-        &:nth-child(2) {
-          width: 100px;
-        }
-
         &:nth-child(7) {
-          width: 120px;
+          width: 100px;
         }
       }
     }
@@ -4892,9 +4979,13 @@ div.btn {
                 width: auto;
               }
               .print-links {
-                div:not(:first-child) {
+                & > div:not(:first-child) {
                   span {
+                    justify-content: flex-end;
                     width: 100%;
+                  }
+                  & > div {
+                    flex-flow: row;
                   }
                 }
               }
@@ -4961,10 +5052,6 @@ div.btn {
       .more-info .info-row {
         width: 70%;
       }
-      .copy-btn {
-        right: .7rem !important;
-      }
-
       .card-modal .original-data {
         margin-left: 0;
         margin-top: 1.5rem;
@@ -5296,6 +5383,15 @@ div.btn {
             }
           }
         }
+        &.card-table {
+          .print-links {
+            & > div:not(:first-child) {
+              & > div {
+                flex-flow: column !important;
+              }
+            }
+          }
+        }
       }
     }
     .footer {
@@ -5362,6 +5458,8 @@ div.btn {
         width: 35px;
         height: 35px;
         border-radius: 5px;
+        transform: scale(1);
+        transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
       }
     }
     .modal-footer {
@@ -5390,9 +5488,6 @@ div.btn {
     .header nav {
       .logo {
         width: 60px;
-      }
-      .left-side .text-status {
-        right: -70px;
       }
       .nav-wrapper .right-side .show-mode + .dropdown-content {
         right: auto;
