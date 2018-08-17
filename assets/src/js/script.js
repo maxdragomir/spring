@@ -9,6 +9,11 @@ $(document).ready(function(){
     });
 
 
+    $('.card-title_printer-btn').on('click', function () {
+       $(this).next().toggleClass('show');
+       $(this).toggleClass('show');
+    });
+
     //under construction
     $('.under-construction-page').addClass('active');
     setTimeout(function () {
@@ -29,6 +34,61 @@ $(document).ready(function(){
         $('.search-btn i').remove();
         $('.search-btn').append(el);
         el.addClass('active');
+
+    });
+
+    // btn cancel
+    $('.btn-cancel').on('click', function () {
+        swal({
+            title: 'Are you sure?',
+            type: 'warning',
+            cancelButtonText: 'No',
+            confirmButtonText: 'Yes',
+            confirmButtonClass: 'waves-effect',
+            cancelButtonClass: 'waves-effect',
+            showCancelButton: true,
+        }).then((result) => {
+            if (result.value) {
+
+            }
+        })
+    });
+
+    // btn delete
+    $('.btn-delete').on('click', function () {
+
+        (async function getText () {
+            const {value: text} = await swal({
+                title: 'Are you sure?',
+                text: 'Type \' Y \' to confirm',
+                type: 'warning',
+                input: 'text',
+                showCancelButton: true,
+                inputAttributes: {
+                    autocapitalize: 'off'
+                },
+                inputValidator: (value) => {
+                    return !value && 'You need to write something!'
+                }
+            });
+            if (text === 'Y' || text === 'y') {
+                swal({
+                    type: 'success',
+                    title: 'Okay',
+                    text: 'You write: ' + text,
+                })
+
+            } else if (text === undefined) {
+                return;
+            } else {
+                swal({
+                    type: 'error',
+                    title: 'Nope',
+                    text: 'You write: ' + text,
+                })
+            }
+
+        })()
 
     });
 
@@ -61,18 +121,8 @@ $(document).ready(function(){
             item: function(data, escape) {
                 return '<div>' + escape(data.text) + '</div>';
             }
-        },
-        onDelete: function(values) {
-            // return confirm(values.length > 1 ? 'Are you sure you want to remove these ' + values.length + ' items?' : 'Are you sure you want to remove "' + values[0] + '"?');
         }
     });
-
-    // var loader = $('.loader');
-    // setTimeout(function () {
-    //     if (!loader.hasClass('ok')) {
-    //         loader.addClass('ok');
-    //     }
-    // }, 500);
 
 
     $('#list-products').addInputArea({
@@ -164,7 +214,7 @@ $(document).ready(function(){
         autoClose: true,
         selectYears: 50,
         showClearBtn: true,
-        format: 'dd/mmm/yyyy',
+        format: 'yyyy/mmm/dd',
         onSelect: function(obj){
 
         }
