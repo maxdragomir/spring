@@ -184,6 +184,7 @@ body {
 
 
 
+
 .wrapper {
   position: relative;
 }
@@ -203,6 +204,10 @@ a.modal-trigger.disabled {
   box-shadow: none;
   color: #9F9F9F !important;
   cursor: default;
+}
+.btn.disabled {
+  background: #DFDFDF !important;
+  box-shadow: $main-shadow !important;
 }
 div.btn {
   &:active {
@@ -565,6 +570,10 @@ div.btn {
     width: 100%;
     overflow-y: auto;
     z-index: 2;
+
+    .dop-fields {
+      display: none;
+    }
 
     .dropdown-content {
       //top: 55px !important;
@@ -1026,18 +1035,18 @@ div.btn {
 
       .products_var {
         position: relative;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         border: 1px solid #ddd;
         background: rgba(0,0,0, .03);
         border-radius: 10px;
 
         .btn-remove-product {
           position: absolute;
-          top: 50%;
-          right: -22px;
-          width: 45px;
-          height: 45px;
-          display: flex;
+          top: -20px;
+          right: -20px;
+          width: 40px;
+          height: 40px;
+          display: flex !important;
           margin: 0 auto;
           justify-content: center;
           align-items: center;
@@ -1045,7 +1054,6 @@ div.btn {
           background: $card-red-block;
           box-shadow: $card-red-shadow;
           color: #fff;
-          transform: translateY(-50%);
         }
 
         .select-wrapper svg {

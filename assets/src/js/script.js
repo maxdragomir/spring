@@ -138,6 +138,7 @@ $(document).ready(function(){
             });
         }
     });
+    $('#add .products_var').remove();
 
     $('.csv-file').hide();
     $('.csv-file.active').show();
