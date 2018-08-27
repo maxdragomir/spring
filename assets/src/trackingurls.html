@@ -1257,19 +1257,22 @@
                     switchBtn.attr('data-tooltip', 'Activate');
                 }
 
-                $('.switch-active').on('click', function () {
+            });
+            $('.switch-active').on('click', function () {
 
-                    if(switchInput.prop('checked')) {
-                        switchBtn.data('tooltip', 'Deactivate');
-                        switchBtn.attr('data-tooltip', 'Deactivate');
-                    } else {
-                        switchBtn.data('tooltip', 'Activate');
-                        switchBtn.attr('data-tooltip', 'Activate');
-                    }
+                var switchBtn = $(this),
+                    switchInput = $(this).find('input');
 
-                    $(this).tooltip('close');
+                if(switchInput.prop('checked')) {
+                    switchBtn.data('tooltip', 'Deactivate');
+                    switchBtn.attr('data-tooltip', 'Deactivate');
+                } else {
+                    switchBtn.data('tooltip', 'Activate');
+                    switchBtn.attr('data-tooltip', 'Activate');
+                }
 
-                });
+                $(this).tooltip('close');
+                // console.log(this);
 
             });
 

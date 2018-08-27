@@ -16,9 +16,8 @@ $(document).ready(function(){
 
     //under construction
     $('.under-construction-page').addClass('active');
-    setTimeout(function () {
-        $('.card-filters label').addClass('show-label');
-    }, 500);
+
+    $('.card-filters label').addClass('show-label');
 
     //clear filters and animate icon
     $('.card-button').on('click', '.clear-btn', function () {
@@ -47,10 +46,6 @@ $(document).ready(function(){
             confirmButtonClass: 'waves-effect',
             cancelButtonClass: 'waves-effect',
             showCancelButton: true,
-        }).then((result) => {
-            if (result.value) {
-
-            }
         })
     });
 
@@ -167,7 +162,6 @@ $(document).ready(function(){
         $('#content-block').addClass('active').slideDown();
     });
 
-
     //modal close
     $('.modal-ask-close').on('click', function () {
         swal({
@@ -188,6 +182,7 @@ $(document).ready(function(){
     });
 
 //Materialize func ------------
+
     $('.modal-style').modal({
         dismissible: false,
         onCloseEnd: function(){
@@ -216,17 +211,32 @@ $(document).ready(function(){
         selectYears: 50,
         showClearBtn: true,
         format: 'yyyy/mmm/dd',
-        onSelect: function(obj){
+        // minDate: '2018/3/20',
+       // maxDate: 2018/Aug/18,
+        onSelect: function () {
 
-        }
+            // var d1 = $('#date-start').val();
+            // var d2 = $('#date-end').val();
+            //
+            // var date1 = new Date(d1);
+            // var date2 = new Date(d2);
+        },
     });
 
-    $('select').formSelect();
-
     $('.materialboxed').materialbox();
+
     $('.dropdown-trigger').dropdown();
     $('.dropdown-trigger-right').dropdown({
         alignment: 'right'
+    });
+
+    $('select').formSelect({
+        dropdownOptions: {
+            // container: '.card'
+            // hover: true,
+            // autoTrigger: false
+            // closeOnClick: false
+        }
     });
 
     $('.tooltipped').tooltip({
@@ -247,7 +257,6 @@ $(document).ready(function(){
             $('.sidebar_bg').removeClass('open');
         }
     });
-
 
 });
 
