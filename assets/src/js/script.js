@@ -195,33 +195,6 @@ $(document).ready(function(){
         }
     });
 
-    $('input[class*="timepicker-"]').timepicker({
-        vibrate: true,
-        twelveHour: false,
-        autoClose: true,
-        showClearBtn: true
-    });
-
-    $('input[class*="datepicker-"]').datepicker({
-        showDaysInNextAndPreviousMonths: true,
-        showMonthAfterYear: true,
-        firstDay: 1,
-        selectMonths: true,
-        autoClose: true,
-        selectYears: 50,
-        showClearBtn: true,
-        format: 'yyyy/mmm/dd',
-        // minDate: '2018/3/20',
-       // maxDate: 2018/Aug/18,
-        onSelect: function () {
-
-            // var d1 = $('#date-start').val();
-            // var d2 = $('#date-end').val();
-            //
-            // var date1 = new Date(d1);
-            // var date2 = new Date(d2);
-        },
-    });
 
     $('.materialboxed').materialbox();
 
@@ -258,5 +231,100 @@ $(document).ready(function(){
         }
     });
 
+    $('input[class*="timepicker-"]').timepicker({
+        vibrate: true,
+        twelveHour: false,
+        autoClose: true,
+        showClearBtn: true
+    });
+
+    $('#date-start').rangePicker('#date-end', {
+        showDaysInNextAndPreviousMonths: true,
+        showMonthAfterYear: true,
+        firstDay: 1,
+        selectMonths: true,
+        autoClose: true,
+        selectYears: 50,
+        showClearBtn: true,
+        format: 'yyyy/mmm/dd',
+    });
+
+    // addPikadayRange(tmp['s_date1'],tmp['s_date2']);
+
 });
+
+$.fn.rangePicker = function(pickerTo, options) {
+    let from = $(this),
+        to = $(pickerTo);
+
+    if(options['onSelect'] === undefined) {
+        options['onSelect'] = () => {
+            let instanceFrom = M.Datepicker.getInstance(from),
+                instanceTo = M.Datepicker.getInstance(to);
+
+            if (instanceFrom.date) {
+                instanceTo.options.minDate = instanceFrom.date;
+            }
+
+            if (instanceTo.date) {
+                instanceFrom.options.maxDate = instanceTo.date;
+            }
+        }
+    }
+
+    $(to).datepicker(options);
+    $(from).datepicker(options);
+};
+
+
+
+
+
+
+
+
+
+
+
+//OLD PICKERS
+var W=window,
+    D=W.document,
+    tmp=D.forms['SearchForm'].elements;
+
+
+function getEl(el) {
+    return (typeof(el)=='string') ? D.getElementById(el) : el;
+}
+
+
+function addPikaday(el,onSelectCallback) {
+    el=getEl(el);
+
+    el.x_pikaday=new Pikaday({
+        'field' : el,
+        'firstDay' : 1,
+        'onSelect' : (onSelectCallback || null)
+    });
+}
+
+function addPikadayRange(el1,el2) {
+    el1=getEl(el1);
+    el2=getEl(el2);
+
+    var onSelectCallback=function () {
+        var p1=el1.x_pikaday,
+            p2=el2.x_pikaday,
+            d1=p1.getDate(),
+            d2=p2.getDate();
+        p1.setStartRange(d1);
+        p1.setEndRange(d2);
+        p1.setMaxDate(d2 || new Date('9999-12-31 12:00:00'));
+        p2.setStartRange(d1);
+        p2.setEndRange(d2);
+        p2.setMinDate(d1 || new Date('0001-01-01 12:00:00'));
+    };
+    addPikaday(el1,onSelectCallback);
+    addPikaday(el2,onSelectCallback);
+    onSelectCallback();
+}
 

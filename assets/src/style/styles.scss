@@ -3077,6 +3077,16 @@ div.btn {
             box-shadow: $card-cyan-shadow;
             color: #fff !important;
           }
+          .datepicker-table td.is-startrange {
+            background: $card-green-block;
+            box-shadow: $card-green-shadow;
+            color: #fff !important;
+          }
+          .datepicker-table td.is-endrange {
+            background: $card-red-block;
+            box-shadow: $card-red-shadow;
+            color: #fff !important;
+          }
           .datepicker-day-button:focus {
             background: rgba(51,149,255, .5);
           }
