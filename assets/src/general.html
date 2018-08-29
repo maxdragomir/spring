@@ -1073,7 +1073,9 @@
 
     <script>
         var titlePos = Math.floor($('.card-title').offset().top),
-            tableHeight = $('.card-table').height();
+            tableHeight = $('.card-table').height(),
+            theadDesctop = $('.thead-desctop').height(),
+            tableTitle = $('.table-title').height();
 
         //fix panel-title
         function fixedTitle() {
@@ -1081,8 +1083,10 @@
             if(tableHeight > 1000) {
                 if ($(window).scrollTop() >= titlePos) {
                     $('body').addClass('fixed-title');
+                    $('.thead-mobile').css('padding-top', theadDesctop + tableTitle);
                 } else if ($(window).scrollTop() < titlePos) {
                     $('body').removeClass('fixed-title');
+                    $('.thead-mobile').css('padding-top', 0);
                 }
             }
 

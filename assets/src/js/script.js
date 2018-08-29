@@ -9,34 +9,47 @@ $(document).ready(function(){
     });
 
 
-    $('.card-title_printer-btn').on('click', function () {
-       $(this).next().toggleClass('show');
-       $(this).toggleClass('show');
-    });
-
     //under construction
     $('.under-construction-page').addClass('active');
 
-    $('.card-filters label').addClass('show-label');
 
-    //clear filters and animate icon
+    //animate filter icon
     $('.card-button').on('click', '.clear-btn', function () {
+        let el, $btnIcon = $('.clear-btn i');
 
-        var el = $('.clear-btn i').clone().removeClass('active');
-        $('.clear-btn i').remove();
-        $('.clear-btn').append(el);
+        el = $btnIcon.clone().removeClass('active');
+        $btnIcon.remove();
+        $(this).append(el);
         el.addClass('active');
 
     }).on('click', '.search-btn', function () {
+        let el, $btnIcon = $('.search-btn i');
 
-        var el = $('.search-btn i').clone().removeClass('active');
-        $('.search-btn i').remove();
-        $('.search-btn').append(el);
+        el = $btnIcon.clone().removeClass('active');
+        $btnIcon.remove();
+        $(this).append(el);
+        el.addClass('active');
+
+    }).on('click', '.other-btn', function () {
+        let el, $btnIcon = $('.other-btn i');
+
+        el = $btnIcon.clone().removeClass('active');
+        $btnIcon.remove();
+        $(this).append(el);
+        el.addClass('active');
+
+    }).on('click', '.delivery-download', function () {
+        let el, $btnIcon = $('.delivery-download i');
+
+        el = $btnIcon.clone().removeClass('active');
+        $btnIcon.remove();
+        $(this).append(el);
         el.addClass('active');
 
     });
 
-    // btn cancel
+
+    //btn cancel table row
     $('.btn-cancel').on('click', function () {
         swal({
             title: 'Are you sure?',
@@ -49,7 +62,8 @@ $(document).ready(function(){
         })
     });
 
-    // btn delete
+
+    //btn delete table row
     $('.btn-delete').on('click', function () {
 
         (async function getText () {
@@ -87,6 +101,7 @@ $(document).ready(function(){
 
     });
 
+
     //log out
     $('.log-out').on('click', function (e) {
         e.preventDefault();
@@ -107,6 +122,8 @@ $(document).ready(function(){
 
     });
 
+
+    //multi-tags
     $('.multi-tags').selectize({
         maxItems: 1000,
         plugins: ['remove_button'],
@@ -120,6 +137,7 @@ $(document).ready(function(){
     });
 
 
+    //products
     $('#list-products').addInputArea({
         area_var: '.products_var',
         btn_add: '.products_add',
@@ -135,6 +153,8 @@ $(document).ready(function(){
     });
     $('#add .products_var').remove();
 
+
+    //csv tabs
     $('.csv-file').hide();
     $('.csv-file.active').show();
 
@@ -162,7 +182,8 @@ $(document).ready(function(){
         $('#content-block').addClass('active').slideDown();
     });
 
-    //modal close
+
+    //modal edit or modal add close
     $('.modal-ask-close').on('click', function () {
         swal({
             title: 'Are you sure?',
@@ -181,8 +202,11 @@ $(document).ready(function(){
         })
     });
 
-//Materialize func ------------
 
+//Materialize func ---------------------------------------------
+
+
+    //modal
     $('.modal-style').modal({
         dismissible: false,
         onCloseEnd: function(){
@@ -196,31 +220,31 @@ $(document).ready(function(){
     });
 
 
-    $('.materialboxed').materialbox();
-
+    //dropdown
     $('.dropdown-trigger').dropdown();
     $('.dropdown-trigger-right').dropdown({
         alignment: 'right'
     });
 
-    $('select').formSelect({
-        dropdownOptions: {
-            // container: '.card'
-            // hover: true,
-            // autoTrigger: false
-            // closeOnClick: false
-        }
-    });
 
+    //select
+    $('select').formSelect();
+
+
+    //tooltip
     $('.tooltipped').tooltip({
         margin: -5,
         transitionMovement: 10
     });
 
+
+    //collaps in mobile
     $('.collapsible').collapsible({
         accordion: true
     });
 
+
+    //sidenav mobile
     $('.sidenav').sidenav({
         edge: 'right',
         onOpenEnd: function () {
@@ -231,6 +255,8 @@ $(document).ready(function(){
         }
     });
 
+
+    //timepicker
     $('input[class*="timepicker-"]').timepicker({
         vibrate: true,
         twelveHour: false,
@@ -238,6 +264,8 @@ $(document).ready(function(){
         showClearBtn: true
     });
 
+
+    //datepicker
     $('#date-start').rangePicker('#date-end', {
         showDaysInNextAndPreviousMonths: true,
         showMonthAfterYear: true,
@@ -249,10 +277,10 @@ $(document).ready(function(){
         format: 'yyyy/mmm/dd',
     });
 
-    // addPikadayRange(tmp['s_date1'],tmp['s_date2']);
-
 });
 
+
+//rangePicker
 $.fn.rangePicker = function(pickerTo, options) {
     let from = $(this),
         to = $(pickerTo);
@@ -275,56 +303,3 @@ $.fn.rangePicker = function(pickerTo, options) {
     $(to).datepicker(options);
     $(from).datepicker(options);
 };
-
-
-
-
-
-
-
-
-
-
-
-//OLD PICKERS
-var W=window,
-    D=W.document,
-    tmp=D.forms['SearchForm'].elements;
-
-
-function getEl(el) {
-    return (typeof(el)=='string') ? D.getElementById(el) : el;
-}
-
-
-function addPikaday(el,onSelectCallback) {
-    el=getEl(el);
-
-    el.x_pikaday=new Pikaday({
-        'field' : el,
-        'firstDay' : 1,
-        'onSelect' : (onSelectCallback || null)
-    });
-}
-
-function addPikadayRange(el1,el2) {
-    el1=getEl(el1);
-    el2=getEl(el2);
-
-    var onSelectCallback=function () {
-        var p1=el1.x_pikaday,
-            p2=el2.x_pikaday,
-            d1=p1.getDate(),
-            d2=p2.getDate();
-        p1.setStartRange(d1);
-        p1.setEndRange(d2);
-        p1.setMaxDate(d2 || new Date('9999-12-31 12:00:00'));
-        p2.setStartRange(d1);
-        p2.setEndRange(d2);
-        p2.setMinDate(d1 || new Date('0001-01-01 12:00:00'));
-    };
-    addPikaday(el1,onSelectCallback);
-    addPikaday(el2,onSelectCallback);
-    onSelectCallback();
-}
-
