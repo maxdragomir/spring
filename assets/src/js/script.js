@@ -1,6 +1,10 @@
 
 $(document).ready(function(){
 
+    //test
+    // ScrollReveal().reveal('.page-title', { duration: 2000 });
+    ScrollReveal().reveal('table tbody tr', { interval: 200, distance: '50px' });
+
     //hide modal
     $('.hide-window').on('click', function () {
         $('body').toggleClass('overflow-auto');
@@ -249,9 +253,13 @@ $(document).ready(function(){
         edge: 'right',
         onOpenEnd: function () {
             $('.sidebar_bg').addClass('open');
+            setTimeout(function () {
+                $('.sidebar_bg span').addClass('open');
+            }, 10000);
         },
         onCloseStart: function () {
             $('.sidebar_bg').removeClass('open');
+            $('.sidebar_bg span').removeClass('open');
         }
     });
 
