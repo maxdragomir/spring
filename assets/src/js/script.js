@@ -1,9 +1,43 @@
 
 $(document).ready(function(){
 
-    //test
-    // ScrollReveal().reveal('.page-title', { duration: 2000 });
-    ScrollReveal().reveal('table tbody tr', { interval: 200, distance: '50px' });
+    //open original data
+    $('.original-btn').on('click', function () {
+        $(this).parents('.card-modal').children('.original-data').toggleClass('active');
+        $(this).toggleClass('active');
+    });
+
+    //original data close btn
+    $('.original-close').on('click', function () {
+        $(this).parents('.card-modal').children('.original-data').toggleClass('active');
+        $(this).parents('.card-modal').find('.original-btn').toggleClass('active');
+    });
+
+
+    //dump logs
+    $('.btn-source').on('click', function () {
+        $(this).parents('.row').find('.block-source').toggleClass('show');
+        $(this).children('.fa-angle-down').toggleClass('show');
+    });
+
+    //audit logs
+    $('.btn-audit').on('click', function () {
+        $(this).parents('.row').find('.block-audit').toggleClass('show');
+        $(this).children('.fa-angle-down').toggleClass('show');
+    });
+
+
+    //additionally inputs for some country
+    $('.country-dop').on('change', function () {
+        var selectUser = $(this).val();
+
+        if (selectUser === 'AX') {
+            $('.dop-fields').slideDown();
+        } else {
+            $('.dop-fields').slideUp();
+        }
+    });
+
 
     //hide modal
     $('.hide-window').on('click', function () {
@@ -155,7 +189,7 @@ $(document).ready(function(){
             });
         }
     });
-    $('#add .products_var').remove();
+    $('.iframe-add .products_var').remove();
 
 
     //csv tabs
