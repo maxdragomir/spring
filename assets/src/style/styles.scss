@@ -3355,6 +3355,7 @@ div.btn {
           align-items: center;
           justify-content: center;
           height: 90px;
+          max-width: 90%;
           opacity: 0;
           border-radius: 0 0 10px 10px;
           transform-origin: top;
@@ -3364,6 +3365,50 @@ div.btn {
           .group-operation {
             display: flex;
             align-items: center;
+
+            .labels-print {
+              position: relative;
+              display: flex;
+              flex-flow: column;
+              height: 50px;
+              min-width: 200px;
+              justify-content: center;
+              //padding-right: 2rem;
+              margin-right: 2rem;
+
+              &:after {
+                content: '';
+                position: absolute;
+                right: -1rem;
+                top: 0;
+                height: 50px;
+                width: 1px;
+                background: rgba(255,255,255, .3);
+              }
+
+              span {
+                font-size: .9rem;
+                position: absolute;
+                top: -23px;
+                width: auto;
+              }
+
+              .labels-print-btn {
+                display: flex;
+                justify-content: space-between;
+
+                a {
+                  min-width: 90px;
+                  height: 40px;
+                  display: flex;
+                  align-items: center;
+                  border-radius: 10px;
+                  background: $card-orange-block;
+                  box-shadow: $card-orange-shadow;
+                  font-weight: 500;
+                }
+              }
+            }
 
             .input-field {
               margin: 0;
@@ -5829,12 +5874,11 @@ div.btn {
       }
     }
     .content {
-      //.card-title.table-title .card-title_btn .btn-checklist {
-      //  display: none;
-      //}
-      //.card-title_group {
-      //  display: none !important;
-      //}
+      .card-title.table-title .card-title_group .group-operation {
+        .labels-print {
+          margin-right: 2rem;
+        }
+      }
       .card {
         &.card-table.card-table-reports {
           .thead-mobile {
@@ -6086,11 +6130,11 @@ div.btn {
         }
 
       .card-title.table-title .card-title_group {
-        height: auto;
         left: auto;
         right: 1.1rem;
-        bottom: -276px;
+        bottom: -360px;
         width: auto;
+        height: 360px;
         margin: inherit;
 
         .group-operation {
@@ -6101,6 +6145,23 @@ div.btn {
               margin-right: 0 !important;
               margin-bottom: 2rem;
 
+            }
+          }
+
+          .labels-print {
+            //display: none;
+            margin-right: 0;
+            padding-right: 0;
+            width: 100%;
+            justify-content: center;
+            margin-bottom: 2rem;
+
+            span {
+              font-size: 13px;
+            }
+
+            &:after {
+              display: none;
             }
           }
         }

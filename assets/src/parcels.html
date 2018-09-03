@@ -412,8 +412,14 @@
                         </div>
 
                         <div class="card-title_group">
-                            <!--<i class="fa fa-tasks mr-4"></i>-->
                             <div class="group-operation">
+                                <div class="labels-print">
+                                    <span>Print Labels for Selected Parcels</span>
+                                    <div class="labels-print-btn">
+                                        <a href="#!" class="btn waves-effect">ZPL 200</a>
+                                        <a href="#!" class="btn waves-effect">ZPL 300</a>
+                                    </div>
+                                </div>
                                 <div class="input-field">
                                     <select>
                                         <option value="0" selected="">Selected Above</option>
@@ -1633,7 +1639,6 @@
 
     //= template/footer.html
 
-
     <script>
         var titlePos = Math.floor($('.card-title').offset().top),
             tableHeight = $('.card-table').height(),
@@ -1699,18 +1704,24 @@
             $('#action-select').on('change', function () {
                 var selectUser = $(this).val();
 
+
                 if (selectUser === '1') {
                     $('.service-group').addClass('show');
                     if(windowWidth <= 992) {
-                        $('.card-title_group').css('bottom', -354);
+                        $('.card-title_group').css({
+                            'bottom': -439,
+                            'height': 439
+                        });
                     }
 
                 } else {
                     $('.service-group').removeClass('show');
                     if(windowWidth <= 992) {
-                        $('.card-title_group').css('bottom', -276);
+                        $('.card-title_group').css({
+                            'bottom': -360,
+                            'height': 360
+                        });
                     }
-
                 }
             });
 
