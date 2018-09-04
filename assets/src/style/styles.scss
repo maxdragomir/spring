@@ -194,14 +194,14 @@ body {
 }
 @keyframes filter-btn-animate-download {
   0% {
-    transform: translateY(-30px);
+    transform: translateY(0px);
   }
-  50% {
+  45% {
     transform: translateY(40px);
   }
-  75% {
+  50% {
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(-20px);
   }
   100% {
     opacity: 1;
@@ -6117,6 +6117,11 @@ div.btn {
       }
     }
     .content {
+      .table-title .pagination {
+        li:not(.no-none) {
+          display: none;
+        }
+      }
       .sidenav {
         display: block;
       }
@@ -6217,13 +6222,6 @@ div.btn {
   }
 }
 @media only screen and (max-width: 768px) {
-  .main .content {
-    .table-title .pagination {
-      li:not(.no-none) {
-        display: none;
-      }
-    }
-  }
 
   .iframe {
     .modal-opt {
@@ -6371,6 +6369,30 @@ div.btn {
 
     .content {
       padding: 100px 0 30px;
+
+      .card-title.table-title {
+        .total {
+          & > i {
+            display: none;
+          }
+          .total-title {
+            display: none;
+          }
+        }
+        .card-title_btn {
+          & > a {
+            top: 1.6rem;
+            right: 4.5rem;
+            width: 35px;
+            height: 35px;
+            border-radius: 5px;
+
+            &.btn-checklist {
+              right: 7.5rem;
+            }
+          }
+        }
+      }
 
       .switch-batches {
         justify-content: center;
@@ -6529,29 +6551,7 @@ div.btn {
           width: calc(100% - 30px);
         }
       }
-      .card-title.table-title {
-        .total {
-          & > i {
-            display: none;
-          }
-          .total-title {
-            display: none;
-          }
-        }
-        .card-title_btn {
-          & > a {
-            top: 1.6rem;
-            right: 4.5rem;
-            width: 35px;
-            height: 35px;
-            border-radius: 5px;
 
-            &.btn-checklist {
-              right: 7.5rem;
-            }
-          }
-        }
-      }
       .card {
         &.card-inv {
           &.delivery-btn {
@@ -6653,6 +6653,22 @@ div.btn {
     }
   }
   .main .content {
+    .card-title.table-title {
+      .card-title_result {
+        display: none;
+      }
+      .card-title_total {
+        display: block;
+
+        .total-number {
+          padding-right: .2rem !important;
+          font-size: 1rem;
+        }
+        .result i.left {
+          margin-right: 10px;
+        }
+      }
+    }
     .card-form {
       width: 375px !important;
     }
@@ -6732,22 +6748,11 @@ div.btn {
     }
     .content {
       .card-title.table-title {
-        .card-title_result {
-          display: none;
-        }
-        .card-title_total {
-          display: block;
-
-          .total-number {
-            padding-right: .2rem !important;
-            font-size: 1rem;
-          }
-          .result i.left {
-            margin-right: 10px;
-          }
+        .card-title_pagination .pagination li {
+          width: 30px;
+          height: 30px;
         }
       }
-
       .card {
         &.card-temp {
           .more-info-download {
