@@ -441,16 +441,22 @@ div.btn {
         font-size: 1rem;
       }
       button.clear-btn-form{
-        background: $card-red-block;
-        box-shadow: $card-red-shadow;
+        background: $card-orange-block;
+        box-shadow: $card-orange-shadow;
+
+        &.original-close {
+          background: $card-red-block;
+          box-shadow: $card-red-shadow;
+          opacity: 1;
+        }
       }
 
       button.clear-btn-form, button.original-btn, button.csv-btn {
         position: relative;
         color: #fff;
-        width: 30px;
-        height: 30px;
-        border-radius: 10px;
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -2654,6 +2660,7 @@ div.btn {
 
           a {
             font-size: 1rem;
+            line-height: 23px;
             color: #333;
             transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
 
@@ -2680,7 +2687,7 @@ div.btn {
     align-items: center;
     justify-content: center;
     font-size: 2rem;
-    color: #333;
+    color: #3c4858;
 
     i {
       color: $card-cyan-text;
@@ -3358,6 +3365,7 @@ div.btn {
           max-width: 90%;
           opacity: 0;
           border-radius: 0 0 10px 10px;
+          z-index: 1;
           transform-origin: top;
           transform: scale(1, 0);
           transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
@@ -3490,6 +3498,16 @@ div.btn {
       }
       & > .col:last-child .card-filters {
         border-radius: 0 10px 10px 0;
+      }
+
+      &.only-date {
+        .card-filters {
+          border-radius: 10px !important;
+
+          .input-field input {
+            border: 0 !important;
+          }
+        }
       }
     }
     .card {
@@ -3844,11 +3862,18 @@ div.btn {
           position: relative;
           padding: 0;
           height: 50px;
+          border-radius: 10px;
 
 
           &.color-secondary {
             label {
               color: $secondary-color;
+            }
+          }
+
+          &.color-cyan {
+            label {
+              color: $card-cyan-text;
             }
           }
 
@@ -3962,7 +3987,6 @@ div.btn {
             border-radius: 10px;
           }
           .dropdown-content {
-            //top: 55px !important;
             border-radius: 10px;
             max-height: 400px;
 
@@ -4527,10 +4551,11 @@ div.btn {
               }
 
               span {
-                width: 70px;
+                width: 75px;
 
                 i {
                   color: #b3b3b3;
+                  padding-right: 5px;
                 }
               }
             }
@@ -4538,6 +4563,11 @@ div.btn {
             .color-orange a {
               color: $card-orange-text;
               transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+
+              &:last-child {
+                color: #bb6c00;
+              }
+
               &:hover {
                 color: $secondary-color;
                 transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
@@ -4547,11 +4577,27 @@ div.btn {
             .color-blue a {
               color: $card-blue-text;
               transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+
+              &:last-child {
+                color: #007f8f;
+              }
+
               &:hover {
                 color: $secondary-color;
                 transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
               }
             }
+
+            //.zpl200 {
+            //  a:last-child {
+            //    color: #888;
+            //  }
+            //}
+            //.zpl300 {
+            //  a:last-child {
+            //    color: #888;
+            //  }
+            //}
 
           }
 
@@ -4655,10 +4701,10 @@ div.btn {
             overflow: inherit;
             height: 10px;
             margin: 0;
-            width: calc(100% - 40px);
+            width: calc(100%);
             border-radius: 10px;
             display: inline-flex;
-            background: $main-color;
+            background: none;
 
             .determinate {
               display: flex;
@@ -4669,20 +4715,8 @@ div.btn {
               transform-origin: left;
               transition: all 1000ms cubic-bezier(0.34, 1.15, 0.7, 1);
 
-              &.color-green {
-                background: $card-green-block;
-              }
-              &.color-blue {
-                background: $card-blue-block;
-              }
-              &.color-orange {
-                background: $card-orange-block;
-              }
-              &.color-red {
-                background: $card-red-block;
-              }
-              &.color-grey {
-                background: $main-color-grey;
+              &.color-cyan {
+                background: $card-cyan-block;
               }
 
               &.active {
@@ -4969,11 +5003,15 @@ div.btn {
             display: flex;
             font-weight: bold;
             align-items: center;
+
+            i {
+              color: #b3b3b3;
+            }
           }
           .more-info_text {
             display: flex;
             justify-content: flex-end;
-            width: 70%;
+            //width: 70%;
             text-align: right;
 
             & > .row {
@@ -5003,14 +5041,41 @@ div.btn {
               }
             }
 
-            a {
+            &.color-orange a {
+              color: $card-orange-text;
               transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+
+              &:last-child {
+                color: #bb6c00;
+              }
 
               &:hover {
                 color: $secondary-color;
                 transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
               }
             }
+
+            &.color-blue a {
+              color: $card-blue-text;
+              transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+
+              &:last-child {
+                color: #007f8f;
+              }
+
+              &:hover {
+                color: $secondary-color;
+                transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+              }
+            }
+            //a {
+            //  transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+            //
+            //  &:hover {
+            //    color: $secondary-color;
+            //    transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+            //  }
+            //}
 
           }
 
@@ -5023,6 +5088,29 @@ div.btn {
             justify-content: space-between;
           }
         }
+        .more-info-btn {
+          display: flex;
+          justify-content: space-between;
+
+          button {
+            display: flex;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+            line-height: normal;
+            border-radius: 10px;
+
+
+            &.btn-cancel-parcel {
+              background: $card-orange-block;
+              box-shadow: $card-orange-shadow;
+            }
+            &.btn-accept-parcel {
+              background: $card-green-block;
+              box-shadow: $card-green-shadow;
+            }
+          }
+        }
 
         &.no-info {
           height: 401px;
@@ -5032,6 +5120,18 @@ div.btn {
           span {
             font-size: 4rem;
             color: #ddd;
+          }
+        }
+        &.no-result {
+          display: none;
+          height: 401px;
+          align-items: center;
+          justify-content: center;
+          box-shadow: $card-red-shadow;
+
+          span {
+            font-size: 4rem;
+            color: $card-red-text;
           }
         }
         &.info {
@@ -6181,7 +6281,6 @@ div.btn {
           &.delivery-btn {
             width: auto;
             margin: auto;
-            justify-content: center;
           }
 
           &.one-btn {
@@ -6434,6 +6533,10 @@ div.btn {
           &.one-btn {
             justify-content: flex-end;
             margin-top: 0;
+          }
+
+          &.delivery-btn {
+            justify-content: center;
           }
         }
       }

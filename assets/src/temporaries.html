@@ -183,6 +183,9 @@
                     <div class="card card-temp no-info">
                         <span class="no-text">No Info</span>
                     </div>
+                    <div class="card card-temp no-result">
+                        <span class="no-text">No Result</span>
+                    </div>
                     <div class="wrapp card-label-img">
                         <div class="card card-temp info">
                             <div class="more-info">
@@ -209,7 +212,7 @@
                                 <div class="card-temp_title">Get label(s)</div>
                                 <div class="info-row">
                                     <div class="more-info_name"><i class="fa fa-download pr-2"></i> Label: </div>
-                                    <div class="more-info_text">
+                                    <div class="more-info_text color-orange">
                                         <a href="#">PDF</a>
                                         <div class="zpl200">
                                             <a href="#">ZPL200</a>
@@ -223,7 +226,7 @@
                                 </div>
                                 <div class="info-row">
                                     <div class="more-info_name"><i class="fa fa-download pr-2"></i> Invoice: </div>
-                                    <div class="more-info_text">
+                                    <div class="more-info_text color-blue">
                                         <a href="#">PDF</a>
                                         <div class="zpl200">
                                             <a href="#">ZPL200</a>
@@ -273,11 +276,22 @@
 
             //demo show info
             $('.search-btn').on('click', function () {
-                $('.no-info').slideUp();
-                $('.info').slideDown();
-                setTimeout(function () {
-                    $('.label-img').addClass('show-img');
-                }, 600);
+
+                if($('#search').val() != '') {
+                    $('.no-result').slideDown().css('display', 'flex');
+                    $('.no-info').slideUp();
+                    $('.info').slideUp();
+                    $('.label-img').removeClass('show-img');
+                } else {
+                    $('.no-result').slideUp();
+                    $('.no-info').slideUp();
+                    $('.info').slideDown();
+                    setTimeout(function () {
+                        $('.label-img').addClass('show-img');
+                    }, 600);
+                }
+
+
             });
 
         });

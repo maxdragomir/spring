@@ -164,14 +164,6 @@
             </div>
 
             <div class=" row mt-4 mb-0">
-                <div class="col s12 m6 l3 xl3">
-                    <div class="card card-filters">
-                        <div class="input-field col s12 m-0">
-                            <input id="search" class="m-0" type="text">
-                            <label for="search">Tracking number</label>
-                        </div>
-                    </div>
-                </div>
                 <div class="col s12 m4 l3 xl2">
                     <div class="card card-filters">
                         <div class="input-field col s12 m-0">
@@ -182,6 +174,16 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col s12 m6 l3 xl3">
+                    <div class="card card-filters">
+                        <div class="input-field col s12 m-0">
+                            <input id="search" class="m-0" type="text">
+                            <label for="search">Tracking number</label>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col s12 m2 l1">
                     <div class="card card-inv card-button one-btn">
                         <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Search"><i class="fa fa-search"></i> </button>
@@ -195,6 +197,9 @@
                 <div class="col s12 m12 l6">
                     <div class="card card-temp no-info">
                         <span class="no-text">No Info</span>
+                    </div>
+                    <div class="card card-temp no-result">
+                        <span class="no-text">No Result</span>
                     </div>
                     <div class="card card-temp info">
                         <div class="more-info">
@@ -212,7 +217,7 @@
                             </div>
                             <div class="info-row">
                                 <div class="more-info_name">Destination</div>
-                                <div class="more-info_text color-orange">United Kingdom / Royal Mail Tracked 48 - Signature</div>
+                                <div class="more-info_text">United Kingdom / Royal Mail Tracked 48 - Signature</div>
                             </div>
                             <div class="info-row">
                                 <div class="more-info_name">Status</div>
@@ -223,7 +228,7 @@
                             <div class="card-temp_title">Get label(s)</div>
                             <div class="info-row">
                                 <div class="more-info_name"><i class="fa fa-download pr-2"></i> Invoice: </div>
-                                <div class="more-info_text">
+                                <div class="more-info_text color-blue">
                                     <a href="#">PDF</a>
                                     <div class="zpl200">
                                         <a href="#">ZPL200</a>
@@ -263,27 +268,14 @@
                                                 <option value="0">lb</option>
                                             </select>
                                         </div>
-                                        <button class="btn waves-effect btn-check tooltipped" data-position="top" data-tooltip="Accept"><i class="fa fa-check"></i></button>
+                                        <!--<button class="btn waves-effect btn-check tooltipped" data-position="top" data-tooltip="Accept"><i class="fa fa-check"></i></button>-->
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="dn more-info more-info-download mt-4">
-                            <div class="card-temp_title">Get label(s)</div>
-                            <div class="info-row">
-                                <div class="more-info_name">Invoice: </div>
-                                <div class="more-info_text">
-                                    <a href="#">PDF</a>
-                                    <div class="zpl200">
-                                        <a href="#">ZPL200</a>
-                                        <a href="#"><i class="fa fa-print ml-2"></i></a>
-                                    </div>
-                                    <div class="zpl300">
-                                        <a href="#">ZPL300</a>
-                                        <a href="#"><i class="fa fa-print ml-2"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="more-info-btn mt-4">
+                            <button class="btn waves-effect btn-large mr-3 btn-cancel-parcel">Cancel</button>
+                            <button class="btn waves-effect btn-large btn-accept-parcel">Accept</button>
                         </div>
                     </div>
                 </div>
@@ -317,9 +309,18 @@
 
             //demo show info
             $('.search-btn').on('click', function () {
-                $('.no-info').slideUp();
-                $('.info').slideDown();
-                $('#weight').focus();
+
+
+                if($('#search').val() != '') {
+                    $('.no-result').slideDown().css('display', 'flex');
+                    $('.no-info').slideUp();
+                    $('.info').slideUp();
+                } else {
+                    $('.no-result').slideUp();
+                    $('.no-info').slideUp();
+                    $('.info').slideDown();
+                    $('#weight').focus();
+                }
             });
 
         });
