@@ -387,10 +387,15 @@
 
         var cardPos,  bodyHeight = $(window).height(), bodyWidth = $(window).width();
 
+
         if (bodyHeight <= 400 || bodyWidth <= 600) {
+
             cardPos = Math.floor($('.fixed-mobile').offset().top);
+
         } else {
+
             cardPos = Math.floor($('.fixed-desctop').offset().top);
+
         }
 
         //fix panel-title
@@ -406,11 +411,15 @@
         }
 
         $(window).scroll(function(){
+
             fixedTitle();
+
         });
 
         $(document).ready(function () {
+
             fixedTitle();
+
         });
 
     </script>

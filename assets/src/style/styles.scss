@@ -456,7 +456,7 @@ div.btn {
         color: #fff;
         width: 32px;
         height: 32px;
-        border-radius: 100%;
+        border-radius: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -782,6 +782,7 @@ div.btn {
         justify-content: center;
         align-items: center;
         width: 100%;
+        font-weight: 300;
         padding: .5rem;
         border-radius: 5px;
         transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
@@ -1109,6 +1110,10 @@ div.btn {
       .dates {
         font-size: 1rem;
         display: flex;
+
+        span:last-child {
+          color: #b3b3b3;
+        }
       }
     }
     .parcel-top-info_btn {
@@ -1540,8 +1545,8 @@ div.btn {
         }
       }
       button.csv-btn {
-        background: $card-cyan-block;
-        box-shadow: $card-cyan-shadow;
+        background: $card-orange-block;
+        box-shadow: $card-orange-shadow;
 
         &.active {
           opacity: 1;
@@ -2145,6 +2150,10 @@ div.btn {
       .dates {
         font-size: 1rem;
         display: flex;
+
+        span:last-child {
+          color: #b3b3b3;
+        }
       }
     }
     .parcel-top-info_btn {
@@ -4554,7 +4563,7 @@ div.btn {
                 width: 75px;
 
                 i {
-                  color: #b3b3b3;
+                  color: #3c4858;
                   padding-right: 5px;
                 }
               }
@@ -4745,7 +4754,6 @@ div.btn {
                 word-wrap: break-word;
               }
               .actions-btn {
-                //flex-flow: column;
 
                 a {
                   margin: 0;
@@ -4777,8 +4785,8 @@ div.btn {
 
             a {
               position: relative;
-              height: 30px;
-              width: 50px;
+              height: 25px;
+              width: 40px;
               border-radius: 5px;
               display: flex;
               justify-content: center;
@@ -4787,9 +4795,6 @@ div.btn {
               box-shadow: $card-orange-shadow;
               transition: all 500ms cubic-bezier(0.34, 1.31, 0.7, 1);
 
-              &:last-child {
-                margin-top: -1rem;
-              }
 
               &:hover {
                 background: #fff;
@@ -4798,7 +4803,7 @@ div.btn {
               }
 
               i {
-                font-size: 1rem;
+                font-size: .9rem;
               }
             }
 
@@ -5005,7 +5010,8 @@ div.btn {
             align-items: center;
 
             i {
-              color: #b3b3b3;
+              color: #3c4858;
+              padding-right: 10px;
             }
           }
           .more-info_text {
@@ -5127,7 +5133,7 @@ div.btn {
           height: 401px;
           align-items: center;
           justify-content: center;
-          box-shadow: $card-red-shadow;
+          //box-shadow: $card-red-shadow;
 
           span {
             font-size: 4rem;
