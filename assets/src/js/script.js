@@ -3,17 +3,17 @@ $(document).ready(function(){
 
     //insert code in input
     $('.var-content').on('click', 'a', function () {
-        var text, input, caretPos, inputVal, txtToAdd;
+        var text, $input, caretPos, inputVal, txtToAdd;
 
         text = $(this).text();
-        input = $('#url');
+        $input = $('#url');
 
-        caretPos = input[0].selectionStart;
-        inputVal = input.val();
+        caretPos = $input[0].selectionStart;
+        inputVal = $input.val();
         txtToAdd = text;
 
-        input.val(inputVal.substring(0, caretPos) + " " + txtToAdd + " " + inputVal.substring(caretPos) );
-        input.next().addClass('active');
+        $input.val(inputVal.substring(0, caretPos) + " " + txtToAdd + " " + inputVal.substring(caretPos) );
+        $input.next().addClass('active');
     });
 
 
