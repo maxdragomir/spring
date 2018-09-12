@@ -44,17 +44,31 @@ body {
     }
   }
 
+  &.overflow-auto {
+    overflow: auto !important;
+  }
+}
+.bg-test {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+
   &:after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 10px;
     background: url(../img/bg.jpg) no-repeat center;
     background-size: cover;
     z-index: -1;
     opacity: 0;
+    transform: rotateX(calc(var(--mouseY))) rotateY(calc(var(--mouseX)));
     transition: all 800ms cubic-bezier(0.34, 1.31, 0.7, 1);
   }
   &.show_bg{
@@ -62,10 +76,6 @@ body {
       opacity: .8;
       transition: all 800ms cubic-bezier(0.34, 1.31, 0.7, 1);
     }
-  }
-
-  &.overflow-auto {
-    overflow: auto !important;
   }
 }
 
@@ -636,6 +646,7 @@ div.btn {
         .select-wrapper {
           display: flex;
           width: 100%;
+          height: 100%;
 
           input {
             height: 49px;
@@ -911,9 +922,9 @@ div.btn {
       transform-origin: top;
       transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
 
-      & > div {
-        padding-right: 0;
-      }
+      //& > div {
+      //  padding-right: 0;
+      //}
 
 
       &.show {
@@ -1037,6 +1048,12 @@ div.btn {
     }
     .parcel-top-info_id {
       font-size: 1rem;
+
+      span {
+        font-size: .8rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
     }
     .parcel-top-info_left {
       display: flex;
@@ -1187,6 +1204,14 @@ div.btn {
 
     }
   }
+
+  .under-construction-page {
+    height: auto;
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
 }
 .modal.modal-style {
   background: #eee;
@@ -1198,14 +1223,6 @@ div.btn {
   & + .new-overlay {
     opacity: .2 !important;
     transition: all 500ms cubic-bezier(0.34, 1.31, 0.7, 1);
-  }
-
-  .under-construction-page {
-    height: auto;
-    h1 {
-      font-size: 2rem;
-      text-align: center;
-    }
   }
 
   &.modal-h-50 {
@@ -2291,6 +2308,7 @@ div.btn {
 
     input {
       font-size: 1rem;
+      width: 20% !important;
 
       &::placeholder {
         color: #9e9e9e;
@@ -2300,7 +2318,7 @@ div.btn {
     & > div {
       cursor: pointer;
       margin: 0 5px 5px 0;
-      padding: 10px;
+      padding: 10px !important;
       background: $card-cyan-block;
       box-shadow: $card-cyan-shadow;
       color: #fff;
@@ -2308,7 +2326,7 @@ div.btn {
       border-radius: 5px;
 
       &.active {
-        background: $card-cyan-text-l;
+        background: $card-cyan-block;
         color: #fff;
       }
     }
@@ -2316,7 +2334,6 @@ div.btn {
   .selectize-dropdown {
     overflow: hidden;
     border-radius: 10px;
-    margin-top: 5px;
 
     .active {
       background-color: rgba(0, 0, 0, 0.08);
@@ -2337,11 +2354,13 @@ div.btn {
   }
   
   &.plugin-remove_button [data-value] .remove {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1rem;
-    width: 20px;
     background: rgba(0,0,0, .2);
     border-radius: 0 5px 5px 0;
     border: 0;
@@ -4085,6 +4104,10 @@ div.btn {
           }
           .datepicker-footer {
             padding: 5px 10px;
+
+            button {
+              border-radius: 10px;
+            }
           }
           .confirmation-btns {
             button {
@@ -4104,6 +4127,12 @@ div.btn {
           border-radius: 10px;
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 
+          .timepicker-container .timepicker-plate {
+            border-radius: 10px;
+            margin-top: 1rem;
+            margin-bottom: 0;
+          }
+
           .timepicker-text-container {
             font-size: 2rem;
           }
@@ -4121,6 +4150,10 @@ div.btn {
             background: rgba(51,149,255, .5);
           }
           .timepicker-footer {
+
+            button {
+              border-radius: 10px;
+            }
             .confirmation-btns button {
               color: $card-cyan-text;
             }
@@ -4777,7 +4810,6 @@ div.btn {
                 width: 25px;
                 background: $card-red-text;
                 color: #fff;
-                padding: 0 5px;
                 border-radius: 5px;
                 margin-bottom: 5px;
               }
@@ -5022,33 +5054,43 @@ div.btn {
           .more-info_text {
             display: flex;
             justify-content: flex-end;
-            //width: 70%;
             text-align: right;
 
             & > .row {
               display: flex;
               justify-content: flex-end;
-              max-width: 360px;
+              width: 350px;
 
               .select-wrapper {
+
                 input {
                   margin: 0;
+                  padding: 0;
+                }
+
+                .caret {
+                  background: #fff;
+                  z-index: 1;
+                  pointer-events: none;
                 }
 
                 .dropdown-content {
                   border-radius: 10px;
                 }
+
               }
 
-              .btn-check {
+              .btn-return {
                 display: flex;
                 height: 100%;
                 justify-content: center;
                 align-items: center;
-                background: $card-green-block;
-                box-shadow: $card-green-shadow;
                 border-radius: 10px;
                 margin-left: 10px;
+              }
+              .btn-return {
+                background: $card-orange-block;
+                box-shadow: $card-orange-shadow;
               }
             }
 
@@ -5141,14 +5183,18 @@ div.btn {
           //box-shadow: $card-red-shadow;
 
           span {
-            font-size: 4rem;
+            font-size: 2rem;
             color: $card-red-text;
+
+            span {
+              text-transform: uppercase;
+              font-weight: bold;
+            }
           }
         }
         &.info {
           display: none;
         }
-
 
         .input-field {
 
@@ -5187,6 +5233,22 @@ div.btn {
               color: $card-green-text;
             }
           }
+        }
+
+
+        &.parcel-img {
+          background: none;
+          box-shadow: none;
+          padding: 10px 0 0;
+          margin: 0 0 1rem 0;
+        }
+        .img {
+          position: relative;
+          display: flex;
+          max-width: 100%;
+          border-radius: 10px;
+          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+          transition: all 500ms cubic-bezier(0.34, 1.31, 0.7, 1);
         }
       }
       &.card-profile, &.card-fix {
@@ -5437,7 +5499,7 @@ div.btn {
     }
     .label-img {
       position: absolute;
-      top: 0%;
+      top: 0;
       left: 0;
       display: flex;
       opacity: 0;
@@ -6327,6 +6389,13 @@ div.btn {
             width: 200px;
           }
         }
+        &.card-temp {
+          &.parcel-img {
+            img {
+              margin: 0 auto;
+            }
+          }
+        }
       }
       .card-label-img {
         img {
@@ -6563,6 +6632,13 @@ div.btn {
             justify-content: center;
           }
         }
+        &.card-temp {
+          &.no-result {
+            span {
+              font-size: 5vw;
+            }
+          }
+        }
       }
 
       #main-filter {
@@ -6697,6 +6773,15 @@ div.btn {
           .more-info-download {
             .more-info_text {
               width: 60%;
+            }
+          }
+
+          .more-info {
+            .col-row {
+              flex-flow: column;
+            }
+            .more-info_text .row {
+              width: auto;
             }
           }
         }
@@ -6919,3 +7004,8 @@ div.btn {
     padding: 0 !important;
   }
 }
+
+
+
+
+

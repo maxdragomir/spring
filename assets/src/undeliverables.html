@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Temporaries</title>
+    <title>Undeliverables</title>
     //= template/head.html
 </head>
 <body>
@@ -34,10 +34,10 @@
                             </a>
                             <ul id="parcels" class="dropdown-content">
                                 <li><a href="parcels.html" class="waves-effect waves-light">Parcels</a></li>
-                                <li><a href="temporaries.html" class="waves-effect waves-light active">Temporaries</a></li>
+                                <li><a href="temporaries.html" class="waves-effect waves-light">Temporaries</a></li>
                                 <li><a href="batches.html" class="waves-effect waves-light">Batches</a></li>
                                 <li><a href="verification.html" class="waves-effect waves-light">Verification</a></li>
-                                <li><a href="undeliverables.html" class="waves-effect waves-light">Undeliverables</a></li>
+                                <li><a href="undeliverables.html" class="waves-effect waves-light active">Undeliverables</a></li>
                             </ul>
                         </li>
                         <li>
@@ -110,9 +110,10 @@
                             <div class="collapsible-body sidenav-li-body-color">
                                 <ul class="purchasing-group">
                                     <li><a class="waves-effect" href="parcels.html">Parcels</a></li>
-                                    <li><a class="waves-effect active" href="temporaries.html">Temporaries</a></li>
+                                    <li><a class="waves-effect" href="temporaries.html">Temporaries</a></li>
                                     <li><a class="waves-effect" href="batches.html">Batches</a></li>
                                     <li><a class="waves-effect" href="verification.html">Verification</a></li>
+                                    <li><a class="waves-effect active" href="undeliverables.html">Undeliverables</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -155,16 +156,28 @@
                     <a href="login.html" class="collapsible-header no-drop waves-effect">Logout<i class="fa fa-sign-out-alt"></i></a>
                 </li>
             </ul>
+
             <div class="row m-0">
                 <div class="col s12 mt-4">
                     <div class="page-title">
-                        <i class="fa fa-file-alt left"></i>Temporaries
+                        <i class="fa fa-retweet left"></i>Undeliverables
                     </div>
                 </div>
             </div>
 
-            <div id="main-filter" class="row mt-4 mb-0">
-                <div class="col s12 m10 l5 xl5">
+            <div class=" row mt-4 mb-0">
+                <div class="col s12 m4 l2 xl2">
+                    <div class="card card-filters">
+                        <div class="input-field col s12 m-0">
+                            <select>
+                                <option value="338704a3">test</option><option value="fa19bdd9">Station 1</option><option value="d5e10a2a" selected="">Station 2</option><option value="eeeae9fe">Station 3</option><option value="68dad289">Station 4</option><option value="a1f43925">Station 5</option><option value="3a15cae2">Station 6</option><option value="712563e8">Station 7</option><option value="beb4e1b7">Station 8</option><option value="3c3329f8">Station 9</option><option value="c4279c30">Station 10</option>
+                            </select>
+                            <label>Station</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m6 l3 xl3">
                     <div class="card card-filters">
                         <div class="input-field col s12 m-0">
                             <input id="search" class="m-0" type="text">
@@ -172,12 +185,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m2 l1">
+
+                <div class="col s12 m2 l1 xl1">
                     <div class="card card-inv card-button one-btn">
                         <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Search"><i class="fa fa-search"></i> </button>
                     </div>
                 </div>
             </div>
+
 
             <div class=" row mt-4">
                 <div class="col s12 m12 l6">
@@ -187,76 +202,57 @@
                     <div class="card card-temp no-result">
                         <span class="no-text"><i class="fa fa-exclamation-triangle pr-2"></i> Parcel #<span class="parcel-id"></span> not found</span>
                     </div>
-                    <div class="wrapp card-label-img">
-                        <div class="card card-temp info">
-                            <div class="more-info">
-                                <div class="card-temp_title">Info</div>
-                                <div class="info-row">
-                                    <div class="more-info_name">Tracking Number</div>
-                                    <div class="more-text color-secondary bold">FN344687232GB</div>
-                                </div>
-                                <div class="info-row">
-                                    <div class="more-info_name">Local Tracking Number</div>
-                                    <div class="more-info_text">FN344687232GB</div>
-                                </div>
-                                <div class="info-row">
-                                    <div class="more-info_name">Shipper Reference</div>
-                                    <div class="more-info_text color-orange">11434715-001</div>
-                                </div>
-                                <div class="info-row">
-                                    <div class="more-info_name">Status</div>
-                                    <div class="more-info_text color-green">Delivered</div>
-                                </div>
+                    <div class="card card-temp info">
+                        <div class="more-info">
+                            <div class="info-row">
+                                <div class="more-info_name">Tracking Number</div>
+                                <div class="more-text color-secondary bold">LX498413835NL</div>
                             </div>
+                            <div class="info-row">
+                                <div class="more-info_name">Local Tracking Number</div>
+                                <div class="more-info_text">LX498413835NL</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="more-info_name">Shipper Reference</div>
+                                <div class="more-info_text color-orange">11400956-001</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="more-info_name">Destination</div>
+                                <div class="more-info_text">Australia / PostNL Packet Tracked</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="more-info_name">Status</div>
+                                <div class="more-info_text color-green">Delivered</div>
+                            </div>
+                        </div>
 
-                            <div class="more-info more-info-download mt-4">
-                                <div class="card-temp_title">Get label(s)</div>
-                                <div class="info-row">
-                                    <div class="more-info_name"><i class="fa fa-download"></i> Label: </div>
-                                    <div class="more-info_text color-orange">
-                                        <a href="#">PDF</a>
-                                        <div class="zpl200">
-                                            <a href="#">ZPL200</a>
-                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
+                    </div>
+                </div>
+                <div class="col s12 m12 l6">
+                    <div class="card card-temp info">
+                        <div class="more-info last-info">
+                            <div class="info-row last-row col-row">
+                                <div class="more-info_name">Return Reason</div>
+                                <div class="more-info_text">
+                                    <div class="row m-0">
+                                        <div class="input-field col s12 m12 m-0 color-green mr-1">
+                                            <select>
+                                                <option value="125" selected="">UNKNOWN</option><option value="12501">REFUSED</option><option value="12502">UNDELIVERABLE</option><option value="12503">DAMAGED</option><option value="12504">NOT COLLECTED</option><option value="12505">ACCORDING TO AGREEMENT</option>
+                                            </select>
                                         </div>
-                                        <div class="zpl300">
-                                            <a href="#">ZPL300</a>
-                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="info-row">
-                                    <div class="more-info_name"><i class="fa fa-download"></i> Invoice: </div>
-                                    <div class="more-info_text color-blue">
-                                        <a href="#">PDF</a>
-                                        <div class="zpl200">
-                                            <a href="#">ZPL200</a>
-                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
-                                        </div>
-                                        <div class="zpl300">
-                                            <a href="#">ZPL300</a>
-                                            <a href="#"><i class="fa fa-print ml-2"></i></a>
-                                        </div>
+                                        <button class="btn waves-effect btn-return tooltipped" data-position="top" data-tooltip="Return Received"><i class="fa fa-check"></i></button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m12 l6">
-                    <div class="card card-temp info parcel-img">
-                        <img class="img" width="500" src="http://mailingtechnology.com/img/illustrate_labels_1.gif" alt="">
-                    </div>
-                </div>
             </div>
-
 
             <div class="dn row m-0">
                 <div class="col s12">
                     <div class="under-construction-page">
-                        <h1 class="m-0">
-                            <i class="fa fa-cog"></i>
-                            under construction</h1>
+                        <h1 class="m-0"> <i class="fa fa-cog"></i> under construction</h1>
                     </div>
                 </div>
             </div>
@@ -281,24 +277,20 @@
 
             //demo show info
             $('.search-btn').on('click', function () {
+
                 var searchVal = $('#search').val();
 
                 if($('#search').val() != '') {
                     $('.no-result').slideDown().css('display', 'flex');
                     $('.no-info').slideUp();
                     $('.info').slideUp();
-                    $('.label-img').removeClass('show-img');
                     $('.parcel-id').text(searchVal);
                 } else {
                     $('.no-result').slideUp();
                     $('.no-info').slideUp();
                     $('.info').slideDown();
-                    setTimeout(function () {
-                        $('.label-img').addClass('show-img');
-                    }, 600);
+                    $('#weight').focus();
                 }
-
-
             });
 
         });

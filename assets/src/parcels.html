@@ -39,6 +39,7 @@
                                 <li><a href="temporaries.html" class="waves-effect waves-light">Temporaries</a></li>
                                 <li><a href="batches.html" class="waves-effect waves-light">Batches</a></li>
                                 <li><a href="verification.html" class="waves-effect waves-light">Verification</a></li>
+                                <li><a href="undeliverables.html" class="waves-effect waves-light">Undeliverables</a></li>
                             </ul>
                         </li>
                         <li>
@@ -383,7 +384,7 @@
                             <div class="result">
                                 <i class="fa fa-table left"></i>
                                 <span class="pr-2">Found:</span>
-                                <div id="c_result" data-result="16923">0</div>
+                                <div class="c_result">16,923</div>
                             </div>
                         </div>
                         <div class="card-title_pagination">
@@ -920,7 +921,7 @@
                 <button class="btn waves-effect modal-ask-close"><i class="fa fa-times"></i></button>
             </div>
         </div>
-        <iframe src="iframe-add.html" class="iframe-link" frameborder="0"></iframe>
+        <iframe src="iframe-parcels-add.html" class="iframe-link" frameborder="0"></iframe>
     </div>
     <div id="edit" class="modal modal-style modal-fixed-footer modal-fixed-header">
         <div class="modal-header color-cyan">
@@ -933,7 +934,7 @@
                 <button class="btn waves-effect modal-ask-close"><i class="fa fa-times"></i></button>
             </div>
         </div>
-        <iframe src="iframe-edit.html" class="iframe-link" frameborder="0"></iframe>
+        <iframe src="iframe-parcels-edit.html" class="iframe-link" frameborder="0"></iframe>
     </div>
     <div id="view" class="modal modal-style modal-fixed-footer modal-fixed-header">
         <div class="modal-header color-cyan">
@@ -946,7 +947,7 @@
                 <button class="btn waves-effect modal-close"><i class="fa fa-times"></i></button>
             </div>
         </div>
-        <iframe src="iframe-view.html" class="iframe-link" frameborder="0"></iframe>
+        <iframe src="iframe-parcels-view.html" class="iframe-link" frameborder="0"></iframe>
     </div>
     <div id="creat" class="modal modal-style modal-fixed-header">
         <div class="modal-header color-cyan">
@@ -959,13 +960,14 @@
                 <button class="btn waves-effect modal-close"><i class="fa fa-times"></i></button>
             </div>
         </div>
-        <iframe src="iframe-creat.html" class="iframe-link" frameborder="0"></iframe>
+        <iframe src="iframe-parcels-creat.html" class="iframe-link" frameborder="0"></iframe>
     </div>
     <!-- /MODALS/ -->
 
     //= template/footer.html
 
     <script>
+
         var titlePos = Math.floor($('.card-title').offset().top),
             tableHeight = $('.card-table').height(),
             theadDesctop = $('.thead-desctop').height(),
@@ -1076,9 +1078,6 @@
             });
 
 
-
-
-
             //show dots if height > 20
             $('.hide-text').each(function () {
                 var textHeight = $(this).height();
@@ -1104,21 +1103,6 @@
                     $(this).children('.hide-text').slideDown();
                 }
             });
-
-
-
-            //Count
-            var resultCount,
-                dataResult = $('#c_result').data('result'),
-                options = {
-                useEasing: true,
-                useGrouping: true,
-                separator: ',',
-                decimal: '.',
-            };
-
-            resultCount = new CountUp('c_result', 0, dataResult, 0, 4, options);
-            resultCount.start();
 
         });
 

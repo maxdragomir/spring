@@ -37,7 +37,7 @@
                                 <li><a href="temporaries.html" class="waves-effect waves-light">Temporaries</a></li>
                                 <li><a href="batches.html" class="waves-effect waves-light">Batches</a></li>
                                 <li><a href="verification.html" class="waves-effect waves-light active">Verification</a></li>
-                            </ul>
+                                <li><a href="undeliverables.html" class="waves-effect waves-light">Undeliverables</a></li>                            </ul>
                         </li>
                         <li>
                             <a class="dropdown-trigger waves-effect" href="#!" data-target="reports">
@@ -164,7 +164,7 @@
             </div>
 
             <div class=" row mt-4 mb-0">
-                <div class="col s12 m4 l3 xl2">
+                <div class="col s12 m4 l2 xl2">
                     <div class="card card-filters">
                         <div class="input-field col s12 m-0">
                             <select>
@@ -184,10 +184,9 @@
                     </div>
                 </div>
 
-                <div class="col s12 m2 l1">
+                <div class="col s12 m2 l1 xl1">
                     <div class="card card-inv card-button one-btn">
                         <button type="button" class="btn search-btn waves-effect tooltipped" data-position="top" data-tooltip="Search"><i class="fa fa-search"></i> </button>
-                        <!--<span class="test-btn"><i class="fa fa-arrow-alt-circle-left pr-2"></i>Click to see demo</span>-->
                     </div>
                 </div>
             </div>
@@ -199,7 +198,7 @@
                         <span class="no-text">No Info</span>
                     </div>
                     <div class="card card-temp no-result">
-                        <span class="no-text">No Result</span>
+                        <span class="no-text"><i class="fa fa-exclamation-triangle pr-2"></i> Parcel #<span class="parcel-id"></span> not found</span>
                     </div>
                     <div class="card card-temp info">
                         <div class="more-info">
@@ -268,7 +267,6 @@
                                                 <option value="0">lb</option>
                                             </select>
                                         </div>
-                                        <!--<button class="btn waves-effect btn-check tooltipped" data-position="top" data-tooltip="Accept"><i class="fa fa-check"></i></button>-->
                                     </div>
                                 </div>
                             </div>
@@ -310,11 +308,13 @@
             //demo show info
             $('.search-btn').on('click', function () {
 
+                var searchVal = $('#search').val();
 
                 if($('#search').val() != '') {
                     $('.no-result').slideDown().css('display', 'flex');
                     $('.no-info').slideUp();
                     $('.info').slideUp();
+                    $('.parcel-id').text(searchVal);
                 } else {
                     $('.no-result').slideUp();
                     $('.no-info').slideUp();

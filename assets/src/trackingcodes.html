@@ -37,6 +37,7 @@
                                 <li><a href="temporaries.html" class="waves-effect waves-light">Temporaries</a></li>
                                 <li><a href="batches.html" class="waves-effect waves-light">Batches</a></li>
                                 <li><a href="verification.html" class="waves-effect waves-light">Verification</a></li>
+                                <li><a href="undeliverables.html" class="waves-effect waves-light">Undeliverables</a></li>
                             </ul>
                         </li>
                         <li>
@@ -205,7 +206,7 @@
                             <div class="result">
                                 <i class="fa fa-table left"></i>
                                 <span class="pr-2">Found: </span>
-                                <div id="c_result" data-result="279">0</div>
+                                <div class="c_result">279</div>
                             </div>
                         </div>
                         <div class="card-title_pagination">
@@ -949,21 +950,6 @@
                 });
 
             });
-
-
-            //Count
-            var resultCount,
-                dataResult = $('#c_result').data('result'),
-
-                options = {
-                    useEasing: true,
-                    useGrouping: true,
-                    separator: ',',
-                    decimal: '.',
-                };
-
-            resultCount = new CountUp('c_result', 0, dataResult, 0, 4, options);
-            resultCount.start();
 
         });
 

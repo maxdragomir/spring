@@ -1,9 +1,71 @@
 
-$(document).ready(function(){
+$(document).ready(function() {
+
+    // toggle tooltip status
+    $.each($('.switch-active'), function() {
+
+        let switchBtn = $(this),
+            switchInput = $(this).find('input');
+
+        if(switchInput.prop('checked')) {
+            switchBtn.data('tooltip', 'Deactivate');
+            switchBtn.attr('data-tooltip', 'Deactivate');
+        } else {
+            switchBtn.data('tooltip', 'Activate');
+            switchBtn.attr('data-tooltip', 'Activate');
+        }
+
+        $('.switch-active').on('click', function () {
+
+            if(switchInput.prop('checked')) {
+                switchBtn.data('tooltip', 'Deactivate');
+                switchBtn.attr('data-tooltip', 'Deactivate');
+            } else {
+                switchBtn.data('tooltip', 'Activate');
+                switchBtn.attr('data-tooltip', 'Activate');
+            }
+
+            $(this).tooltip('close');
+
+        });
+
+    });
+
+
+    // user type
+    $('#user-type').on('change', function () {
+        let selectUser = $('select#user-type').val();
+
+        if(selectUser === '11') {
+            $('.type-hide').removeClass('show');
+            $('.type-shipper').addClass('show');
+        } else if(selectUser === '21') {
+            $('.type-hide').removeClass('show');
+            $('.type-carrier').addClass('show');
+        } else if(selectUser === '4') {
+            $('.type-hide').removeClass('show');
+            $('.type-hubsuper').addClass('show');
+        } else if(selectUser === '5') {
+            $('.type-hide').removeClass('show');
+            $('.type-hubwork').addClass('show');
+        } else if(selectUser === '7') {
+            $('.type-hide').removeClass('show');
+            $('.type-client').addClass('show');
+        } else if(selectUser === '22') {
+            $('.type-hide').removeClass('show');
+            $('.type-sales').addClass('show');
+        } else if(selectUser === '1') {
+            $('.type-hide').removeClass('show');
+            $('.type-admin').addClass('show');
+        } else {
+            $('.type-hide').removeClass('show');
+        }
+    });
+
 
     //insert code in input
     $('.var-content').on('click', 'a', function () {
-        var text, $input, caretPos, inputVal, txtToAdd;
+        let text, $input, caretPos, inputVal, txtToAdd;
 
         text = $(this).text();
         $input = $('#url');
@@ -45,7 +107,7 @@ $(document).ready(function(){
 
     //additionally inputs for some country
     $('.country-dop').on('change', function () {
-        var selectUser = $(this).val();
+        let selectUser = $(this).val();
 
         if (selectUser === 'AX') {
             $('.dop-fields').slideDown();
@@ -185,7 +247,7 @@ $(document).ready(function(){
         create: false,
         render: {
             item: function(data, escape) {
-                return '<div>' + escape(data.text) + '</div>';
+                return '<div class="press-scale">' + escape(data.text) + '</div>';
             }
         }
     });

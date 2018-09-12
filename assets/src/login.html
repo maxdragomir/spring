@@ -5,7 +5,7 @@
     //= template/head.html
 </head>
 <body>
-
+<div class="bg-test"></div>
     <div class="wrapper">
         <div class="main">
 
@@ -65,7 +65,7 @@
     <script>
         $(document).ready(function () {
             $('.login-logo').addClass('show-logo');
-            $('body').addClass('show_bg');
+            $('.bg-test').addClass('show_bg');
 
 
             setTimeout(function () {
@@ -94,6 +94,21 @@
                     $('#login').focus();
                 }, 500);
             });
+
+
+            const img = document.querySelector(".bg-test");
+
+            document.addEventListener("mousemove", function (e) {
+                move (e.clientX, e.clientY);
+            });
+
+            function move (x, y) {
+                let wh = window.innerHeight / 2,
+                    ww = window.innerWidth / 2;
+
+                document.body.style.setProperty('--mouseX', (x - ww) / 100 + "deg");
+                document.body.style.setProperty('--mouseY', (y - wh) / 100 + "deg");
+            }
         });
     </script>
 </body>

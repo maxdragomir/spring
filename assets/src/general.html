@@ -37,6 +37,7 @@
                                 <li><a href="temporaries.html" class="waves-effect waves-light">Temporaries</a></li>
                                 <li><a href="batches.html" class="waves-effect waves-light">Batches</a></li>
                                 <li><a href="verification.html" class="waves-effect waves-light">Verification</a></li>
+                                <li><a href="undeliverables.html" class="waves-effect waves-light">Undeliverables</a></li>
                             </ul>
                         </li>
                         <li>
@@ -350,11 +351,12 @@
                                 <span class="total-title pr-4">Total:</span>
                                 <div class="total-number pr-4 tooltipped" data-position="top" data-tooltip="Parcels">
                                     <i class="fa fa-box pr-2"></i>
-                                    <span id="c_total_parcels" data-parcels="66676">0</span>
+                                    <span class="c_total_parcels">66,676</span>
                                 </div>
                                 <div class="total-number tooltipped" data-position="top" data-tooltip="Weight">
                                     <i class="fa fa-weight pr-2"></i>
-                                    <span id="c_total_weight" data-weight="67969">0 </span> kg</div>
+                                    <span class="c_total_weight pr-2">67,969</span>kg
+                                </div>
                             </div>
                         </div>
 
@@ -618,24 +620,6 @@
                 $(this).addClass('active');
 
             });
-
-
-            //Count
-            var totalParcels, totalWeight,
-                dataParcels = $('#c_total_parcels').data('parcels'),
-                dataWeight = $('#c_total_weight').data('weight'),
-
-                options = {
-                    useEasing: true,
-                    useGrouping: true,
-                    separator: ',',
-                    decimal: '.',
-                };
-
-            totalParcels = new CountUp('c_total_parcels', 0, dataParcels, 0, 2, options);
-            totalParcels.start();
-            totalWeight = new CountUp('c_total_weight', 0, dataWeight, 0, 2, options);
-            totalWeight.start();
 
         });
 

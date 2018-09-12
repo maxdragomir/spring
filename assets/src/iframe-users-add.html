@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>Dashboard</title>
+        //= template/head.html
+
+    </head>
+    <body class="iframe iframe-add">
+
+        <div class="modal-content">
+
+            <div class="row m-0 mt-2">
+
+                <div class="col s12 mb-2">
+                    <div class="card card-modal">
+                        <div class="row">
+                            <div class="input-field col s12 m6 color-grey content-centered">
+                                <select id="user-type">
+                                    <option value="0" selected>Choose user type</option><option value="11">Shipper</option><option value="21">Carrier</option><option value="4">Hub Supervisor</option><option value="5">Hub Worker</option><option value="7">Client Services</option><option value="22">Sales</option><option value="1">Admin</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 pr">
+                    <div class="row">
+
+                        <div class="type-shipper type-hide">
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-2">
+                                    <div class="input-title input-title-active">
+                                        <div class="switch color-green switch-active tooltipped" data-position="top" data-tooltip="">
+                                            <label>
+                                                <input checked type="checkbox">
+                                                <span class="lever"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s12 m6 l2">
+                                            <div class="one-row-checkbox color-green">
+                                                <label>
+                                                    <input type="checkbox"/>
+                                                    <span class="fs-1">Test Mode</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="input-field col s12 m6 l3 color-grey tooltipped" data-position="bottom" data-tooltip="Must be unique">
+                                            <input id="client-number" class="m-0" type="text">
+                                            <label for="client-number">Client Number<i class="fa fa-info-circle"></i></label>
+                                        </div>
+                                        <div class="input-field col s12 m6 l3 color-grey">
+                                            <select>
+                                                <option value="2">France - Main Hub</option><option value="6">Germany - Main Hub</option><option value="4">HK - Main Hub</option><option value="3">Italy - Main hub</option><option value="1">Spain - Main Hub</option><option value="5">UK - Main hub</option>
+                                            </select>
+                                            <label>Assigned Hub</label>
+                                        </div>
+                                        <div class="input-field col s12 m6 l4 color-grey">
+                                            <select>
+                                                <option value="Australia/Sydney">[GMT+10:00] Australia Eastern Time</option><option value="Australia/Adelaide">[GMT+09:30] Australia Central Time</option><option value="Japan">[GMT+09:00] Japan</option><option value="Asia/Seoul">[GMT+09:00] Seoul</option><option value="Australia/Perth">[GMT+08:00] Australia Western Time</option><option value="Asia/Shanghai">[GMT+08:00] China (Beijing)</option><option value="Asia/Hong_Kong">[GMT+08:00] Hong Kong</option><option value="Asia/Singapore">[GMT+08:00] Singapore</option><option value="Europe/Moscow">[GMT+03:00] Moscow</option><option value="EET">[GMT+02:00] Eastern European Time</option><option value="CET">[GMT+01:00] Central European Time</option><option value="WET">[GMT+00:00] Western European Time</option><option value="Europe/London">[GMT+00:00] Great Britain</option><option value="Canada/Newfoundland">[GMT-03:30] Newfoundland</option><option value="Canada/Atlantic">[GMT-04:00] Atlantic Time</option><option value="US/Eastern">[GMT-05:00] Eastern Time</option><option value="US/Central">[GMT-06:00] Central Time</option><option value="US/Mountain">[GMT-07:00] Mountain Time</option><option value="US/Arizona">[GMT-07:00] Arizona</option><option value="US/Pacific">[GMT-08:00] Pacific Time</option><option value="US/Alaska">[GMT-09:00] Alaska Time</option><option value="US/Hawaii">[GMT-10:00] Hawaii-Aleutian Time</option>
+                                            </select>
+                                            <label>Timezone</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-4 mt-4">
+                                    <div class="row">
+
+                                        <div class="input-field col s12 m6 l3 color-grey tooltipped" data-position="bottom" data-tooltip=" * 3-25 chars; only latin letters, digits and .-+_@ chars">
+                                            <input id="username" class="m-0" type="text">
+                                            <label for="username">Choose Username<i class="fa fa-info-circle"></i></label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-grey">
+                                            <input id="email" class="m-0" type="text">
+                                            <label for="email">Email</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-grey">
+                                            <input id="password" class="m-0" type="text">
+                                            <label for="password">Password</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-grey">
+                                            <input id="title" class="m-0" type="text">
+                                            <label for="title">Title</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12 m12 l6">
+                                <div class="card card-modal mb-2">
+                                    <div class="input-title">Address</div>
+                                    <div class="row">
+                                        <div class="input-field col s6 color-grey">
+                                            <input id="shipper_name" class="m-0" type="text">
+                                            <label for="shipper_name">Name</label>
+                                        </div>
+                                        <div class="input-field col s6 color-grey">
+                                            <input id="shipper_company" class="m-0" type="text">
+                                            <label for="shipper_company">Company</label>
+                                        </div>
+
+                                        <div class="input-field col s12 color-grey">
+                                            <input id="shipper_address1" class="m-0" type="text">
+                                            <label for="shipper_address1">Address line 1</label>
+                                        </div>
+                                        <div class="input-field col s6 color-grey">
+                                            <input id="shipper_address2" class="m-0" type="text">
+                                            <label for="shipper_address2">Address line 2</label>
+                                        </div>
+                                        <div class="input-field col s6 color-grey">
+                                            <input id="shipper_address3" class="m-0" type="text">
+                                            <label for="shipper_address3">Address line 3</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 color-grey">
+                                            <input id="shipper_city" class="m-0" type="text">
+                                            <label for="shipper_city">City</label>
+                                        </div>
+                                        <div class="input-field col s12 m6 color-grey">
+                                            <input id="shipper_country-state" class="m-0" type="text">
+                                            <label for="shipper_country-state">Country / State</label>
+                                        </div>
+
+                                        <div class="input-field col s5 m3 l4 color-grey">
+                                            <input id="shipper_zip-code" class="m-0" type="text">
+                                            <label for="shipper_zip-code">ZIP - code</label>
+                                        </div>
+                                        <div class="input-field col s7 m9 l8 color-grey">
+                                            <select name="shipper_consignee_country" size="1" >
+                                                <option value="AF">Afghanistan</option><option value="AX">Aland Islands</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua and Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT">Austria</option><option value="AZ">Azerbaijan</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BO">Bolivia</option><option value="BQ">Bonaire</option><option value="BA">Bosnia and Herzegovina</option><option value="BW">Botswana</option><option value="BV">Bouvet Island</option><option value="BR">Brazil</option><option value="IO">British Indian Ocean Territory</option><option value="BN">Brunei</option><option value="BG">Bulgaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="BT">Bhutan</option><option value="KH">Cambodia</option><option value="CM">Cameroon</option><option value="CA">Canada</option><option value="IC">Canary Islands</option><option value="CV">Cape Verde</option><option value="KY">Cayman Islands</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="CL">Chile</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos Island</option><option value="CO">Colombia</option><option value="KM">Comoros</option><option value="CG">Congo</option><option value="CD">Congo Democratic Republic</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="HR">Croatia</option><option value="CU">Cuba</option><option value="CW">Curacao</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="EC">Ecuador</option><option value="EG">Egypt</option><option value="SV">El Salvador</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="EE">Estonia</option><option value="ET">Ethiopia</option><option value="FK">Falkland Islands</option><option value="FO">Faroe Islands</option><option value="FJ">Fiji</option><option value="FI">Finland</option><option value="FR">France</option><option value="GF">French Guyana</option><option value="PF">French Polynesia</option><option value="TF">French Southern Territory</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia</option><option value="DE">Germany</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GG">Guernsey</option><option value="GN">Guinea</option><option value="GW">Guinea Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="HM">Heard and McDonald Islands</option><option value="HN">Honduras</option><option value="HK">Hong Kong</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran</option><option value="IQ">Iraq</option><option value="IE">Ireland</option><option value="IM">Isle of Man</option><option value="IL">Israel</option><option value="IT">Italy</option><option value="CI">Ivory Coast</option><option value="JM">Jamaica</option><option value="JP">Japan</option><option value="JE">Jersey</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KE">Kenya</option><option value="XK">Kosovo</option><option value="KI">Kiribati</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Laos</option><option value="LV">Latvia</option><option value="LB">Lebanon</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MO">Macau</option><option value="MK">Macedonia</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MH">Marshall Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico</option><option value="FM">Micronesia</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="MN">Mongolia</option><option value="ME">Montenegro</option><option value="MS">Montserrat</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="MM">Myanmar</option><option value="NA">Namibia</option><option value="NR">Nauru</option><option value="NP">Nepal</option><option value="AN">Netherland Antilles</option><option value="NL">Netherlands</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="KP">North Korea</option><option value="MP">Northern Mariana Island</option><option value="NO">Norway</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PW">Palau</option><option value="PS">Palestine</option><option value="PA">Panama</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="PH">Philippines</option><option value="PN">Pitcairn</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="PR">Puerto Rico</option><option value="QA">Qatar</option><option value="RE">Reunion Island</option><option value="RO">Romania</option><option value="RU">Russia</option><option value="RW">Rwanda</option><option value="BL">Saint Barthelemy</option><option value="SH">Saint Helena</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="SX">Saint Maarten</option><option value="MF">Saint Martin</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and the Grenadines</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="ST">Sao Tome and Principe</option><option value="SA">Saudi Arabia</option><option value="SN">Senegal</option><option value="RS">Serbia</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="SB">Solomon Islands</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="GS">South Georgia</option><option value="KR">South Korea</option><option value="SS">South Sudan</option><option value="ES">Spain</option><option value="LK">Sri Lanka</option><option value="SD">Sudan</option><option value="SR">Suriname</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SZ">Swaziland</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="SY">Syria</option><option value="TJ">Tajikistan</option><option value="TW">Taiwan</option><option value="TZ">Tanzania</option><option value="TH">Thailand</option><option value="TL">Timor</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad and Tobago</option><option value="TN">Tunisia</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="TC">Turks and Caicos Islands</option><option value="TV">Tuvalu</option><option value="UG">Uganda</option><option value="UA">Ukraine</option><option value="AE">United Arab Emirates</option><option value="GB">United Kingdom</option><option value="US">United States</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option value="VU">Vanuatu</option><option value="VA">Vatican</option><option value="VE">Venezuela</option><option value="VN">Vietnam</option><option value="VG">Virgin Islands (British)</option><option value="VI">Virgin Islands (US)</option><option value="WF">Wallis and Futuna</option><option value="EH">Western Sahara</option><option value="YE">Yemen</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option>
+                                            </select>
+                                            <label>Country</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m5 color-grey">
+                                            <input id="shipper_phone" class="m-0" type="text">
+                                            <label for="shipper_phone">Phone</label>
+                                        </div>
+                                        <div class="input-field col s12 m7 color-grey">
+                                            <input id="shipper_email" class="m-0" type="text">
+                                            <label for="shipper_email">Email</label>
+                                        </div>
+
+                                        <div class="input-field col s12 color-grey">
+                                            <input id="shipper_vat" class="m-0" type="text">
+                                            <label for="shipper_vat">Vat</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12 m12 l6">
+                                <div class="card card-modal mb-2">
+                                    <div class="input-title">Settings</div>
+                                    <div class="row">
+                                        <div class="input-field col s12 color-grey">
+                                            <input id="ftp-username" class="m-0" type="text">
+                                            <label for="ftp-username">FTP Username</label>
+                                        </div>
+                                        <div class="input-field col s12 color-grey">
+                                            <input id="ftp-password" class="m-0" type="text">
+                                            <label for="ftp-password">FTP Password</label>
+                                        </div>
+                                        <div class="col s12 m6 l5 xl4">
+                                            <div class="one-row-checkbox color-green">
+                                                <label>
+                                                    <input type="checkbox"/>
+                                                    <span class="fs-1">FTP Enabled</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m6 l7 xl5">
+                                            <div class="one-row-checkbox color-green">
+                                                <label>
+                                                    <input type="checkbox"/>
+                                                    <span class="fs-1">FTP Tracking Enabled</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="input-field col s12 m12 l12 xl3 color-grey">
+                                            <select>
+                                                <option value="UTF-8" selected="">UTF-8</option>
+                                            </select>
+                                            <label>Charset</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12 m12 l6">
+                                <div class="card card-modal mb-4 mt-0">
+                                    <div class="row">
+
+                                        <div class="col s12 m12 l6">
+                                            <div class="one-row-checkbox color-green mt-0">
+                                                <label>
+                                                    <input type="checkbox"/>
+                                                    <span class="fs-1">Consignee Phone Required</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m12 l6">
+                                            <div class="one-row-checkbox color-green mt-0">
+                                                <label>
+                                                    <input type="checkbox"/>
+                                                    <span class="fs-1">Consignee Email Required</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="input-field col s12 color-grey">
+                                            <textarea id="admin-comment" class="textarea textarea-big"></textarea>
+                                            <label for="admin-comment">Administration Comments</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="type-carrier type-hide">
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-2">
+                                    <div class="input-title input-title-active">
+                                        <div class="switch color-green switch-active tooltipped" data-position="top" data-tooltip="">
+                                            <label>
+                                                <input checked type="checkbox">
+                                                <span class="lever"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="input-field col s12 m6 l2 color-grey tooltipped" data-position="bottom" data-tooltip=" * 3-25 chars; only latin letters, digits and .-+_@ chars">
+                                            <input id="username" class="m-0" type="text">
+                                            <label for="username">Choose Username<i class="fa fa-info-circle"></i></label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-grey">
+                                            <input id="email" class="m-0" type="text">
+                                            <label for="email">Email</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l2 color-grey">
+                                            <input id="password" class="m-0" type="text">
+                                            <label for="password">Password</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l2 color-grey">
+                                            <input id="title" class="m-0" type="text">
+                                            <label for="title">Title</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-grey">
+                                            <select>
+                                                <option value="Australia/Sydney">[GMT+10:00] Australia Eastern Time</option><option value="Australia/Adelaide">[GMT+09:30] Australia Central Time</option><option value="Japan">[GMT+09:00] Japan</option><option value="Asia/Seoul">[GMT+09:00] Seoul</option><option value="Australia/Perth">[GMT+08:00] Australia Western Time</option><option value="Asia/Shanghai">[GMT+08:00] China (Beijing)</option><option value="Asia/Hong_Kong">[GMT+08:00] Hong Kong</option><option value="Asia/Singapore">[GMT+08:00] Singapore</option><option value="Europe/Moscow">[GMT+03:00] Moscow</option><option value="EET">[GMT+02:00] Eastern European Time</option><option value="CET">[GMT+01:00] Central European Time</option><option value="WET">[GMT+00:00] Western European Time</option><option value="Europe/London">[GMT+00:00] Great Britain</option><option value="Canada/Newfoundland">[GMT-03:30] Newfoundland</option><option value="Canada/Atlantic">[GMT-04:00] Atlantic Time</option><option value="US/Eastern">[GMT-05:00] Eastern Time</option><option value="US/Central">[GMT-06:00] Central Time</option><option value="US/Mountain">[GMT-07:00] Mountain Time</option><option value="US/Arizona">[GMT-07:00] Arizona</option><option value="US/Pacific">[GMT-08:00] Pacific Time</option><option value="US/Alaska">[GMT-09:00] Alaska Time</option><option value="US/Hawaii">[GMT-10:00] Hawaii-Aleutian Time</option>
+                                            </select>
+                                            <label>Timezone</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-4 mt-4">
+                                    <div class="row">
+                                        <div class="input-title input-title-active">
+                                            Assigned Carriers
+                                        </div>
+                                        <div class="input-field col s12 no-material-select">
+                                            <select class="multi-tags">
+                                                <option value="">Carriers</option>
+                                                <option value="1">PostNL Parcel EU</option>
+                                                <option value="2">PostNL Parcel GlobalPack EMS</option>
+                                                <option value="3">PostNL Parcel GlobalPack UPU</option>
+                                                <option value="4">PostNL Packet Tracked</option>
+                                                <option value="5">PostNL Packet Registered</option>
+                                                <option value="6">Royal Mail Tracked 24 - No Signature</option>
+                                                <option value="7">Royal Mail Tracked 24 - Signature</option>
+                                                <option value="8">Royal Mail Tracked 48 - No Signature</option>
+                                                <option value="9">Royal Mail Tracked 48 - Signature</option>
+                                                <option value="10">Sending Mainland</option>
+                                                <option value="11">Sending Islands</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal mt-2 mb-4">
+                                    <div class="row">
+                                        <div class="input-field col s12 color-grey">
+                                            <textarea id="admin-comment" class="textarea textarea-big"></textarea>
+                                            <label for="admin-comment">Administration Comments</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="type-hubsuper type-hide">
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-2">
+                                    <div class="input-title input-title-active">
+                                        <div class="switch color-green switch-active tooltipped" data-position="top" data-tooltip="">
+                                            <label>
+                                                <input checked type="checkbox">
+                                                <span class="lever"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="input-field col s12 m12 l4 color-grey">
+                                            <input id="title" class="m-0" type="text">
+                                            <label for="title">Title</label>
+                                        </div>
+                                        <div class="input-field col s12 m6 l4 color-grey">
+                                            <select>
+                                                <option value="2">France - Main Hub</option><option value="6">Germany - Main Hub</option><option value="4">HK - Main Hub</option><option value="3">Italy - Main hub</option><option value="1">Spain - Main Hub</option><option value="5">UK - Main hub</option>
+                                            </select>
+                                            <label>Assigned Hub</label>
+                                        </div>
+                                        <div class="input-field col s12 m6 l4 color-grey">
+                                            <select>
+                                                <option value="Australia/Sydney">[GMT+10:00] Australia Eastern Time</option><option value="Australia/Adelaide">[GMT+09:30] Australia Central Time</option><option value="Japan">[GMT+09:00] Japan</option><option value="Asia/Seoul">[GMT+09:00] Seoul</option><option value="Australia/Perth">[GMT+08:00] Australia Western Time</option><option value="Asia/Shanghai">[GMT+08:00] China (Beijing)</option><option value="Asia/Hong_Kong">[GMT+08:00] Hong Kong</option><option value="Asia/Singapore">[GMT+08:00] Singapore</option><option value="Europe/Moscow">[GMT+03:00] Moscow</option><option value="EET">[GMT+02:00] Eastern European Time</option><option value="CET">[GMT+01:00] Central European Time</option><option value="WET">[GMT+00:00] Western European Time</option><option value="Europe/London">[GMT+00:00] Great Britain</option><option value="Canada/Newfoundland">[GMT-03:30] Newfoundland</option><option value="Canada/Atlantic">[GMT-04:00] Atlantic Time</option><option value="US/Eastern">[GMT-05:00] Eastern Time</option><option value="US/Central">[GMT-06:00] Central Time</option><option value="US/Mountain">[GMT-07:00] Mountain Time</option><option value="US/Arizona">[GMT-07:00] Arizona</option><option value="US/Pacific">[GMT-08:00] Pacific Time</option><option value="US/Alaska">[GMT-09:00] Alaska Time</option><option value="US/Hawaii">[GMT-10:00] Hawaii-Aleutian Time</option>
+                                            </select>
+                                            <label>Timezone</label>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-4 mt-4">
+                                    <div class="row">
+
+                                        <div class="input-field col s12 m6 l4 color-grey tooltipped" data-position="bottom" data-tooltip=" * 3-25 chars; only latin letters, digits and .-+_@ chars">
+                                            <input id="username" class="m-0" type="text">
+                                            <label for="username">Choose Username<i class="fa fa-info-circle"></i></label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l4 color-grey">
+                                            <input id="email" class="m-0" type="text">
+                                            <label for="email">Email</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l4 color-grey">
+                                            <input id="password" class="m-0" type="text">
+                                            <label for="password">Password</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-4 mt-2">
+                                    <div class="row">
+                                        <div class="input-field col s12 color-grey">
+                                            <textarea id="admin-comment" class="textarea textarea-big"></textarea>
+                                            <label for="admin-comment">Administration Comments</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="type-hubwork type-hide">
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-2">
+                                    <div class="input-title input-title-active">
+                                        <div class="switch color-green switch-active tooltipped" data-position="top" data-tooltip="">
+                                            <label>
+                                                <input checked type="checkbox">
+                                                <span class="lever"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12 m12 l4 color-grey">
+                                            <input id="title" class="m-0" type="text">
+                                            <label for="title">Title</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l4 color-grey">
+                                            <select>
+                                                <option value="2">France - Main Hub</option><option value="6">Germany - Main Hub</option><option value="4">HK - Main Hub</option><option value="3">Italy - Main hub</option><option value="1">Spain - Main Hub</option><option value="5">UK - Main hub</option>
+                                            </select>
+                                            <label>Assigned Hub</label>
+                                        </div>
+                                        <div class="input-field col s12 m6 l4 color-grey">
+                                            <select>
+                                                <option value="Australia/Sydney">[GMT+10:00] Australia Eastern Time</option><option value="Australia/Adelaide">[GMT+09:30] Australia Central Time</option><option value="Japan">[GMT+09:00] Japan</option><option value="Asia/Seoul">[GMT+09:00] Seoul</option><option value="Australia/Perth">[GMT+08:00] Australia Western Time</option><option value="Asia/Shanghai">[GMT+08:00] China (Beijing)</option><option value="Asia/Hong_Kong">[GMT+08:00] Hong Kong</option><option value="Asia/Singapore">[GMT+08:00] Singapore</option><option value="Europe/Moscow">[GMT+03:00] Moscow</option><option value="EET">[GMT+02:00] Eastern European Time</option><option value="CET">[GMT+01:00] Central European Time</option><option value="WET">[GMT+00:00] Western European Time</option><option value="Europe/London">[GMT+00:00] Great Britain</option><option value="Canada/Newfoundland">[GMT-03:30] Newfoundland</option><option value="Canada/Atlantic">[GMT-04:00] Atlantic Time</option><option value="US/Eastern">[GMT-05:00] Eastern Time</option><option value="US/Central">[GMT-06:00] Central Time</option><option value="US/Mountain">[GMT-07:00] Mountain Time</option><option value="US/Arizona">[GMT-07:00] Arizona</option><option value="US/Pacific">[GMT-08:00] Pacific Time</option><option value="US/Alaska">[GMT-09:00] Alaska Time</option><option value="US/Hawaii">[GMT-10:00] Hawaii-Aleutian Time</option>
+                                            </select>
+                                            <label>Timezone</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-4 mt-4">
+                                    <div class="row">
+
+                                        <div class="input-field col s12 m6 l4 color-grey tooltipped" data-position="bottom" data-tooltip=" * 3-25 chars; only latin letters, digits and .-+_@ chars">
+                                            <input id="username" class="m-0" type="text">
+                                            <label for="username">Choose Username<i class="fa fa-info-circle"></i></label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l4 color-grey">
+                                            <input id="email" class="m-0" type="text">
+                                            <label for="email">Email</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l4 color-grey">
+                                            <input id="password" class="m-0" type="text">
+                                            <label for="password">Password</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-4 mt-2">
+                                    <div class="row">
+                                        <div class="input-field col s12 color-grey">
+                                            <textarea id="admin-comment" class="textarea textarea-big"></textarea>
+                                            <label for="admin-comment">Administration Comments</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="type-client type-hide">
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-2">
+                                    <div class="input-title input-title-active">
+                                        <div class="switch color-green switch-active tooltipped" data-position="top" data-tooltip="">
+                                            <label>
+                                                <input checked type="checkbox">
+                                                <span class="lever"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="input-field col s12 m6 l2 color-grey tooltipped" data-position="bottom" data-tooltip=" * 3-25 chars; only latin letters, digits and .-+_@ chars">
+                                            <input id="username" class="m-0" type="text">
+                                            <label for="username">Choose Username<i class="fa fa-info-circle"></i></label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-grey">
+                                            <input id="email" class="m-0" type="text">
+                                            <label for="email">Email</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l2 color-grey">
+                                            <input id="password" class="m-0" type="text">
+                                            <label for="password">Password</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l2 color-grey">
+                                            <input id="title" class="m-0" type="text">
+                                            <label for="title">Title</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-grey">
+                                            <select>
+                                                <option value="Australia/Sydney">[GMT+10:00] Australia Eastern Time</option><option value="Australia/Adelaide">[GMT+09:30] Australia Central Time</option><option value="Japan">[GMT+09:00] Japan</option><option value="Asia/Seoul">[GMT+09:00] Seoul</option><option value="Australia/Perth">[GMT+08:00] Australia Western Time</option><option value="Asia/Shanghai">[GMT+08:00] China (Beijing)</option><option value="Asia/Hong_Kong">[GMT+08:00] Hong Kong</option><option value="Asia/Singapore">[GMT+08:00] Singapore</option><option value="Europe/Moscow">[GMT+03:00] Moscow</option><option value="EET">[GMT+02:00] Eastern European Time</option><option value="CET">[GMT+01:00] Central European Time</option><option value="WET">[GMT+00:00] Western European Time</option><option value="Europe/London">[GMT+00:00] Great Britain</option><option value="Canada/Newfoundland">[GMT-03:30] Newfoundland</option><option value="Canada/Atlantic">[GMT-04:00] Atlantic Time</option><option value="US/Eastern">[GMT-05:00] Eastern Time</option><option value="US/Central">[GMT-06:00] Central Time</option><option value="US/Mountain">[GMT-07:00] Mountain Time</option><option value="US/Arizona">[GMT-07:00] Arizona</option><option value="US/Pacific">[GMT-08:00] Pacific Time</option><option value="US/Alaska">[GMT-09:00] Alaska Time</option><option value="US/Hawaii">[GMT-10:00] Hawaii-Aleutian Time</option>
+                                            </select>
+                                            <label>Timezone</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-4 mt-4">
+                                    <div class="row">
+                                        <div class="input-field col s12 color-grey">
+                                            <textarea id="admin-comment" class="textarea textarea-big"></textarea>
+                                            <label for="admin-comment">Administration Comments</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="type-sales type-hide">
+                            <div class="col s12">
+                                <div class="card card-modal mb-2">
+                                    <div class="input-title input-title-active">
+                                        <div class="switch color-green switch-active tooltipped" data-position="top" data-tooltip="">
+                                            <label>
+                                                <input checked type="checkbox">
+                                                <span class="lever"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="input-field col s12 m6 l2 color-grey tooltipped" data-position="bottom" data-tooltip=" * 3-25 chars; only latin letters, digits and .-+_@ chars">
+                                            <input id="username" class="m-0" type="text">
+                                            <label for="username">Choose Username<i class="fa fa-info-circle"></i></label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-grey">
+                                            <input id="email" class="m-0" type="text">
+                                            <label for="email">Email</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l2 color-grey">
+                                            <input id="password" class="m-0" type="text">
+                                            <label for="password">Password</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l2 color-grey">
+                                            <input id="title" class="m-0" type="text">
+                                            <label for="title">Title</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-grey">
+                                            <select>
+                                                <option value="Australia/Sydney">[GMT+10:00] Australia Eastern Time</option><option value="Australia/Adelaide">[GMT+09:30] Australia Central Time</option><option value="Japan">[GMT+09:00] Japan</option><option value="Asia/Seoul">[GMT+09:00] Seoul</option><option value="Australia/Perth">[GMT+08:00] Australia Western Time</option><option value="Asia/Shanghai">[GMT+08:00] China (Beijing)</option><option value="Asia/Hong_Kong">[GMT+08:00] Hong Kong</option><option value="Asia/Singapore">[GMT+08:00] Singapore</option><option value="Europe/Moscow">[GMT+03:00] Moscow</option><option value="EET">[GMT+02:00] Eastern European Time</option><option value="CET">[GMT+01:00] Central European Time</option><option value="WET">[GMT+00:00] Western European Time</option><option value="Europe/London">[GMT+00:00] Great Britain</option><option value="Canada/Newfoundland">[GMT-03:30] Newfoundland</option><option value="Canada/Atlantic">[GMT-04:00] Atlantic Time</option><option value="US/Eastern">[GMT-05:00] Eastern Time</option><option value="US/Central">[GMT-06:00] Central Time</option><option value="US/Mountain">[GMT-07:00] Mountain Time</option><option value="US/Arizona">[GMT-07:00] Arizona</option><option value="US/Pacific">[GMT-08:00] Pacific Time</option><option value="US/Alaska">[GMT-09:00] Alaska Time</option><option value="US/Hawaii">[GMT-10:00] Hawaii-Aleutian Time</option>
+                                            </select>
+                                            <label>Timezone</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-4 mt-4">
+                                    <div class="row">
+                                        <div class="input-title input-title-active">
+                                            Assigned Shippers
+                                        </div>
+                                        <div class="input-field col s12 no-material-select">
+                                            <select class="multi-tags">
+                                                <option value="">Shippers</option><option value="101796">100002482 - AGAPEA</option><option value="101903">100003665 - ANDRES GOMEZ GONZALEZ</option><option value="101911">100001157 - ALBERTO IZQUIERDO CUADRADO</option><option value="101908">100005118 - ALBERTO JOSE PAEZ MUÑOZ</option><option value="101855">100004888 - ALASSIE</option><option value="101928">10001892 - ALCHIMIAWEB</option><option value="101845">100005038 - ALCOSAFAR</option><option value="101851">100003841 - ALEXANDER DE WILDE</option><option value="101869">100002512 - ALFONSO JAVIER SANCHIS BIOSCA</option><option value="101770">F100004036 - ALIZE</option><option value="101891">100005092 - ALVARO PASTOR SANCHEZ</option><option value="101867">100002827 - ANNA MARIA RELATS</option><option value="101859">100004514 - Antonio Delgado Panchón</option><option value="101929">100001506 - ART GALLERY FRANCE</option><option value="101779">100003693 - ASIAGLOBAL</option><option value="101873">100004981 - ALEJANDRO SUAREZ CABRERA</option><option value="101870">100002347 - BALOMPIE DISTRIBUIDORA</option><option value="101913">100003288 - BESIDE SOLUTIONS</option><option value="101773">T100012346 - BVoet</option><option value="101819">100005001 - LA CAMARA DEL ALQUIMISTA</option><option value="101848">100004630 - CAPITOLA</option><option value="101750">100004627 - CARETHY</option><option value="101919">100004755 - CIUDAD CAMPER</option><option value="101793">100003256 - CLICKINRED</option><option value="101863">100001603 - CLICK MED SARL</option><option value="101802">100003529 - CONOSUR</option><option value="101910">100001001 - CONSORCIO MANIPULADO</option><option value="101875">100005068 - COSAS DE ENFERMERA CB</option><option value="101831">100002840 - COSTA SCREENPRINT</option><option value="101817">100001839 - CARMEN SEOANE</option><option value="101790">100004727 - DIRECT OPTIC</option><option value="101832">100004993 - DIVINOS PLACERES</option><option value="101815">100001843 - DENIS MARTIN VILLANEGO</option><option value="101890">100004496 - DTM LOISIRS CRÉATIFS</option><option value="101895">100004774 - EASO MAGNO</option><option value="101830">100003853 - ECLIPSUN SHOPPING</option><option value="101900">100003484 - EL FLAMENCO VIVE</option><option value="101866">100002502 - Elisabeth Wolf Allemann</option><option value="101857">100004562 - ENCHANTY PARK</option><option value="101889">100004662 - ENFERMERA EN APUROS</option><option value="101917">100002811 - EDUARDO PEREZ JARA</option><option value="101856">100004909 - ERIC DE WILDE</option><option value="101887">100005071 - EUROWATCH ELBB</option><option value="101783">100004661 - FAIR PLAY</option><option value="101879">100003601 - FARMACIA DEL SOL</option><option value="101854">100004708 - FARMATECA TAJONA</option><option value="101807">100004249 - FERNANDO LOPEZ SANZ</option><option value="101810">100001202 - FRANCIS GAGLIO</option><option value="101827">100003266 - FIAS PROYECTOS Y DESARROLLOS</option><option value="101868">002016856 - FOLCH STUDIO</option><option value="101844">900000874 - Friedrichstadt-Apotheke</option><option value="101792">100003469 - FTLExpress</option><option value="101893">100002480 - GAMEFOX</option><option value="101907">100005064 - GARCIA TORAL</option><option value="101759">T166777888 - GBavera</option><option value="101924">100004101 - GUSTAVO DEMIAN GUERRERO</option><option value="101905">947230545 - German Spring Demo account</option><option value="101874">100005081 - Global-e UK Ltd</option><option value="101774">100003176 - GREENSTUFF</option><option value="101818">000728960 - GRUPO POSTA</option><option value="101872">100002776 - GUREAK MARKETING (EUROPAC)</option><option value="101768">T100001234 - HBlanco</option><option value="101823">002002231 - IBEROAMERICANA EDITORIAL</option><option value="101918">100001043 - IBEROMAIL CORREIO INTERNATIONAL</option><option value="101838">000431245 - IHES</option><option value="101771">F100004757 - INDERWEAR</option><option value="101915">100003696 - INNOVACIONES DISRAS</option><option value="101922">100002963 - Isabel Salamanca</option><option value="101806">100001857 - JAVIER LOPEZ SANZ</option><option value="101826">100002641 - Jazz Messengers</option><option value="101904">T100005555 - JBrueck</option><option value="101888">100001919 - JUAN RGUEZ DE LA FLOR</option><option value="101902">100002608 - JUAN JOSE SANCHEZ MESA</option><option value="101824">100002651 - Juan José Couto Cortizo</option><option value="101880">100004025 - JULIAN JOYEROS</option><option value="101800">100001858 - JUSTCLICK</option><option value="101871">100005070 - K-2 GROUP</option><option value="101850">100003229 - KINOTECA VIDEO</option><option value="101764">T166777889 - KKChow</option><option value="101842">T100001222 - KTuinstra</option><option value="101809">100002577 - LUIS ALBA GALLO</option><option value="101925">100004642 - LAS MONTAÑAS DEL CANADA</option><option value="101899">100003360 - LAZKANO INTERNET</option><option value="101894">000756573 - LIBRERIA Y EDITORIAL RENACIMIENTO</option><option value="101896">100004540 - LINEAS GLOBALES DE COMUNICACIÓN</option><option value="101923">100002003 - LUIS MONTES REQUEJO</option><option value="101926">100004086 - MANIA TOYS COLLECTOR</option><option value="101897">100003896 - MIGUEL ANGEL PEÑA</option><option value="101881">100004026 - MARIA DE LAS NIEVES CARRERA</option><option value="101877">100002614 - MATTEO FILLA</option><option value="101860">100001615 - MARIA DOLORES MARTIN DOÑORO</option><option value="101853">100004263 - MENDIOLA ORTEGA</option><option value="101785">100004290 - METROPOLIS</option><option value="101834">100004273 - NOSOLOPOSTERS</option><option value="101749">100003041 - MISCOTA</option><option value="101808">100004279 - MARIA JOSE ARDURA GARCIA</option><option value="101921">100002292 - Manuel Rodríguez Alcaide</option><option value="101878">002007785 - NATIVIDAD HIJAZO BARCELO</option><option value="101841">100004149 - NUTRICION MARKET FITNESS</option><option value="101794">100002088 - PACOLIMON</option><option value="101816">100003349 - PERLA AZABACHE</option><option value="101916">02011294 - PHARMAMAR</option><option value="101836">100005034 - PLAYMYGROUP INTERNATIONAL S.L.</option><option value="101882">100004023 - PRAJOYA</option><option value="101858">100003898 - PRECIOSADICTOS</option><option value="101784">100003732 - PROYECTARTE</option><option value="101829">100003580 - REPÚBLICA GRÁFICA</option><option value="101864">100001177 - REVOLVER RECORDS</option><option value="101862">100002848 - RICARDO GARCIA CLARAMUNT</option><option value="101839">002005770 - RIU</option><option value="101885">100004024 - ROBERTO SANCHEZ FARPON</option><option value="101861">100000792 - ROGELIO MONTES REQUEJO</option><option value="101914">100002335 - ROGER GELI BELTRAN</option><option value="101811">100002579 - SAMUEL DE ROA</option><option value="101797">100001814 - SERVOVENDI</option><option value="101835">100004716 - Shipius</option><option value="101852">100003589 - SHOPINGLASK</option><option value="101901">100004522 - Sergio Mejuto Fernandez</option><option value="101876">000609112 - SODIS</option><option value="101847">100004583 - STICKETS</option><option value="101822">100001152 - SUBPROF</option><option value="101846">100004638 - TENVINILO</option><option value="101735">TEST - Test Shipper</option><option value="101758">T111111111 - Test123</option><option value="101769">T100012345 - TESTFR</option><option value="101849">100005057 - TIFTON</option><option value="101795">100003800 - TODOTIENDA</option><option value="101742">100002562 - TRADEINN</option><option value="101801">100002980 - TUDETIC</option><option value="101909">100001446 - UNAI ECHEVARRIA ALONSO</option><option value="101927">100005130 - UHRENWATCH S.L.</option><option value="101837">100004979 - ULTIMA GAMES</option><option value="101886">100004027 - UNIVERSAL TIME</option><option value="101920">000722205 - VILBO EDICIONES PUBLICIDAD</option><option value="101805">100004891 - WEAREWADO</option><option value="101865">000760421 - WEIRDO MUSIKA S.L.</option><option value="101748">100004626 - WELLINDAL</option><option value="101898">100002348 - YERSANA HERBORISTERIA</option><option value="101765">100004505 - ZELERIS</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-4 mt-2">
+                                    <div class="row">
+                                        <div class="input-field col s12 color-grey">
+                                            <textarea id="admin-comment" class="textarea textarea-big"></textarea>
+                                            <label for="admin-comment">Administration Comments</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="type-admin type-hide">
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-2">
+                                    <div class="input-title input-title-active">
+                                        <div class="switch color-green switch-active tooltipped" data-position="top" data-tooltip="">
+                                            <label>
+                                                <input checked type="checkbox">
+                                                <span class="lever"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="input-field col s12 m6 l2 color-grey tooltipped" data-position="bottom" data-tooltip=" * 3-25 chars; only latin letters, digits and .-+_@ chars">
+                                            <input id="username" class="m-0" type="text">
+                                            <label for="username">Choose Username<i class="fa fa-info-circle"></i></label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-grey">
+                                            <input id="email" class="m-0" type="text">
+                                            <label for="email">Email</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l2 color-grey">
+                                            <input id="password" class="m-0" type="text">
+                                            <label for="password">Password</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l2 color-grey">
+                                            <input id="title" class="m-0" type="text">
+                                            <label for="title">Title</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m6 l3 color-grey">
+                                            <select>
+                                                <option value="Australia/Sydney">[GMT+10:00] Australia Eastern Time</option><option value="Australia/Adelaide">[GMT+09:30] Australia Central Time</option><option value="Japan">[GMT+09:00] Japan</option><option value="Asia/Seoul">[GMT+09:00] Seoul</option><option value="Australia/Perth">[GMT+08:00] Australia Western Time</option><option value="Asia/Shanghai">[GMT+08:00] China (Beijing)</option><option value="Asia/Hong_Kong">[GMT+08:00] Hong Kong</option><option value="Asia/Singapore">[GMT+08:00] Singapore</option><option value="Europe/Moscow">[GMT+03:00] Moscow</option><option value="EET">[GMT+02:00] Eastern European Time</option><option value="CET">[GMT+01:00] Central European Time</option><option value="WET">[GMT+00:00] Western European Time</option><option value="Europe/London">[GMT+00:00] Great Britain</option><option value="Canada/Newfoundland">[GMT-03:30] Newfoundland</option><option value="Canada/Atlantic">[GMT-04:00] Atlantic Time</option><option value="US/Eastern">[GMT-05:00] Eastern Time</option><option value="US/Central">[GMT-06:00] Central Time</option><option value="US/Mountain">[GMT-07:00] Mountain Time</option><option value="US/Arizona">[GMT-07:00] Arizona</option><option value="US/Pacific">[GMT-08:00] Pacific Time</option><option value="US/Alaska">[GMT-09:00] Alaska Time</option><option value="US/Hawaii">[GMT-10:00] Hawaii-Aleutian Time</option>
+                                            </select>
+                                            <label>Timezone</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <div class="card card-modal mb-4 mt-4">
+                                    <div class="row">
+
+                                        <div class="input-field col s12 color-grey">
+                                            <textarea id="admin-comment" class="textarea textarea-big"></textarea>
+                                            <label for="admin-comment">Administration Comments</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+
+                <div class="switch color-green">
+                    <label>
+                        <input type="checkbox">
+                        <span class="lever"></span>
+                        <span class="label-text">Not close window to continue edit</span>
+                    </label>
+                </div>
+                <button class="btn btn-large waves-effect btn-submit">Submit</button>
+            </div>
+
+        </div>
+
+        //= template/footer.html
+
+    </body>
+</html>
