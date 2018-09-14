@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Dashboard</title>
+    <title>Log in</title>
     //= template/head.html
 </head>
-<body>
-<div class="bg-test"></div>
-    <div class="wrapper">
+<body class="login">
+    <div data-offset=".6"  class="wrapper">
+        <div class="bg-test"></div>
+
         <div class="main">
 
             <div class="content login-page">
@@ -84,7 +85,6 @@
                 }, 500);
             });
 
-
             $('.btn-back').on('click', function () {
                 $('.login-form').slideDown();
                 $('.forgot-form').slideUp();
@@ -96,19 +96,6 @@
             });
 
 
-            const img = document.querySelector(".bg-test");
-
-            document.addEventListener("mousemove", function (e) {
-                move (e.clientX, e.clientY);
-            });
-
-            function move (x, y) {
-                let wh = window.innerHeight / 2,
-                    ww = window.innerWidth / 2;
-
-                document.body.style.setProperty('--mouseX', (x - ww) / 100 + "deg");
-                document.body.style.setProperty('--mouseY', (y - wh) / 100 + "deg");
-            }
         });
     </script>
 </body>

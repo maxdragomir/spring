@@ -1,6 +1,13 @@
 
 $(document).ready(function() {
 
+    //logs url
+    $('.btn-var').on('click', function () {
+        $(this).parents('.row').find('.var-block').toggleClass('show');
+        $(this).children('.fa-angle-down').toggleClass('show');
+    });
+
+
     // toggle tooltip status
     $.each($('.switch-active'), function() {
 
@@ -75,7 +82,9 @@ $(document).ready(function() {
         txtToAdd = text;
 
         $input.val(inputVal.substring(0, caretPos) + " " + txtToAdd + " " + inputVal.substring(caretPos) );
+
         $input.next().addClass('active');
+
     });
 
 
@@ -130,32 +139,8 @@ $(document).ready(function() {
 
 
     //animate filter icon
-    $('.card-button').on('click', '.clear-btn', function () {
-        let el, $btnIcon = $('.clear-btn i');
-
-        el = $btnIcon.clone().removeClass('active');
-        $btnIcon.remove();
-        $(this).append(el);
-        el.addClass('active');
-
-    }).on('click', '.search-btn', function () {
-        let el, $btnIcon = $('.search-btn i');
-
-        el = $btnIcon.clone().removeClass('active');
-        $btnIcon.remove();
-        $(this).append(el);
-        el.addClass('active');
-
-    }).on('click', '.other-btn', function () {
-        let el, $btnIcon = $('.other-btn i');
-
-        el = $btnIcon.clone().removeClass('active');
-        $btnIcon.remove();
-        $(this).append(el);
-        el.addClass('active');
-
-    }).on('click', '.delivery-download', function () {
-        let el, $btnIcon = $('.delivery-download i');
+    $('.card-button > .btn').on('click', function () {
+        let el, $btnIcon = $(this).find('i');
 
         el = $btnIcon.clone().removeClass('active');
         $btnIcon.remove();
