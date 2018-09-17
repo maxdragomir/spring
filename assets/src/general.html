@@ -616,9 +616,7 @@
 
             // bar colors
             $.each($('.determinate'), function() {
-                var percent = $(this).width() / $(this).parent().width() * 100;
-                $(this).addClass('active');
-
+                $(this).addClass('active').width() / $(this).parent().width() * 100;
             });
 
         });

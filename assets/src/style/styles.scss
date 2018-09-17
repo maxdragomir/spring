@@ -15,36 +15,35 @@ body {
     overflow: hidden;
   }
 
-  &.fixed-title .main .content .card-fix {
-    position: fixed;
-    bottom: 0;
-    width: 50%;
-    left: 0;
-    right: 0;
-    display: flex;
-    margin-top: -85px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 -10px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2);
-    transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
-  }
   &.fixed-title .main .content {
-
+    .card-fix {
+      position: fixed;
+      bottom: 0;
+      width: 50%;
+      left: 0;
+      right: 0;
+      display: flex;
+      margin-top: -85px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 -10px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2);
+      transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+    }
     .card-title {
       position: fixed;
       width: calc(100% - 82px);
       top: 28px;
       border-radius: 0 0 10px 10px;
     }
-  }
-  &.fixed-title .main .content .thead-desctop {
-    position: fixed;
-    width: calc(100% - 113px) !important;
-    top: 54px;
-    z-index: 2;
+    .thead-desctop {
+      position: fixed;
+      width: calc(100% - 113px) !important;
+      top: 54px;
+      z-index: 2;
 
-    tr {
-      background: #fff;
+      tr {
+        background: #fff;
+      }
     }
   }
 
@@ -162,6 +161,14 @@ body {
 
 
 
+@keyframes tags-animation {
+  0% {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
 @keyframes spinner {
   0% {
     transform: rotate(0deg)
@@ -2331,6 +2338,12 @@ div.btn {
       color: #fff;
       border: 0;
       border-radius: 5px;
+      transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+
+      &.animate {
+        animation: tags-animation 200ms cubic-bezier(0.34, 1.61, 0.7, 1);
+        transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+      }
 
       &.active {
         background: $card-cyan-block;
@@ -2793,7 +2806,7 @@ div.btn {
         opacity: 0;
         overflow: hidden;
 
-        &.open {
+        &.show {
           opacity: 1;
           transition: all 500ms linear;
         }
@@ -2822,7 +2835,7 @@ div.btn {
           transform: translateY(100px);
           transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
 
-          &.open {
+          &.show {
             transform: translateY(0);
             transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
           }
@@ -3418,7 +3431,6 @@ div.btn {
               height: 50px;
               min-width: 200px;
               justify-content: center;
-              //padding-right: 2rem;
               margin-right: 2rem;
 
               &:after {
@@ -3514,7 +3526,7 @@ div.btn {
             }
           }
 
-          &.open {
+          &.show {
             transform: scale(1, 1);
             opacity: 1;
             visibility: visible;
@@ -4706,40 +4718,47 @@ div.btn {
 
         &.card-table-parcels {
 
-          .all-id {
-            position: relative;
-            transition: all 300ms cubic-bezier(0.34, 1.31, 0.7, 1);
-
-
-            .checklist {
-              position: absolute;
-              left: 0;
-              opacity: 0;
-              visibility: hidden;
-              transition: all 300ms cubic-bezier(0.34, 1.31, 0.7, 1);
-
-              [type="checkbox"]:checked + span:not(.lever):before {
-                border-right-color: $card-green-text;
-                border-bottom-color: $card-green-text;
-              }
-            }
-
-            &.open {
-              padding-left: 30px;
+          &.table-group-inputs {
+            .all-id {
+              position: relative;
               transition: all 300ms cubic-bezier(0.34, 1.31, 0.7, 1);
 
 
               .checklist {
-                opacity: 1;
-                visibility: visible;
+                position: absolute;
+                left: 0;
+                opacity: 0;
+                visibility: hidden;
                 transition: all 300ms cubic-bezier(0.34, 1.31, 0.7, 1);
 
+                [type="checkbox"]:checked + span:not(.lever):before {
+                  border-right-color: $card-green-text;
+                  border-bottom-color: $card-green-text;
+                }
               }
             }
+            &.show {
+              .all-id {
+                padding-left: 30px;
+                transition: all 300ms cubic-bezier(0.34, 1.31, 0.7, 1);
 
+                .checklist {
+                  opacity: 1;
+                  visibility: visible;
+                  transition: all 300ms cubic-bezier(0.34, 1.31, 0.7, 1);
+
+                }
+              }
+            }
           }
+          //td[data-title]{
 
+
+
+
+          //}
         }
+
         &.card-table-batches {
           tbody {
             .actions-btn {
@@ -6081,11 +6100,51 @@ div.btn {
           }
         }
         &.card-table {
+          &.table-group-inputs {
+            td[data-title] {
+              &:before {
+                content: attr(data-title);
+                font-weight: bold;
+                font-size: inherit;
+                white-space: pre-line;
+                text-align: left;
+                width: auto;
+                transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+
+              }
+            }
+            .all-id {
+              position: inherit !important;
+
+
+            }
+              &.show {
+              td[data-title]{
+                &:first-child {
+                  &:before {
+                    margin-left: 30px;
+                    transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+
+                  }
+                }
+              }
+                .checklist {
+                  left: 30px !important;
+
+                  label span {
+                    padding: 0;
+                  }
+                }
+
+
+            }
+          }
           .thead-desctop {
             thead {
               display: none;
             }
           }
+
           .thead-mobile {
             overflow: inherit;
             height: 100%;
@@ -6098,17 +6157,7 @@ div.btn {
               display: block;
               width: 100%;
 
-              .all-id {
-                position: inherit;
-                &.open {
-                  .checklist {
-                    left: 30px;
-                    label span {
-                      padding: 0;
-                    }
-                  }
-                }
-              }
+
               .td-links {
                 .test-badge {
                   & > .bold {
@@ -6156,25 +6205,8 @@ div.btn {
                   justify-content: flex-end;
                 }
               }
-              td[data-title]{
-                &:before {
-                  content: attr(data-title);
-                  font-weight: bold;
-                  font-size: inherit;
-                  white-space: pre-line;
-                  text-align: left;
-                  width: auto;
-                  transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
 
-                }
-                &.open:first-child {
-                  &:before {
-                    margin-left: 30px;
-                    transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
 
-                  }
-                }
-              }
               .alot-text {
                 width: 100%;
               }
@@ -6333,9 +6365,9 @@ div.btn {
       .card-title.table-title .card-title_group {
         left: auto;
         right: 1.1rem;
-        bottom: -360px;
+        bottom: -354px;
         width: auto;
-        height: 360px;
+        height: auto;
         margin: inherit;
 
         .group-operation {
@@ -6350,7 +6382,6 @@ div.btn {
           }
 
           .labels-print {
-            //display: none;
             margin-right: 0;
             padding-right: 0;
             width: 100%;
@@ -6365,6 +6396,10 @@ div.btn {
               display: none;
             }
           }
+        }
+
+        &.active {
+          bottom: -432px;
         }
       }
 
