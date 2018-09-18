@@ -6100,23 +6100,21 @@ div.btn {
           }
         }
         &.card-table {
-          &.table-group-inputs {
-            td[data-title] {
-              &:before {
-                content: attr(data-title);
-                font-weight: bold;
-                font-size: inherit;
-                white-space: pre-line;
-                text-align: left;
-                width: auto;
-                transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
+          td[data-title] {
+            &:before {
+              content: attr(data-title);
+              font-weight: bold;
+              font-size: inherit;
+              white-space: pre-line;
+              text-align: left;
+              width: auto;
+              transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
 
-              }
             }
+          }
+          &.table-group-inputs {
             .all-id {
               position: inherit !important;
-
-
             }
               &.show {
               td[data-title]{
@@ -6807,7 +6805,7 @@ div.btn {
     .content {
       .card-title_printer-info {
         .printer-info {
-          width: calc(100% - 30px);
+          width: calc(100% - 29px);
         }
       }
 
@@ -7026,6 +7024,10 @@ div.btn {
           width: 30px;
           height: 30px;
         }
+
+        .card-title_group {
+          width: 75%;
+        }
       }
       .card {
         &.card-temp {
@@ -7054,14 +7056,6 @@ div.btn {
   }
 }
 @media only screen and (max-width: 350px) {
-  .main .content {
-    .card-title.table-title .card-title_group {
-      right: 0;
-      left: 0;
-      margin: 0 auto;
-      width: calc(100% - 2.2rem);
-    }
-  }
   .iframe .modal-content .input-title button.original-btn{
     padding: 0 !important;
   }
