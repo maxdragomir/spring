@@ -285,18 +285,22 @@
                 var searchVal = $('#search').val();
 
                 if($('#search').val() != '') {
+
                     $('.no-result').slideDown().css('display', 'flex');
                     $('.no-info').slideUp();
                     $('.info').slideUp();
                     $('.label-img').removeClass('show-img');
                     $('.parcel-id').text(searchVal);
+
                 } else {
+
                     $('.no-result').slideUp();
                     $('.no-info').slideUp();
                     $('.info').slideDown();
                     setTimeout(function () {
                         $('.label-img').addClass('show-img');
                     }, 600);
+
                 }
 
 

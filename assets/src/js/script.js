@@ -237,6 +237,7 @@ $(document).ready(function() {
         }
     });
 
+    
     //products
     $('#list-products').addInputArea({
         area_var: '.products_var',
