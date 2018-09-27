@@ -188,9 +188,7 @@ $(document).ready(function() {
                     text: 'You write: ' + text,
                 })
 
-            } else if (text === undefined) {
-                return;
-            } else {
+            } else if (text !== undefined) {
                 swal({
                     type: 'error',
                     title: 'Nope',
@@ -288,7 +286,6 @@ $(document).ready(function() {
     $('.modal-ask-close').on('click', function () {
         swal({
             title: 'Are you sure?',
-            text: 'If you bla bla bla bla',
             type: 'warning',
             cancelButtonText: 'No',
             confirmButtonText: 'Yes',

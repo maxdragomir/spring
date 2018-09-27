@@ -1646,7 +1646,7 @@
 
     <script>
 
-        var titlePos = Math.floor($('.card-title').offset().top),
+        let titlePos = Math.floor($('.card-title').offset().top),
             tableHeight = $('.card-table').height(),
             theadDesctop = $('.thead-desctop').height(),
             tableTitle = $('.table-title').height(),
@@ -1690,7 +1690,7 @@
 
             //close print dropdown
             $(document).on('click', function(e){
-                var block = $('.card-title_printer-info');
+                let block = $('.card-title_printer-info');
                 if (block.has(e.target).length === 0){
                     block.children().removeClass('show');
                 }
@@ -1706,7 +1706,7 @@
 
             //show service in group dropdown
             $('#action-select').on('change', function () {
-                var selectUser = $(this).val();
+                let selectUser = $(this).val();
 
 
                 if (selectUser === '1') {
@@ -1719,10 +1719,10 @@
             });
 
             //check all checkboxes
-            var $selectAll = $('#selectAll');
-            var $table = $('.card-table-parcels table');
-            var $tdCheckbox = $table.find('tbody input:checkbox');
-            var $tdCheckboxChecked = [];
+            let $selectAll = $('#selectAll'),
+                $table = $('.card-table-parcels table'),
+                $tdCheckbox = $table.find('tbody input:checkbox'),
+                $tdCheckboxChecked = [];
 
             $selectAll.on('click', function () {
                 $tdCheckbox.prop('checked', this.checked);
@@ -1735,7 +1735,7 @@
 
             //show dots if height > 20
             $('.hide-text').each(function () {
-                var textHeight = $(this).height();
+                let textHeight = $(this).height();
 
                 if(windowWidth > 1500) {
                     $('.hide-text').slideUp();
