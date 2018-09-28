@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>Dashboard</title>
+        //= template/head.html
+
+    </head>
+    <body class="iframe iframe-edit">
+
+        <div class="modal-content modal-opt">
+
+        <div class="row m-0 mt-2">
+
+            <!-- id row -->
+            <div class="col s12">
+                <div class="card card-modal mb-2">
+                    <div class="parcel-top-info pl-2 pr-2">
+                        <div class="bold parcel-top-info_id mobile">ID 171321</div>
+
+                        <div class="parcel-top-info_desctop">
+                            <div class="parcel-top-info_left">
+                                <div class="bold parcel-top-info_id">ID 171321</div>
+                                <!--<a href="#!" class="btn parcel-top-info_btn btn-source waves-effect"> <i class="fa fa-file-code pr-2"></i> Source Dump <i class="fa fa-angle-down ml-2"></i></a>-->
+
+                            </div>
+
+                            <div class="parcel-top-info_right">
+                                <div class="dates">
+                                    <span class="tooltipped pr-2" data-position="top" data-tooltip="Created">09.07.2018, 18:31</span>
+                                    <span> | </span>
+                                    <span class="tooltipped pl-2" data-position="top" data-tooltip="Modified">09.07.2018, 18:31</span>
+                                </div>
+                                <a href="#!" class="color-cyan btn parcel-top-info_btn btn-log waves-effect"> Log File <i class="fa fa-angle-down ml-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- log row -->
+            <div class="col s12 log-file m-0">
+                <div class="card card-modal m-0">
+                    <div class="parcel-log" id="log">
+                            <pre>FILE PARSING STARTED
+Line 1 ERROR: Invalid 1st field (version)
+Line 2 recognized as parcel line
+FILE PARSING FINISHED
+1 PARCELS FOUND
+PARCELS CREATING STARTED
+Creating parcel 1 / #028-9747466-5643538 (file line 2)...
+ERROR: parcel created with warnings (Consignee Name required)
+PARCELS CREATING FINISHED
+                            </pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- info row -->
+            <div class="col s12">
+                <div class="card card-modal mt-4 mb-4">
+                    <div class="more-info">
+                        <div class="info-row">
+                            <div class="more-info_name">User</div>
+                            <div class="more-info_text bold color-green">5465464 - USER</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="more-info_name">Type</div>
+                            <div class="more-info_text">OMS</div>
+                        </div>
+                        <div class="info-row big-text">
+                            <div class="more-info_name">Status</div>
+                            <div class="more-info_text color-red">
+
+
+                                <div class="color-black">
+                                    <div class="color-red">Processed with Errors</div>
+                                    <div class="color-grey">Some errors occured - see log-file </div>
+                                    <div>– 1 parcel(s) found / 1 declared </div>
+                                    <div>– <a href="#">1</a> parcel(s) created / <a href="#">1</a> <span class="color-red">with errors</span></div>
+                                    <span class="color-red">– 1 invalid file line(s) </span>
+
+                                </div>
+                                <div class="color-black">
+                                    <div class="bold">Current State</div>
+                                    – 0 ok / 0 errors / 0 queued
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="more-info_name">Charset</div>
+                            <div class="more-info_text">UTF-8</div>
+                        </div><div class="info-row">
+                        <div class="more-info_name">CSV-file</div>
+                        <div class="more-info_text color-secondary"><a href="#" class="press-scale waves-effect"><i class="fa fa-download pr-1"></i> Manifest.csv</a></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+        //= template/footer.html
+
+    </body>
+</html>

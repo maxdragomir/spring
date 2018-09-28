@@ -709,7 +709,13 @@
     <div id="add" class="modal modal-style modal-fixed-footer modal-fixed-header">
         <div class="modal-header color-cyan">
             <div class="modal-title"><i class="fa fa-plus left"></i>Add Hub</div>
-            <button class="btn waves-effect modal-close"><i class="fa fa-times"></i></button>
+            <div class="d-flex">
+                <button class="btn waves-effect hide-window mr-2">
+                    <i class="fa fa-window-maximize"></i>
+                    <i class="fa fa-window-minimize"></i>
+                </button>
+                <button class="btn waves-effect modal-ask-close"><i class="fa fa-times"></i></button>
+            </div>
         </div>
         <iframe src="iframe-hubs-add.html" class="iframe-link" frameborder="0"></iframe>
     </div>
@@ -717,7 +723,11 @@
         <div class="modal-header color-cyan">
             <div class="modal-title"><i class="fa fa-pen left"></i>Edit Hub</div>
             <div class="d-flex">
-                <button class="btn waves-effect modal-close ml-2"><i class="fa fa-times"></i></button>
+                <button class="btn waves-effect hide-window mr-2">
+                    <i class="fa fa-window-maximize"></i>
+                    <i class="fa fa-window-minimize"></i>
+                </button>
+                <button class="btn waves-effect modal-ask-close"><i class="fa fa-times"></i></button>
             </div>
         </div>
         <iframe src="iframe-hubs-edit.html" class="iframe-link" frameborder="0"></iframe>

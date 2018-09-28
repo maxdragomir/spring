@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>Dashboard</title>
+        //= template/head.html
+
+    </head>
+    <body class="iframe iframe-add">
+
+    <div class="modal-content">
+
+        <div class="row m-0 mt-2">
+            <div class="col s12 m12">
+                <div class="card card-modal mb-2">
+                    <div class="row">
+                        <div class="input-field col s12 m6 color-grey">
+                            <select>
+                                <option value="postnl">PostNL Parcel</option><option value="postnlpacket">PostNL Packet</option><option value="royalmail">RoyalMail Tracked 24/48</option>
+                            </select>
+                            <label>Carrier</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m12 l6 ">
+                <div class="card card-modal mb-4 mt-4">
+                    <div class="row">
+                        <div class="input-field col s12 color-grey tooltipped" data-position="bottom" data-tooltip=" * char '%' = any sequence of chars">
+                            <textarea id="source" class="textarea textarea-big"></textarea>
+                            <label for="source">Source Error <i class="fa fa-info-circle"></i></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m12 l6">
+                <div class="card card-modal mb-4 mt-4">
+                    <div class="row">
+
+                        <div class="input-field col s12 color-grey tooltipped" data-position="bottom" data-tooltip=" * enter '-' (dash) to not map">
+                            <textarea id="result" class="textarea textarea-big"></textarea>
+                            <label for="result">Result Error <i class="fa fa-info-circle"></i></label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+
+            <div class="switch color-green">
+                <label>
+                    <input type="checkbox">
+                    <span class="lever"></span>
+                    <span class="label-text">Not close window to continue edit</span>
+                </label>
+            </div>
+            <button class="btn btn-large waves-effect btn-submit">Submit</button>
+        </div>
+    </div>
+
+        //= template/footer.html
+
+    </body>
+</html>

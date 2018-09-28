@@ -88,6 +88,7 @@ $(document).ready(function() {
     });
 
 
+
     //open original data
     $('.original-btn').on('click', function () {
         $(this).parents('.card-modal').children('.original-data').toggleClass('active');
@@ -100,6 +101,11 @@ $(document).ready(function() {
         $(this).parents('.card-modal').find('.original-btn').toggleClass('active');
     });
 
+    //log file
+    $('.btn-log').on('click', function () {
+        $(this).parents('.row').children('.log-file').toggleClass('show');
+        $(this).children('.fa-angle-down').toggleClass('show');
+    });
 
     //dump logs
     $('.btn-source').on('click', function () {

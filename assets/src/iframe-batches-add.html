@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>Dashboard</title>
+        //= template/head.html
+
+    </head>
+    <body class="iframe iframe-add">
+
+    <div class="modal-content">
+
+        <div class="row m-0 mt-2">
+
+            <!-- mode row -->
+            <div class="col s12 mb-4">
+                <div class="card card-modal mb-0">
+                    <div class="row">
+                        <div class="input-field col s12 m3">
+                            <div class="status color-red"><span>Test mode</span></div>
+                            <!--<div class="status color-green"><span>Live mode</span></div>-->
+                        </div>
+                        <div class="input-field col s12 m6 color-grey">
+                            <select>
+                                <option value="0">User 1</option>
+                                <option value="0">User 2</option>
+                                <option value="0">User 3</option>
+                                <option value="0">User 4</option>
+                                <option value="0">User 5</option>
+                                <option value="0">User 6</option>
+                                <option value="0">User 7</option>
+                                <option value="0">User 8</option>
+                                <option value="0">User 9</option>
+                                <option value="0">User 10</option>
+                            </select>
+                            <label>User</label>
+                        </div>
+                        <div class="input-field col s12 m3 color-grey">
+                            <select>
+                                <option value="0">Manifest</option><option value="2">OMS</option>
+                            </select>
+                            <label>Type</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- batch row -->
+            <div class="col s12 m12 l8">
+                <div class="card card-modal mb-0">
+                    <div class="input-title several-btns">CSV-file
+                        <div>
+                            <button type="button" class="btn waves-effect waves-light file-btn csv-btn active tooltipped " data-position="top" data-tooltip="File"><i class="fa fa-file"></i></button>
+                            <button type="button" class="btn waves-effect waves-light url-btn csv-btn tooltipped" data-position="top" data-tooltip="URL"><i class="fa fa-link"></i></button>
+                            <button type="button" class="btn waves-effect waves-light content-btn csv-btn tooltipped" data-position="top" data-tooltip="Content"><i class="fa fa-pen"></i></button>
+                        </div>
+                    </div>
+
+                    <div id="file-block" class="row csv-file active">
+                        <div class="file-field input-field col s12 color-grey">
+                            <div class="btn">
+                                <span>Choose File</span>
+                                <input type="file">
+                            </div>
+                            <div class="file-path-wrapper color-grey">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="url-block" class="row csv-file">
+                        <div class="input-field col s12 color-grey">
+                            <input id="url" class="m-0" type="text">
+                            <label for="url">URL</label>
+                        </div>
+                    </div>
+
+                    <div id="content-block" class="row csv-file">
+                        <div class="input-field col s12 color-grey">
+                            <textarea id="content" class="textarea open-textarea"></textarea>
+                            <label for="content">Content</label>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <div class="col s12 m12 l4">
+                <div class="card card-modal mb-0">
+                    <div class="input-title">Charset</div>
+
+                    <div class="row">
+                        <div class="input-field col s12 color-grey">
+                            <select><option value="0" selected>UTF-8</option></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal-footer align-right">
+            <button class="btn btn-large waves-effect btn-submit">Submit</button>
+        </div>
+
+    </div>
+
+
+        //= template/footer.html
+
+    </body>
+</html>

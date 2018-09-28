@@ -26,7 +26,7 @@ body {
       margin-top: -85px;
       margin-left: auto;
       margin-right: auto;
-      box-shadow: 0 -10px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2);
+      box-shadow: 0 -10px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2) !important;
       transition: all 500ms cubic-bezier(0.34, 1.61, 0.7, 1);
     }
     .card-title {
@@ -526,8 +526,8 @@ div.btn {
         }
       }
       button.csv-btn {
-        background: $card-cyan-block;
-        box-shadow: $card-cyan-shadow;
+        background: $card-orange-block;
+        box-shadow: $card-orange-shadow;
 
         &.active {
           opacity: 1;
@@ -5286,9 +5286,15 @@ div.btn {
         border-radius: 10px;
         padding: 1rem;
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+        transition: box-shadow 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+
+        &:hover {
+          box-shadow: 0 14px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2);
+          transition: box-shadow 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+        }
 
         &.align-right {
-          justify-content: space-between;
+          justify-content: flex-end;
         }
 
         .switch {
@@ -6021,6 +6027,9 @@ div.btn {
   }
 }
 @media only screen and (max-width: 1200px) {
+  body.fixed-title .main .content .card-fix {
+    width: 70%;
+  }
   .iframe {
     .modal-content .card-modal {
       .input-field textarea.textarea.textarea-big {
@@ -6078,12 +6087,16 @@ div.btn {
       }
     }
     .content {
+
       .card-title.table-title .card-title_group .group-operation {
         .labels-print {
           margin-right: 2rem;
         }
       }
       .card {
+        &.card-fix {
+          width: 100%;
+        }
         &.card-table.card-table-reports {
           .thead-mobile {
             td {
@@ -6249,7 +6262,7 @@ div.btn {
 }
 @media only screen and (max-width: 992px) {
   body.fixed-title .main .content .card-fix {
-    width: 70%;
+    width: 95%;
   }
   .m-mt-l-4 {
     margin-top: 2rem;

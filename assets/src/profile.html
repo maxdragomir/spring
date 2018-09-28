@@ -167,30 +167,50 @@
 
                 <div class="col s12 m12 l8 xl6 offset-l2 offset-xl3">
                     <div class="card card-profile">
-                        <div class="row mb-0">
+                        <div class="row mb-4">
                             <div class="col s12">
-                                <div class="input-title mb-4 mt-2">Profile</div>
+                                <div class="input-title input-title-active">
+                                    <div class="switch color-green">
+                                        <label>
+                                            <input type="checkbox">
+                                            <span class="lever"></span>
+                                            <span class="label-text">Test Mode</span>
+                                        </label>
+                                    </div>
+                                </div>
 
-                                <div class="row mb-0">
+                                <div class="row mb-0 mt-4">
 
-                                    <div class="input-field col s12 m6 color-green tooltipped" data-position="bottom" data-tooltip=" * 3-25 chars; only latin letters, digits and .-+_@ chars">
+                                    <div class="input-field col s12 m4 color-green tooltipped" data-position="bottom" data-tooltip=" * 3-25 chars; only latin letters, digits and .-+_@ chars">
                                         <input id="username" class="m-0" type="text" value="Username">
                                         <label for="username">Choose Username<i class="fa fa-info-circle"></i></label>
                                     </div>
 
-                                    <div class="input-field col s12 m6 color-green">
+                                    <div class="input-field col s12 m4 color-green">
                                         <input id="email" class="m-0" type="text" value="email@mail.ru">
                                         <label for="email">Email</label>
                                     </div>
 
-                                    <div class="input-field col s12 m6 color-green">
-                                        <input id="password" class="m-0" type="password" value="password">
-                                        <label for="password">Password</label>
-                                    </div>
-
-                                    <div class="input-field col s12 m6 color-green">
+                                    <div class="input-field col s12 m4 color-green">
                                         <input id="title" class="m-0" type="text" value="Title">
                                         <label for="title">Title</label>
+                                    </div>
+
+                                </div>
+                                <div class="row mb-0 mt-4">
+                                    <div class="input-field col s12 m4 color-green tooltipped" data-position="bottom" data-tooltip="fill in to change">
+                                        <input id="new-password" class="m-0" type="password">
+                                        <label for="new-password">New Password <i class="fa fa-info-circle"></i></label>
+                                    </div>
+
+                                    <div class="input-field col s12 m4 color-green">
+                                        <input id="repeat-password" class="m-0" type="password">
+                                        <label for="repeat-password">Repeat Password</label>
+                                    </div>
+
+                                    <div class="input-field col s12 m4 color-green">
+                                        <input id="current-password" class="m-0" type="password">
+                                        <label for="current-password">Current Password	</label>
                                     </div>
 
                                 </div>
@@ -351,13 +371,6 @@
                 </div>
                 <div class="col s12 m12 l8 xl6 offset-l2 offset-xl3">
                     <div class="card card-fix align-right pr-4 pl-4">
-                        <div class="switch color-green">
-                            <label>
-                                <input type="checkbox">
-                                <span class="lever"></span>
-                                <span class="label-text">Test Mode</span>
-                            </label>
-                        </div>
                         <button class="btn btn-large waves-effect btn-submit">Submit</button>
                     </div>
                 </div>
